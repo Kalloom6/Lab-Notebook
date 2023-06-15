@@ -1,0 +1,16 @@
+---
+title: "N2_Drug_Pressure_Sample_List_Run1"
+author: "Callum Malcolm"
+date: "2023-06-15"
+output:
+  html_document:
+    df_print: paged
+---
+
+``` {r read excel file, echo = FALSE}
+library(readxl)
+library(kableExtra)
+library(rmarkdown)
+data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Drug Pressure - Sequencing/Sample List.xlsx")
+paged_table(data, options = list(rows.print = 15))
+```
