@@ -1,0 +1,151 @@
+---
+title: "RT-PCR WILDseq prep Protocol"
+author: "Callum Malcolm"
+date: "2023-06-09"
+output: pdf_document
+---
+# RNA Extraction
+
+**Notes before starting**  
+Use *Quick*-RNA Microprep Kit (cat# R1050/R1051)
+
+* Use Pico-Pure for small cell pellets
+* Check that all kit components have been properly constituted
+* Discard flow through after every spin
+* Spin columns for 1 min at max rpm (13.2rpm)
+* Prepare DNAse mix
+  + 5 $\mu$L DNAse I + 35$\mu$L DNA Digestion Buffer per sample
+  + Make master mix at 1.1n  
+
+
+**Protocol:**
+
+1. Add RNA Lysis buffer  
+    - For cell amount 10^5^ use 100$\mu$L 
+    - For cell amount 10^6^ use 300$\mu$L
+2. Add 1 volume of 100% Ethanol and mix well   
+    - Pipette up and down
+    - Vortex for <30sec
+    - Repeat until pellet is fully dissolved  
+3. Transfer mix into spin column  
+4. Wash column with 400$\mu$L RNA wash buffer  
+5. Add 40$\mu$L DNAse I to spin column and incubate at RT for 30C for 15min  
+6. Add 400 $\mu$L RNA Prep Buffer and spin  
+7. Add 700 $\mu$L RNA Wash Buffer and spin  
+8. Add 400 $\mu$L RNA Wash buffer and spin  
+9. Spin column to dry and transfer to nucelase-free tube  
+10. 15 $\mu$L DNAse/RNAse-Free water to column matrix and centrifuge  
+
+    
+\
+\
+
+# Reverse Transcription
+
+**Notes Before Starting:**  
+
+  * Label PCR strip tubes
+  * Thaw RT reagents
+  * Uses WILDseq specific RT primer
+  * Dilute RT primer to 2$\mu$M  
+    - Do this in a PCR hood
+    - **IMPORTANT** Do not mix primers and carefully note which RT primer is added to which sample
+  * Make RT and ExoI master mixes (MM) before starting  
+    - MM amounts are 1.1n  
+
+**Protocol:**  
+
+*Note:* Use "rt" protocol in callum folder on thermocycler for heating steps  
+
+1. In PCR strip tubes dilute 1-5ug RNA in a total volume of 10 $\mu$L of RNAse/DNAse-free water  
+2. Add 1 ul of RT primer  
+3. Add 1 ul of dNTPs 
+4. Denature at 65 C for 5 mins in PCR machine  
+5. Add straight to ice for 2 mins  
+6. Spin to get liquid to bottom of tube  
+7. Prepare master mix of RT enzyme and buffers (Make prior to starting)   
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L |          |
+| SSIV RT        | 1 $\mu$L |          |
+| 100 mM DTT     | 1 $\mu$L |          |
+| RNAse Out      | 1 $\mu$L |          |
+
+
+8. Add 7 $\mu$L of RT MM prepared above to each sample and mix  
+    - Spin briefly to get liquid to bottom of the tube  
+9. In PCR Machine: incubate at 53C for 10 mins followed by 80C for 10 mins  
+10. Add 3 $\mu$L of ExoI MM to each sample
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |          |
+| NEBuffer r3.1*        | 2 $\mu$L |          |
+
+\center * Most PCR buffers are compatible \center
+
+11. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube 
+10. Add 1 $\mu$L of RNAse H and incubate at 37C for 20 mins  
+11. Dilute final cDNA 1 in 2 with DNAse/RNAse-free water  
+
+
+# PCR Amplification of cDNA
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume| MM volume |
+|:--------------|----|--------------|
+| Q5 Master Mix | 25 $\mu$L |.    \
+| P5_R1_fwd (100$\mu$M)| 2.5 $\mu$L |
+|P7_rev                | 2.5 $\mu$L |
+| DNAse/RNAse H20      | 13.5 $\mu$L |
+| Q5 polymerase        | 0.5 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L |  
+
+2. Perform PCR using the following parameters:  
+
+|Steps       |Time|
+|:--------------|----|
+|Step 1: 98C    | 30s |
+| **Step 2: 98C** | **10s**|
+| **Step 3: 61C** | **30s**| 
+| **Step 4: 72C** | **30s**|
+|Step 5: 72C    | 2 min |
+|Step 6: 12C    | Hold |  
+
+\center __20-25 cycles of steps 2-4__  \center
+
+
+3. Run out 5 $\mu$L of each PCR reaction on 1.5% agarose gel
+  - Amplicon should be ~200bp
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+## Running PCR Gel protocol
+1. 
+
+ 
+
+
+
+
+
+

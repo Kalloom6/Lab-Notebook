@@ -1,0 +1,258 @@
+---
+title: "N2 - Drug Pressure Plan"
+author: "Callum Malcolm"
+date: "2023-05-18"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Day-2 - Friday 19-05-2023\
+1. Seed Feeders
+  Note: Add 2ml of 4.8x10^4^ feeder cells / mL cell suspension to each well of 9x 6-well plates
+  
+# Day 0 - Satuday 20-05-2023
+
+1. Count N2-Barcode cells and dilute cell suspension to 5x10^5^ cells/ml    
+2. Add 1mL of cell suspension/well  
+  **Note:** Thermofisher indicates that 1.2x10^6^ cells in a 6 well plate is "confluent" and recommends seeding density of 0.3x10^6^. Seeding 0.5x10^6^ means that after 2 days if dividing normally cells should be close to confluent while adding in extra cells to support those in higher concentrations of drug. 
+3. Make 1$\mu$M working stock of each drug
+    * Doxorubicin: 1$\mu$L 10mM stock in 10mL media
+    * Methotrexate: 1$\mu$L 10mM stock in 10mL media
+    * Vincristine: 333.33$\mu$L 30mM stock in 10mL media  
+
+## Plate Maps 
+
+
+
+#### Doxorubicin Dilutions
+**Note:** Drug will be diluted by 1/2 when added to well  
+Doxorubicin Working Stock (WS) = 1$\mu$M
+
+|Drug        |Drug ID|Dilution volume         |Media Volume | Dil 1[Drug] | [Final Drug]|
+|:---------: |:-----:| :---------------------:| :----------:| :----------:|:------------|
+|DMSO        | DMSO  |  1 $\mu$L              | 9999$\mu$L  | 0           | 0           |
+|Doxorubicin | Dox 1 | 600 $\mu$L (from WS)   | 9700 $\mu$L | 600nm       | 300nm       |
+|Doxorubicin | Dox 2 | 5000 $\mu$L (from Dox 1)| 5000 $\mu$L | 300nm       | 150nm       |
+|Doxorubicin | Dox 3 | 5000 $\mu$L (from Dox 2)| 5000 $\mu$L | 150nm       | 75nm        |
+|Doxorubicin | Dox 4 | 5000 $\mu$L (from Dox 3)| 5000 $\mu$L | 75nm       | 37.5nm      |
+|Doxorubicin | Dox 5 | 5000 $\mu$L (from Dox 4)| 5000 $\mu$L | 37.5nm      | 18.75nm    |
+
+\
+\
+\
+\
+\
+\
+\
+
+### Doxorubicin Plates
+#### Dox Plate 1
+
+|Well ID | Well Cell Count | Well volume | Drug  | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | DMSO  | 1mL         |  0           |
+| A2     | 5x10^5^         | 1 mL        | DMSO  | 1mL         |  0           |
+| A3     | 5x10^5^         | 1 mL        | DMSO  | 1mL         |  0           |
+| B1     | 5x10^5^         | 1 mL        | Dox 1 | 1mL         |  300nm       |
+| B2     | 5x10^5^         | 1 mL        | Dox 1 | 1mL         |  300nm       |
+| B3     | 5x10^5^         | 1 mL        | Dox 1 | 1mL         |  300nm       |
+
+#### Dox Plate 2
+|Well ID | Well Cell Count | Well volume | Drug  | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | Dox 2 | 1mL         |  150nm       |
+| A2     | 5x10^5^         | 1 mL        | Dox 2 | 1mL         |  150nm       |
+| A3     | 5x10^5^         | 1 mL        | Dox 2 | 1mL         |  150nm       |
+| B1     | 5x10^5^         | 1 mL        | Dox 3 | 1mL         |  75nm        |
+| B2     | 5x10^5^         | 1 mL        | Dox 3 | 1mL         |  75nm        |
+| B3     | 5x10^5^         | 1 mL        | Dox 3 | 1mL         |  75nm        |
+
+#### Dox Plate 3
+|Well ID | Well Cell Count | Well volume | Drug  | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | Dox 4 | 1mL         |37.5nm        |
+| A2     | 5x10^5^         | 1 mL        | Dox 4 | 1mL         |37.5nm        |
+| A3     | 5x10^5^         | 1 mL        | Dox 4 | 1mL         |37.5nm        |
+| B1     | 5x10^5^         | 1 mL        | Dox 5 | 1mL         |18.75nm       |
+| B2     | 5x10^5^         | 1 mL        | Dox 5 | 1mL         |18.75nm       |
+| B3     | 5x10^5^         | 1 mL        | Dox 5 | 1mL         |18.75nm       |
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+#### Methotrexate Dilutions   
+**Note:** Drug will be diluted by 1/2 when added to well
+Methotrexate Working Stock = 1$\mu$M
+
+|Drug         |Drug ID |Dilution volume         |Media Volume | Dil 1[Drug]| [Final Drug]|
+|:---------:  |:-----: | :---------------------:| :----------:| :---------:|:------------|
+|DMSO         | DMSO   |  1 $\mu$L              | 9999$\mu$L  | 0          | 0           |
+|Methotrexate | Meth 1 | 200 $\mu$L (from WS)     | 9800 $\mu$L | 200nm   | 100nm       |
+|Methotrexate | Meth 2 | 5000 $\mu$L (from Meth 1)| 5000 $\mu$L | 100nm   |  50nm       |
+|Methotrexate | Meth 3 | 5000 $\mu$L (from Meth 2)| 5000 $\mu$L | 40nm       |  20nm   |
+|Methotrexate | Meth 4 | 5000 $\mu$L (from Meth 3)| 5000 $\mu$L | 20nm       |  10nm    |
+|Methotrexate | Meth 5 | 5000 $\mu$L (from Meth 4)| 5000 $\mu$L | 10nm       |   5nm    |
+
+
+### Methotrexate Plates
+#### Meth Plate 1
+
+|Well ID | Well Cell Count | Well volume | Drug   | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---:  | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | DMSO   | 1mL         |  0           |
+| A2     | 5x10^5^         | 1 mL        | DMSO   | 1mL         |  0           |
+| A3     | 5x10^5^         | 1 mL        | DMSO   | 1mL         |  0           |
+| B1     | 5x10^5^         | 1 mL        | Meth 1 | 1mL         |  100nm       |
+| B2     | 5x10^5^         | 1 mL        | Meth 1 | 1mL         |  100nm       |
+| B3     | 5x10^5^         | 1 mL        | Meth 1 | 1mL         |  100nm       |
+
+#### Meth Plate 2
+|Well ID | Well Cell Count | Well volume | Drug   | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :----: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | Meth 2 | 1mL         |  50nm       |
+| A2     | 5x10^5^         | 1 mL        | Meth 2 | 1mL         |  50nm       |
+| A3     | 5x10^5^         | 1 mL        | Meth 2 | 1mL         |  50nm       |
+| B1     | 5x10^5^         | 1 mL        | Meth 3 | 1mL         |  20nm       |
+| B2     | 5x10^5^         | 1 mL        | Meth 3 | 1mL         |  20nm       |
+| B3     | 5x10^5^         | 1 mL        | Meth 3 | 1mL         |  20nm       |
+
+#### Meth Plate 3
+|Well ID | Well Cell Count | Well volume | Drug   | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---:  | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | Meth 4 | 1mL         |  10nm        |
+| A2     | 5x10^5^         | 1 mL        | Meth 4 | 1mL         |  10nm        |
+| A3     | 5x10^5^         | 1 mL        | Meth 4 | 1mL         |  10nm        |
+| B1     | 5x10^5^         | 1 mL        | Meth 5 | 1mL         |   5nm        |
+| B2     | 5x10^5^         | 1 mL        | Meth 5 | 1mL         |   5nm        |
+| B3     | 5x10^5^         | 1 mL        | Meth 5 | 1mL         |   5nm        |
+\
+\
+\
+ 
+ 
+#### Vincristine Dilutions  
+**Note:** Drug will be diluted by 1/2 when added to well  
+Vincristine Working Stock = 1$\mu$M
+
+|Drug        |Drug ID|Dilution Volume |Media Volume | Dil 1[Drug] | [Final Drug]|
+|:---------: |:-----:| :------------------:| :----------:| :----------:|:------------|
+|DMSO        | DMSO  |  1 $\mu$L              | 9999$\mu$L  | 0           | 0           |
+|Vincristine | Vin 1 | 8 $\mu$L (from WS)     | 9992 $\mu$L | 8nm         | 4nm         |
+|Vincristine | Vin 2 | 5000 $\mu$L (from Vin 1)| 5000 $\mu$L | 4nm        | 2nm         |
+|Vincristine | Vin 3 | 5000 $\mu$L (from Vin 2)| 5000 $\mu$L | 2nm         | 1nm        |
+|Vincristine | Vin 4 | 5000 $\mu$L (from Vin 3)| 5000 $\mu$L | 1nm         | 0.5nm      |
+|Vincristine | Vin 5 | 5000 $\mu$L (from Vin 4)| 5000 $\mu$L | 0.5nm     | 0.25nm     |
+
+### Vincristine Plates
+#### Vin Plate 1
+
+|Well ID | Well Cell Count | Well volume | Drug  | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | DMSO  | 1mL         |  0           |
+| A2     | 5x10^5^         | 1 mL        | DMSO  | 1mL         |  0           |
+| A3     | 5x10^5^         | 1 mL        | DMSO  | 1mL         |  0           |
+| B1     | 5x10^5^         | 1 mL        | Vin 1 | 1mL         |  4nm         |
+| B2     | 5x10^5^         | 1 mL        | Vin 1 | 1mL         |  4nm         |
+| B3     | 5x10^5^         | 1 mL        | Vin 1 | 1mL         |  4nm         |
+
+#### Vin Plate 2
+|Well ID | Well Cell Count | Well volume | Drug  | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | Vin 2 | 1mL         |  2nm       |
+| A2     | 5x10^5^         | 1 mL        | Vin 2 | 1mL         |  2nm       |
+| A3     | 5x10^5^         | 1 mL        | Vin 2 | 1mL         |  2nm       |
+| B1     | 5x10^5^         | 1 mL        | Vin 3 | 1mL         |  1nm        |
+| B2     | 5x10^5^         | 1 mL        | Vin 3 | 1mL         |  1nm        |
+| B3     | 5x10^5^         | 1 mL        | Vin 3 | 1mL         |  1nm        |
+
+#### Vin Plate 3
+|Well ID | Well Cell Count | Well volume | Drug  | Drug Volume | [Final Drug] |
+| :-----:| :--------------:| :----------:| :---: | :----------:| :----------: |
+| A1     | 5x10^5^         | 1 mL        | Vin 4 | 1mL         |  0.5nm        |
+| A2     | 5x10^5^         | 1 mL        | Vin 4 | 1mL         |  0.5nm        |
+| A3     | 5x10^5^         | 1 mL        | Vin 4 | 1mL         |  0.5nm        |
+| B1     | 5x10^5^         | 1 mL        | Vin 5 | 1mL         |  0.25nm        |
+| B2     | 5x10^5^         | 1 mL        | Vin 5 | 1mL         |  0.25nm        |
+| B3     | 5x10^5^         | 1 mL        | Vin 5 | 1mL         |  0.25nm        |
+
+
+# Day 2 - Monday 22-05-2023
+1. Visually check cells for viability
+2. Count wells which are growing and split back if overconfluent (>1.0x10^6^ cells)
+3. Replenish drug media
+  * Collect and spin down supernatant  
+    **Note** Add associated drug media to wells while supernatant is being spun down as cells are still attached to feeders
+  * Resuspend in associated drug media
+  **Note** Repeat drug dilutions from Day 0 except do not make Dil 1 2x [final]
+  
+# Day 3 - Tuesday 23-05-2023
+1. Seed 9x 6-well feeders
+2. Seeding density: Add 2ml of 4.8x10^4^ feeder cells / mL cell suspension to each well
+
+# Day 4 - Wednesday 24-05-2023 
+
+**Collection Day 1**  
+
+1. Homogenize each well thoroughly  
+2. Take 1/2 of cell suspension for RNA extraction  
+    a. Spin down for 5 min at 250 x g
+    b. Snap freeze in liquid nitrogen  
+3. Reseed remaining 1/2 of cell suspension  
+    a. Count cell suspension
+    b. Reseed 0.5x10^6^ cells/well (or remaining amount if less than 500K) 
+    
+# Day 6 - Friday 26-05-2023
+1. Visually check cells for viability
+2. Count wells which are growing and split back if overconfluent (>1.0x10^6^ cells)
+3. Replenish drug media
+  * Collect and spin down supernatant  
+      **Note:** Add associated drug media to wells while supernatant is being spun down as cells are still attached to feeders
+  * Resuspend in associated drug media  
+  **Note** Repeat drug dilutions from Day 0 except do not make Dil 1 2x [final]
+
+# Day 7 - Saturday 27-05-2023  \
+Note: This can be done Friday
+1. Seed 9x 6-well feeders
+2. Seeding density: Add 2ml of 4.8x10^4^ feeder cells / mL cell suspension to each well
+
+
+# Day 8 - Sunday 28-05-2023
+**Collection Day 1**  
+
+1. Homogenize each well thoroughly  
+2. Take 1/2 of cell suspension for RNA extraction  
+    a. Spin down for 5 min at 250 x g
+    b. Snap freeze in liquid nitrogen  
+3. Reseed remaining 1/2 of cell suspension  
+    a. Count cell suspension
+    b. Reseed 0.5x10^6^ cells/well (or remaining amount if less than 500K) 
+    
+# Day 10 - Tuesday 30-05-2023
+1. Visually check cells for viability
+2. Count wells which are growing and split back if overconfluent (>1.0x10^6^ cells)
+3. Replenish drug media
+  * Collect and spin down supernatant  
+     **Note:** Add associated drug media to wells while supernatant is being spun down as cells are still attached to feeders
+  * Resuspend in associated drug media  
+  **Note:** Repeat drug dilutions from Day 0 except do not make Dil 1 2x [final]
+  
+# Day 12 - Thursday 1-06-2023
+1. Homogenize each well thoroughly  
+2. Collect entire cell suspension for RNA extraction  
+    a. Spin down for 5 min at 250 x g
+    b. Snap freeze in liquid nitrogen 
+
