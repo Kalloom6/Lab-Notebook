@@ -1,0 +1,28 @@
+---
+title: "Turner Lab Notebook"
+author: "Callum Malcolm"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Tuesday 02-05-2023
+1. Thawed N2, RBL1, and RAMOS into T75 flasks  
+  Note: N2 and RBL1 flaskes seeded with feeders
+
+# Wednesday 03-05-2023
+1. Splitting cells
+
+| Cell Line | Cells/mL | Cells/mL Seeded| CS volume |Final Volume|Last day split| P number|
+| :-------: | :------: | :-------------:| :--------:| :---------:|:------------:|:-------:|
+| N2        | 8.93x10^5^| 3x10^5^.      | 6.71 mL   | 12 mL      |Tues 02-05-23 | 2       |
+| RBL1      | 7.73x10^5^| 3x10^5^.      | 7.76 mL   | 12 mL      |Tues 02-05-23 | 2       |
+
+2. Expanded N2-Barcodes to T175  
+
+3. Seeded feeders into 96-well
+    a. Diluted feeders to 3.2x10^4^ cells/mL
+    b. Add 100$\mu$L cell suspension to each well
+
+
+

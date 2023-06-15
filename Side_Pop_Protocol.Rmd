@@ -1,0 +1,53 @@
+---
+title: "Side_Pop_Protocol"
+author: "Callum Malcolm"
+date: "2023-05-18"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Protocol
+**Note:** Seed cells 1-2 days before so they are in log phase growth  
+**Note:** Preheat thermomixer to 37^o^C and take out Verapamil and Hoechst from -20^o^C before starting  
+
+1. Suspend cells and count  
+2. Dilute cells to 1x10^6^ cells/mL   
+  **Note:** Determine correct dilution media (FACS buffer, Media, ect.)  
+  **Ex:** For N2 use media as FACS buffer will reduce viability  
+3. Distribute 1ml of cell suspension to eppendorfs  
+4. Add X $\mu$L verapamil to control samples and X $\mu$L PBS to test samples  
+  **Note:** Verapamil volume depends on cell line; cell lines with larger morphology could require more volume. Important to optimise this aspect of the assay before proceeding.  
+  **Ex.** 10 $\mu$L Verapamil is optimal for N2 PDX  
+5. Incubate samples for 20 min at 37^o^C shaking at 600rpm  
+6. Add Hoechst to samples  
+  **Note:** Be **VERY** precise with pipetting (ie. remove droplets from tip). This is the most important optimization step. Test with a range of concentrations with corresponding Verapamil controls to determine optimal volumes for both reagents.  
+  **Note:** Protect Hoechst from light (ie. cover shaker with tinfoil, try to operate in the dark)  
+  **Ex:** 2.5 $\mu$L Hoescht is optimal for N2 PDX  
+7. Incubate samples in thermomixer for 2hrs at 37^o^C and 600rpm  
+8. Put samples on ice and spin down at 250 x g at 4^o^C  
+  **Note:** Set centrifuge to 4^o^C 30min before the end of Hoechst incubation, collect ice and label FACS tubes  
+9. Resuspend in ice cold dilution media  
+  **Note:** Use ~300 $\mu$L 
+10. Read samples on Fortessa II
+\
+\
+\
+\
+\
+\
+
+# Reagents
+
+| Reagent   | Product Code | [Stock] | [Assay]        | Volume of Stock Used |
+|-----------|--------------|---------|----------------|----------------------|
+| Hoescht   | ab228551     | 1mg/ml  | 2-5 $\mu$g/mL  | 2-5$\mu$L/mL         |
+| Verapamil | V4629        | 10mM    | 100$\mu$M      | 10$\mu$L/mL          |
+
+# Cytometer Optics
+* Email flow facilites about changing the filters before starting  
+* UV Laser (Fortessa II) excites at 350nm  
+* Dichroic mirror LP600 splits beam:
+  - Hoechst Blue: 450/50 BP
+  - Hoechst Red: 610/20 BP
+
