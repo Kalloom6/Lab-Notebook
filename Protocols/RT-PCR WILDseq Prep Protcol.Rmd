@@ -121,26 +121,9 @@ Use *Quick*-RNA Microprep Kit (cat# R1050/R1051)
 \center __20-25 cycles of steps 2-4__  \center
 
 
-3. Run out 5 $\mu$L of each PCR reaction on 1.5% agarose gel
+3. Check each PCR reaction on TapeStation
   - Amplicon should be ~200bp
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
 
-## Running PCR Gel protocol
-1. 
 
  
 
