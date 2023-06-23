@@ -1,0 +1,64 @@
+---
+title: "EC50 Plate Seeding Protocol"
+author: "Callum Malcolm"
+date: "2023-06-23"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+**Protocol**  
+  1. Make cell suspension of 2.5x10^6^ cells/ml 
+    - Seed cells at ~223k cells/well (90$\mu$L CS/well)
+    - If using a new cell line complete a growth curve first to determine optimal seeding density
+  2. Dilute stock drug into dilution 1
+  3. Fill outside wells with ~150$\mu$L PBS
+
+
+```{r EC50 Serial Dilutions, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```

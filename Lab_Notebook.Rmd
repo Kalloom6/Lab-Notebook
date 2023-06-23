@@ -3,9 +3,9 @@ title: "Turner Lab Notebook"
 author: "Callum Malcolm"
 output:
   pdf_document: default
-  toc: true
-  toc_float: true
-  html_document: default
+toc: true
+toc_float: true
+urlcolor: blue
 ---
 
 # Tuesday 02-05-2023
@@ -34,9 +34,11 @@ output:
 1. Splitting cells
     - Split N2/RBL1/JIRE
     - Added 10 mL media to BLLW  
-      * Lots of dead cells observed
-2. EC50 - ID:  
-    - Cylophosphamide EC50 for N2 and RBL1  
+      * Lots of dead cells observed 
+      
+## Seed EC50
+    - Plate ID: EC50_230619_Plate1   
+    - Cylophosphamide (Stock: 20mM) EC50 for N2 and RBL1  
   
 ```{r EC50 2 Cell Line Plate Map, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -151,7 +153,7 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
 
 # Tuesday 20-06-2023
 
-### RNA Extraction for SP Test 3 Sample
+## RNA Extraction for SP Test 3 Sample
 - Sample collected:
 - Low number of cells so used Pico-Pure Kit
 - 1 sample (n = 1)
@@ -162,7 +164,7 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
   
 |Component       |Volume|   MM volume  |
 |:--------------|----|-----------------|
-| DNAse I Stock | 5 $\mu$L |     5.1 $\mu$L     |
+| DNAse I Stock | 5 $\mu$L |     5.5 $\mu$L     |
 | DNA Disgestion Buffer | 35 $\mu$L |  38.5 $\mu$L |  
   
   **RNA Extraction Pico-Pure Protocol** 
@@ -201,10 +203,239 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
   19. Centrifuge column for one minute at 16000 x g to elute RNA    
   20. Started PCR and completed Tapestation
   
-### Tapestation  
+## Tapestation_230620  
 
-**Protcol**
+[High-Sensitivity RNA ScreenTape Protocol](https://www.agilent.com/cs/library/usermanuals/public/ScreenTape_HSRNA_QG.pdf)  
+
+[Results](https://drive.google.com/file/d/1_aZi2VKbqw5D8l0CXRS9rjji2gffc3tT/view?usp=share_link)  
+- Inconclusive, proceeded with PCR
+
+## Reverse Transcription
+
+**Notes Before Starting:**  
+
+  * Label PCR strip tubes
+  * Thaw RT reagents
+  * Uses WILDseq specific RT primer
+  * Dilute RT primer to 2$\mu$M  
+    - Do this in a PCR hood
+    - **IMPORTANT** Do not mix primers and carefully note which RT primer is added to which sample
+  * Make RT and ExoI master mixes (MM) before starting  
+    - MM amounts are 1.1n  
+
+**Protocol:**  
+
+*Note:* Used "rt" protocol in callum folder on thermocycler for heating steps  
+
+1. In PCR strip tubes diluted 1-5ug RNA in a total volume of 10 $\mu$L of RNAse/DNAse-free water  
+2. Added 1 ul of RT primer  
+3. Added 1 ul of dNTPs 
+4. Denatured at 65 C for 5 mins in PCR machine  
+5. Added straight to ice for 2 mins  
+6. Spun to get liquid to bottom of tube  
+7. Prepared master mix of RT enzyme and buffers (Made prior to starting)   
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L |  4.4 $\mu$L        |
+| SSIV RT        | 1 $\mu$L | 1.1 $\mu$L        |
+| 100 mM DTT     | 1 $\mu$L | 1.1 $\mu$L           |
+| RNAse Out      | 1 $\mu$L |  1.1 $\mu$L          |
+
+
+8. Added 7 $\mu$L of RT MM prepared above to each sample and mix  
+    - Spun briefly to get liquid to bottom of the tube  
+9. In PCR Machine: incubated at 53C for 10 mins followed by 80C for 10 mins  
+10. Added 3 $\mu$L of ExoI MM to each sample
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |  1.1 $\mu$L      |
+| NEBuffer r3.1*        | 2 $\mu$L |  2.2 $\mu$L         |
+
+<center>
+ * Most PCR buffers are compatible
+</center>
+ 
+11. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube 
+10. Add 1 $\mu$L of RNAse H and incubate at 37C for 20 mins  
+11. Dilute final cDNA 1 in 2 with DNAse/RNAse-free water  
+
+
+## PCR Amplification of cDNA
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume| MM volume |
+|:--------------|----|--------------|
+| Q5 Master Mix | 25 $\mu$L | 
+| P5_R1_fwd (100$\mu$M)| 2.5 $\mu$L |
+|P7_rev                | 2.5 $\mu$L |
+| DNAse/RNAse H20      | 13.5 $\mu$L |
+| Q5 polymerase        | 0.5 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L |  
+
+2. Perform PCR using the following parameters:  
+
+|Steps       |Time|
+|:--------------|----|
+|Step 1: 98C    | 30s |
+| **Step 2: 98C** | **10s**|
+| **Step 3: 61C** | **30s**| 
+| **Step 4: 72C** | **30s**|
+|Step 5: 72C    | 2 min |
+|Step 6: 12C    | Hold |  
+
+<center>
+
+__20-25 cycles of steps 2-4__
+
+</center>
+
+Ran overnight and left at 12C
+
+# Wednesday 21-06-2023  
+
+## Tapestation_230619_SPTest3_cDNA
+
+[High-Sensitivity DNA ScreenTape Protocol](https://www.agilent.com/cs/library/usermanuals/Public/ScreenTape_HSD1000_QG.pdf)  
+
+[Results](https://drive.google.com/file/d/1J8JyF6imxUhW5XPriCVr-1706D86LBfS/view?usp=share_link)    
+  * Did not work, bands present but faint and not at 200bp  
+  * Potential solutions:  
+      - Repeat PCR with increased cycles  
+      - Repeat RNA extration with trizol protocol (Anna)
+      
+# Thursday 22-06-2023  
+
+## Collect EC50 Plate 
+    - Plate ID: EC50_230619_Plate1
+![N2 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
+![RBL1 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
 
 
 
+# Friday 23-06-23
+
+### Split Cells  
+ 1. Threw out BLLW (all dead)
+ 2. Split JIRE 1/2
+ 3. Split N2/RBL1 1/4
+
+### Seed EC50  
+- EC50 Plate ID: EC50_230623_Plate1
+<center>
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(tidyverse)
+library(ggforce)
+library(scales)
+
+pbs <- "PBS"
+C1 <- "N2"
+C2 <- "RBL1"
+EC50_ID <- "EC50_230623_plate1"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "3","3","3","2","2","2","1","1","1",pbs,pbs,
+                  pbs,"6","6","6","5","5","5","4","4","4",pbs,pbs,
+                  pbs,"Control","Control","Control","8","8","8","7","7","7",pbs,pbs,
+                  pbs,"3","3","3","2","2","2","1","1","1",pbs,pbs,
+                  pbs,"6","6","6","5","5","5","4","4","4",pbs,pbs,
+                  pbs,"Control","Control","Control","8","8","8","7","7","7",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans()) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_bw() + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+
+```
+
+Drug Dilutions
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
 
