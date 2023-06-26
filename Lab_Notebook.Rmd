@@ -314,8 +314,8 @@ Ran overnight and left at 12C
 
 ## Collect EC50 Plate 
     - Plate ID: EC50_230619_Plate1
-![N2 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
-![RBL1 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
+![N2 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
+![RBL1 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
 
 
 
@@ -328,7 +328,7 @@ Ran overnight and left at 12C
 
 ### Seed EC50  
 - EC50 Plate ID: EC50_230623_Plate1
-<center>
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 library(tidyverse)
 library(ggforce)
