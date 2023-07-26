@@ -197,7 +197,35 @@ table %>%
 - Thawed and resuspended in 12 mL media
 - Added to T75 pre-seeded with FDC cells (from Chris Steel)
 
+# Monday 27-03-2023 
+## Split Cells
+- Split cell lines N2/RBL1/JIRE
+- Dirty split 1:3 
 
+# Wednesday 29-03-2023 
+## Split Cells
+- Split by Chris Steel. 
+
+# Friday 31-03-2023 
+## Split Cells
+- Split cell lines N2/RBL1/JIRE
+- Dirty split 1:4
+
+# Monday 3-04-2023
+
+**Large Infection in TC**  
+- N2 Growth Curve stopped  
+
+#Wednesday 5-04-2023 
+## Seed Cells - N2/RBL1/JIRE  
+- Vials given by Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel)
+
+## Seed Cells - N2/RBL1/JIRE  
+- Vials given by Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel)
 \
 \
 \
