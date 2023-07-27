@@ -268,18 +268,19 @@ table %>%
 # Monday 19-06-2023  
 
 ## Split Cells
-    - Split N2/RBL1/JIRE
-    - Added 10 mL media to BLLW  
-      * Lots of dead cells observed 
+- Split N2/RBL1/JIRE
+- Added 10 mL media to BLLW  
+    * Lots of dead cells observed 
       
 ## Seed EC50
-    - Plate ID: EC50_230619_Plate1   
-    - Cylophosphamide (Stock: 20mM) EC50 for N2 and RBL1  
+- Plate ID: EC50_230619_Plate1   
+- Cylophosphamide (Stock: 20mM) EC50 for N2 and RBL1
   
 ```{r EC50 2 Cell Line Plate Map, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggforce)
 library(scales)
+library(prism)
 
 pbs <- "PBS"
 C1 <- "N2"
@@ -287,12 +288,12 @@ C2 <- "RBL1"
 EC50_ID <- "EC50_230619_plate1"
 
 dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "3","3","3","2","2","2","1","1","1",pbs,pbs,
-                  pbs,"6","6","6","5","5","5","4","4","4",pbs,pbs,
-                  pbs,"Control","Control","Control","8","8","8","7","7","7",pbs,pbs,
-                  pbs,"3","3","3","2","2","2","1","1","1",pbs,pbs,
-                  pbs,"6","6","6","5","5","5","4","4","4",pbs,pbs,
-                  pbs,"Control","Control","Control","8","8","8","7","7","7",pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
                   pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
 
 drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
@@ -325,12 +326,12 @@ p <- ggplot(data = df1) +
   geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
 p <- p + coord_equal()
 p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans()) +
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
   scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
 p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
 p <- p +
   labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  theme_bw() + 
+  theme_prism("waves") + 
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 print(p, max.levels = NULL, width = 2)
@@ -567,6 +568,7 @@ Ran overnight and left at 12C
 library(tidyverse)
 library(ggforce)
 library(scales)
+library(prism)
 
 pbs <- "PBS"
 C1 <- "N2"
@@ -574,12 +576,12 @@ C2 <- "RBL1"
 EC50_ID <- "EC50_230623_plate1"
 
 dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "3","3","3","2","2","2","1","1","1",pbs,pbs,
-                  pbs,"6","6","6","5","5","5","4","4","4",pbs,pbs,
-                  pbs,"Control","Control","Control","8","8","8","7","7","7",pbs,pbs,
-                  pbs,"3","3","3","2","2","2","1","1","1",pbs,pbs,
-                  pbs,"6","6","6","5","5","5","4","4","4",pbs,pbs,
-                  pbs,"Control","Control","Control","8","8","8","7","7","7",pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
                   pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
 
 drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
@@ -612,12 +614,12 @@ p <- ggplot(data = df1) +
   geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
 p <- p + coord_equal()
 p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans()) +
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
   scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
 p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
 p <- p +
   labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  theme_bw() + 
+  theme_prism("waves") + 
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 print(p)
@@ -730,8 +732,41 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
 - Grow up sorted side pop to avoid issues with low cell numbers  
 
 # Tuesday 25-07-2023  
+## Seed Cells - N2-BC4/RBL1/BLLW/RAMOS-BC1  
+- Got vials from Chris
+- Thawed, resuspended in 6 mL AR-1
+- Spun down at 90* for 5 min
+- Discarded supernatant and resuspended pellet in 12 mL of AR-1
+- Added RBL1/BLLW to T75's pre-seeded with FDC (24-07-2023)
+- Added RAMOS-BC1 to new T75
+  * RAMOS-BC2 from 24-07-2023 was dead
+  * Was taken from -80, New RAMOS vial from LN
+- Added N2 to T125 seeded with FDC (24-07-2023)
 
+# Wednesday 26-07-2023
+## Cell Culture
+- Checked cells, all flasks looked healthy
+- Added media
+  * N2 - 20ml of AR-1
+  * RAMOS - 10 mL of AR-1
+  * RBL1 - 10ml of AR-1
+  * BLLW - 10ml of AR-1
 
+# Thursday 27-07-2023
+## Split Cells - RAMOS
+- Split Ramos 1:2
+- Added 10ml of AR-1 to N2
+- Plan to split RBL1/BLLW tomorrow
+
+## Lucy Drug Randomizer 
+- Randomized drugs for Lucy Hare mouse experiment
+
+| Drug | Identification |
+| :-------: | :------: |
+| Alectinib  | A | 
+| Erda | B | 
+| Vehicle | C | 
+| Alectinib + Erda  | D | 
 
 
 
