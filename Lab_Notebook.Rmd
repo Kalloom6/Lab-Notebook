@@ -211,22 +211,213 @@ table %>%
 - Split cell lines N2/RBL1/JIRE
 - Dirty split 1:4
 
-# Monday 3-04-2023
+# Monday 03-04-2023
 
 **Large Infection in TC**  
-- N2 Growth Curve stopped  
 
-#Wednesday 5-04-2023 
+## Seed Cells - N2/RBL1/JIRE  
+- Vials given by Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel) 
+
+## Seed EC50
+DNW
+- N2/JIRE/RBL1  
+- Vin/Dactolisib
+
+# Wednesday 05-04-2023   
 ## Seed Cells - N2/RBL1/JIRE  
 - Vials given by Chris Steel
 - Thawed and resuspended in 12 mL media
 - Added to T75 pre-seeded with FDC cells (from Chris Steel)
 
-## Seed Cells - N2/RBL1/JIRE  
-- Vials given by Chris Steel
-- Thawed and resuspended in 12 mL media
-- Added to T75 pre-seeded with FDC cells (from Chris Steel)
-\
+
+# Thursday 06-04-2023 
+
+## Collect EC50 Plate 
+    - Plate ID: EC50_230619_Plate1
+    - DNW
+    
+# Tuesday 11-04-2023 
+
+## Seed EC50_230411
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Dactolisib"
+C2 <- "Vincristine"
+EC50_ID <- "EC50_230411_drug_plating"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+Drug Dilutions
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Dactolisib"
+initial_concentration <- 20
+dilution_factor <- 10
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Vincristine"
+initial_concentration <- 30
+dilution_factor <- 10
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+   - 3 plates seeded
+   - Plate 1: N2
+   - Plate 2: JIRE
+   - Plate 3: RBL1
+   
+# Wednesday 12-04-2023
+
+## Cell Culture  
+- Thaw RBL1  
+
+## Side Population - N2_230412
+- Hoescht  
+  * 2.5 / 2.75 / 3  
+  * DNW
+  
+
+
+
 \
 \
 \
@@ -384,6 +575,14 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
   kable(.)
 
 ```
+
+
+# Saturday 20-05-2023  
+
+
+
+
+
 
 
 # Tuesday 20-06-2023
@@ -691,7 +890,8 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
 
 # Monday 24-07-2023
 
-## Seeding Cells - RAMOS/FDC  
+## Seeding Cells - RAMOS/FDC
+### Made New Media: AR-1
 1. Made new media: AR-1
 
 | Solution | ID code | Volume| % Total volume
@@ -768,10 +968,108 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
 | Vehicle | C | 
 | Alectinib + Erda  | D | 
 
+# Friday 28-07-2023
 
 
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "uM"
 
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+# Friday 06-10-2023
+
+## Cell Culture  
+### Made New Media: AR-2
+1. Made new media: AR-2
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% |  
+
+# Monday 09-10-2023
+
+## Cell Culture  
+### Seeded A20  
+- Got A20 from Swetha box: 2nd rack in shared -80  
+- AR-2  
+
+### Seeded FDC  
+  - Seeded feeders, taken from feeder box, irradiated by Chris  
+  - Will seed N4 PDX tomorrow  
+
+# Tuesday 10-10-2023  
+
+## Cell Culture  
+### Seeded N4  
+- Given by Chris
+-AR-2
+- Seeded onto FDC cells from 09-10
+- Future experiments:
+  * Barcode PDX
+  * EC50: Vincristine/Doxorubicin/Methotrexate/Cyclophosphamide (Active)  
+  
+### Seeded RAMOS-BC  
+- Seeded barcoded Ramos cells - Pool #4  
+  * From Chris
+  * LN tank 1 - Rack 5 - box 2nd from Bottom
+- AR-2
+- Future Experiments:  
+  * Combination Drug pressure: Vin/Dox/Meth  
+
+### Checked A20  
+- Look healthy
+- ~40% confluency  
+
+# Wednesday 11-10-2023  
+
+
+
+  
 
 
 
