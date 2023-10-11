@@ -1067,6 +1067,24 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
 
 # Wednesday 11-10-2023  
 
+## Cell Culture  
+### A20 Culture
+- ~70% confluent
+- Split A20 in half
+  * Half in 1xT75 and other half in 1xT175
+  * T175 to be frozen down
+  
+### RAMOS-BC4 Culture
+- ~60% confluent
+- Spun down at 400xg for 5 min and resuspended in 20ml AR-2 
+
+### N4 Culture
+- Look healthy, attached to feeders with some floaters
+- Will add media tomorrow
+- Plans:
+  * Freeze down aliqouts (2-3x10^6 per vial needed, ideally freeze down 3x vials)
+  * Plan barcoding experiment
+  
 
 
   
