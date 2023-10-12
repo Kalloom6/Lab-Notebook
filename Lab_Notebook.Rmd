@@ -7,6 +7,8 @@ toc: true
 toc_float: true
 urlcolor: blue
 ---
+\newpage
+
 # Wednesday 15-03-2023  
 ## Cell Culture 
 - Given N2/RBL1/BLLW PDX line from Chris Steele
@@ -1085,6 +1087,27 @@ dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))
   * Freeze down aliqouts (2-3x10^6 per vial needed, ideally freeze down 3x vials)
   * Plan barcoding experiment
   
+# Thursday 11-10-2023 
+
+## Cell Culture
+
+### Ramos-BC4
+- Infected, will need to grab another vial
+- Is the Stock infected? Will thaw 2 different pools this time
+
+### A20
+- 1 x T75 + 1 x T175 both about ~60% confluent
+- Media is slughtly turbid, Jamie did a visual check and cells seem clean (A20 have a tendency towards slight turbidity - Jamie)
+- Will add 10mL of AR-2 and observe till tomorrow
+- If clean:
+  * Freeze down 3 vials from T175
+  * Set up EC50s with left over cells (Vin/Dox/Meth)
+  * Split
+
+### N4
+- Look healthy, media clean
+- About ~40-50% confluent
+- Will add 10mL of AR-2 and observe on Friday
 
 
   
