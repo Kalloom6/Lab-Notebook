@@ -2189,7 +2189,39 @@ print(p)
 - Resuspended both DMSO and Treatment cells in fresh AR-3
 - Allow to grow 
 
+# Monday 06-11-2023
+## Cell Culture
 
+### A20
+- Split 1/2
+- AR-3
+
+### N4.1
+- Healthy/growing
+- Leave till tomorrow
+
+### N4.2
+- Healthy/growing
+- Leave till tomorrow
+
+### Ramos-BC 1
+- 
+
+### Ramos-BC 5
+- 
+
+### Ramos-BC 6
+- 
+
+### Seed Feeders
+- For WILDseq transduction of N4 (tuesday?)
+- 
+
+## Drug Pressure Experiment 1: RAMOS Day 7
+- Split DMSO cells 1/6
+- Add 1mL AR-3 to treatment cells
+  * treatment cells still sick, allow to grow for a few more days
+  * Perhaps transfer to smaller well?
 
 
 
