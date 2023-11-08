@@ -18,12 +18,14 @@ toc_float: true
 ## Materials
 - For 40 samples
 
-|Component       |Expected Volume/experiment|
-|:--------------|----|
-| 5x SSIV Buffer | 4 $\mu$L |
-| SSIV RT        | 44 $\mu$L |
-| 100 mM DTT     | 44 $\mu$L |
-| RNAse Out      | 44 $\mu$L |
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| 5x SSIV Buffer | 200 $\mu$L | |
+| SSIV RT        | 50 $\mu$L |   |
+| 100 mM DTT     | 50 $\mu$L |    |
+| RNAse Out      | 50 $\mu$L |   |
+| Thermolabile Exonuclease I  | 1 $\mu$L |          |
+| NEBuffer r3.1*        | 2 $\mu$L |          |
 
 
 ## RT Protocol  
@@ -65,13 +67,12 @@ toc_float: true
 
 ## Materials
 
-|Component       |Expected Volume/experiment| Check |
-|:--------------|----|-----------------|
-| 5x SSIV Buffer | 4 $\mu$L |          |
-| SSIV RT        | 1 $\mu$L |          |
-| 100 mM DTT     | 1 $\mu$L |          |
-| RNAse Out      | 1 $\mu$L |          |
-
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM WS_RT-PCR1_Fwd  | 70 $\mu$L |   -       |
+| 10uM WS_RT-PCR1_Rev | 70 $\mu$L |     -     |
+| DNAse/RNAse H20 | 550 $\mu$L |          |
+| Kapa Hifi HotStart Ready Mix (2X) | 1200 $\mu$L |  KK2601  |
 
 ## PCR1 Protocol  
 
@@ -104,6 +105,40 @@ toc_float: true
 Hold Step |Step 6: 12C    | Hold |  
 
 \center __10-25 cycles of steps 2-4__  \center
+
+
+Clean up reaction using Ampure beads and check product size and yield on tapestation
+
+# Bead Clean Up
+## Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+## Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+## Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation. 
+**Expected size = 165-172bp**
+
+
+
 
 
 
