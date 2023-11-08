@@ -6,7 +6,7 @@ output: pdf_document
 toc: true
 toc_float: true
 ---
-
+\newpage
 # Reverse Transcription
 ## Overview
 - cDNA synthesis from RNA template
@@ -59,7 +59,7 @@ toc_float: true
 10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
 11. Dilute final cDNA 1:2 with DNAse/RNAse-free water.
 
-
+\newpage
 # PCR Step 1
 ## Overview
 - Aim to keep number of cycles at a minimum. 
@@ -109,6 +109,7 @@ Hold Step |Step 6: 12C    | Hold |
 
 Clean up reaction using Ampure beads and check product size and yield on tapestation
 
+\newpage
 # Bead Clean Up
 ## Overview
 - Clean PCR reaction by removing leftover primers
@@ -134,15 +135,15 @@ Clean up reaction using Ampure beads and check product size and yield on tapesta
 10.	Add 15 ul EB buffer and resuspend beads by pipetting
 11.	Incubate 2min room temp
 12.	Place on magnet and remove eluate
-13. Assess PCR product size, contamination and concentration on tapestation. 
+13. Assess PCR product size, contamination and concentration on tapestation.   
 **Expected size = 165-172bp**
 
-# PCR 
+\newpage 
 # PCR Step 2
 ## Overview
 - PCR to index samples for sequencing by attaching UMI 
-- VERY IMPORTANT to accurately record which samples receive which adaptors
-  *For
+- VERY IMPORTANT to accurately record which samples receive which adaptors  
+  *[Guide for Index Adaptor Pooling](https://support-docs.illumina.com/SHARE/IndexAdaptersPooling/Content/SHARE/FrontPages/IndexAdapterPooling.htm) 
 
 ## Materials
 
