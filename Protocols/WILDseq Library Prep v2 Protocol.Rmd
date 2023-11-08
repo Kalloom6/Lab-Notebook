@@ -138,6 +138,56 @@ Clean up reaction using Ampure beads and check product size and yield on tapesta
 **Expected size = 165-172bp**
 
 # PCR 
+# PCR Step 2
+## Overview
+- PCR to index samples for sequencing by attaching UMI 
+- VERY IMPORTANT to accurately record which samples receive which adaptors
+  *For
+
+## Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM Nxxx Nextera i7 adapter  | - |   -       |
+| 10uM Sxxx Nextera i5 adapter | - |     -     |
+| DNAse/RNAse H20 | 1000 $\mu$L |          |
+| Kapa Hifi HotStart Ready Mix (2X) | 1200 $\mu$L |  KK2601  |
+
+
+## PCR2 Protocol  
+1. Prepare samples according to the following table:
+  - Keep careful note of which adaptors are added to which sample
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM Nxxx Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM Sxxx Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __8 cycles of steps 2-4__  \center
+
+3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
+- If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
+
+4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
+
+
+
+
 
 
 
