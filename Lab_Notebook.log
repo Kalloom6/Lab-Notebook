@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.11)  6 NOV 2023 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.11)  9 NOV 2023 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,7 +682,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Lab_Notebook_files/figure-latex/unnamed-chunk-1-1.pdf, id=409, 449.68pt x 304.
+<Lab_Notebook_files/figure-latex/unnamed-chunk-1-1.pdf, id=457, 449.68pt x 304.
 13625pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type 
 pdf)
@@ -698,7 +698,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Lab_Notebook_files/figure-latex/unnamed-chunk-5-1.pdf, id=457, 449.68pt x 294.
+<Lab_Notebook_files/figure-latex/unnamed-chunk-5-1.pdf, id=505, 449.68pt x 294.
 09875pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type 
 pdf)
@@ -737,7 +737,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 671--673
  []
 
 [11]
-<Lab_Notebook_files/figure-latex/EC50 2 Cell Line Plate Map-1.pdf, id=510, 447.
+<Lab_Notebook_files/figure-latex/EC50 2 Cell Line Plate Map-1.pdf, id=558, 447.
 6725pt x 309.155pt>
 File: Lab_Notebook_files/figure-latex/EC50 2 Cell Line Plate Map-1.pdf Graphic 
 file (type pdf)
@@ -882,7 +882,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 950--952
 
 [15]
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg, id=590, 481.8pt x 481.8pt>
+0_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg, id=638, 481.8pt x 481.8pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg Graphic file (type jpg)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -892,7 +892,7 @@ Turner Lab/Data/EC50/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg  used
  on input line 1035.
 (pdftex.def)             Requested size: 258.37431pt x 258.37431pt.
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg, id=591, 481.8pt x 481.8pt>
+0_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg, id=639, 481.8pt x 481.8pt>
 
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg Graphic file (type jpg
@@ -908,7 +908,7 @@ Overfull \hbox (49.21582pt too wide) in paragraph at lines 1035--1037
 [][] [] 
  []
 
-<Lab_Notebook_files/figure-latex/unnamed-chunk-8-1.pdf, id=592, 447.6725pt x 30
+<Lab_Notebook_files/figure-latex/unnamed-chunk-8-1.pdf, id=640, 447.6725pt x 30
 9.155pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type 
 pdf)
@@ -921,7 +921,7 @@ ab/Data/EC50/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg> </Users/call
 um/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
 0_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg>]
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_230623/N2_CYC_EC50.jpg, id=606, 481.8pt x 481.8pt>
+0_230623/N2_CYC_EC50.jpg, id=654, 481.8pt x 481.8pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_230623/N2_CYC_EC50.jpg Graphic file (type jpg)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -930,7 +930,7 @@ Package pdftex.def Info: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/
 Turner Lab/Data/EC50/EC50_230623/N2_CYC_EC50.jpg  used on input line 1102.
 (pdftex.def)             Requested size: 258.37431pt x 258.37431pt.
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_230623/RBL1_CYC_EC50.jpg, id=607, 481.8pt x 481.8pt>
+0_230623/RBL1_CYC_EC50.jpg, id=655, 481.8pt x 481.8pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_230623/RBL1_CYC_EC50.jpg Graphic file (type jpg)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -962,7 +962,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1401--1403
  []
 
 [20] [21] [22]
-<Lab_Notebook_files/figure-latex/unnamed-chunk-13-1.pdf, id=694, 449.68pt x 288
+<Lab_Notebook_files/figure-latex/unnamed-chunk-13-1.pdf, id=742, 449.68pt x 288
 .07625pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type
  pdf)
@@ -971,7 +971,7 @@ Package pdftex.def Info: Lab_Notebook_files/figure-latex/unnamed-chunk-13-1.pdf
   used on input line 1675.
 (pdftex.def)             Requested size: 449.69261pt x 288.08432pt.
 [23 <./Lab_Notebook_files/figure-latex/unnamed-chunk-13-1.pdf>]
-<Lab_Notebook_files/figure-latex/unnamed-chunk-16-1.pdf, id=709, 449.68pt x 265
+<Lab_Notebook_files/figure-latex/unnamed-chunk-16-1.pdf, id=757, 449.68pt x 265
 .99374pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type
  pdf)
@@ -980,7 +980,7 @@ Package pdftex.def Info: Lab_Notebook_files/figure-latex/unnamed-chunk-16-1.pdf
   used on input line 1739.
 (pdftex.def)             Requested size: 449.69948pt x 266.00525pt.
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_231013/A20_Doxorubicin_EC50_231013.jpg, id=710, 481.8pt x 481.8pt>
+0_231013/A20_Doxorubicin_EC50_231013.jpg, id=758, 481.8pt x 481.8pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_231013/A20_Doxorubicin_EC50_231013.jpg Graphic file (type jpg)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -990,7 +990,7 @@ Turner Lab/Data/EC50/EC50_231013/A20_Doxorubicin_EC50_231013.jpg  used on input
  line 1781.
 (pdftex.def)             Requested size: 258.37431pt x 258.37431pt.
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_231013/A20_Meth_EC50_231013_Plate2.pdf, id=711, 505.89pt x 505.89pt>
+0_231013/A20_Meth_EC50_231013_Plate2.pdf, id=759, 505.89pt x 505.89pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_231013/A20_Meth_EC50_231013_Plate2.pdf Graphic file (type pdf)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -1000,7 +1000,7 @@ Turner Lab/Data/EC50/EC50_231013/A20_Meth_EC50_231013_Plate2.pdf  used on input
  line 1799.
 (pdftex.def)             Requested size: 258.371pt x 258.371pt.
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_231013/A20_Cyc_EC50_231013_Plate2.pdf, id=712, 505.89pt x 505.89pt>
+0_231013/A20_Cyc_EC50_231013_Plate2.pdf, id=760, 505.89pt x 505.89pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_231013/A20_Cyc_EC50_231013_Plate2.pdf Graphic file (type pdf)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -1027,7 +1027,7 @@ l.1880   T
           hawed Ramos-BC 1, 5, 6 </Users/callum/Library/CloudStorage/OneDrive-U
 niversityofCambridge/Turner Lab/Data/EC50/EC50_231013/A20_Cyc_EC50_231013_Plate
 2.pdf>] [27] [28] [29]
-<Lab_Notebook_files/figure-latex/unnamed-chunk-19-1.pdf, id=820, 449.68pt x 288
+<Lab_Notebook_files/figure-latex/unnamed-chunk-19-1.pdf, id=869, 449.68pt x 288
 .07625pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type
  pdf)
@@ -1036,7 +1036,7 @@ Package pdftex.def Info: Lab_Notebook_files/figure-latex/unnamed-chunk-19-1.pdf
   used on input line 2353.
 (pdftex.def)             Requested size: 449.69261pt x 288.08432pt.
 [30] [31 <./Lab_Notebook_files/figure-latex/unnamed-chunk-19-1.pdf>]
-<Lab_Notebook_files/figure-latex/unnamed-chunk-22-1.pdf, id=850, 449.68pt x 265
+<Lab_Notebook_files/figure-latex/unnamed-chunk-22-1.pdf, id=898, 449.68pt x 265
 .99374pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file (type
  pdf)
@@ -1046,7 +1046,7 @@ Package pdftex.def Info: Lab_Notebook_files/figure-latex/unnamed-chunk-22-1.pdf
 (pdftex.def)             Requested size: 449.69948pt x 266.00525pt.
 [32 <./Lab_Notebook_files/figure-latex/unnamed-chunk-22-1.pdf>]
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_231027/A20_meth_231027_plate2t.jpeg, id=870, 481.8pt x 481.8pt>
+0_231027/A20_meth_231027_plate2t.jpeg, id=918, 481.8pt x 481.8pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_231027/A20_meth_231027_plate2t.jpeg Graphic file (type jpg)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -1056,7 +1056,7 @@ Turner Lab/Data/EC50/EC50_231027/A20_meth_231027_plate2t.jpeg  used on input li
 ne 2521.
 (pdftex.def)             Requested size: 258.37431pt x 258.37431pt.
 <~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC5
-0_231027/A20_cyc_231027_plate2b.jpeg, id=871, 481.8pt x 481.8pt>
+0_231027/A20_cyc_231027_plate2b.jpeg, id=919, 481.8pt x 481.8pt>
 File: ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC5
 0/EC50_231027/A20_cyc_231027_plate2b.jpeg Graphic file (type jpg)
 <use ~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50
@@ -1078,7 +1078,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2574--2575
 
  []
 
-<Lab_Notebook_files/figure-latex/unnamed-chunk-23-1.pdf, id=883, 449.68pt x 292
+<Lab_Notebook_files/figure-latex/unnamed-chunk-23-1.pdf, id=931, 449.68pt x 292
 .09125pt>
 File: Lab_Notebook_files/figure-latex/unnamed-chunk-23-1.pdf Graphic file (type
  pdf)
@@ -1096,16 +1096,16 @@ Overfull \hbox (4.8809pt too wide) in paragraph at lines 2913--2913
  []|\T1/lmr/m/n/10 (-20) Cyclophosphamide| 
  []
 
-[36] [37] (./Lab_Notebook.aux)
+[36] [37] [38] [39] [40] (./Lab_Notebook.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16977 strings out of 476025
- 278128 string characters out of 5790017
+ 17086 strings out of 476025
+ 279472 string characters out of 5790017
  1871388 words of memory out of 5000000
- 36517 multiletter control sequences out of 15000+600000
+ 36567 multiletter control sequences out of 15000+600000
  569599 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,10n,81p,1009b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1117,10 +1117,10 @@ ts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pu
 blic/lm/lmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr
 7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Lab_Notebook.pdf (37 pages, 1724373 bytes).
+Output written on Lab_Notebook.pdf (40 pages, 1732025 bytes).
 PDF statistics:
- 1671 PDF objects out of 1728 (max. 8388607)
- 1559 compressed objects within 16 object streams
- 508 named destinations out of 1000 (max. 500000)
- 34363 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1848 PDF objects out of 2073 (max. 8388607)
+ 1731 compressed objects within 18 object streams
+ 567 named destinations out of 1000 (max. 500000)
+ 34555 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -2205,23 +2205,107 @@ print(p)
 - Leave till tomorrow
 
 ### Ramos-BC 1
-- 
+- Froze down
+- 3x vials
+- FBS +10% DMSO
 
 ### Ramos-BC 5
-- 
+- Froze down
+- 3x vials
+- FBS +10% DMSO
 
 ### Ramos-BC 6
-- 
+- Froze down
+- 3x vials
+- FBS +10% DMSO 
 
 ### Seed Feeders
 - For WILDseq transduction of N4 (tuesday?)
-- 
+- 1x 4 wells of 6-well plate, 15wells of 96-well plate
+- Dilute in 8ml
+- 2mL/well of 6well
+- 90$\mu$L/well of 96well plate 
 
 ## Drug Pressure Experiment 1: RAMOS Day 7
 - Split DMSO cells 1/6
 - Add 1mL AR-3 to treatment cells
   * treatment cells still sick, allow to grow for a few more days
   * Perhaps transfer to smaller well?
+  
+# Tuesday 07/11/2023
+## Made New Media: AR-4
+1. Made new media: AR-4
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% |
+
+## Cell Culture
+### A20
+- Split 1/6
+- AR-4
+
+### N4.1
+- Healthy/growing
+- Leave till tomorrow
+
+### N4.2
+- Froze down
+- 2x vials
+- FBS +10% DMSO
+
+## Drug Pressure Experiment 1: RAMOS Day 5 
+- Split D 1/6
+
+## Attempt 3: Transduce N4 with WILDseq Library
+1. Made 2mL cell suspension of 4x10^6^ cells/mL 
+- N4: took 10ml of 20ml CS, spun down and resuspended in 2mL AR-4
+2. Add 0.5mL of cell suspension to 4 wells of 12 well plate
+3. Add virus mixture (listed below) to respective wells:
+
+| Well ID | Virus | Media | HEPES |
+| :-----: | :---: | :----:|:-----:|
+| A1 | 250 $\mu$L | 225 $\mu$L |25 $\mu$L |
+| A2 | 150 $\mu$L | 150 $\mu$L | 25 $\mu$L |
+| A3 | 50 $\mu$L | 50 $\mu$L  | 25 $\mu$L |
+| A4 | 0 $\mu$L | 0 $\mu$L  | 25 $\mu$L |  
+
+4. Centrifuged cells at 1000 x g for 1.5 hours at 32C
+5. Resuspended cells and transferred to 6 well plate
+- N4 were put on feeder plate which was seeded 06-11-2023
+
+# Wednesday 07/11/2023
+## Attempt 3: Barcoding N4
+- Changed Media
+- Cells look healthy
+## Drug Pressure Experiment 1: RAMOS Day 6
+- Checked treatment cells with trypan blue
+- Everything was dead
+- Ended experiment: will reconsider approach
+  * Treat Ramos with individual agents as well as combination
+  * Treat for 3 days and recover or 12 days and recover(?)
+  
+# Thursday 07/11/2023
+## Attempt 3: Barcoding N4
+- Booked sort for tomorrow
+- Changed media
+- Sanity check on E6 Fortessa
+## Cell Culture
+
+### A20
+
+### N4
+
+
+
+
+
+
+
+
 
 
 
