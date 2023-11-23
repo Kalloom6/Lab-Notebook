@@ -2479,15 +2479,56 @@ Change media:
 4. Transferred into new 12-well plate
 
 
-# Friday 14/11/2023
+# Friday 17/11/2023
 
-## Cell Cutlure
+## Cell Culture
 **INFECTION**
 - RAMOS-BC1 and RAMOS-DPv2 infected
 - Threw out cultures and AR-4
 - N4 seemingly unaffected
 
+# Monday 20/11/2023
 
+## WILDseq - Mouse Experiment 1
+### Overview
+- Chris Steel injected mice with barcoded N2 cells
+- He applied various treatment conditions and tracked tumour growth over time
+- Collected tumours at humane endpoint for barcode analysis and scRNA-seq
+### RNA extraction WILDseq-ME1
+- Performed RNA extraction of tissue/cell samples according to the following kit:
+
+| Sample ID | Treatment/Sample | ng/uL | i7 index | i5 index |
+| :-----: | :---: | :----:|:-----:|:-----:| :-----:|
+| 1 | Cyclophosphamide | 773.7 | N701 | S502 |
+| 2 | Cyclophosphamide  | 545.3 | N702 | S502 |
+| 3 | Cyclophosphamide | 903.6  | N703 | S502 |
+| 4 | Cyclophosphamide | 1056.1 |N704 | S502 |
+| 5 | Cyclophosphamide | 959.1 |N705 | S502 |
+| 6 | Combination | 730.1 | N706 | S502 |
+| 7 | Combination | 602.3 | N707 | S502 |
+| 8 | Combination | 449.6  | N710 | S502 |
+| 9 | Combination| 1002.1 | N701 | S503 |
+| 10 | Combination | 1929.2 | N702 | S503 |
+| 11| Methotrexate | 861.5 | N703 | S503 |
+| 12 | Methotrexate | 1110.4  | N704 | S503 |
+| 13 | Methotrexate | 1171.0 | N705 | S503 |
+| 14 | Methotrexate  | 1347.8 | N706 | S503 |
+| 15 | Methotrexate  | 891.4  | N707 | S503 |
+| 16 | Vehicle | 374.5 | N710 | S503 |
+| 17 | Vehicle | 911.2 | N701 | S505 |
+| 18 | Vehicle | 829.8 | N702 | S505 |
+| 19 | Vehicle | 600.1  | N703 | S505 |
+| 20 | Vehicle | 750.3 | N704 | S505 |
+| 21 | Baseline | 401.5 | N705 | S505 |
+| 22 | Baseline | 443.3 | N706 | S505 |
+| 23 | Baseline  | 373.4  | N707 | S505 |
+| 24 | Baseline | 444.5  | N710 | S505 |
+| 25 | Baseline | 267.6 | N701 | S506 |
+| 26 | BLLW 14K | 378.7  | N702 | S506 |
+| 27 | BLLW 2K | 362.7  | N703 | S506 |
+| 28 | BLLW 1K | 563.8  | N704 | S506|
+| 29 | Methotrexate (outlier) | 348.1 | N705 | S506|
+| 30 | Combo | 380.8 | N706 | S506 |
 
 
 
