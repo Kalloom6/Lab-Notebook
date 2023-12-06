@@ -2530,10 +2530,122 @@ Change media:
 | 29 | Methotrexate (outlier) | 348.1 | N705 | S506|
 | 30 | Combo | 380.8 | N706 | S506 |
 
+# Tuesday 21/11/2023
+## WILDseq - Mouse Experiment 1: RT
+
+### RT Overview
+- cDNA synthesis from RNA template
+- Include a -RT control if possible
+  * Mix several samples and include extra H20 instead of Reverse Transcriptase
+  * PCR this sample as well, checks for contamination of genomic DNA, mastermix, ect. 
+  * Can also use as negative control to determine product size and yield on tapestation
+
+### RT Protocol  
+1. In PCR strip tubes, prepare 1-5 $\mu$g of RNA in a total volume of 10 $\mu$l of RNAse/DNAase-free water.
+2. Add 1 $\mu$l of WS_RT_UMI_NexteraR2 primer (2$\mu$M stock)
+3. Add 1 $\mu$l dNTPs (10 mM each). 
+4. Denature at 65 C for 5 mins in the PCR machine, then straight onto ice for at least 2 mins, spin briefly to get liquid to the bottom of the tube.
+5. Prepare mastermix of RT enzyme and buffers. 1.1x the number of samples.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L | 132 $\mu$L      |
+| SSIV RT        | 1 $\mu$L |    33 $\mu$L      |
+| 100 mM DTT     | 1 $\mu$L |    33 $\mu$L      |
+| RNAse Out      | 1 $\mu$L |     33 $\mu$L     |
+
+6. Add 7 $\mu$l of RT MM prepared above to each sample and mix, spin briefly to get liquid to the bottom of the tube.
+   - Spin briefly to get liquid to bottom of the tube 
+7. In the PCR machine incubate at 53 C for 10 mins followed by 80 C for 10 mins.
+8. Add 1 $\mu$l Themolabile Exonuclease I (NEB M0568) to remove excess RT primer.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |     33 $\mu$L     |
+| NEBuffer r3.1*        | 2 $\mu$L |    66 $\mu$L      |
+
+\center **Most PCR buffers are compatible** \center
+
+9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube
+10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
+11. Dilute final cDNA 1:2 with DNAse/RNAse-free water.
+- 44 $\mu$L water/reaction
+
+## WILDseq Primers
+- Received WS primers from Kirsty Sawika
+
+List primers/nmole/reconstituive volume
+
+# Wednesday 21/11/2023
+## WILDseq - Mouse Experiment 1: PCR1 Attempt 1
+### Overview
+- Aim to keep number of cycles at a minimum. 
+- Forward primer is an equal mix of primers with different length spacers to generate diversity required for sequencing.
+
+### PCR1 Protocol  
+
+- Set up PCR reactions on ice
+- One reaction per sample plus -RT control
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume| Master Mix |
+|:--------------|----| ------- |
+| 10uM WS_RT-PCR1_Fwd | 1.5 $\mu$L | 49.5 $\mu$L |
+|10uM WS_RT-PCR1_Rev | 1.5 $\mu$L | 49.5 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L | 396 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L | 825 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L | 
 
 
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
 
 
+Clean up reaction using Ampure beads and check product size and yield on tapestation
+
+
+# Bead Clean Up
+## Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
 
 
 
