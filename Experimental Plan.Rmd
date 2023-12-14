@@ -1,0 +1,82 @@
+---
+title: "Experimental Plan"
+author: "Callum Malcolm"
+date: "2023-12-07"
+output: pdf_document
+toc: true
+toc_float: true
+urlcolor: blue
+
+---
+
+\newpage
+
+# Project 1: Modelling the BL Tumour Microenviroment
+
+## Overview
+- Using A20 to model BL immune TME
+  * Look specifically at T-cell infiltration
+  * Immune evasion mechanisms deployed by BL 
+- Compare results to patient data
+- Apply findings to humanised mouse models of BL PDX
+
+## Background
+- The impact of immune TME in BL is unclear
+- BL 
+
+## Experimental Plan
+
+### E1: NSG vs BALB/C A20 injection
+#### E1 Overview
+- Compare between immunocompetent and immunocomprimised mice
+- Basic actors to compare
+  * Tumour growth rate
+  * Tumour size
+  
+#### IHC Panel
+- Compare markers between tumour types
+- Burkitt IHC indentification:
+  * CD10+ (B-Cell Germinal Centre)
+  * Bcl-2-
+  * Ki-67%hi (proliferation index)
+  
+  Potential IHC Panel Markers
+  
+| Cell Type | Marker | 
+| :-------: | :------: | 
+| Proliferation marker | Ki67 |
+| B cell | CD20 |
+|   T cells (all)   | CD3 |
+| T Cells (cytotoxic) | CD8 |
+| T cells (helper) | CD 4 |
+| Dendritic Cells | CD11c |
+| Macrophage | F4/80 |
+
+#### Flow Panel
+- Options are:
+  * Standard T Cell
+  * TRegs
+  * B-cells
+  * DC Mono CD11c
+  * Th17
+  * TfH
+  
+ Standard T Cell
+  
+| Cell Type | Marker | 
+| :-------: | :------: | 
+| T Memory | CXCR3 |
+| Naive Immune Cells | CCR7 |
+|   Naive T Cells   | CD45RA |
+| Th17 | CCR6 |
+| GC B-Cells | CD38 |
+| TRegs (Helper) | CD4 |
+| Macrophage | HLA-DR |
+|  T Cells (all)   | CD3 |
+| T Cells (Cytoxic)  | CD8 |
+
+
+
+
+
+
