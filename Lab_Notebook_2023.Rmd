@@ -1,0 +1,2654 @@
+---
+title: "Turner Lab Notebook"
+author: "Callum Malcolm"
+output:
+  pdf_document: default
+toc: true
+toc_float: true
+urlcolor: blue
+---
+\newpage
+
+# \textbf MARCH 2023
+
+# Wednesday 15-03-2023  
+## Cell Culture 
+- Given N2/RBL1/BLLW PDX line from Chris Steele
+
+## N2 Growth Curve  
+Looking to compare N2 growth on and off feeders  
+1. Seeded 2mL of N2/BLLW cell suspension at 0.25x10^6^cells/mL  
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+A <- "- FDC"
+B <- "+ FDC"
+Plate_ID <- "N2/BLLW Growth Curve Plate Map"
+
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(ggprism)
+
+drug_list = matrix(c(A,A,A,B,B,B), ncol = 3, nrow = 2, byrow = TRUE)
+
+
+df1 <- as.data.frame(drug_list)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:3, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = Plate_ID, x = "Col", y = "Row") + 
+  theme_bw() + 
+  theme_prism("waves")+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+```
+
+# Thursday 16-03-2023  
+## N2/BLLW Growth Curve Day 1  
+- Cells gently mixed
+- 30 $\mu$L cell suspension taken and counted
+- Only counted 1 square and multiplied by 4
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+counts <- c(25, 26, 12, 15, 14, 6, 6, 6, 5, 3, 3, 6)
+Cell_Line1 <- "N2"
+Cell_Line2 <- "BLLW"
+
+cl1 <- rep(Cell_Line1, times = 6)
+cl2 <- rep(Cell_Line2, times = 6)
+row1 <- c(rep(Cell_Line1, times = 6), rep(Cell_Line2, times = 6))
+row2 <- c(rep("+ FDC", times = 3), rep("- FDC", times = 3), rep("+ FDC", times = 3), rep("- FDC", times = 3))
+countx10 <- function(x){
+  y <- (x * 4)*20000
+  return(y)
+}
+cpmL <- countx10(counts)
+Combo <- function(A,B,C,D){
+  combo <- data.frame(A,B,C,D)
+  return(combo)
+}
+table <- Combo(row1, row2, counts, cpmL)
+colnames(table) <- c('Cell Line','FDC Status','Count', 'Cell Number')
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+table %>%
+  kable(.)
+#%>% kable_styling(bootstrap_options = "striped", full_width = F)
+
+```
+
+# Friday 17-03-2023  
+## N2/BLLW Growth Curve Day 2
+- Cells gently mixed
+- 30 $\mu$L cell suspension taken and counted
+- Only counted 1 square and multiplied by 4
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+counts <- c(36, 28, 38, 61, 38, 16, 3, 5, 5, 1, 0, 1)
+Cell_Line1 <- "N2"
+Cell_Line2 <- "BLLW"
+
+cl1 <- rep(Cell_Line1, times = 6)
+cl2 <- rep(Cell_Line2, times = 6)
+row1 <- c(rep(Cell_Line1, times = 6), rep(Cell_Line2, times = 6))
+row2 <- c(rep("+ FDC", times = 3), rep("- FDC", times = 3), rep("+ FDC", times = 3), rep("- FDC", times = 3))
+countx10 <- function(x){
+  y <- (x * 4)*20000
+  return(y)
+}
+cpmL <- countx10(counts)
+Combo <- function(A,B,C,D){
+  combo <- data.frame(A,B,C,D)
+  return(combo)
+}
+table <- Combo(row1, row2, counts, cpmL)
+colnames(table) <- c('Cell Line','FDC Status','Count', 'Cell Number')
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+table %>%
+  kable(.) 
+#%>% kable_styling(bootstrap_options = "striped", full_width = F)
+
+```
+
+## Split Cells  
+| Cell Line | Cells/mL | Cells/mL Seeded| CS volume |Final Volume| Seeded Cells/mL |
+| :-------: | :------: | :-------------:| :--------:| :---------:|:---------------:|
+| N2        | 8.8x10^5^| 3x10^5^.      | 6.8 mL   | 12 mL      | 3x10^5^ |
+| RBL1      | 8.6x10^5^| 3x10^5^.      | 11.6 mL   | 12 mL      | 5x10^5^ |
+
+# Saturday 18-03-2023 
+## N2/BLLW Growth Curve Day 3  
+- Counted by Chris
+
+# Sunday 18-03-2023 
+## N2/BLLW Growth Curve Day 4  
+- Counted by Chris 
+
+# Monday 20-03-2023  
+## N2 Growth Curve Day 5
+- BLLW were all dead, experiment stopped
+- Cells gently mixed
+- 30 $\mu$L cell suspension taken and counted
+- Only counted 1 square and multiplied by 4  
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+counts <- c(146, 112, 132, 112, 155, 141)
+Cell_Line1 <- "N2"
+
+cl1 <- rep(Cell_Line1, times = 6)
+row2 <- c(rep("+ FDC", times = 3), rep("- FDC", times = 3))
+countx10 <- function(x){
+  y <- (x * 4)*20000
+  return(y)
+}
+cpmL <- countx10(counts)
+Combo <- function(A,B,C,D){
+  combo <- data.frame(A,B,C,D)
+  return(combo)
+}
+table <- Combo(cl1, row2, counts, cpmL)
+colnames(table) <- c('Cell Line','FDC Status','Count', 'Cell Number')
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+table %>%
+  kable(.) 
+#%>% kable_styling(bootstrap_options = "striped", full_width = F)
+
+```
+## Split Cells 
+- Split cell lines N2/RBL1/JIRE
+- Dirty split 1:2
+
+## Seed BLLW  
+- Given BLLW aliquot from Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel)
+
+# Tuesday 21-03-2023
+
+**Large Infection in TC**  
+- N2 Growth Curve stopped
+
+# Friday 24-03-2023  
+
+## Seed Cells - N2/RBL1/JIRE  
+- Vials given by Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel)
+
+# Monday 27-03-2023 
+## Split Cells
+- Split cell lines N2/RBL1/JIRE
+- Dirty split 1:3 
+
+# Wednesday 29-03-2023 
+## Split Cells
+- Split by Chris Steel. 
+
+# Friday 31-03-2023 
+## Split Cells
+- Split cell lines N2/RBL1/JIRE
+- Dirty split 1:4
+
+# APRIL 2023
+
+# Monday 03-04-2023
+
+**Large Infection in TC**  
+
+## Seed Cells - N2/RBL1/JIRE  
+- Vials given by Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel) 
+
+## Seed EC50
+DNW
+- N2/JIRE/RBL1  
+- Vin/Dactolisib
+
+# Wednesday 05-04-2023   
+## Seed Cells - N2/RBL1/JIRE  
+- Vials given by Chris Steel
+- Thawed and resuspended in 12 mL media
+- Added to T75 pre-seeded with FDC cells (from Chris Steel)
+
+
+# Thursday 06-04-2023 
+
+## Collect EC50 Plate 
+    - Plate ID: EC50_230619_Plate1
+    - DNW
+    
+# Tuesday 11-04-2023 
+
+## Seed EC50_230411
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Dactolisib"
+C2 <- "Vincristine"
+EC50_ID <- "EC50_230411_drug_plating"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+Drug Dilutions
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Dactolisib"
+initial_concentration <- 20
+dilution_factor <- 10
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Vincristine"
+initial_concentration <- 30
+dilution_factor <- 10
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+   - 3 plates seeded
+   - Plate 1: N2
+   - Plate 2: JIRE
+   - Plate 3: RBL1
+   
+# Wednesday 12-04-2023
+
+## Cell Culture  
+- Thaw RBL1  
+
+## Side Population - N2_230412
+- Hoescht  
+  * 2.5 / 2.75 / 3  
+  * DNW
+  
+
+
+
+\
+\
+\
+\
+# MAY 2023
+
+# Tuesday 02-05-2023  
+
+## Seeding Cells - N2/RBL1/RAMOS
+
+1. Thawed N2, RBL1, and RAMOS into T75 flasks  
+  Note: N2 and RBL1 flaskes seeded with feeders
+
+# Wednesday 03-05-2023
+
+## Split Cells
+
+| Cell Line | Cells/mL | Cells/mL Seeded| CS volume |Final Volume|Last day split| P number|
+| :-------: | :------: | :-------------:| :--------:| :---------:|:------------:|:-------:|
+| N2        | 8.93x10^5^| 3x10^5^.      | 6.71 mL   | 12 mL      |Tues 02-05-23 | 2       |
+| RBL1      | 7.73x10^5^| 3x10^5^.      | 7.76 mL   | 12 mL      |Tues 02-05-23 | 2       |
+
+2. Expanded N2-Barcodes to T175  
+
+3. Seeded feeders into 96-well
+    a. Diluted feeders to 3.2x10^4^ cells/mL
+    b. Add 100$\mu$L cell suspension to each well
+    
+
+# Thursday 04-05-2023     
+    
+    
+    
+    
+
+    
+
+
+
+# Monday 19-06-2023  
+
+## Split Cells
+- Split N2/RBL1/JIRE
+- Added 10 mL media to BLLW  
+    * Lots of dead cells observed 
+      
+## Seed EC50
+- Plate ID: EC50_230619_Plate1   
+- Cylophosphamide (Stock: 20mM) EC50 for N2 and RBL1
+  
+```{r EC50 2 Cell Line Plate Map, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "N2"
+C2 <- "RBL1"
+EC50_ID <- "EC50_230619_plate1"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+
+```
+
+Drug Dilutions
+```{r EC50 Serial Dilutions, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 10
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+# Saturday 20-05-2023  
+
+
+
+
+
+# JUNE 2023
+
+# Tuesday 20-06-2023
+
+## RNA Extraction for SP Test 3 Sample
+- Sample collected:
+- Low number of cells so used Pico-Pure Kit
+- 1 sample (n = 1)
+
+*Note before starting:*  
+  - Pre-heat block to 42C  
+  - Pre-make DNAse treatment master mix (1.1n)  
+  
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| DNAse I Stock | 5 $\mu$L |     5.5 $\mu$L     |
+| DNA Disgestion Buffer | 35 $\mu$L |  38.5 $\mu$L |  
+  
+  **RNA Extraction Pico-Pure Protocol** 
+  
+  1. Extract cells with 100 $\mu$L of Extraction Buffer (XB)  
+    - Resuspend the cell pellet gently by pipetting  
+    - DO NOT VORTEX  
+  2. Incubate at 42C for 30min  
+  3. Centrifuge sample at 3000xg for two minutes  
+  4. Collect supernatant  
+    - Can stop here and freeze RNA at 70C  
+  5. Pre-condition the RNA Purification Column  
+    - Add 250 $\mu$L Conditioning Buffer onto the purification column filter membrane  
+    - Incubate RNA Purification Column with CB for 5min at RT  
+    - Centrifuge purification column at 16000xg for 1 min  
+  6. Pipette 100 $\mu$L of 70% Ethanol (EtOH) into cell extract    
+    - Mix well by pipetting  
+    - DO NOT VORTEX  
+  7. Add cell extract to column  
+  8. Centrifuge column for 2 minutes at 100 x g and then 16000 x g for 30s  
+  9. Pipette 100 $\mu$L Wash Buffer 1 (W1) into the purification column and centrifuge for 1min at 8000 x g  
+  10. Add 40 $\mu$L of DNAse treatment master mix to purification tube
+  - Add directly onto membrane  
+  11. Incubate at RT for 15 min  
+  12. Pipette 40 $\mu$L Wash Buffer 1 (W1) onto purification column membrane and centrifuge at 8000 x g for 15 seconds  
+  13. Pipette 100 $\mu$L Wash Buffer 1 (W2) into purification column membrane and centriguge for one minute at 8000 x g  
+  14. Pipette 100 $\mu$L Wash Buffer 1 (W2) into purification column membrane and centriguge for two minutes at 16000 x g  
+    - Check if any wash buffer remains in column and centrifuge again at 16000 x g for one minute to clear all the liquid  
+  15. Transfer purification column to new 0.5mL tube   
+    - Insert purification column/0.5mL assembly into 1.5mL tube for centrifugation   
+  16. Pipette EB directly onto membrane of the purification column   
+    - Gently touch tip to surface of membrane to ensure maximum absorption of EB into membrane   
+    - Use 11 $\mu$L to 30 $\mu$L EB   
+  17. Incubate purification column for one minute at room temperature  
+  18. Centrifuge column for one minute at 1000 x g to distribute EB in column  
+  19. Centrifuge column for one minute at 16000 x g to elute RNA    
+  20. Started PCR and completed Tapestation
+  
+## Tapestation_230620  
+
+[High-Sensitivity RNA ScreenTape Protocol](https://www.agilent.com/cs/library/usermanuals/public/ScreenTape_HSRNA_QG.pdf)  
+
+[Results](https://drive.google.com/file/d/1_aZi2VKbqw5D8l0CXRS9rjji2gffc3tT/view?usp=share_link)  
+- Inconclusive, proceeded with PCR
+
+## Reverse Transcription
+
+**Notes Before Starting:**  
+
+  * Label PCR strip tubes
+  * Thaw RT reagents
+  * Uses WILDseq specific RT primer
+  * Dilute RT primer to 2$\mu$M  
+    - Do this in a PCR hood
+    - **IMPORTANT** Do not mix primers and carefully note which RT primer is added to which sample
+  * Make RT and ExoI master mixes (MM) before starting  
+    - MM amounts are 1.1n  
+
+**Protocol:**  
+
+*Note:* Used "rt" protocol in callum folder on thermocycler for heating steps  
+
+1. In PCR strip tubes diluted 1-5ug RNA in a total volume of 10 $\mu$L of RNAse/DNAse-free water  
+2. Added 1 ul of RT primer  
+3. Added 1 ul of dNTPs 
+4. Denatured at 65 C for 5 mins in PCR machine  
+5. Added straight to ice for 2 mins  
+6. Spun to get liquid to bottom of tube  
+7. Prepared master mix of RT enzyme and buffers (Made prior to starting)   
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L |  4.4 $\mu$L        |
+| SSIV RT        | 1 $\mu$L | 1.1 $\mu$L        |
+| 100 mM DTT     | 1 $\mu$L | 1.1 $\mu$L           |
+| RNAse Out      | 1 $\mu$L |  1.1 $\mu$L          |
+
+
+8. Added 7 $\mu$L of RT MM prepared above to each sample and mix  
+    - Spun briefly to get liquid to bottom of the tube  
+9. In PCR Machine: incubated at 53C for 10 mins followed by 80C for 10 mins  
+10. Added 3 $\mu$L of ExoI MM to each sample
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |  1.1 $\mu$L      |
+| NEBuffer r3.1*        | 2 $\mu$L |  2.2 $\mu$L         |
+
+<center>
+ * Most PCR buffers are compatible
+</center>
+ 
+11. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube 
+10. Add 1 $\mu$L of RNAse H and incubate at 37C for 20 mins  
+11. Dilute final cDNA 1 in 2 with DNAse/RNAse-free water  
+
+
+## PCR Amplification of cDNA
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume| MM volume |
+|:--------------|----|--------------|
+| Q5 Master Mix | 25 $\mu$L | 
+| P5_R1_fwd (100$\mu$M)| 2.5 $\mu$L |
+|P7_rev                | 2.5 $\mu$L |
+| DNAse/RNAse H20      | 13.5 $\mu$L |
+| Q5 polymerase        | 0.5 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L |  
+
+2. Perform PCR using the following parameters:  
+
+|Steps       |Time|
+|:--------------|----|
+|Step 1: 98C    | 30s |
+| **Step 2: 98C** | **10s**|
+| **Step 3: 61C** | **30s**| 
+| **Step 4: 72C** | **30s**|
+|Step 5: 72C    | 2 min |
+|Step 6: 12C    | Hold |  
+
+<center>
+
+__20-25 cycles of steps 2-4__
+
+</center>
+
+Ran overnight and left at 12C
+
+# Wednesday 21-06-2023  
+
+## Tapestation_230619_SPTest3_cDNA
+
+[High-Sensitivity DNA ScreenTape Protocol](https://www.agilent.com/cs/library/usermanuals/Public/ScreenTape_HSD1000_QG.pdf)  
+
+[Results](https://drive.google.com/file/d/1J8JyF6imxUhW5XPriCVr-1706D86LBfS/view?usp=share_link)    
+  * Did not work, bands present but faint and not at 200bp  
+  * Potential solutions:  
+      - Repeat PCR with increased cycles  
+      - Repeat RNA extration with trizol protocol (Anna)
+      
+# Thursday 22-06-2023  
+
+## Collect EC50 Plate 
+    - Plate ID: EC50_230619_Plate1
+![N2 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_190623/N2_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
+![RBL1 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_190623/RBL1_Cyclophosphamide_EC50_Plot_230619.jpg){#id .class width=55% height=55%}
+
+
+
+# Friday 23-06-23
+
+### Split Cells  
+ 1. Threw out BLLW (all dead)
+ 2. Split JIRE 1/2
+ 3. Split N2/RBL1 1/4
+
+### Seed EC50  
+- EC50 Plate ID: EC50_230623_Plate1
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "N2"
+C2 <- "RBL1"
+EC50_ID <- "EC50_230623_plate1"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+
+```
+
+Drug Dilutions
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+# Monday 26-06-23  
+
+## Collect EC50 Plate 
+    - Plate ID: EC50_230623_Plate1
+![N2 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_230623/N2_CYC_EC50.jpg){#id .class width=55% height=55%}
+![RBL1 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_230623/RBL1_CYC_EC50.jpg){#id .class width=55% height=55%}
+\
+\
+
+**Break for writing MRes Report: 27/06/2023 - 24/07/2023**
+
+
+# JULY 2023
+
+# Monday 24-07-2023
+
+## Seeding Cells - RAMOS/FDC
+### Made New Media: AR-1
+1. Made new media: AR-1
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% |  
+
+2. Seeded Feeders
+- 2 vial of FDC cells thawed
+- Resuspended in 12 mL of media
+- 6 mL of FDC cell suspension were added to 2 seperate T75 flasks (Seeding RBL1/BLLW on 25-07-2023) 
+- Remaining 12 mL of Media were added to T175 (Seeding N2 on 25-07-2023)  
+
+3. Seeded Ramos WILDseq Barcode Pool 2
+- Thawed a vial of RAMOS pool 2 (previously barcorded DATE)
+- Resuspended in 5 mL
+- Spun down 90* for 5min
+- Resuspended in 12 mL of AR-1 media
+- Seeded into T75
+
+**Experimental Plans**   
+
+1. Barcode BLLW/RBL1
+
+2. Set up Drug pressure experiement for RAMOS barcoded cells
+- EC50's for cyclophosphamide and methotrexate need to be completed
+- Drugs to test (EC50):  
+
+| Drug | Concentration | Replicates|
+| :-------: | :------: | :--------:|
+| DMSO   | 1% | 3    | 
+| Doxorubicin | 200nM | 3   | 
+| Methotrexate | 100nM | 3   | 
+| Vincristine | 1nM | 3    | 
+3. Do Side Population Experiement for N2 Barcoded Cells
+- Grow up sorted side pop to avoid issues with low cell numbers  
+
+# Tuesday 25-07-2023  
+## Seed Cells - N2-BC4/RBL1/BLLW/RAMOS-BC1  
+- Got vials from Chris
+- Thawed, resuspended in 6 mL AR-1
+- Spun down at 90* for 5 min
+- Discarded supernatant and resuspended pellet in 12 mL of AR-1
+- Added RBL1/BLLW to T75's pre-seeded with FDC (24-07-2023)
+- Added RAMOS-BC1 to new T75
+  * RAMOS-BC2 from 24-07-2023 was dead
+  * Was taken from -80, New RAMOS vial from LN
+- Added N2 to T125 seeded with FDC (24-07-2023)
+
+# Wednesday 26-07-2023
+## Cell Culture
+- Checked cells, all flasks looked healthy
+- Added media
+  * N2 - 20ml of AR-1
+  * RAMOS - 10 mL of AR-1
+  * RBL1 - 10ml of AR-1
+  * BLLW - 10ml of AR-1
+
+# Thursday 27-07-2023
+## Split Cells - RAMOS
+- Split Ramos 1:2
+- Added 10ml of AR-1 to N2
+- Plan to split RBL1/BLLW tomorrow
+
+## Lucy Drug Randomizer 
+- Randomized drugs for Lucy Hare mouse experiment
+
+| Drug | Identification |
+| :-------: | :------: |
+| Alectinib  | A | 
+| Erda | B | 
+| Vehicle | C | 
+| Alectinib + Erda  | D | 
+
+# Friday 28-07-2023
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+# OCTOBER 2023
+
+# Friday 06-10-2023
+
+## Cell Culture  
+### Made New Media: AR-2
+1. Made new media: AR-2
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% |  
+
+# Monday 09-10-2023
+
+## Cell Culture  
+### Seeded A20  
+- Got A20 from Swetha box: 2nd rack in shared -80  
+- AR-2  
+
+### Seeded FDC  
+  - Seeded feeders, taken from feeder box, irradiated by Chris  
+  - Will seed N4 PDX tomorrow  
+
+# Tuesday 10-10-2023  
+
+## Cell Culture  
+### Seeded N4  
+- Given by Chris
+-AR-2
+- Seeded onto FDC cells from 09-10
+- Future experiments:
+  * Barcode PDX
+  * EC50: Vincristine/Doxorubicin/Methotrexate/Cyclophosphamide (Active)  
+  
+### Seeded RAMOS-BC  
+- Seeded barcoded Ramos cells - Pool #4  
+  * From Chris
+  * LN tank 1 - Rack 5 - box 2nd from Bottom
+- AR-2
+- Future Experiments:  
+  * Combination Drug pressure: Vin/Dox/Meth  
+
+### Checked A20  
+- Look healthy
+- ~40% confluency  
+
+# Wednesday 11-10-2023  
+
+## Cell Culture  
+### A20 Culture
+- ~70% confluent
+- Split A20 in half
+  * Half in 1xT75 and other half in 1xT175
+  * T175 to be frozen down
+  
+### RAMOS-BC4 Culture
+- ~60% confluent
+- Spun down at 400xg for 5 min and resuspended in 20ml AR-2 
+
+### N4 Culture
+- Look healthy, attached to feeders with some floaters
+- Will add media tomorrow
+- Plans:
+  * Freeze down aliqouts (2-3x10^6 per vial needed, ideally freeze down 3x vials)
+  * Plan barcoding experiment
+  
+# Thursday 12-10-2023 
+
+## Cell Culture
+
+### Ramos-BC4
+- Infected, will need to grab another vial
+- Is the Stock infected? Will thaw 2 different pools this time
+
+### A20
+- 1 x T75 + 1 x T175 both about ~60% confluent
+- Media is slughtly turbid, Jamie did a visual check and cells seem clean (A20 have a tendency towards slight turbidity - Jamie)
+- Will add 10mL of AR-2 and observe till tomorrow
+- If clean:
+  * Freeze down 3 vials from T175
+  * Set up EC50s with left over cells (Vin/Dox/Meth)
+  * Split
+
+### N4
+- Look healthy, media clean
+- About ~40-50% confluent
+- Will add 10mL of AR-2 and observe on Friday
+
+# Friday 13-10-2023
+
+## Cell Culture
+### A20
+- Freeze down (10% DMSO in FBS)
+- A20 count: 2.91x10^6^/mL
+  * 2mL + 3mL Media
+- 3 vials frozen and put in LN Tank 6, Rack 5, Box 6
+
+## EC50_231013
+### EC50 Plate ID: EC50_231013_Plate1
+- Doxorubicin top/Vincristine bottom
+ 
+Doxorubicin Stock: 10mM DMSO
+ 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Doxorubicin"
+initial_concentration <- 300
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+Vincristine stock: 30$\mu$M   
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Vincristine"
+initial_concentration <- 10
+dilution_factor <- 1.4
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Doxorubicin"
+C2 <- "Vincristine"
+EC50_ID <- "EC50_231013_plate1"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+
+```
+
+### EC50 Plate ID: EC50_231013_Plate2
+- Methotrexate top/Cyclophosphamide bottom
+ 
+Methotrexate Stock: 10mM DMSO
+ 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Methotrexate"
+initial_concentration <- 500
+dilution_factor <- 2
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+Cyclophosphamide stock: 20 mM DMSO
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.4
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Methotrexate"
+C2 <- "Cyclophosphamide"
+EC50_ID <- "EC50_231013_plate2"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+
+```
+
+# Monday 16-10-2023
+
+## Cell Culture
+### A20  
+- Split 1/5
+- AR-2
+
+### N4
+- Split 1/5
+- AR-2
+
+## Collect EC50_231013
+### Plate ID: EC50_231013_Plate1
+![A20 Doxorubicin Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_231013/A20_Doxorubicin_EC50_231013.jpg){#id .class width=55% height=55%}
+
+- Vincristine DNW
+
+### Plate ID: EC50_231013_Plate2
+
+![A20 Methotrexate Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_231013/A20_Meth_EC50_231013_Plate2.pdf){#id .class width=55% height=55%}
+
+![A20 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_231013/A20_Cyc_EC50_231013_Plate2.pdf){#id .class width=55% height=55%}
+
+# Thursday 19-10-2023
+
+## Cell Culture
+### A20  
+- Split 1/5
+- AR-2
+
+### N4
+- Split 1/5
+- AR-2
+
+# Friday 20-10-2023
+
+## Cell Culture
+### A20  
+- Split 1/5
+- AR-2
+
+### N4
+- Split 1/5
+- AR-2
+
+# Sunday 22-10-2023
+
+## Cell Culture
+### RAMOS Barcode  
+- LN Tank 6, Rack 5, Box 6
+- Thawed Ramos-BC 1, 5, 6
+
+# Monday 23-10-2023
+
+## Cell Culture
+### N4
+- ~40-50% confluent
+- Added 10mL AR-2
+
+### A20
+- ~60-70% confluent
+- Added 10mL AR-2
+
+### Ramos-BC 1
+- ~50% confluent
+- Added 10mL AR-2
+
+### Ramos-BC 5
+- ~50% confluent
+- Added 10mL AR-2
+
+### Ramos-BC 6
+- ~50% confluent
+- Added 10mL AR-2
+
+## Seed Feeders (FDC)
+- Count: 4.19x10^5^
+- Dilute to 4.8x10^4^
+- Resuspended in 5mL AR-2, added 3.73 mL
+- Seeded 1x 6-well plate
+  * 2 mL/well
+- Seeded 1x 96-well plate (15 wells)
+  * 90 $\mu$L/well
+
+# Tuesday 23-10-2023
+## Cell Culture
+### N4
+- No split, maintained
+
+### A20
+- No split, maintained
+
+### Ramos-BC 1
+- ~60% confluent
+- Split 1/3
+- AR-2
+
+### Ramos-BC 5
+- ~60% confluent
+- Split 1/3
+- AR-2
+
+### Ramos-BC 6
+- ~60% confluent
+- Split 1/3
+- AR-2
+
+### FDC
+- Looked attached, healthy
+- Media fine
+
+## Transduce A20/N4 with WILDseq Library
+1. Made 2mL cell suspension of 4x10^6^ cells/mL 
+- A20: 1.91x10^6^ count
+- N4: 1.3x10^5^ count (took 2 mL of CS from flask)
+2. Add 0.5mL of cell suspension to 4 wells of 12 well plate
+3. Add virus mixture (listed below) to respective wells:
+
+| Well ID | Virus | Media | HEPES |
+| :-----: | :---: | :----:|:-----:|
+| A1 | 25 $\mu$L | 900 $\mu$L | 50 $\mu$L |
+| A2 | 10 $\mu$L | 930 $\mu$L | 50 $\mu$L |
+| A3 | 1 $\mu$L | 948 $\mu$L  | 50 $\mu$L |
+| A4 | 0 $\mu$L | 950 $\mu$L  | 50 $\mu$L |  
+
+4. Centrifuged cells at 600 x g for 1.5 hours at 32C
+5. Resuspended cells and transferred to 6 well plate
+- N4 were put on feeder plate which was seeded 23-10-2023
+
+# Wednesday 25-10-23
+## Attempt 1: A20/N4 Barcoding - Media change
+- Changed media
+- AR-2
+
+## Made New Media: AR-3
+1. Made new media: AR-3
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% | 
+
+# Thursday 26-10-23
+## Attempt 1: A20/N4 Barcoding - Sort
+- DNW
+- No cells were positive
+- Possible causes:
+  * Virus volume too low
+  * Spin speed too low
+  * packaging envelope incorrect for mouse cells (GALV)
+
+# Friday 27-10-23
+## Cell Culture
+### A20
+- Maintained
+- No Split
+
+### N4
+- Split 1/4
+- AR-3
+
+### Ramos-BC 1
+- ~60% confluent
+- Split 1/4
+- AR-3
+
+### Ramos-BC 5
+- ~60% confluent
+- Split 1/4
+- AR-3
+
+### Ramos-BC 6
+- ~60% confluent
+- Split 1/4
+- AR-3 
+
+
+## EC50_231027
+
+### Overview
+- Treated A20 with Doxorubicin, Vincristine, Cyclophosphamide, Methotreaxte
+- Concentrations were the same as EC50_231013
+- Repeat for biological replicates
+- Made an error for plate 1
+
+### EC50 Protocol:
+1. Create 12 ml cell suspension of 2.5x10^6^ cells
+  - A20 Cell count: 2.5x10^6^
+  - 8.33mL AR-3 added to 1.66mL of flask CS
+2. Add 90 $\mu$L of CS to respective wells of a 96-well plate
+3. Dilute drug to starting concentration indicated in DMSO
+4. Serial dilute into DMSO 8 times
+5. Add 10uL of diluted drug to respective eppendorf containing 990uL media
+6. Add 10$\mu$L of drugged media to respective well
+
+### EC50 Plate ID: EC50_231027_Plate1
+- Doxorubicin top/Vincristine bottom
+ 
+Doxorubicin Stock: 10mM DMSO
+ 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Doxorubicin"
+initial_concentration <- 300
+dilution_factor <- 1.5
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+Vincristine stock: 30$\mu$M DMSO  
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Vincristine"
+initial_concentration <- 10
+dilution_factor <- 1.4
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Doxorubicin"
+C2 <- "Vincristine"
+EC50_ID <- "EC50_231013_plate1"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+
+```
+
+NOTE: Made an error by adding Methotrexate and Cyclophosphamide treatments to PLate 1 (as well as listed treatments)
+- Disregard results
+
+
+### EC50 Plate ID: EC50_231027_Plate2
+- Methotrexate top/Cyclophosphamide bottom
+ 
+Methotrexate Stock: 10mM DMSO
+ 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Methotrexate"
+initial_concentration <- 500
+dilution_factor <- 2
+num_dilutions <- 8
+concentration_units <- "nM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+Cyclophosphamide stock: 20 mM DMSO
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Set conditions
+drug_name <- "Cyclophosphamide"
+initial_concentration <- 20
+dilution_factor <- 1.4
+num_dilutions <- 8
+concentration_units <- "uM"
+
+library(dplyr)
+library(kableExtra)
+options(scipen = 1, digits = 2)
+
+# Function to calculate serial dilutions and create a table
+serial_dilutions_table <- function(drug_name, initial_concentration, dilution_factor, num_dilutions, conc_units) {
+  concentrations <- numeric(num_dilutions + 1)
+  concentrations[1] <- initial_concentration
+  
+  # Create a data frame to store the dilution information
+  dilution_table <- data.frame(
+    Drug = character(num_dilutions + 1),
+    Dilution = integer(num_dilutions + 1),
+    Concentration = numeric(num_dilutions + 1),
+    Units = character(num_dilutions + 1)
+  )
+  
+  for (i in 1:num_dilutions) {
+    concentrations[i + 1] <- concentrations[i] / dilution_factor
+  }
+  
+  # Populate the dilution table
+  dilution_table$Drug <- drug_name
+  dilution_table$Dilution <- c(0:num_dilutions + 1)
+  dilution_table$Concentration <- concentrations
+  dilution_table$Starting_Concentration <- concentrations / 0.001
+  dilution_table$Units <- conc_units
+  
+  return(dilution_table)
+}
+
+dilution_table <- serial_dilutions_table(drug_name, initial_concentration, dilution_factor, num_dilutions, concentration_units)
+#Mutated function to out correct scientific notation - I dont know how this works
+dilution_table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+  kable(.)
+
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Methotrexate"
+C2 <- "Cyclophosphamide"
+EC50_ID <- "EC50_231013_plate2"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,"1","1","1","2","2","2","3","3","3",pbs,pbs,
+                  pbs,"4","4","4","5","5","5","6","6","6",pbs,pbs,
+                  pbs,"7","7","7","8","8","8", "9","9","9",pbs,pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2.5,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+
+```
+
+
+# Monday 27-10-23
+## Cell Culture
+### A20
+- Split 1/2
+- AR-3
+
+### N4
+- Split 1/2
+- AR-3
+
+### Ramos-BC 1
+- Split 1/2
+- AR-3
+
+### Ramos-BC 5
+- Split 1/2
+- AR-3
+
+### Ramos-BC 6
+- Split 1/2
+- AR-3 
+
+## Seed Feeders
+- Repeating barcoding of A20/N4
+- Count: 3.64x10^5^
+- Dilute to 4.8x10^4^
+- Resuspended in 5mL AR-2, added 2.58 mL
+- Seeded 1x 6-well plate
+  * 2 mL/well
+- Seeded 1x 96-well plate (15 wells)
+  * 90 $\mu$L/well
+
+## Collect EC50_231027
+### Plate ID: EC50_231027_Plate
+![A20 Methotrextate Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_231027/A20_meth_231027_plate2t.jpeg){#id .class width=55% height=55%}
+![A20 Cyclophosphamide Results](~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/EC50/EC50_231027/A20_cyc_231027_plate2b.jpeg){#id .class width=55% height=55%}
+
+# Tuesday 31-10-2023
+## Attempt 2: Transduce A20/N4 with WILDseq Library
+1. Made 2mL cell suspension of 4x10^6^ cells/mL 
+- A20: 2.18x10^6^ count
+- N4: 3.06x10^5^ count (took 2 mL of CS from flask)
+2. Add 0.5mL of cell suspension to 4 wells of 12 well plate
+3. Add virus mixture (listed below) to respective wells:
+
+| Well ID | Virus | Media | HEPES |
+| :-----: | :---: | :----:|:-----:|
+| A1 | 250 $\mu$L | 225 $\mu$L |25 $\mu$L |
+| A2 | 150 $\mu$L | 150 $\mu$L | 25 $\mu$L |
+| A3 | 50 $\mu$L | 50 $\mu$L  | 25 $\mu$L |
+| A4 | 0 $\mu$L | 0 $\mu$L  | 25 $\mu$L |  
+
+4. Centrifuged cells at 1000 x g for 1.5 hours at 0C\
+- Mistakenly set centrifuge to 0C
+5. Resuspended cells and transferred to 6 well plate
+- N4 were put on feeder plate which was seeded 23-10-2023
+
+## Drug Pressure Experiment 1: RAMOS Day 1
+### Overview
+- Designing combination treatment to reflect common BL treatments in clinic
+- Plan to analyse differences in barcode represetnation between baseline, DMSO, and treatment-resistant
+- Drug concentrations:
+
+| Drug | Treatment Day | Concentration | Stock |
+| :-----: | :---: | :----:|:-----:|
+| Doxorubicin | Day 2 | 80nM |100 $\mu$M working stock |
+| Vincristine | Day 1 | 10nM | 30$\mu$M|
+| Methotrexate | Day 1 | 20nM  | 100 $\mu$M working stock |
+| Cyclophosphamide | Day 2/3/4 | 20 $\mu$M |20$\mu$M working stock | 
+
+- Plan:
+1. Collect sample at baseline 
+2. Complete 4 day treatment course of RAMOS-BC cells (with corresponding DMSO controls)
+3. Allow treatment(T) cells to recover and collect sample
+4. Complete 4 day treatment course again and collect sample
+
+- Possible future experiments:
+  * EC50's of T vs WT cells (are T RAMOS cells drug resistant?)
+
+## Day 1
+### Seeded RAMOS BC
+- Seeded 3x 6 well plates with RAMOS-BC 1, 5, 6 respectively
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+A <- "DMSO"
+B <- "Treatment"
+Plate_ID <- "RAMOS_BC Drug Pressure Plate Map"
+
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(ggprism)
+
+drug_list = matrix(c(A,A,A,B,B,B), ncol = 3, nrow = 2, byrow = TRUE)
+
+
+df1 <- as.data.frame(drug_list)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:3, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = Plate_ID, x = "Col", y = "Row") + 
+  theme_bw() + 
+  theme_prism("waves")+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+```
+
+- Seeded 0.25x10^6^ cells/well in 3mL AR-3
+- Treatment wells
+
+| Drug | Treatment Day | Concentration | Stock | Stock Volume | Media Volume|
+| :-----: | :---: | :----:|:-----:| :----:|:-----:|
+| DMSO | Day 1 | - | - | 14.4 $\mu$L | 27 mL AR-3 |
+| Vincristine | Day 1 | 10nM | 30$\mu$M| 9 $\mu$L | 27 mL AR-3 |
+| Methotrexate | Day 1 | 20nM  | 100 $\mu$M working stock | 5.4 $\mu$L of WS | 27 mL AR-3 |
+
+
+### Collected RAMOS Baseline
+- Took 1mL CS from respective flask and transferred to eppendorf
+- Spun down 2500 x g at 4C
+- Removed Media
+- Snap froze in LN
+- Put in -80 CM Box 1
+
+# NOVEMBER 2023
+
+# Wednesday 01-11-2023
+## Drug Pressure Experiment 1: RAMOS Day 2
+- Changed media
+- Spun down at 600 x g for 5 min
+- Resuspended in Day 2 Treatment:
+
+| Drug | Treatment Day | Concentration | Stock | Stock Volume | Media Volume|
+| :-----: | :---: | :----:|:-----:| :----:|:-----:|
+| DMSO | Day 1 | - | - | 48.60 $\mu$L | 27 mL AR-3 |
+| Doxorubicin | Day 1 | 80nM | 100 $\mu$M working stock | 21.60 $\mu$L of working stock | 27 mL AR-3 |
+| Cyclophosphamide | Day 1 | 20$\mu$M  | 20mM | 27 $\mu$L | 27 mL AR-3 |
+
+## Attempt 2: Barcoding A20/N4
+- Sanity check
+- Ran samples on E6 flow
+- A20 negative
+- Suggests envelope protein is not compatible with mouse cells
+- N4 dead
+- Re-make WILDseq virus with VSVG packaging envelope
+
+# Thursday 02-11-2023
+## Cell Culture
+
+### A20
+- Split 1/2
+- AR-3
+
+### N4
+- Split 1/2
+- AR-3
+
+### Ramos-BC 1
+- Split 1/4
+- AR-3
+
+### Ramos-BC 5
+- Split 1/4
+- AR-3
+
+### Ramos-BC 6
+- Split 1/4
+- AR-3 
+
+### Seeded Feeders
+- 1 vial
+- Split into 2  T75 flasks
+
+## Drug Pressure Experiment 1: RAMOS Day 3
+- Changed media
+- Spun down at 600 x g for 5 min
+- Resuspended in Day 3 Treatment:
+
+| Drug | Treatment Day | Concentration | Stock | Stock Volume | Media Volume|
+| :-----: | :---: | :----:|:-----:| :----:|:-----:|
+| DMSO | Day 1 | - | - | 27 $\mu$L | 27 mL AR-3 |
+| Cyclophosphamide | Day 1 | 20$\mu$M  | 20mM | 27 $\mu$L | 27 mL AR-3 |
+
+# Friday 03-11-2023
+## Cell Culture
+
+### A20
+- Split 1/2
+- AR-3
+
+### N4
+- Split into two new feeder flasks
+  * Seeded 02-11-2023
+  * N4.1 / N4.2
+  * 1 flask to transdue, 1 flask to freeze down
+- AR-3
+
+### Ramos-BC 1
+- Add 10mL AR-3
+
+### Ramos-BC 5
+- Add 10mL AR-3
+
+### Ramos-BC 6
+- Add 10mL AR-3
+
+## Drug Pressure Experiment 1: RAMOS Day 4
+- Treatment cells too sick to continue 
+- Changed media
+- Spun down at 600 x g for 5 min
+- Resuspended both DMSO and Treatment cells in fresh AR-3
+- Allow to grow 
+
+# Monday 06-11-2023
+## Cell Culture
+
+### A20
+- Split 1/2
+- AR-3
+
+### N4.1
+- Healthy/growing
+- Leave till tomorrow
+
+### N4.2
+- Healthy/growing
+- Leave till tomorrow
+
+### Ramos-BC 1
+- Froze down
+- 3x vials
+- FBS +10% DMSO
+
+### Ramos-BC 5
+- Froze down
+- 3x vials
+- FBS +10% DMSO
+
+### Ramos-BC 6
+- Froze down
+- 3x vials
+- FBS +10% DMSO 
+
+### Seed Feeders
+- For WILDseq transduction of N4 (tuesday?)
+- 1x 4 wells of 6-well plate, 15wells of 96-well plate
+- Dilute in 8ml
+- 2mL/well of 6well
+- 90$\mu$L/well of 96well plate 
+
+## Drug Pressure Experiment 1: RAMOS Day 7
+- Split DMSO cells 1/6
+- Add 1mL AR-3 to treatment cells
+  * treatment cells still sick, allow to grow for a few more days
+  * Perhaps transfer to smaller well?
+  
+# Tuesday 07/11/2023
+## Made New Media: AR-4
+1. Made new media: AR-4
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% |
+
+## Cell Culture
+### A20
+- Split 1/6
+- AR-4
+
+### N4.1
+- Healthy/growing
+- Leave till tomorrow
+
+### N4.2
+- Froze down
+- 2x vials
+- FBS +10% DMSO
+
+## Drug Pressure Experiment 1: RAMOS Day 5 
+- Split D 1/6
+
+## Attempt 3: Transduce N4 with WILDseq Library
+1. Made 2mL cell suspension of 4x10^6^ cells/mL 
+- N4: took 10ml of 20ml CS, spun down and resuspended in 2mL AR-4
+2. Add 0.5mL of cell suspension to 4 wells of 12 well plate
+3. Add virus mixture (listed below) to respective wells:
+
+| Well ID | Virus | Media | HEPES |
+| :-----: | :---: | :----:|:-----:|
+| A1 | 250 $\mu$L | 225 $\mu$L |25 $\mu$L |
+| A2 | 150 $\mu$L | 150 $\mu$L | 25 $\mu$L |
+| A3 | 50 $\mu$L | 50 $\mu$L  | 25 $\mu$L |
+| A4 | 0 $\mu$L | 0 $\mu$L  | 25 $\mu$L |  
+
+4. Centrifuged cells at 1000 x g for 1.5 hours at 32C
+5. Resuspended cells and transferred to 6 well plate
+- N4 were put on feeder plate which was seeded 06-11-2023
+
+# Wednesday 08/11/2023
+## Attempt 3: Barcoding N4
+- Changed Media
+- Cells look healthy
+## Drug Pressure Experiment 1: RAMOS Day 6
+- Checked treatment cells with trypan blue
+- Everything was dead
+- Ended experiment: will reconsider approach
+  * Treat Ramos with individual agents as well as combination
+  * Treat for 3 days and recover or 12 days and recover(?)
+  
+# Thursday 09/11/2023
+## Attempt 3: Barcoding N4
+- Booked sort for tomorrow
+- Changed media
+- Sanity check on E6 Fortessa (very low MOI)
+## Cell Culture
+
+### A20
+- Split 5mL CS into 15mL of AR-4
+### N4
+- Split 5mL CS into 30mL of AR-4
+
+# Friday 10/11/2023
+## Attempt 3: Barcoding N4
+- Sorted N4
+- 1000 cells into wells A1-A3 of 96-well plate seeded with feeders 
+  * Seeded 06/11/2023
+- 500 cells into wells B1-B3
+  * Seeded 06/11/2023
+  
+## Cell Culture
+### RAMOS-BC1
+- Thawed vial of RAMOS-BC1 into 15mL of AR-4
+### N4
+- Threw away
+### A20
+- Threw away
+
+# Monday 13/11/2023
+
+## Start RAMOS-Drug Pressure v2
+1. Count RAMOS-BC1 CS
+  - CS: 1x10^6^ cells/mL
+2. Add 122.8$\mu$L CS per well
+3. Make drug dilutions according to following table:
+- Make working stock of Doxorubicin and Methotrexate
+- Dilute 10mM stock to 100$\mu$M
+  * 10$\mu$L stock in 990 $\mu$L DMSO
+
+DMSO: 16.67 $\mu$L DMSO in 10mL
+Combo: Added doxorubicin, vincristine, methotrexate, and cyclophosphamide to 10mL at same volumes indicated below
+
+| Drug | Concentration | Stock | Dilution |
+| :-----:  | :----:|:-----:|:-----:|
+| Doxorubicin  | 80nM |100 $\mu$M working stock (10mM Stock) | 5 $\mu$L WS in 10mL |
+| Vincristine | 10nM | 30$\mu$M| 1.67 $\mu$L stock in 10mL |
+| Methotrexate  | 20nM  | 100 $\mu$M working stock (10mM Stock) | 5$\mu$L WS in 10mL |
+| Cyclophosphamide  | 20 $\mu$M |20$\mu$M working stock | 5 $\mu$L stock in 10mL |
+
+
+4. Add 3 mL of drugged media to respective wells
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+A <- "DMSO"
+B <- "DOXORUBICIN"
+Plate_ID <- "Plate A"
+
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(ggprism)
+
+drug_list = matrix(c(A,A,A,B,B,B), ncol = 3, nrow = 2, byrow = TRUE)
+
+
+df1 <- as.data.frame(drug_list)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:3, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p +
+  labs(title = Plate_ID, x = "Col", y = "Row") + 
+  theme_bw() + 
+  theme_prism("waves")+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+A <- "VINCRISTINE"
+B <- "METHOTREXATE"
+Plate_ID <- "Plate B"
+
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(ggprism)
+
+drug_list = matrix(c(A,A,A,B,B,B), ncol = 3, nrow = 2, byrow = TRUE)
+
+
+df1 <- as.data.frame(drug_list)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:3, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p +
+  labs(title = Plate_ID, x = "Col", y = "Row") + 
+  theme_bw() + 
+  theme_prism("waves")+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+A <- "CYCLOPHOSPHAMIDE"
+B <- "COMBO"
+Plate_ID <- "Plate C"
+
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(ggprism)
+
+drug_list = matrix(c(A,A,A,B,B,B), ncol = 3, nrow = 2, byrow = TRUE)
+
+
+df1 <- as.data.frame(drug_list)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:3, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p +
+  labs(title = Plate_ID, x = "Col", y = "Row") + 
+  theme_bw() + 
+  theme_prism("waves")+
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p)
+```
+
+## Cell Culture
+### N4-BC Attempt 3
+- Add media to wells with cells
+- Lots of death, some clusters of live cells
+### RAMOS-BC1
+- Split 4mL CS into 20mL AR-4
+
+**PIL COURSE**
+
+# Thursday 13/11/2023
+
+## RAMOS-DPv2
+Change media:
+1. Transfer into 15ml Falcon
+2. Spun down @ 500xg for 6min
+3. Resuspended in 1mL
+4. Transferred into new 12-well plate
+
+
+# Friday 17/11/2023
+
+## Cell Culture
+**INFECTION**
+- RAMOS-BC1 and RAMOS-DPv2 infected
+- Threw out cultures and AR-4
+- N4 seemingly unaffected
+
+# Monday 20/11/2023
+
+## WILDseq - Mouse Experiment 1
+### Overview
+- Chris Steel injected mice with barcoded N2 cells
+- He applied various treatment conditions and tracked tumour growth over time
+- Collected tumours at humane endpoint for barcode analysis and scRNA-seq
+### RNA extraction WILDseq-ME1
+- Performed RNA extraction of tissue/cell samples according to the following kit:
+
+| Sample ID | Treatment/Sample | ng/uL | i7 index | i5 index |
+| :-----: | :---: | :----:|:-----:|:-----:| :-----:|
+| 1 | Cyclophosphamide | 773.7 | N701 | S502 |
+| 2 | Cyclophosphamide  | 545.3 | N702 | S502 |
+| 3 | Cyclophosphamide | 903.6  | N703 | S502 |
+| 4 | Cyclophosphamide | 1056.1 |N704 | S502 |
+| 5 | Cyclophosphamide | 959.1 |N705 | S502 |
+| 6 | Combination | 730.1 | N706 | S502 |
+| 7 | Combination | 602.3 | N707 | S502 |
+| 8 | Combination | 449.6  | N710 | S502 |
+| 9 | Combination| 1002.1 | N701 | S503 |
+| 10 | Combination | 1929.2 | N702 | S503 |
+| 11| Methotrexate | 861.5 | N703 | S503 |
+| 12 | Methotrexate | 1110.4  | N704 | S503 |
+| 13 | Methotrexate | 1171.0 | N705 | S503 |
+| 14 | Methotrexate  | 1347.8 | N706 | S503 |
+| 15 | Methotrexate  | 891.4  | N707 | S503 |
+| 16 | Vehicle | 374.5 | N710 | S503 |
+| 17 | Vehicle | 911.2 | N701 | S505 |
+| 18 | Vehicle | 829.8 | N702 | S505 |
+| 19 | Vehicle | 600.1  | N703 | S505 |
+| 20 | Vehicle | 750.3 | N704 | S505 |
+| 21 | Baseline | 401.5 | N705 | S505 |
+| 22 | Baseline | 443.3 | N706 | S505 |
+| 23 | Baseline  | 373.4  | N707 | S505 |
+| 24 | Baseline | 444.5  | N710 | S505 |
+| 25 | Baseline | 267.6 | N701 | S506 |
+| 26 | BLLW 14K | 378.7  | N702 | S506 |
+| 27 | BLLW 2K | 362.7  | N703 | S506 |
+| 28 | BLLW 1K | 563.8  | N704 | S506|
+| 29 | Methotrexate (outlier) | 348.1 | N705 | S506|
+| 30 | Combo | 380.8 | N706 | S506 |
+
+# Tuesday 21/11/2023
+## WILDseq - Mouse Experiment 1: RT
+
+### RT Overview
+- cDNA synthesis from RNA template
+- Include a -RT control if possible
+  * Mix several samples and include extra H20 instead of Reverse Transcriptase
+  * PCR this sample as well, checks for contamination of genomic DNA, mastermix, ect. 
+  * Can also use as negative control to determine product size and yield on tapestation
+
+### RT Protocol  
+1. In PCR strip tubes, prepare 1-5 $\mu$g of RNA in a total volume of 10 $\mu$l of RNAse/DNAase-free water.
+2. Add 1 $\mu$l of WS_RT_UMI_NexteraR2 primer (2$\mu$M stock)
+3. Add 1 $\mu$l dNTPs (10 mM each). 
+4. Denature at 65 C for 5 mins in the PCR machine, then straight onto ice for at least 2 mins, spin briefly to get liquid to the bottom of the tube.
+5. Prepare mastermix of RT enzyme and buffers. 1.1x the number of samples.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L | 132 $\mu$L      |
+| SSIV RT        | 1 $\mu$L |    33 $\mu$L      |
+| 100 mM DTT     | 1 $\mu$L |    33 $\mu$L      |
+| RNAse Out      | 1 $\mu$L |     33 $\mu$L     |
+
+6. Add 7 $\mu$l of RT MM prepared above to each sample and mix, spin briefly to get liquid to the bottom of the tube.
+   - Spin briefly to get liquid to bottom of the tube 
+7. In the PCR machine incubate at 53 C for 10 mins followed by 80 C for 10 mins.
+8. Add 1 $\mu$l Themolabile Exonuclease I (NEB M0568) to remove excess RT primer.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |     33 $\mu$L     |
+| NEBuffer r3.1*        | 2 $\mu$L |    66 $\mu$L      |
+
+\center **Most PCR buffers are compatible** \center
+
+9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube
+10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
+11. Dilute final cDNA 1:2 with DNAse/RNAse-free water.
+- 44 $\mu$L water/reaction
+
+## WILDseq Primers
+- Received WS primers from Kirsty Sawika
+
+List primers/nmole/reconstituive volume
+
+# Wednesday 21/11/2023
+## WILDseq - Mouse Experiment 1: PCR1 Attempt 1
+### Overview
+- Aim to keep number of cycles at a minimum. 
+- Forward primer is an equal mix of primers with different length spacers to generate diversity required for sequencing.
+
+### PCR1 Protocol  
+
+- Set up PCR reactions on ice
+- One reaction per sample plus -RT control
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume| Master Mix |
+|:--------------|----| ------- |
+| 10uM WS_RT-PCR1_Fwd | 1.5 $\mu$L | 49.5 $\mu$L |
+|10uM WS_RT-PCR1_Rev | 1.5 $\mu$L | 49.5 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L | 396 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L | 825 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
+
+
+Clean up reaction using Ampure beads and check product size and yield on tapestation
+
+
+# Bead Clean Up
+## Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+
+
+
+
+
