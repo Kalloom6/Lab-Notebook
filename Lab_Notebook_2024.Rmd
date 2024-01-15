@@ -1,0 +1,14 @@
+---
+title: "Lab_Notebook_2024"
+author: "Callum Malcolm"
+output:
+  pdf_document: default
+toc: true
+toc_float: true
+urlcolor: blue
+---
+\newpage
+
+# \textbf January 2024
+
+# Monday 15-01-2023 
