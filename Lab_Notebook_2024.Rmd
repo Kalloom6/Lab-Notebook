@@ -11,4 +11,184 @@ urlcolor: blue
 
 # \textbf January 2024
 
-# Monday 15-01-2023 
+# Tuesday 16-01-2023
+
+## WILDseq - Mouse Experiment 1
+### Overview: 
+- PCR tests to see if PCR would work for WS-ME1 cDNA previously made  
+- Started with samples 1-8 so as not to waste sample/reagents if PCR 1 did not work
+
+#### Sample List
+| Sample ID | Treatment/Sample | ng/uL | i7 index | i5 index |
+| :-----: | :---: | :----:|:-----:|:-----:| :-----:|
+| 1 | Cyclophosphamide | 773.7 | N701 | S502 |
+| 2 | Cyclophosphamide  | 545.3 | N702 | S502 |
+| 3 | Cyclophosphamide | 903.6  | N703 | S502 |
+| 4 | Cyclophosphamide | 1056.1 |N704 | S502 |
+| 5 | Cyclophosphamide | 959.1 |N705 | S502 |
+| 6 | Combination | 730.1 | N706 | S502 |
+| 7 | Combination | 602.3 | N707 | S502 |
+| 8 | Combination | 449.6  | N710 | S502 |
+| 9 | Combination| 1002.1 | N701 | S503 |
+| 10 | Combination | 1929.2 | N702 | S503 |
+| 11| Methotrexate | 861.5 | N703 | S503 |
+| 12 | Methotrexate | 1110.4  | N704 | S503 |
+| 13 | Methotrexate | 1171.0 | N705 | S503 |
+| 14 | Methotrexate  | 1347.8 | N706 | S503 |
+| 15 | Methotrexate  | 891.4  | N707 | S503 |
+| 16 | Vehicle | 374.5 | N710 | S503 |
+| 17 | Vehicle | 911.2 | N701 | S505 |
+| 18 | Vehicle | 829.8 | N702 | S505 |
+| 19 | Vehicle | 600.1  | N703 | S505 |
+| 20 | Vehicle | 750.3 | N704 | S505 |
+| 21 | Baseline | 401.5 | N705 | S505 |
+| 22 | Baseline | 443.3 | N706 | S505 |
+| 23 | Baseline  | 373.4  | N707 | S505 |
+| 24 | Baseline | 444.5  | N710 | S505 |
+| 25 | Baseline | 267.6 | N701 | S506 |
+| 26 | BLLW 14K | 378.7  | N702 | S506 |
+| 27 | BLLW 2K | 362.7  | N703 | S506 |
+| 28 | BLLW 1K | 563.8  | N704 | S506|
+| 29 | Methotrexate (outlier) | 348.1 | N705 | S506|
+| 30 | Combo | 380.8 | N706 | S506 |
+
+### PCR 1: Samples 1-8
+- Checked [cDNA] on NanoDrop of sample 8 to make sure samples were still intact
+  * ng/$\mu$L = 1042.3
+  * It is assumed all other cDNA is of similar quality
+
+1. Made a master mix of PCR1 reagents 
+- Made enough for 31 samples
+- Primer mix was made earlier
+
+|Component       |Volume| Master Mix |
+|:--------------|----| ------- |
+| 10uM WS PCR1 Primer Mix | 3 $\mu$L | 93 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L | 372 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L | 775 $\mu$L |
+
+2. Add following components to tubes
+|Component       |Volume|
+|:--------------|----|
+| PCR1 MasterMix | 40 $\mu$L | 
+| cDNA      | 10 $\mu$L |
+
+3. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
+
+
+### Bead Clean Up
+#### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+#### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+#### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+#### Tapestation PCR 1
+
+
+![2024-01-16 Tapestation PCR 1 Results Samples 1-8](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 1.png)
+
+### PCR 2: Samples 5
+
+#### Overview
+- Yield from PCR1 is low (.09 - .631 ng/$\mu$L)
+- Sample with lowest concentration was taken ahead to PCR 2 (E1 - Sample 5)
+- PCR to index samples for sequencing by attaching UMI 
+
+#### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM Nxxx Nextera i7 adapter  | - |   -       |
+| 10uM Sxxx Nextera i5 adapter | - |     -     |
+| DNAse/RNAse H20 | 1000 $\mu$L |          |
+| Kapa Hifi HotStart Ready Mix (2X) | 1200 $\mu$L |  KK2601  |
+
+
+#### Protocol  
+1. Prepared samples according to the following table:
+  - Sample - Adaptor pairs in table above
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM N705 Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM S502 Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Performed PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __8 cycles of steps 2-4__  \center
+
+
+3. Performed Ampure bead clean up as above with 90ul beads per 50ul PCR reaction
+
+4. Checked size and concentration on tapestation
+
+#### Tapestation PCR 2
+![2024-01-16 Tapestation PCR 2 Test Samples 5](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 2.png)
+
+
+#### Review
+- Contamination/PCR bubble?
+- Yield is adequate (assuming it is representative of the correct peak)
+- Chris wants to repeat PCR1 for remaining samples, take PCR2 ahead, and re-run sames with D1000 tape (non High-Sensitivity)
+
+#### Plan for tomorrow
+- PCR 1 samples 9-30
+- Bead Clean Up
+- Tape Station
+- Ask Chris about HEK
+- Find A20 for Rahul
+
+# Wednesday 17-01-2023
+
+
+
+
+
+
+
