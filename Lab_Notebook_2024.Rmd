@@ -13,7 +13,7 @@ urlcolor: blue
 
 # Tuesday 16-01-2023
 
-## WILDseq - Mouse Experiment 1
+## WILDseq - Mouse Experiment 1: PCR 1 Samples 1-8 / PCR 2 Sample 5
 ### Overview: 
 - PCR tests to see if PCR would work for WS-ME1 cDNA previously made  
 - Started with samples 1-8 so as not to waste sample/reagents if PCR 1 did not work
@@ -181,10 +181,174 @@ Hold Step |Step 6: 12C    | Hold |
 - PCR 1 samples 9-30
 - Bead Clean Up
 - Tape Station
-- Ask Chris about HEK
-- Find A20 for Rahul
 
 # Wednesday 17-01-2023
+
+## WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30
+
+### Overview: 
+- Completed PCR 1 for Samples 9-30
+
+### PCR 1: Samples 9-30
+
+1. Used master mix of PCR1 reagents made 2024-01-16 
+
+2. Add following components to tubes
+|Component       |Volume|
+|:--------------|----|
+| PCR1 MasterMix | 40 $\mu$L | 
+| cDNA      | 10 $\mu$L |
+
+3. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
+
+
+### Bead Clean Up
+#### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+#### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+#### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+#### Tapestation PCR 1
+![2024-01-17 Tapestation PCR 1 Samples 9-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
+
+#### Tapestation PCR 1
+![2024-01-17 Tapestation PCR 1 Samples 17-30](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 2.png)
+\\
+
+#### Review
+- Samples 10/17/18/29 don't have adequate yield
+  * Will need to redo PCR 1
+  * Sample 10 has acceptable PCR1 sample from previous run
+- Yield is adequate for the rest to move ahead
+
+#### Plan for tomorrow
+- PCR 1 samples 17/18/29
+  * Bead Clean Up
+  * Tape Station
+- PCR 2 for all samples
+  * Double check reagents amounts
+  * Running low on KAPA (re-ordered) and Nextera Primers
+- Chris wants to add 2 additional samples
+  * To Do - RNA Extraction / RT / PCR 1 / PCR 2
+  * Wait until majority of samples have acceptable PCR 2 product
+
+# Wednesday 17-01-2023
+
+## WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30
+
+### Overview: 
+- Completed PCR 1 for Samples 9-30
+
+### PCR 1: Samples 9-30
+
+1. Used master mix of PCR1 reagents made 2024-01-16 
+
+2. Add following components to tubes
+|Component       |Volume|
+|:--------------|----|
+| PCR1 MasterMix | 40 $\mu$L | 
+| cDNA      | 10 $\mu$L |
+
+3. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
+
+
+### Bead Clean Up
+#### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+#### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+#### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+#### Tapestation PCR 1
+![2024-01-17 Tapestation PCR 1 Samples 9-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
+
+#### Tapestation PCR 1
+![2024-01-17 Tapestation PCR 1 Samples 17-30](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 2.png)
+\\
+
+#### Review
+- Samples 10/17/18/29 don't have adequate yield
+  * Will need to redo PCR 1
+  * Sample 10 has acceptable PCR1 sample from previous run
+- Yield is adequate for the rest to move ahead
+
+#### Plan for tomorrow
+- PCR 1 samples 17/18/29
+  * Bead Clean Up
+  * Tape Station
+- PCR 2 for all samples
+  * Double check reagents amounts
+  * Running low on KAPA (re-ordered) and Nextera Primers
+- Chris wants to add 2 additional samples
+  * To Do - RNA Extraction / RT / PCR 1 / PCR 2
+  * Wait until majority of samples have acceptable PCR 2 product
+
+
 
 
 
