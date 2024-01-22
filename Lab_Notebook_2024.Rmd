@@ -51,6 +51,15 @@ urlcolor: blue
 | 28 | BLLW 1K | 563.8  | N704 | S506|
 | 29 | Methotrexate (outlier) | 348.1 | N705 | S506|
 | 30 | Combo | 380.8 | N706 | S506 |
+| 31 | RBL2P 2K | 173.3 | N707 | S506 |
+| 32 | RBL2P 7K | 2708.0 | N7010 | S506 |
+| 33 | RBL2P 250K | 1418.5 | N701 | S507 |
+| 34 |Mock_direct_1 | - | N702 | S507 |
+| 35 | Mock_direct_2 | -  | N703 | S507 |
+| 36 | Mock_direct_3 | - | N704 | S507 |
+| 37 | Mock_culture_1 | - | N705 | S507 |
+| 38 | Mock_culture_2 | - | N706 | S507 |
+| 39 | Mock_culture_3 | - | N707 | S507 |
 
 ### PCR 1: Samples 1-8
 - Checked [cDNA] on NanoDrop of sample 8 to make sure samples were still intact
@@ -265,14 +274,14 @@ Hold Step |Step 6: 12C    | Hold |
   * To Do - RNA Extraction / RT / PCR 1 / PCR 2
   * Wait until majority of samples have acceptable PCR 2 product
 
-# Wednesday 17-01-2023
+# Thursday 18-01-2023
 
-## WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30
+## WILDseq - Mouse Experiment 1: PCR 1 Samples 17/18/29
 
 ### Overview: 
-- Completed PCR 1 for Samples 9-30
+- Repeated PCR 1 for Samples 17/18/29
 
-### PCR 1: Samples 9-30
+### PCR 1: Samples 17/18/29
 
 1. Used master mix of PCR1 reagents made 2024-01-16 
 
@@ -325,11 +334,8 @@ Hold Step |Step 6: 12C    | Hold |
 **Expected size = 165-172bp**
 
 #### Tapestation PCR 1
-![2024-01-17 Tapestation PCR 1 Samples 9-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
+![2024-01-18 Tapestation PCR 1 Samples 17/18/29](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
 
-#### Tapestation PCR 1
-![2024-01-17 Tapestation PCR 1 Samples 17-30](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 2.png)
-\\
 
 #### Review
 - Samples 10/17/18/29 don't have adequate yield
@@ -348,10 +354,124 @@ Hold Step |Step 6: 12C    | Hold |
   * To Do - RNA Extraction / RT / PCR 1 / PCR 2
   * Wait until majority of samples have acceptable PCR 2 product
 
+# Friday 19-01-2023
+
+## WILDseq - Mouse Experiment 1: RNA Extraction/RT Samples 31-33
+Overview: Extra samples given by Chris for whitelist
+
+### RNA extraction Samples 31-33
+- Performed RNA extraction of tissue/cell samples according to the following kit:
+
+### RT Protocol Samples 31-33
+1. In PCR strip tubes, prepared 5 $\mu$g of RNA in a total volume of 10 $\mu$l of RNAse/DNAase-free water.
+2. Add 1 $\mu$l of WS_RT_UMI_NexteraR2 primer (2$\mu$M stock)
+3. Add 1 $\mu$l dNTPs (10 mM each). 
+4. Denature at 65 C for 5 mins in the PCR machine, then straight onto ice for at least 2 mins, spin briefly to get liquid to the bottom of the tube.
+5. Used Master Mix previously made
+6. Add 7 $\mu$l of RT MM prepared above to each sample and mix, spin briefly to get liquid to the bottom of the tube.
+   - Spin briefly to get liquid to bottom of the tube 
+7. In the PCR machine incubate at 53 C for 10 mins followed by 80 C for 10 mins.
+8. Add 1 $\mu$l Themolabile Exonuclease I (NEB M0568) to remove excess RT primer.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |          |
+| NEBuffer r3.1*        | 2 $\mu$L |          |
+
+\center **Most PCR buffers are compatible** \center
+
+9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube
+10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
+11. Checked [cDNA] on NanoDrop
+  - Added to Sample List
+
+# Monday 22-01-2023
+
+### PCR 1: Samples 31-33
+- Included negative control (MM + H20)
+
+1. Used master mix of PCR1 reagents made 2024-01-16 
+
+2. Add following components to tubes
+|Component       |Volume|
+|:--------------|----|
+| PCR1 MasterMix | 40 $\mu$L | 
+| cDNA      | 10 $\mu$L |
+
+3. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
 
 
+### Bead Clean Up
+#### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+#### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+#### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+#### Tapestation PCR 1 31-33 
+![2024-01-17 Tapestation PCR 1 Samples 31-33, -control](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
 
 
+!!!! Band present in - Control lane !!!!
+
+#### Tapestation PCR 1 31 + -Control Repeat
+
+### PCR 1: Negative Control
+- Remade negative control (MM + H20)
+
+1. Used master mix of PCR1 reagents made 2024-01-16 
+
+2. Add following components to tubes
+|Component       |Volume|
+|:--------------|----|
+| PCR1 MasterMix | 40 $\mu$L | 
+| cDNA      | 10 $\mu$L |
+
+3. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __10-25 cycles of steps 2-4__  \center
 
 
 
