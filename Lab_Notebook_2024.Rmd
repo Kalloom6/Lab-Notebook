@@ -63,7 +63,7 @@ urlcolor: blue
 
 ### PCR 1: Samples 1-8
 - Checked [cDNA] on NanoDrop of sample 8 to make sure samples were still intact
-  * ng/$\mu$L = 1042.3
+  * Sample 8 ng/$\mu$L = 1042.3
   * It is assumed all other cDNA is of similar quality
 
 1. Made a master mix of PCR1 reagents 
@@ -71,14 +71,15 @@ urlcolor: blue
 - Primer mix was made earlier
 
 |Component       |Volume| Master Mix |
-|:--------------|----| ------- |
+|:--------------:|:----:|:-------:|
 | 10uM WS PCR1 Primer Mix | 3 $\mu$L | 93 $\mu$L |
 | DNAse/RNAse H20      | 12 $\mu$L | 372 $\mu$L |
 | Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L | 775 $\mu$L |
 
 2. Add following components to tubes
+
 |Component       |Volume|
-|:--------------|----|
+|:--------------:|:----:|
 | PCR1 MasterMix | 40 $\mu$L | 
 | cDNA      | 10 $\mu$L |
 
@@ -93,9 +94,9 @@ urlcolor: blue
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __10-25 cycles of steps 2-4__  \center
+\center __10-25 cycles of steps 2-4__
 
-
+\raggedright
 ### Bead Clean Up
 #### Overview
 - Clean PCR reaction by removing leftover primers
@@ -124,10 +125,10 @@ Hold Step |Step 6: 12C    | Hold |
 13. Assess PCR product size, contamination and concentration on tapestation.   
 **Expected size = 165-172bp**
 
-#### Tapestation PCR 1
-
+#### Tapestation PCR 1 - Samples 1-8
 
 ![2024-01-16 Tapestation PCR 1 Results Samples 1-8](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 1.png)
+Inital Test PCR 1
 
 ### PCR 2: Samples 5
 
@@ -170,7 +171,7 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 2 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __8 cycles of steps 2-4__  \center
+ __8 cycles of steps 2-4__ 
 
 
 3. Performed Ampure bead clean up as above with 90ul beads per 50ul PCR reaction
@@ -219,7 +220,10 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __10-25 cycles of steps 2-4__  \center
+__10-25 cycles of steps 2-4__
+
+
+
 
 
 ### Bead Clean Up
@@ -273,7 +277,7 @@ Hold Step |Step 6: 12C    | Hold |
 - Chris wants to add 2 additional samples
   * To Do - RNA Extraction / RT / PCR 1 / PCR 2
   * Wait until majority of samples have acceptable PCR 2 product
-
+  
 # Thursday 18-01-2023
 
 ## WILDseq - Mouse Experiment 1: PCR 1 Samples 17/18/29
@@ -301,9 +305,7 @@ Hold Step |Step 6: 12C    | Hold |
 |Extension| **Step 4: 72C** | **15s**|
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
-
-\center __10-25 cycles of steps 2-4__  \center
-
+ __10-25 cycles of steps 2-4__ 
 
 ### Bead Clean Up
 #### Overview
@@ -334,7 +336,6 @@ Hold Step |Step 6: 12C    | Hold |
 **Expected size = 165-172bp**
 
 #### Tapestation PCR 1
-![2024-01-18 Tapestation PCR 1 Samples 17/18/29](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
 
 
 #### Review
@@ -353,7 +354,7 @@ Hold Step |Step 6: 12C    | Hold |
 - Chris wants to add 2 additional samples
   * To Do - RNA Extraction / RT / PCR 1 / PCR 2
   * Wait until majority of samples have acceptable PCR 2 product
-
+  
 # Friday 19-01-2023
 
 ## WILDseq - Mouse Experiment 1: RNA Extraction/RT Samples 31-33
@@ -378,7 +379,7 @@ Overview: Extra samples given by Chris for whitelist
 | Thermolabile Exonuclease I  | 1 $\mu$L |          |
 | NEBuffer r3.1*        | 2 $\mu$L |          |
 
-\center **Most PCR buffers are compatible** \center
+ **Most PCR buffers are compatible**
 
 9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
     - Spin briefly to get liquid to bottom of the tube
@@ -410,7 +411,7 @@ Overview: Extra samples given by Chris for whitelist
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __10-25 cycles of steps 2-4__  \center
+ __10-25 cycles of steps 2-4__
 
 
 ### Bead Clean Up
@@ -441,13 +442,11 @@ Hold Step |Step 6: 12C    | Hold |
 13. Assess PCR product size, contamination and concentration on tapestation.   
 **Expected size = 165-172bp**
 
+
 #### Tapestation PCR 1 31-33 
-![2024-01-17 Tapestation PCR 1 Samples 31-33, -control](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
-
-
+#### Tapestation PCR 1
+![2024-01-22 Tapestation PCR 1 Samples 30-33 and Control](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 !!!! Band present in - Control lane !!!!
-
-#### Tapestation PCR 1 31 + -Control Repeat
 
 ### PCR 1: Negative Control
 - Remade negative control (MM + H20)
@@ -471,8 +470,104 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __10-25 cycles of steps 2-4__  \center
+
+#### Tapestation Control Test 1
+- Compared New -Control to old 
+  * Wanted to determine if this was a pipetting error
+![2024-01-22 Tapestation Control Test 1](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 
 
+#### Tapestation Control Test 2
+- Compared New -Control to H20 
+  * Wanted to determine if water was contaminated
+![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 
 
+# Tuesday 23-01-2023
+## Made New Media: AR-5
+1. Made new media: AR-5
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 1% |
+
+## Cell Culture
+### A20
+- Thawed A20 and seeded in T25
+- Spun down CS to remove DMSO, cell pellet small
+- Cells didn't look super healthy
+- Monitor tomorrow
+
+### HEK
+- Got T75 flask from Chris
+- 70% confluent
+- Added 10mL of trypsin and tapped flask until cells were dislodged
+- Added 10mL of DMEM (20% FBS) and added to 50mL tube
+- Added 25mL of DMEM to 5 T75 flasks
+- Mixed CS to get single cell suspension and remvoe clumps
+- Transferred 4mL of CS to each flask
+- Will grow up for 1-2 days and freeze down 4 T75 flasks
+  * Other flask will be used to gorw WILDseq library virus for A20's
+
+## WS-ME1 Library Prep: Control Test 3
+Overview: question around contaminated primers
+- Ran PCR1 with new primer/PCR 1 mix
+
+### PCR 1: Negative Control
+- Remade negative control (MM + H20)
+- Remade Primer mix and PCR1 MM
+
+#### PCR1 Primer Mix
+- WILDseq protocol from Kirsty dictates 8 fwd primers mixed in equal amounts with equivilant amount of rev priemr
+- Primers were reconsituted at 100 $\mu$M so needed to be diluted to 10 $\mu$
+
+
+|Component                 |   Volume  |
+|:------------------------:|:---------:|
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 16 $\mu$L |
+| DNAse/RNAse H20          | 320 $\mu$L| 
+
+
+#### PCR1 MM
+
+|Component       |Volume| Master Mix |
+|:--------------|----| ------- |
+| 10uM WS PCR1 Primer Mix | 3 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+
+1. Add following components to tubes  
+
+|Component       |Volume|
+|:--------------:|:----:|
+| PCR1 MasterMix | 40 $\mu$L | 
+| H2O     | 10 $\mu$L |
+
+2. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+
+#### Tapestation Control Test 3 
+- Compared New -Control to old -control 
+  * Wanted to determine if water was contaminated
+![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-23 TS 1.png)
+  
