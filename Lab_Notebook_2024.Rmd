@@ -571,3 +571,67 @@ Hold Step |Step 6: 12C    | Hold |
   * Wanted to determine if water was contaminated
 ![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-23 TS 1.png)
   
+  
+# Wednesday 24-01-2023
+
+## Cell Culture
+### A20
+- Checked cells ~10% confluent
+- Cells looked healthy but sparse
+- Grow up for inection
+- Ask Chris about cell numbers needed for injecting into 12 mice
+
+### HEK
+- 20% confluent
+- Check tomorrow and split or Friday
+
+## WILDseq - Mouse Experiment 1: Library Prep Attempt 5 - RT
+- Decided to repeat the entire library prep process using RNA extracted previously
+- Everything done in PCR room RNA hood
+
+
+### RT Protocol  
+1. In PCR strip tubes, prepared 5 $\mu$g of RNA in a total volume of 10 $\mu$l of RNAse/DNAase-free water.
+2. Add 1 $\mu$l of WS_RT_UMI_NexteraR2 primer (2$\mu$M)
+- Diluted primer from stock (100$\mu$M)
+- Added 1 $\mu$L RT-Primer stock into 49$\mu$L water
+3. Add 1 $\mu$l dNTPs (10 mM each). 
+4. Denature at 65 C for 5 mins in the PCR machine, then straight onto ice for at least 2 mins, spin briefly to get liquid to the bottom of the tube.
+5. Prepare mastermix of RT enzyme and buffers. 1.1x the number of samples.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L | 134 $\mu$L      |
+| SSIV RT        | 1 $\mu$L |    33.5 $\mu$L      |
+| 100 mM DTT     | 1 $\mu$L |    33.5 $\mu$L      |
+| RNAse Out      | 1 $\mu$L |     33.5 $\mu$L     |
+
+6. Add 7 $\mu$l of RT MM prepared above to each sample and mix, spin briefly to get liquid to the bottom of the tube.
+   - Spin briefly to get liquid to bottom of the tube 
+7. In the PCR machine incubate at 53 C for 10 mins followed by 80 C for 10 mins.
+8. Add 1 $\mu$l Themolabile Exonuclease I (NEB M0568) to remove excess RT primer.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |     33.5 $\mu$L     |
+| NEBuffer r3.1*        | 2 $\mu$L |    67 $\mu$L      |
+
+\center **Most PCR buffers are compatible** \center
+
+9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube
+10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
+
+Stored at -4C
+
+#### Plan for tomorrow
+- PCR 1 (check for KAPA HIFI amount)
+  * Bead Clean Up
+  * Tape Station
+- Check on cells
+- Plan cell numbers needed for A20 mouse injections
+
+
+
+
+
