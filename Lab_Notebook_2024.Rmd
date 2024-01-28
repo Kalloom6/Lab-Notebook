@@ -631,7 +631,205 @@ Stored at -4C
 - Check on cells
 - Plan cell numbers needed for A20 mouse injections
 
+# Thursday 25-01-2023
+
+## Cell Culture
+### A20
+- Checked cells ~50% confluent
+- Cells looked healthy but sparse
+- Added 10ml of AR-5
+- Grow up for injection
+- Ask Chris about cell numbers needed for injecting into 12 mice
+
+### HEK
+- Collected all T175 and froze down
+- Left one flask going at 20% confluency
+
+## WS-ME1 Library Prep - Attempt 5 PCR 1
+Ran PCR1 for attempt 5 
+
+### PCR 1: Negative Control
+- Remade negative control (MM + H20)
+- Remade Primer mix and PCR1 MM
+
+#### PCR1 Primer Mix
+- WILDseq protocol from Kirsty dictates 8 fwd primers mixed in equal amounts with equivalent amount of rev primer
+- Primers were reconsituted at 100 $\mu$M so needed to be diluted to 10 $\mu$M
 
 
+|Component                 |   Volume  |
+|:------------------------:|:---------:|
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 2 $\mu$L  |
+| 100uM WS PCR1 Primer Mix | 16 $\mu$L |
+| DNAse/RNAse H20          | 144 $\mu$L| 
 
 
+#### PCR1 MM
+
+|Component       |Volume| Master Mix |
+|:--------------|----| ------- |
+| 10uM WS PCR1 Primer Mix | 3 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L |
+| Q5 Master Mix | 25 $\mu$L |
+
+- Used Q5 instead of KAPA
+
+1. Add following components to tubes  
+
+|Component       |Volume|
+|:--------------:|:----:|
+| PCR1 MasterMix | 40 $\mu$L | 
+| H2O     | 10 $\mu$L |
+
+2. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+### Bead Clean Up
+#### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+#### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+#### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+### Tapestation PCR 1 Samples 1-33
+
+#### Tapestation PCR 1 1-16 
+##### Tapestation PCR 1
+![2024-01-25 Tapestation PCR 1 Samples 1-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 1.png)
+
+#### Tapestation PCR 1 1-32 
+##### Tapestation PCR 1
+![2024-01-25 Tapestation PCR 1 Samples 17-32](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 2.png)
+
+- Samples 18, 19, and 20 DNW
+
+#### Tapestation PCR 1 18-20, 33 
+##### Tapestation PCR 1
+![2024-01-25 Tapestation PCR 1 Samples 33 and redo 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 3.png)
+
+- Samples 18, 19, and 20 DNW again
+
+
+# Friday 26-01-2023
+
+## Cell Culture
+### A20
+- Expanded to T175
+- Grow up for injection
+- Ask Chris about cell numbers needed for injecting into 12 mice
+
+### HEK
+- Split 1/2
+- DMEM
+
+## WS-ME1 Library Prep - Attempt 5 PCR 1 repeat and PCR 2 prep
+- Reran PCR1 for samples 18,19,20
+- Prepped PCR2 primers
+
+### PCR2 Prep
+- Reconstituted PCR2 primers bought by Chris
+  * Used DNAse/RNAse Free H20 and diluted to 100 $\mu$M
+- Diluted into strip tubes working stock (10$\mu$M)
+  * 90 $\mu$L H20 + 10 $\mu$L primer stock
+  
+### PCR1 Samples 18-20
+
+#### PCR1 Protocol
+
+- Used Primer Mix previously made on 25-01-2024
+
+|Component       |Volume| Master Mix |
+|:--------------|----| ------- |
+| 10uM WS PCR1 Primer Mix | 3 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L |
+| Q5 Master Mix | 25 $\mu$L |
+
+- Used Q5 instead of KAPA
+
+1. Add following components to tubes  
+
+|Component       |Volume|
+|:--------------:|:----:|
+| PCR1 MasterMix | 40 $\mu$L | 
+| H2O     | 10 $\mu$L |
+
+2. Performed PCR using the following parameters: 
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+### Bead Clean Up
+#### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+#### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+#### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+### Tapestation PCR 1 Samples 18-20
+
+#### Tapestation PCR 1 18-20
+##### Tapestation PCR 1
+![2024-01-25 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
