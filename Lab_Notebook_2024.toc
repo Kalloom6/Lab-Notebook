@@ -124,4 +124,6 @@
 \contentsline {subsubsection}{Tapestation}{34}{section*.125}%
 \contentsline {section}{Monday 05-02-2023}{35}{section*.126}%
 \contentsline {subsection}{Cell Culture}{35}{section*.127}%
-\contentsline {subsubsection}{HEK}{35}{section*.128}%
+\contentsline {subsubsection}{Made DMEM}{35}{section*.128}%
+\contentsline {subsubsection}{HEK - Seeded}{35}{section*.129}%
+\contentsline {subsubsection}{A20 - Split}{35}{section*.130}%

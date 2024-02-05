@@ -935,7 +935,7 @@ __8 cycles of steps 2-4__
 |Final Extension|Step 5: 72C    | 2 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __8 cycles of steps 2-4__  \center
+ __8 cycles of steps 2-4__ 
 
 3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
 - If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
@@ -951,14 +951,31 @@ Hold Step |Step 6: 12C    | Hold |
 # Monday 05-02-2023
 
 ## Cell Culture
-### DMEM
+### Made DMEM
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| DMEM   | ---- | 500 mL     | 78% |
+| Pen-Strep    | ---- | 5.5 mL      | 1% |
+| FBS     | ---- | 55 mL    | 10% |
 
-
-### HEK 
+### HEK - Seeded
 - Seeded New HEK
+  * HEK stock are in CM Box 1 -80  
+  
+1. Thawed vial
+2. Added 1mL DMEM to vial
+3. Transferred to 15mL falcon tube
+4. Slowly added 5mL DMEM
+5. Spun down at 650rpm for 4min
+6. Removed supernant and resuspended vial flicking
+7. Added 1mL DMEM and pipetted multiple times to create single cell suspension
+8. Added to T25 flask
+9. Added 14mL of DMEM
+10. Placed in incubator
 
-### A20
+### A20 - Split
 - Split 1/6
+- Spliut T25 vial for Emily James (EJ)
 
 
 
