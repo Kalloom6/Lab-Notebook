@@ -616,7 +616,7 @@ Hold Step |Step 6: 12C    | Hold |
 | Thermolabile Exonuclease I  | 1 $\mu$L |     33.5 $\mu$L     |
 | NEBuffer r3.1*        | 2 $\mu$L |    67 $\mu$L      |
 
-\center **Most PCR buffers are compatible** \center
+ **Most PCR buffers are compatible**
 
 9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
     - Spin briefly to get liquid to bottom of the tube
@@ -832,10 +832,10 @@ Hold Step |Step 6: 12C    | Hold |
 
 #### Tapestation PCR 1 18-20
 ##### Tapestation PCR 1
-![2024-01-25 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
+![2024-01-26 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
 
 
-# Thursday 26-01-2023
+# Monday 29-01-2023
 
 ## Cell Culture
 ### A20
@@ -876,7 +876,7 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 2 min |
 Hold Step |Step 6: 12C    | Hold |  
 
-\center __8 cycles of steps 2-4__  \center
+__8 cycles of steps 2-4__
 
 3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
 - If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
@@ -884,9 +884,81 @@ Hold Step |Step 6: 12C    | Hold |
 4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
 
 ### Tapestation 
+![2024-01-29 Tapestation PCR 2 Samples 1-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-29 TS 1.png)  
+- 1-8 PCR DNW (suspected issue with bead clean-up)
+
+![2024-01-29 Tapestation PCR 2 Samples 17-24](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-29 TS 2.png)  -
+
+- Last 4 samples are from Chris (seperate experiment)
+
+# Tuesday 30-01-2023
+
+## Cell Culture
+### HEK 
+- Unhealthy
+- Discarded
+
+### A20
+- Split 1/6
 
 
+# Thursday 01-02-2023
 
+## PCR Step 2 - Samples 1-8, 25-39  
+- Repeated PCR2 for samples 1-8
+
+### Overview
+- PCR to index samples for sequencing by attaching UMI 
+- Didn't have enough Q5 to complete all the samples
+
+### PCR2 Protocol  
+1. Prepare samples according to the following table:
+  - Keep careful note of which adaptors are added to which sample
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM Nxxx Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM Sxxx Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Q5 | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __8 cycles of steps 2-4__  \center
+
+3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
+- If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
+
+4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
+
+
+### Tapestation
+![2024-02-01 Tapestation PCR 2 Samples 1-8,25-32](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 1.png)
+![2024-02-01 Tapestation PCR 2 Samples 33-39](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 2.png) 
+
+
+# Monday 05-02-2023
+
+## Cell Culture
+### DMEM
+
+
+### HEK 
+- Seeded New HEK
+
+### A20
+- Split 1/6
 
 
 
