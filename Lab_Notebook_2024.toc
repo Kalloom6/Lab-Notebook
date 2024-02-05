@@ -1,0 +1,107 @@
+\contentsline {section}{\textbf January 2024}{3}{section*.2}%
+\contentsline {section}{Tuesday 16-01-2023}{3}{section*.3}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 1-8 / PCR 2 Sample 5}{3}{section*.4}%
+\contentsline {subsubsection}{Overview:}{3}{section*.5}%
+\contentsline {paragraph}{Sample List}{3}{section*.6}%
+\contentsline {subsubsection}{PCR 1: Samples 1-8}{4}{section*.7}%
+\contentsline {subsubsection}{Bead Clean Up}{4}{section*.8}%
+\contentsline {paragraph}{Overview}{4}{section*.9}%
+\contentsline {paragraph}{Materials}{4}{section*.10}%
+\contentsline {paragraph}{Protocol}{4}{section*.11}%
+\contentsline {paragraph}{Tapestation PCR 1 - Samples 1-8}{5}{section*.12}%
+\contentsline {subsubsection}{PCR 2: Samples 5}{5}{section*.13}%
+\contentsline {paragraph}{Overview}{5}{section*.14}%
+\contentsline {paragraph}{Materials}{6}{section*.15}%
+\contentsline {paragraph}{Protocol}{6}{section*.16}%
+\contentsline {paragraph}{Tapestation PCR 2}{6}{figure.1}%
+\contentsline {paragraph}{Review}{6}{section*.18}%
+\contentsline {paragraph}{Plan for tomorrow}{6}{section*.19}%
+\contentsline {section}{Wednesday 17-01-2023}{8}{section*.20}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30}{8}{section*.21}%
+\contentsline {subsubsection}{Overview:}{8}{section*.22}%
+\contentsline {subsubsection}{PCR 1: Samples 9-30}{8}{section*.23}%
+\contentsline {subsubsection}{Bead Clean Up}{8}{section*.24}%
+\contentsline {paragraph}{Overview}{8}{section*.25}%
+\contentsline {paragraph}{Materials}{8}{section*.26}%
+\contentsline {paragraph}{Protocol}{8}{section*.27}%
+\contentsline {paragraph}{Tapestation PCR 1}{9}{figure.2}%
+\contentsline {paragraph}{Tapestation PCR 1}{10}{section*.29}%
+\contentsline {paragraph}{Review}{10}{section*.30}%
+\contentsline {paragraph}{Plan for tomorrow}{10}{section*.31}%
+\contentsline {section}{Thursday 18-01-2023}{11}{section*.32}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 17/18/29}{11}{section*.33}%
+\contentsline {subsubsection}{Overview:}{11}{section*.34}%
+\contentsline {subsubsection}{PCR 1: Samples 17/18/29}{11}{section*.35}%
+\contentsline {subsubsection}{Bead Clean Up}{11}{section*.36}%
+\contentsline {paragraph}{Overview}{11}{section*.37}%
+\contentsline {paragraph}{Materials}{11}{section*.38}%
+\contentsline {paragraph}{Protocol}{11}{section*.39}%
+\contentsline {paragraph}{Tapestation PCR 1}{12}{section*.40}%
+\contentsline {paragraph}{Review}{12}{section*.41}%
+\contentsline {paragraph}{Plan for tomorrow}{12}{section*.42}%
+\contentsline {section}{Friday 19-01-2023}{12}{section*.43}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: RNA Extraction/RT Samples 31-33}{12}{section*.44}%
+\contentsline {subsubsection}{RNA extraction Samples 31-33}{12}{section*.45}%
+\contentsline {subsubsection}{RT Protocol Samples 31-33}{12}{section*.46}%
+\contentsline {section}{Monday 22-01-2023}{13}{section*.47}%
+\contentsline {subsubsection}{PCR 1: Samples 31-33}{13}{section*.48}%
+\contentsline {subsubsection}{Bead Clean Up}{13}{section*.49}%
+\contentsline {paragraph}{Overview}{13}{section*.50}%
+\contentsline {paragraph}{Materials}{13}{section*.51}%
+\contentsline {paragraph}{Protocol}{14}{section*.52}%
+\contentsline {paragraph}{Tapestation PCR 1 31-33}{14}{section*.53}%
+\contentsline {paragraph}{Tapestation PCR 1}{15}{section*.54}%
+\contentsline {subsubsection}{PCR 1: Negative Control}{15}{section*.55}%
+\contentsline {paragraph}{Tapestation Control Test 1}{16}{section*.56}%
+\contentsline {paragraph}{Tapestation Control Test 2}{16}{section*.57}%
+\contentsline {section}{Tuesday 23-01-2023}{17}{section*.58}%
+\contentsline {subsection}{Made New Media: AR-5}{17}{section*.59}%
+\contentsline {subsection}{Cell Culture}{18}{section*.60}%
+\contentsline {subsubsection}{A20}{18}{section*.61}%
+\contentsline {subsubsection}{HEK}{18}{section*.62}%
+\contentsline {subsection}{WS-ME1 Library Prep: Control Test 3}{18}{section*.63}%
+\contentsline {subsubsection}{PCR 1: Negative Control}{18}{section*.64}%
+\contentsline {paragraph}{PCR1 Primer Mix}{18}{section*.65}%
+\contentsline {paragraph}{PCR1 MM}{18}{section*.66}%
+\contentsline {paragraph}{Tapestation Control Test 3}{19}{section*.67}%
+\contentsline {section}{Wednesday 24-01-2023}{20}{section*.68}%
+\contentsline {subsection}{Cell Culture}{20}{section*.69}%
+\contentsline {subsubsection}{A20}{20}{section*.70}%
+\contentsline {subsubsection}{HEK}{21}{section*.71}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: Library Prep Attempt 5 - RT}{21}{section*.72}%
+\contentsline {subsubsection}{RT Protocol}{21}{section*.73}%
+\contentsline {paragraph}{Plan for tomorrow}{21}{section*.74}%
+\contentsline {section}{Thursday 25-01-2023}{22}{section*.75}%
+\contentsline {subsection}{Cell Culture}{22}{section*.76}%
+\contentsline {subsubsection}{A20}{22}{section*.77}%
+\contentsline {subsubsection}{HEK}{22}{section*.78}%
+\contentsline {subsection}{WS-ME1 Library Prep - Attempt 5 PCR 1}{22}{section*.79}%
+\contentsline {subsubsection}{PCR 1: Negative Control}{22}{section*.80}%
+\contentsline {paragraph}{PCR1 Primer Mix}{22}{section*.81}%
+\contentsline {paragraph}{PCR1 MM}{22}{section*.82}%
+\contentsline {subsubsection}{Bead Clean Up}{23}{section*.83}%
+\contentsline {paragraph}{Overview}{23}{section*.84}%
+\contentsline {paragraph}{Materials}{23}{section*.85}%
+\contentsline {paragraph}{Protocol}{23}{section*.86}%
+\contentsline {subsubsection}{Tapestation PCR 1 Samples 1-33}{23}{section*.87}%
+\contentsline {paragraph}{Tapestation PCR 1 1-16}{23}{section*.88}%
+\contentsline {subparagraph}{Tapestation PCR 1}{23}{figure.3}%
+\contentsline {paragraph}{Tapestation PCR 1 1-32}{26}{section*.90}%
+\contentsline {subparagraph}{Tapestation PCR 1}{26}{figure.4}%
+\contentsline {paragraph}{Tapestation PCR 1 18-20, 33}{26}{section*.92}%
+\contentsline {subparagraph}{Tapestation PCR 1}{26}{figure.5}%
+\contentsline {section}{Friday 26-01-2023}{26}{section*.94}%
+\contentsline {subsection}{Cell Culture}{26}{section*.95}%
+\contentsline {subsubsection}{A20}{26}{section*.96}%
+\contentsline {subsubsection}{HEK}{27}{section*.97}%
+\contentsline {subsection}{WS-ME1 Library Prep - Attempt 5 PCR 1 repeat and PCR 2 prep}{27}{section*.98}%
+\contentsline {subsubsection}{PCR2 Prep}{27}{section*.99}%
+\contentsline {subsubsection}{PCR1 Samples 18-20}{27}{section*.100}%
+\contentsline {paragraph}{PCR1 Protocol}{27}{section*.101}%
+\contentsline {subsubsection}{Bead Clean Up}{27}{section*.102}%
+\contentsline {paragraph}{Overview}{27}{section*.103}%
+\contentsline {paragraph}{Materials}{28}{section*.104}%
+\contentsline {paragraph}{Protocol}{28}{section*.105}%
+\contentsline {subsubsection}{Tapestation PCR 1 Samples 18-20}{28}{section*.106}%
+\contentsline {paragraph}{Tapestation PCR 1 18-20}{28}{section*.107}%
+\contentsline {subparagraph}{Tapestation PCR 1}{28}{figure.6}%

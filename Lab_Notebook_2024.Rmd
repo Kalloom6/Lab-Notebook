@@ -833,3 +833,62 @@ Hold Step |Step 6: 12C    | Hold |
 #### Tapestation PCR 1 18-20
 ##### Tapestation PCR 1
 ![2024-01-25 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
+
+
+# Thursday 26-01-2023
+
+## Cell Culture
+### A20
+- Split 1:6
+- AR-5
+- Ask Chris about cell numbers needed for injecting into 12 mice
+
+### HEK
+- Split 1/6
+- DMEM
+
+## PCR Step 2 - Samples 1-24
+### Overview
+- PCR to index samples for sequencing by attaching UMI 
+- Didn't have enough Q5 to complete all the samples
+
+### PCR2 Protocol  
+1. Prepare samples according to the following table:
+  - Keep careful note of which adaptors are added to which sample
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM Nxxx Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM Sxxx Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Q5 | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\center __8 cycles of steps 2-4__  \center
+
+3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
+- If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
+
+4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
+
+### Tapestation 
+
+
+
+
+
+
+
+

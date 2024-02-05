@@ -11,7 +11,7 @@ urlcolor: blue
 
 \newpage
 
-# Project 1: Modelling the BL Tumour Microenviroment
+# Project 1: A20 Modelling the BL Tumour Microenviroment
 
 ## Overview
 - Using A20 to model BL immune TME
@@ -32,6 +32,16 @@ urlcolor: blue
 - Basic actors to compare
   * Tumour growth rate
   * Tumour size
+
+#### Injection Plan
+
+| Group | Strain  |Location | Cell Injection| Cell Number|
+|:--------:|:----:|:----:|:-------:|
+| 1 | BALB/c | Sub-cut | A20 | 1x10^6^ |
+| 2 |BALB/c  | IP | A20 | 1x10^6^ |
+| 3 | NSG  | IP | A20 | 1x10^6^ |
+| 4 | NSG  | Sub-cut | A20 | 1x10^6^ |
+
   
 #### IHC Panel
 - Compare markers between tumour types
@@ -60,6 +70,8 @@ urlcolor: blue
   * DC Mono CD11c
   * Th17
   * TfH
+- Check what Swetha ordered
+* Box 7 antibody sheet dropbox
   
  Standard T Cell
   
@@ -74,6 +86,51 @@ urlcolor: blue
 | Macrophage | HLA-DR |
 |  T Cells (all)   | CD3 |
 | T Cells (Cytoxic)  | CD8 |
+
+### E2: Trial BL Therapies
+- CAR drugs
+- Bi-Specific antibodies (check that they can be applied to mice)
+- Rituximab comparison
+  * Clonal dynamics of Rituximab treatment
+    - WILDseq
+
+
+### E3: Immune focused CRISPR Screen
+- Immune compromised vs Immune competent
+  * Think very carefully about specific mouse models (some still have macrophages, NK cells, ect.)
+  * [JAX Lab Article](https://www.jax.org/news-and-insights/2006/March/choosing-an-immunodeficient-mouse-model#:~:text=Immunodeficient%20mouse%20models%2C%20particularly%20severe,cell%20biology%20and%20other%20research.)
+  
+
+
+# Project 2: Spatial Transciptomics of BL
+
+11 Samples of BL acquired from VIVO BioBank
+
+Looking at characterizing the Human BL TME
+- Publically available BL Data - VISIUM internal samples - Mibiscope Internal Samples
+
+Publically available datasets analysis
+- Talk to Jamie again
+
+- 10x Visium transcriptomics
+  * T Cell Dynamics
+    - Infiltration
+    - Exhaustion
+  * NK cell dynamics
+  * Places to get it done:
+    - CI (no)
+    - [Source Bioscience](https://sourcebioscience.com/genomics/10x-visium-spatial-transcriptomics/)
+    - Wellcome Sanger Institute
+      * Teichmann Lab used 10x Visium
+  
+- MIBIScope Comparison
+  * Does Protein expression map onto spatial gene expression?
+  * Collaborate with Nina in Germany
+  
+  
+    
+
+
 
 
 
