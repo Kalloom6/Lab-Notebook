@@ -11,7 +11,7 @@ urlcolor: blue
 
 # \textbf January 2024
 
-# Tuesday 16-01-2023
+# Tuesday 16-01-2024
 
 ## WILDseq - Mouse Experiment 1: PCR 1 Samples 1-8 / PCR 2 Sample 5
 ### Overview: 
@@ -128,7 +128,9 @@ Hold Step |Step 6: 12C    | Hold |
 #### Tapestation PCR 1 - Samples 1-8
 
 ![2024-01-16 Tapestation PCR 1 Results Samples 1-8](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 1.png)
-Inital Test PCR 1
+\center
+Initial Test PCR 1
+\raggedright
 
 ### PCR 2: Samples 5
 
@@ -170,9 +172,9 @@ Inital Test PCR 1
 |Extension| **Step 4: 72C** | **15s**|
 |Final Extension|Step 5: 72C    | 2 min |
 Hold Step |Step 6: 12C    | Hold |  
-
+\center
  __8 cycles of steps 2-4__ 
-
+\raggedright
 
 3. Performed Ampure bead clean up as above with 90ul beads per 50ul PCR reaction
 
@@ -192,7 +194,7 @@ Hold Step |Step 6: 12C    | Hold |
 - Bead Clean Up
 - Tape Station
 
-# Wednesday 17-01-2023
+# Wednesday 17-01-2024
 
 ## WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30
 
@@ -220,11 +222,9 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
+\center
 __10-25 cycles of steps 2-4__
-
-
-
-
+\raggedright
 
 ### Bead Clean Up
 #### Overview
@@ -278,7 +278,7 @@ __10-25 cycles of steps 2-4__
   * To Do - RNA Extraction / RT / PCR 1 / PCR 2
   * Wait until majority of samples have acceptable PCR 2 product
   
-# Thursday 18-01-2023
+# Thursday 18-01-2024
 
 ## WILDseq - Mouse Experiment 1: PCR 1 Samples 17/18/29
 
@@ -291,7 +291,7 @@ __10-25 cycles of steps 2-4__
 
 2. Add following components to tubes
 |Component       |Volume|
-|:--------------|----|
+|:--------------:|:----:|
 | PCR1 MasterMix | 40 $\mu$L | 
 | cDNA      | 10 $\mu$L |
 
@@ -304,8 +304,10 @@ __10-25 cycles of steps 2-4__
 |Annealing | **Step 3: 60C** | **15s**| 
 |Extension| **Step 4: 72C** | **15s**|
 |Final Extension|Step 5: 72C    | 1 min |
-Hold Step |Step 6: 12C    | Hold |  
+Hold Step |Step 6: 12C    | Hold | 
+\center
  __10-25 cycles of steps 2-4__ 
+\raggedright
 
 ### Bead Clean Up
 #### Overview
@@ -355,7 +357,7 @@ Hold Step |Step 6: 12C    | Hold |
   * To Do - RNA Extraction / RT / PCR 1 / PCR 2
   * Wait until majority of samples have acceptable PCR 2 product
   
-# Friday 19-01-2023
+# Friday 19-01-2024
 
 ## WILDseq - Mouse Experiment 1: RNA Extraction/RT Samples 31-33
 Overview: Extra samples given by Chris for whitelist
@@ -387,7 +389,7 @@ Overview: Extra samples given by Chris for whitelist
 11. Checked [cDNA] on NanoDrop
   - Added to Sample List
 
-# Monday 22-01-2023
+# Monday 22-01-2024
 
 ### PCR 1: Samples 31-33
 - Included negative control (MM + H20)
@@ -395,8 +397,9 @@ Overview: Extra samples given by Chris for whitelist
 1. Used master mix of PCR1 reagents made 2024-01-16 
 
 2. Add following components to tubes
+
 |Component       |Volume|
-|:--------------|----|
+|:--------------:|:----:|
 | PCR1 MasterMix | 40 $\mu$L | 
 | cDNA      | 10 $\mu$L |
 
@@ -411,8 +414,9 @@ Overview: Extra samples given by Chris for whitelist
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
+\center
  __10-25 cycles of steps 2-4__
-
+\raggedright
 
 ### Bead Clean Up
 #### Overview
@@ -446,7 +450,9 @@ Hold Step |Step 6: 12C    | Hold |
 #### Tapestation PCR 1 31-33 
 #### Tapestation PCR 1
 ![2024-01-22 Tapestation PCR 1 Samples 30-33 and Control](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
-!!!! Band present in - Control lane !!!!
+\center
+**!!!! Band present in - Control lane !!!!**
+\raggedright
 
 ### PCR 1: Negative Control
 - Remade negative control (MM + H20)
@@ -454,8 +460,9 @@ Hold Step |Step 6: 12C    | Hold |
 1. Used master mix of PCR1 reagents made 2024-01-16 
 
 2. Add following components to tubes
-|Component       |Volume|
-|:--------------|----|
+
+|Component       | Volume |
+|:--------------:|:----:|
 | PCR1 MasterMix | 40 $\mu$L | 
 | cDNA      | 10 $\mu$L |
 
@@ -470,6 +477,9 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
+\center
+ __10-25 cycles of steps 2-4__
+\raggedright
 
 #### Tapestation Control Test 1
 - Compared New -Control to old 
@@ -483,7 +493,7 @@ Hold Step |Step 6: 12C    | Hold |
 ![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 
 
-# Tuesday 23-01-2023
+# Tuesday 23-01-2024
 ## Made New Media: AR-5
 1. Made new media: AR-5
 
@@ -565,6 +575,9 @@ Overview: question around contaminated primers
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
+\center
+ __10-25 cycles of steps 2-4__
+\raggedright
 
 #### Tapestation Control Test 3 
 - Compared New -Control to old -control 
@@ -572,7 +585,7 @@ Hold Step |Step 6: 12C    | Hold |
 ![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-23 TS 1.png)
   
   
-# Wednesday 24-01-2023
+# Wednesday 24-01-2024
 
 ## Cell Culture
 ### A20
@@ -616,13 +629,14 @@ Hold Step |Step 6: 12C    | Hold |
 | Thermolabile Exonuclease I  | 1 $\mu$L |     33.5 $\mu$L     |
 | NEBuffer r3.1*        | 2 $\mu$L |    67 $\mu$L      |
 
+\center
  **Most PCR buffers are compatible**
+\raggedright
 
 9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
     - Spin briefly to get liquid to bottom of the tube
 10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
-
-Stored at -4C
+    - Stored at -4C
 
 #### Plan for tomorrow
 - PCR 1 (check for KAPA HIFI amount)
@@ -631,7 +645,7 @@ Stored at -4C
 - Check on cells
 - Plan cell numbers needed for A20 mouse injections
 
-# Thursday 25-01-2023
+# Thursday 25-01-2024
 
 ## Cell Culture
 ### A20
@@ -699,6 +713,10 @@ Ran PCR1 for attempt 5
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
+\center
+ __10-25 cycles of steps 2-4__
+\raggedright
+
 ### Bead Clean Up
 #### Overview
 - Clean PCR reaction by removing leftover primers
@@ -746,7 +764,7 @@ Hold Step |Step 6: 12C    | Hold |
 - Samples 18, 19, and 20 DNW again
 
 
-# Friday 26-01-2023
+# Friday 26-01-2024
 
 ## Cell Culture
 ### A20
@@ -800,6 +818,10 @@ Hold Step |Step 6: 12C    | Hold |
 |Final Extension|Step 5: 72C    | 1 min |
 Hold Step |Step 6: 12C    | Hold |  
 
+\center
+ __10-25 cycles of steps 2-4__
+\raggedright
+
 ### Bead Clean Up
 #### Overview
 - Clean PCR reaction by removing leftover primers
@@ -835,7 +857,7 @@ Hold Step |Step 6: 12C    | Hold |
 ![2024-01-26 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
 
 
-# Monday 29-01-2023
+# Monday 29-01-2024
 
 ## Cell Culture
 ### A20
@@ -874,9 +896,11 @@ Hold Step |Step 6: 12C    | Hold |
 |Annealing | **Step 3: 55C** | **15s**| 
 |Extension| **Step 4: 72C** | **15s**|
 |Final Extension|Step 5: 72C    | 2 min |
-Hold Step |Step 6: 12C    | Hold |  
+Hold Step |Step 6: 12C    | Hold |
 
+\center
 __8 cycles of steps 2-4__
+\raggedright
 
 3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
 - If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
@@ -891,7 +915,7 @@ __8 cycles of steps 2-4__
 
 - Last 4 samples are from Chris (seperate experiment)
 
-# Tuesday 30-01-2023
+# Tuesday 30-01-2024
 
 ## Cell Culture
 ### HEK 
@@ -901,8 +925,9 @@ __8 cycles of steps 2-4__
 ### A20
 - Split 1/6
 
+# \textbf February 2024
 
-# Thursday 01-02-2023
+# Thursday 01-02-2024
 
 ## PCR Step 2 - Samples 1-8, 25-39  
 - Repeated PCR2 for samples 1-8
@@ -934,8 +959,9 @@ __8 cycles of steps 2-4__
 |Extension| **Step 4: 72C** | **15s**|
 |Final Extension|Step 5: 72C    | 2 min |
 Hold Step |Step 6: 12C    | Hold |  
-
+\center
  __8 cycles of steps 2-4__ 
+\raggedright
 
 3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
 - If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
@@ -948,7 +974,7 @@ Hold Step |Step 6: 12C    | Hold |
 ![2024-02-01 Tapestation PCR 2 Samples 33-39](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 2.png) 
 
 
-# Monday 05-02-2023
+# Monday 05-02-2024
 
 ## Cell Culture
 ### Made DMEM
@@ -976,6 +1002,46 @@ Hold Step |Step 6: 12C    | Hold |
 ### A20 - Split
 - Split 1/6
 - Spliut T25 vial for Emily James (EJ)
+
+# Tuesday 05-02-2024
+
+## WS-ME1 Pooling for Submission
+
+- Genomics core indicated that library should be submitted at 5nM-10nM in a volume of 20-30uL
+- Cubit PCR2 Samples to determine concentration
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/In_vivo_lib_prep_data.xlsx", sheet = "Pooling")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+- Used IDT Library Concentration Conversion Calculator
+  * Link: https://eu.idtdna.com/Calc/library-concentration-conversion
+  
+
+# Wednesday 05-02-2024
+
+## Cell Culture
+
+### HEK
+- Decided to wait till Monday to start making virus
+- Discarded HEK
+- Will reseed HEK Sunday
+
+### A20
+- Split 1/6
+- Keeping going for NSG/BALBc injection
+  * Issue with procedure room in AMB, waiting for that to be resolved
+- Also plan to incorporate WILDseq
+
+# Thursday 06-02-2024
+
 
 
 
