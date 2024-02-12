@@ -1003,7 +1003,7 @@ Hold Step |Step 6: 12C    | Hold |
 - Split 1/6
 - Spliut T25 vial for Emily James (EJ)
 
-# Tuesday 05-02-2024
+# Tuesday 06-02-2024
 
 ## WS-ME1 Pooling for Submission
 
@@ -1025,7 +1025,7 @@ knitr::kable(excel_data)
   * Link: https://eu.idtdna.com/Calc/library-concentration-conversion
   
 
-# Wednesday 05-02-2024
+# Wednesday 07-02-2024
 
 ## Cell Culture
 
@@ -1040,10 +1040,46 @@ knitr::kable(excel_data)
   * Issue with procedure room in AMB, waiting for that to be resolved
 - Also plan to incorporate WILDseq
 
-# Thursday 06-02-2024
+# Friday 09-02-2024
+
+## Cell Culture
+
+### A20
+- Split 1/6
+- Keeping going for NSG/BALBc injection
+  * Issue with procedure room in AMB, waiting for that to be resolved
+- Also plan to incorporate WILDseq
+
+# Monday 12-02-2024
+
+## Cell Culture
+
+### Made DMEM-V1
+
+- DMEM for virus prodution
+- Does not have Pen/Strep
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| DMEM   | ---- | 500 mL     | 78% |
+| FBS     | ---- | 128 mL    | 20% |
+| Glutamax    | ---- | 6.5 mL    | 1% |
+
+### A20
+- Split 1/6
+- Keeping going for NSG/BALBc injection
+  * Planning to inject with Chris tomorrow
+- Also plan to incorporate WILDseq once virus is made
+
+# Tuesday 13-02-2024
 
 
+# Wednesday 14-02-2024
 
 
+# Thursday 15-02-2024
+
+
+# Friday 16-02-2024
 
 
