@@ -88,7 +88,16 @@ urlcolor: blue
 | T Cells (Cytoxic)  | CD8 |
 
 ### E2: Trial BL Therapies
-- CAR drugs
+- Balb/c drug vs no drug vs WS-A20 drug vs WS-A20 no drug
+  * Want to compare effect of GFP on immune cell infiltration
+  * Look at clonal dynamics of rituximab treatment
+- Glo-BNHL Trial
+  * Odronextamab
+    - CD20xCD3 Bispecific antibody
+  * Loncastuximab tesirine
+    - 
+  * Rituximab
+- CAR treatments?
 - Bi-Specific antibodies (check that they can be applied to mice)
 - Rituximab comparison
   * Clonal dynamics of Rituximab treatment
@@ -104,12 +113,50 @@ urlcolor: blue
 
 # Project 2: Spatial Transciptomics of BL
 
-11 Samples of BL acquired from VIVO BioBank
+11 Samples of BL acquired from VIVO BioBank  
+- Want to do stuff similar to these studies:  
+  * [PDAC Spatial Transcriptomics](https://www.nature.com/articles/s41588-022-01157-1)  
+  * [Genomic/Transcriptomic analysis of Clinical BL Samples](https://www.nature.com/articles/s41467-019-08578-3)
 
-Looking at characterizing the Human BL TME
-- Publically available BL Data - VISIUM internal samples - Mibiscope Internal Samples
+## Paper Plan
+Based on PDAC ST paper
 
-Publically available datasets analysis
+- Panel 1: 
+  * Patient Data
+    a. Correlation survival studies between immune cell infiltration and survival
+
+- Panel 1:
+  * Patient sample characterisation
+    a. Work Flow (sample backgrounds, collection from sources)
+    b. Overview of all cell types profiled in the scRNA-seq cohort.
+    c. Overview of spatial transcriptomics cohort
+- Panel 2
+  * Characterize the tumour (Tumor vs stroma vs immune cells)
+    a. Differential pathway enrichment case-level tumor subpopulations
+    b. Tumor cluster pathway enrichment for specific case
+    c. Tumor cluster pathway enrichment for another specific case
+    d. UMAP of tumor subclusters for specific case
+    e. UMAP of tumor subclusters for specific case
+    
+- Panel 3
+  * Genomic Landscape and oncogenic driver heterogeneity (??)
+  
+- Panel 4
+  * Tumour cell heterogeneity in ST data(?)
+
+- Panel 5
+  * Immune Populations in TME
+
+- Panel 6
+  * Mibiscope
+
+## Thesis ID
+Looking at characterizing the Human BL TME  
+- Publically available BL Data   
+- VISIUM internal samples   
+- Mibiscope Internal Samples  
+
+Publically available datasets analysis  
 - Talk to Jamie again
 
 - 10x Visium transcriptomics
@@ -126,9 +173,19 @@ Publically available datasets analysis
 - MIBIScope Comparison
   * Does Protein expression map onto spatial gene expression?
   * Collaborate with Nina in Germany
+ 
+## Publically Available RNAseq  
+
+1. The iDEP or TACITuS pipeline for transcriptomic profiling and GSEA/pathway analysis.   
+2. The CIBERSORT immune-cell deconvolution algorithm to obtain cell-fractions and gene expression/enrichment scores of tumor-infiltrating lymphocytes.   
+3. The GEPIA2 database for survival analysis correlating to immune infiltration and/or differential gene expression.   
   
-  
-    
+# Ideas
+
+## Ferritin as a drug delivery system
+- Does BL have increased Tfr1 expression relative to normal cells/B cells?
+
+
 
 
 
