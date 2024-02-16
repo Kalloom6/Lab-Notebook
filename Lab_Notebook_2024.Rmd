@@ -1065,21 +1065,79 @@ knitr::kable(excel_data)
 | FBS     | ---- | 128 mL    | 20% |
 | Glutamax    | ---- | 6.5 mL    | 1% |
 
+### Thawed HEK
+
 ### A20
 - Split 1/6
 - Keeping going for NSG/BALBc injection
   * Planning to inject with Chris tomorrow
 - Also plan to incorporate WILDseq once virus is made
 
+## Processing scRNAseq
+
 # Tuesday 13-02-2024
 
+## Cell Culture
+
+### HEK
+- Morphology looked weird
+- 20% FBS is probably too high
+- Threw away will start next week
+
+## Processing scRNAseq
 
 # Wednesday 14-02-2024
 
+## Cell Culture
 
-# Thursday 15-02-2024
+### A20
+- Split 1/6
+- Keeping going for NSG/BALBc injection
+  * Planning to inject with Chris tomorrow
+- Also plan to incorporate WILDseq once virus is made
 
+## Processing scRNAseq
 
 # Friday 16-02-2024
+
+## A20 Xenograft EXP 1
+
+### Cell Prep
+
+  1. Thawed 2.5mL of Matrigel on ice ~3hours before 
+  2. Transferred 12x10^6^ cells to a 15mL eppendorf
+  3. Pelleted CS
+  4. Resuspended in 2.5mL of PBS
+  5. Transferred 400$\mu$L CS to 6 different 1mL eppendorfs
+  6. Added 400$\mu$L of Matrigel, mixed gentlely and placed back on ice
+  7. Brought materials over to the AMB for injection
+
+### Injection  
+
+- Chris Injected 
+- Study Plan: SP140164  
+
+| Mouse ID | Earmark | Genotype | Injection Location | 
+| :-------: | :------: | :--------:|:----------:|
+| TUAD36.2h  | NM | NSG     | IP |
+| TUAD36.2i  | 1R | NSG     | IP |
+| TUAD36.2k  | 2R | NSG     | IP |
+| TUAD36.2a  | NM | NSG     | SC |
+| TUAD36.2b  | 1L | NSG     | SC |
+| TUAD36.2c  | 1R | NSG     | SC |
+| TUAP3.1e  | 1L | BALB/c   | IP |
+| TUAP3.1a  | NM | BALB/c   | IP |
+| TUAP4.1a  | 2L | BALB/c   | IP |
+| TUAP3.1b  | 1L | BALB/c   | SC |
+| TUAP4.1b  | 2R | BALB/c   | SC |
+| TUAP3.1c  | 1R | BALB/c   | SC |  
+
+- Each mouse received ~1x10^6^ cells
+- Mice will be monitored over the coming weeks for tumour development 
+
+
+
+
+
 
 
