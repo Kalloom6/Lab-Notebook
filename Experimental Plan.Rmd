@@ -20,6 +20,10 @@ urlcolor: blue
 - Compare results to patient data
 - Apply findings to humanised mouse models of BL PDX
 
+## Issues
+- What is the Biological/clinical relevance of this model?
+- Are you priming an infiltrating response due to the nature of cell injections causing necrosis (thereby stimulating the immune system)
+
 ## Background
 - The impact of immune TME in BL is unclear
 - BL 
@@ -117,6 +121,31 @@ urlcolor: blue
 - Want to do stuff similar to these studies:  
   * [PDAC Spatial Transcriptomics](https://www.nature.com/articles/s41588-022-01157-1)  
   * [Genomic/Transcriptomic analysis of Clinical BL Samples](https://www.nature.com/articles/s41467-019-08578-3)
+- Whole Genome, whole exome sequencing
+- Patient demographics?
+- Survival outcomes?
+  
+## Tools  
+
+- [NCI GDC data portal](https://portal.gdc.cancer.gov/analysis_page?app=)
+  * Compare gene expression, mutations, survial analytics(?)
+- Cibersortx
+  * Look at predicted immune populations
+- SRA
+  * Publicly available BL RNAseq datasets
+- GEO
+  * Gene expression omnibus
+- BLGSP
+  * BL genome repository (need access)
+- ICGC
+  * BL genome repository (need access)
+  * ICGC 25k argos(?) should have BL cases
+
+- DepMap
+  * Cancer dependency on various genes (skews metabolic in terms of relevant output)
+- GTEx
+  * Adult Genotype-Tissue Expression (GTEx) project
+  * 
 
 ## Paper Plan
 Based on PDAC ST paper

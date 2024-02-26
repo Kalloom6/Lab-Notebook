@@ -1135,6 +1135,65 @@ knitr::kable(excel_data)
 - Each mouse received ~1x10^6^ cells
 - Mice will be monitored over the coming weeks for tumour development 
 
+# Monday 19-02-2024
+
+## Cell Culture
+### A20
+- Split 1/6
+- Used AR-5
+
+# Wednesday 21-02-2024
+
+## Cell Culture
+### A20
+- Split 1/6
+- Used AR-5
+
+### HEK
+- Seeded New HEK
+  * HEK stock are in CM Box 1 -80 
+- Used DMEM-V1
+
+1. Thawed vial
+2. Added 1mL DMEM to vial
+3. Transferred to 15mL falcon tube
+4. Slowly added 5mL DMEM
+5. Spun down at 650rpm for 4min
+6. Removed supernant and resuspended vial flicking
+7. Added 1mL DMEM and pipetted multiple times to create single cell suspension
+8. Added to T25 flask
+9. Added 14mL of DMEM
+10. Placed in incubator
+
+# Friday 23-02-2024
+
+## Cell Culture
+### A20
+- Split 1/6  
+- Used AR-5
+
+### HEK
+- Split 1/6
+- Used DMEM-V1
+
+# Monday 26-02-2024
+
+## Cell Culture
+
+### A20
+- Split into T25
+- Froze down 4 vials
+- 4x10^6^ cells per vial
+- Used AR-5
+
+### HEK
+- Froze down 7 vials
+- 6x10^6^ cells per vial
+
+### WILDseq Virus Production Day 1
+- Seeded 2 10cm dishes of HEK cells
+  * Coated with Poly-D-Lysine (covered plate, removed liquid, let sit for 10 min, washed with PBS) 
+  * 4.5x10^6^ cells seeded per dish (seeded at 13:00)
 
 
 
