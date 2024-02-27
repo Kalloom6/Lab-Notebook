@@ -11,7 +11,162 @@ urlcolor: blue
 
 \newpage
 
-# Project 1: A20 Modelling the BL Tumour Microenviroment
+# Thesis Plan
+
+## Chapter 1: Clinical Data
+
+### C1.1 Analysis of Immune cell make up of publically avaialble RNAseq BL Datasets
+ - CIBERSORT
+  * Immune profile
+ - ECOTYPER
+  * COO analysis
+ - GSEA analysis of samples with unique immune profile(?)
+ 
+###C1.2 Spatial Transcriptomics of sBL Clinical Samples
+- 4 samples (maybe 6)
+- Initial IHC:
+  * H+E
+  * CD20
+  * CD10
+  * Ki-67
+  * MYC
+- Genomic Analysis of MYC status
+  * FISH
+- ST
+  * 10x Visium
+  * Focus on Immune profile subsets
+  
+###C1.3 Mibiscope
+- Identify proteins of interest from 1.1/1.2
+
+
+## Chapter 2: sBL PDX in Humanised Mice
+
+### NK-92 and Rituximab
+- 2x PDX?
+- WILDseq GFP+ test
+- Co-Culture "EC50"
+  * Use GFP+ as a proxy for cell viability
+  * +/- Rituximab (other Glo-BNHL treatments?)
+  * You need to think about this
+- Long term co-culture
+  * Sort
+  * RNAseq
+  * Proteomics (?)
+  * WILDseq Clonal Selection (?)
+
+### C2.1 Humanised vs NSG Pilot
+- IHC
+- Flow 
+
+
+
+
+
+# Project 2: Spatial Transciptomics of BL
+
+11 Samples of BL acquired from VIVO BioBank  
+- Want to do stuff similar to these studies:  
+  * [PDAC Spatial Transcriptomics](https://www.nature.com/articles/s41588-022-01157-1)  
+  * [Genomic/Transcriptomic analysis of Clinical BL Samples](https://www.nature.com/articles/s41467-019-08578-3)
+- Whole Genome, whole exome sequencing
+- Patient demographics?
+- Survival outcomes?
+  
+## Tools  
+
+- [NCI GDC data portal](https://portal.gdc.cancer.gov/analysis_page?app=)
+  * Compare gene expression, mutations, survial analytics(?)
+- Cibersortx
+  * Look at predicted immune populations
+- SRA
+  * Publicly available BL RNAseq datasets
+- GEO
+  * Gene expression omnibus
+- BLGSP
+  * BL genome repository (need access)
+- ICGC
+  * BL genome repository (need access)
+  * ICGC 25k argos(?) should have BL cases
+
+- DepMap
+  * Cancer dependency on various genes (skews metabolic in terms of relevant output)
+- GTEx
+  * Adult Genotype-Tissue Expression (GTEx) project
+  * 
+
+## Paper Plan
+Based on PDAC ST paper
+
+- Panel 1: 
+  * Patient Data
+    a. Correlation survival studies between immune cell infiltration and survival
+
+- Panel 1:
+  * Patient sample characterisation
+    a. Work Flow (sample backgrounds, collection from sources)
+    b. Overview of all cell types profiled in the scRNA-seq cohort.
+    c. Overview of spatial transcriptomics cohort
+- Panel 2
+  * Characterize the tumour (Tumor vs stroma vs immune cells)
+    a. Differential pathway enrichment case-level tumor subpopulations
+    b. Tumor cluster pathway enrichment for specific case
+    c. Tumor cluster pathway enrichment for another specific case
+    d. UMAP of tumor subclusters for specific case
+    e. UMAP of tumor subclusters for specific case
+    
+- Panel 3
+  * Genomic Landscape and oncogenic driver heterogeneity (??)
+  
+- Panel 4
+  * Tumour cell heterogeneity in ST data(?)
+
+- Panel 5
+  * Immune Populations in TME
+
+- Panel 6
+  * Mibiscope
+
+## Thesis ID
+Looking at characterizing the Human BL TME  
+- Publically available BL Data   
+- VISIUM internal samples   
+- Mibiscope Internal Samples  
+
+Publically available datasets analysis  
+- Talk to Jamie again
+
+- 10x Visium transcriptomics
+  * T Cell Dynamics
+    - Infiltration
+    - Exhaustion
+  * NK cell dynamics
+  * Places to get it done:
+    - CI (no)
+    - [Source Bioscience](https://sourcebioscience.com/genomics/10x-visium-spatial-transcriptomics/)
+    - Wellcome Sanger Institute
+      * Teichmann Lab used 10x Visium
+  
+- MIBIScope Comparison
+  * Does Protein expression map onto spatial gene expression?
+  * Collaborate with Nina in Germany
+ 
+## Publically Available RNAseq  
+
+1. The iDEP or TACITuS pipeline for transcriptomic profiling and GSEA/pathway analysis.   
+2. The CIBERSORT immune-cell deconvolution algorithm to obtain cell-fractions and gene expression/enrichment scores of tumor-infiltrating lymphocytes.   
+3. The GEPIA2 database for survival analysis correlating to immune infiltration and/or differential gene expression.   
+
+
+
+
+
+
+
+
+
+
+# A20 Modelling the BL Tumour Microenviroment
 
 ## Overview
 - Using A20 to model BL immune TME
@@ -113,101 +268,6 @@ urlcolor: blue
   * Think very carefully about specific mouse models (some still have macrophages, NK cells, ect.)
   * [JAX Lab Article](https://www.jax.org/news-and-insights/2006/March/choosing-an-immunodeficient-mouse-model#:~:text=Immunodeficient%20mouse%20models%2C%20particularly%20severe,cell%20biology%20and%20other%20research.)
   
-
-
-# Project 2: Spatial Transciptomics of BL
-
-11 Samples of BL acquired from VIVO BioBank  
-- Want to do stuff similar to these studies:  
-  * [PDAC Spatial Transcriptomics](https://www.nature.com/articles/s41588-022-01157-1)  
-  * [Genomic/Transcriptomic analysis of Clinical BL Samples](https://www.nature.com/articles/s41467-019-08578-3)
-- Whole Genome, whole exome sequencing
-- Patient demographics?
-- Survival outcomes?
-  
-## Tools  
-
-- [NCI GDC data portal](https://portal.gdc.cancer.gov/analysis_page?app=)
-  * Compare gene expression, mutations, survial analytics(?)
-- Cibersortx
-  * Look at predicted immune populations
-- SRA
-  * Publicly available BL RNAseq datasets
-- GEO
-  * Gene expression omnibus
-- BLGSP
-  * BL genome repository (need access)
-- ICGC
-  * BL genome repository (need access)
-  * ICGC 25k argos(?) should have BL cases
-
-- DepMap
-  * Cancer dependency on various genes (skews metabolic in terms of relevant output)
-- GTEx
-  * Adult Genotype-Tissue Expression (GTEx) project
-  * 
-
-## Paper Plan
-Based on PDAC ST paper
-
-- Panel 1: 
-  * Patient Data
-    a. Correlation survival studies between immune cell infiltration and survival
-
-- Panel 1:
-  * Patient sample characterisation
-    a. Work Flow (sample backgrounds, collection from sources)
-    b. Overview of all cell types profiled in the scRNA-seq cohort.
-    c. Overview of spatial transcriptomics cohort
-- Panel 2
-  * Characterize the tumour (Tumor vs stroma vs immune cells)
-    a. Differential pathway enrichment case-level tumor subpopulations
-    b. Tumor cluster pathway enrichment for specific case
-    c. Tumor cluster pathway enrichment for another specific case
-    d. UMAP of tumor subclusters for specific case
-    e. UMAP of tumor subclusters for specific case
-    
-- Panel 3
-  * Genomic Landscape and oncogenic driver heterogeneity (??)
-  
-- Panel 4
-  * Tumour cell heterogeneity in ST data(?)
-
-- Panel 5
-  * Immune Populations in TME
-
-- Panel 6
-  * Mibiscope
-
-## Thesis ID
-Looking at characterizing the Human BL TME  
-- Publically available BL Data   
-- VISIUM internal samples   
-- Mibiscope Internal Samples  
-
-Publically available datasets analysis  
-- Talk to Jamie again
-
-- 10x Visium transcriptomics
-  * T Cell Dynamics
-    - Infiltration
-    - Exhaustion
-  * NK cell dynamics
-  * Places to get it done:
-    - CI (no)
-    - [Source Bioscience](https://sourcebioscience.com/genomics/10x-visium-spatial-transcriptomics/)
-    - Wellcome Sanger Institute
-      * Teichmann Lab used 10x Visium
-  
-- MIBIScope Comparison
-  * Does Protein expression map onto spatial gene expression?
-  * Collaborate with Nina in Germany
- 
-## Publically Available RNAseq  
-
-1. The iDEP or TACITuS pipeline for transcriptomic profiling and GSEA/pathway analysis.   
-2. The CIBERSORT immune-cell deconvolution algorithm to obtain cell-fractions and gene expression/enrichment scores of tumor-infiltrating lymphocytes.   
-3. The GEPIA2 database for survival analysis correlating to immune infiltration and/or differential gene expression.   
   
 # Ideas
 
