@@ -63,7 +63,7 @@ urlcolor: blue
 
 
 
-# Project 2: Spatial Transciptomics of BL
+## Project 1: Spatial Transciptomics of BL
 
 11 Samples of BL acquired from VIVO BioBank  
 - Want to do stuff similar to these studies:  
@@ -73,7 +73,7 @@ urlcolor: blue
 - Patient demographics?
 - Survival outcomes?
   
-## Tools  
+### Tools  
 
 - [NCI GDC data portal](https://portal.gdc.cancer.gov/analysis_page?app=)
   * Compare gene expression, mutations, survial analytics(?)
@@ -95,7 +95,7 @@ urlcolor: blue
   * Adult Genotype-Tissue Expression (GTEx) project
   * 
 
-## Paper Plan
+### Paper Plan
 Based on PDAC ST paper
 
 - Panel 1: 
@@ -159,40 +159,52 @@ Publically available datasets analysis
 
 
 
+# Ideas
+
+## Rituximab Resistance
+
+### Generate Rituximab Resistant PDX
+- Resistance to Rituximab-CDC
+- Resistance to Rituximab-ADCC (NK cell dependent)
+- Apply barcoding approach to try to identify signalling pathways which are depended on for evasion
 
 
 
+## Humanised Mice PDX 
 
+### Incorporate Barcodes?
+- This is very undercooked
 
+## Omo-MYC
+- Waiting for regualtory approval
 
+## (Shelved) A20 Modelling the BL Tumour Microenviroment
 
-# A20 Modelling the BL Tumour Microenviroment
-
-## Overview
+### Overview
 - Using A20 to model BL immune TME
   * Look specifically at T-cell infiltration
   * Immune evasion mechanisms deployed by BL 
 - Compare results to patient data
 - Apply findings to humanised mouse models of BL PDX
 
-## Issues
+#### Issues
 - What is the Biological/clinical relevance of this model?
 - Are you priming an infiltrating response due to the nature of cell injections causing necrosis (thereby stimulating the immune system)
 
-## Background
+#### Background
 - The impact of immune TME in BL is unclear
 - BL 
 
-## Experimental Plan
+### Experimental Plan
 
-### E1: NSG vs BALB/C A20 injection
-#### E1 Overview
+#### E1: NSG vs BALB/C A20 injection
+##### E1 Overview
 - Compare between immunocompetent and immunocomprimised mice
 - Basic actors to compare
   * Tumour growth rate
   * Tumour size
 
-#### Injection Plan
+##### Injection Plan
 
 | Group | Strain  |Location | Cell Injection| Cell Number|
 |:--------:|:----:|:----:|:-------:|
@@ -202,7 +214,7 @@ Publically available datasets analysis
 | 4 | NSG  | Sub-cut | A20 | 1x10^6^ |
 
   
-#### IHC Panel
+##### IHC Panel
 - Compare markers between tumour types
 - Burkitt IHC indentification:
   * CD10+ (B-Cell Germinal Centre)
@@ -220,8 +232,9 @@ Publically available datasets analysis
 | T cells (helper) | CD 4 |
 | Dendritic Cells | CD11c |
 | Macrophage | F4/80 |
+| NK (?)| CD56 (?) | 
 
-#### Flow Panel
+##### Flow Panel
 - Options are:
   * Standard T Cell
   * TRegs
@@ -246,7 +259,7 @@ Publically available datasets analysis
 |  T Cells (all)   | CD3 |
 | T Cells (Cytoxic)  | CD8 |
 
-### E2: Trial BL Therapies
+#### E2: BL Therapies (this will not work)
 - Balb/c drug vs no drug vs WS-A20 drug vs WS-A20 no drug
   * Want to compare effect of GFP on immune cell infiltration
   * Look at clonal dynamics of rituximab treatment
@@ -263,13 +276,11 @@ Publically available datasets analysis
     - WILDseq
 
 
-### E3: Immune focused CRISPR Screen
+#### E3: Immune focused CRISPR Screen
 - Immune compromised vs Immune competent
   * Think very carefully about specific mouse models (some still have macrophages, NK cells, ect.)
   * [JAX Lab Article](https://www.jax.org/news-and-insights/2006/March/choosing-an-immunodeficient-mouse-model#:~:text=Immunodeficient%20mouse%20models%2C%20particularly%20severe,cell%20biology%20and%20other%20research.)
-  
-  
-# Ideas
+
 
 ## Ferritin as a drug delivery system
 - Does BL have increased Tfr1 expression relative to normal cells/B cells?
