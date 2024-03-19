@@ -1,0 +1,26 @@
+---
+title: "RTX Resistance EXP1 Plan"
+author: "Callum Malcolm"
+date: "2024-03-07"
+output: pdf_document
+---
+
+# Overview
+- To establish cell lysis capabilities of RTX on BL PDX N2 and RBL2P
+
+Protocol adapted from:
+
+CDC Assays
+
+CDC studies were performed as previously described [9]. In brief, 2×10°6 CLL cells in 1mL AIM-V medium were pretreated on ice for 30 minutes with 10μg/mL of each mAb either alone or in combination. These cell suspensions were then split and either received no serum, 10% (v/v) NHS, or 10% (v/v) C5-serum. The cells were then incubated for one hour at 37°C with 95% humidity and 5% CO2 and then washed twice with 3mL of AIM-V medium before analysis. Absolute viable cell counts were assayed using flow cytometry with BD Trucount beads (BD Biosciences) in a 1% BSA buffer with PI staining to assess cell viability. Cells killed by CDC can either be lysed (i.e. disintegrated and no longer detected on flow cytometry) or remain intact with PI permeable membranes (intact dead cells). Cell lysis was determined for each sample by dividing the absolute cell count of the experimental specimens by that of the control specimen (10%NHS). Total CDC (% cytotoxicity) which measures the sum of lysed cells and intact dead cells was determined for each sample by dividing the absolute viable (PI negative) counts of the experimental specimens by that of the control specimen followed by multiplication by 100.
+
+
+# Experimental Plan
+
+## Day 1
+- Thaw PDX onto feeders in T175 flask
+
+## Day 2
+- Check cells and replenish media if needed
+
+## Day 3

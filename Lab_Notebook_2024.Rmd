@@ -1195,6 +1195,42 @@ knitr::kable(excel_data)
   * Coated with Poly-D-Lysine (covered plate, removed liquid, let sit for 10 min, washed with PBS) 
   * 4.5x10^6^ cells seeded per dish (seeded at 13:00)
 
+# Wednesday 06-03-2024
+- Collected SC tumours
+- HEK infection
+  * binned A20/HEK
+
+# Wednesday 13-03-2024
+- Made media
+- Seededin N2-BC4
+- Froze down A20
+- Collected 3 IP NSG tumours
+
+# Thursday 14-03-2024
+- Changed media (N2-BC4)
+
+# Friday 15-03-2024
+
+## Cell Culture
+
+### N2-BC4 RTX CDC Assay - version 1
+
+# Monday
+
+## Cell Culture - N2 -C4
+- Split: seeded 5x10^6^ cells
+
+## N2-BC4 RTX CDC Assay - version 2
+Overview: Trying to optimise RTX CDC assay
+- Using 0% serum, since there are no complement factors in the media the cell live/dead reading should not change
+- Next step: add varying amounts of human serum
+
+
+
+
+
+
+
 
 
 

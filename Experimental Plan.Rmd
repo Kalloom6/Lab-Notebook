@@ -40,7 +40,54 @@ urlcolor: blue
 - Identify proteins of interest from 1.1/1.2
 
 
-## Chapter 2: sBL PDX in Humanised Mice
+## Chapter 2: Rituximab Resistance in BL PDX  
+
+- Overview: looking at mechanisms of Rituximab resistance in BL PDX
+  * CDC: Complement Dependent Cytoxicity
+  * ADCC: Antibody-Dependent Ccellular Cytoxicity
+- Use N2 and RBL2P
+
+- Can incorporate publicially available dataset to compare Rituximab treatment vs not
+  * refractory 
+
+### Experiment 1: Establish Rituximab-related CDC in PDX  
+
+Overview: Are PDX susceptible to RTX-dependent CDC?
+- Previously described protocol:
+  * Paper: [Analysis of changes in CD20, CD55, and CD59 expression on established rituximab-resistant B-lymphoma cell lines] (Analysis of changes in CD20, CD55, and CD59 expression on established rituximab-resistant B-lymphoma cell lines)
+
+Naive RAMOS cells (RAMOS-N) were simultaneously exposed to the several concentrations of rituximab and human serum, and then after 1-h incubation at 37 °C, the percentage of lysed cells was measured. RAMOS-N cells were found to be lysed in the presence of rituximab and serum, and the percentage of lysed cells increased gradually in a dose-dependent manner. These results confirmed that RAMOS-N cells were sensitive to rituximab-related CDC and that the lysis ratio increased according to the concentration of rituximab and serum.
+
+Outcome: Cell Lysis curves for RTX-Dependent CDC in PDX
+
+### Experiment 2: Establishing RTX-resistant PDX
+
+Overview: Can we generate PDX lines resistant to RTX?
+- Protocol found in paper above
+- Incorporate WILDseq to look at the change in clonal dynamics
+
+Outcome: Validation of RTX-Resistant Cells Lines
+
+### Experiment 3: Analyse changes in CD20
+Overview: How does CD20 expression dynamics change in PDX-N vs PDX-R?
+- Flow for CD20 (CD19 Control)
+- qPCR for CD20 expression
+
+### Experiment 4: Co-inhibitor Testing
+Overview: Do co-inhibtors found in the literature promote CDC in PDX-R?
+
+- Midostaurin: PI3K/AKT pathway
+- CD59 inhibitor
+- PIM1 inhibition
+
+### Experiment 5: ADCC Testing
+
+Overview: Does RTX CDC resistance confer ADCC resistance?
+
+
+
+
+sBL PDX in Humanised Mice
 
 ### NK-92 and Rituximab
 - 2x PDX?
@@ -167,6 +214,39 @@ Publically available datasets analysis
 - Resistance to Rituximab-CDC
 - Resistance to Rituximab-ADCC (NK cell dependent)
 - Apply barcoding approach to try to identify signalling pathways which are depended on for evasion
+
+#### RTX CDC Resistance
+1. RTX CDC assay
+- Change concentrations of RTX
+- Change concentrations of serum
+2. RTX Resistance
+- Take barcode sample at Day 0, resistance 1, resistance 2, resistance 3, ect. 
+  * Viably freeze for scRNAseq?
+  *Cell pellet for bulk rna
+- Increase concentrations
+- Monitor by CDC assay
+3. In vivo
+- Compare resistant to non-resistant
+- Barcode Experiment 
+- In vivo CRISPR screen
+
+Jamie's plan:
+
+
+
+
+#### RTX NK-92 Assay
+
+
+
+## BL based Macrophage polarisation
+
+### Co-culture experiement
+
+
+### Mosaic Macropahge engineering
+- Activated by specific pathways which disengage them
+
 
 
 
