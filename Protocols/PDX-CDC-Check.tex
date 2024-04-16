@@ -37,6 +37,16 @@
 \makeatother
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -105,6 +115,18 @@ dividing the absolute viable (PI negative) counts of the experimental
 specimens by that of the control specimen followed by multiplication by
 100.
 
+\href{https://www.sciencedirect.com/science/article/pii/S0145212605003607?via\%3Dihub}{Flow
+Analysis of RTX-resistant B-NHL cell lines}\\
+RAMOS cells adjusted to 1 × 106 cells/ml were incubated both with and
+without rituximab in the presence of human serum for 1 h at 37 °C, and
+samples were cooled for 5 min at 0 °C to stop the reaction. The
+percentage of lysed cells was determined immediately by direct cell
+count in trypan blue-stained samples, as previously described. Cell
+lysis was examined and expressed as a percentage as follows: \%cell
+lysis = \{1 − (viable cells after exposure to rituximab and human
+serum)/(viable cells before exposure to rituximab and human serum)\}
+×100.
+
 \hypertarget{experimental-plan}{%
 \section{Experimental Plan}\label{experimental-plan}}
 
@@ -129,6 +151,16 @@ specimens by that of the control specimen followed by multiplication by
 \hypertarget{day-3}{%
 \subsection{Day 3}\label{day-3}}
 
-\includegraphics{PDX-CDC-Check_files/figure-latex/unnamed-chunk-1-1.pdf}
+\begin{longtable}[]{@{}ccc@{}}
+\toprule\noalign{}
+Sample Number & EBV Status & CD20 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+7 & 5 Negative & 7 Positive \\
+& 1 Positive & \\
+& 1 Not tested & \\
+\end{longtable}
 
 \end{document}

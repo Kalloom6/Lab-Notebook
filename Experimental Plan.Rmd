@@ -366,7 +366,13 @@ Jamie's plan:
 - Does BL have increased Tfr1 expression relative to normal cells/B cells?
 
 
+\newpage
 
+|Sample Number| EBV Status | CD20 | CD10 | MYC Translocation |
+| :-------: | :------: | :------: | :--------------: | :----: |
+|   | 5 Negative |           |             | 6 Positive          |
+| 7 | 1 Positive | 7 Positive| 7 Positive  |  1 Not Conclusive |
+|   | 1 Not tested |        |    |         |                    | 
 
 
 

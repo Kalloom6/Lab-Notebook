@@ -14,6 +14,9 @@ CDC Assays
 
 CDC studies were performed as previously described [9]. In brief, 2×10°6 CLL cells in 1mL AIM-V medium were pretreated on ice for 30 minutes with 10μg/mL of each mAb either alone or in combination. These cell suspensions were then split and either received no serum, 10% (v/v) NHS, or 10% (v/v) C5-serum. The cells were then incubated for one hour at 37°C with 95% humidity and 5% CO2 and then washed twice with 3mL of AIM-V medium before analysis. Absolute viable cell counts were assayed using flow cytometry with BD Trucount beads (BD Biosciences) in a 1% BSA buffer with PI staining to assess cell viability. Cells killed by CDC can either be lysed (i.e. disintegrated and no longer detected on flow cytometry) or remain intact with PI permeable membranes (intact dead cells). Cell lysis was determined for each sample by dividing the absolute cell count of the experimental specimens by that of the control specimen (10%NHS). Total CDC (% cytotoxicity) which measures the sum of lysed cells and intact dead cells was determined for each sample by dividing the absolute viable (PI negative) counts of the experimental specimens by that of the control specimen followed by multiplication by 100.
 
+[Flow Analysis of RTX-resistant B-NHL cell lines](https://www.sciencedirect.com/science/article/pii/S0145212605003607?via%3Dihub)  
+RAMOS cells adjusted to 1 × 106 cells/ml were incubated both with and without rituximab in the presence of human serum for 1 h at 37 °C, and samples were cooled for 5 min at 0 °C to stop the reaction. The percentage of lysed cells was determined immediately by direct cell count in trypan blue-stained samples, as previously described. Cell lysis was examined and expressed as a percentage as follows: %cell lysis = {1 − (viable cells after exposure to rituximab and human serum)/(viable cells before exposure to rituximab and human serum)} ×100.
+
 
 # Experimental Plan
 
@@ -24,3 +27,12 @@ CDC studies were performed as previously described [9]. In brief, 2×10°6 CLL c
 - Check cells and replenish media if needed
 
 ## Day 3
+
+
+
+
+|Sample Number| EBV Status | CD20 |
+| :-------: | :------: | :------: |
+| 7 | 5 Negative | 7 Positive |
+| | 1 Positive |  |
+| | 1 Not tested | |
