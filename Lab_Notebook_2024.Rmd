@@ -1550,16 +1550,505 @@ p <- p +
 print(p, max.levels = NULL, width = 2)
 ```
 
-# Monday 31-03-2024
+# Sunday 31-03-2024
 
-# Cell Culture
-## N2-BC4
+## Cell Culture
+### N2-BC4
 
-## Ramos-BC5
+- Healthy, split
+
+- Changed FDC:
+
+1. Thawed vial
+2. Added 1mL DMEM to vial
+3. Transferred to 15mL falcon tube
+4. Slowly added 5mL DMEM
+5. Spun down at 650rpm for 4min
+6. Removed supernant and resuspended vial flicking
+7. Added 1mL DMEM and pipetted multiple times to create single cell suspension
+8. Added to T175 flask
+9. Added 30mL of DMEM
+10. Added 5x10^5^ N2 cells from previous flask
+10. Placed in incubator
+
+### Ramos-BC5
+- Healthy, split
+- Count: 2.18x10^6^ cells/mL
+- Split: 7x10^5^ cells in 15 mL
+
+## Ramos CDC Testing  
+
+- Tested CDC assay adapted from [Ge et al., 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315025/#CR32)
+- CDC protocol
+1. Seed 250k cells 500uL volumes per well of a 12-well plate
+2. Add RTX or media in 250uL volumes per well
+  * [RTX] working needs to be 4x final desired well volume
+3. Add Serum or media in 250uL volumes per well
+  * Serum amount should be 4x final % desired
+  
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "0% Serum"
+C2 <- "10% Serum"
+R1 <- "0ug/mL RTX"
+R2 <- "5ug/mL RTX"
+Plate_Name <- "CDC Testing"
+Plate_ID <- "CDC_24331_Ramos"
+
+dil_ID = matrix(c(R1,R2,R1,R2,
+                  R1,R2,R1,R2,
+                 R1,R2,R1,R2
+                  ), ncol = 4, nrow = 3, byrow = TRUE)
+
+drug_list = matrix(c(
+  C1,C1,C2,C2,
+  C1,C1,C2,C2,
+  C1,C1,C2,C2
+  ), ncol = 4, nrow = 3, byrow = TRUE)
 
 
 
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:3) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:3) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:4, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:3, labels = LETTERS[1:3], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = Plate_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+## EC50 RTX N2-BC4/RAMOS-BC5 24331 - Seeding (DNW)
+- Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
+- Decreased overall well volume to reduce CTB being used
+- Used RTX provided by Jamie
+- Only incubated for 24hr
+- Plate seeding protocol:
+  1. Diluted cell suspension to seed 20000 cells/well in 25$\mu$L amounts
+  
+|Cell Line| Well Number | Cells total | Volume total | CS cells/mL | Flask cell count | **Flask Volume** | **Media Volume** |
+| :-------: | :------: | :--------:|:----------:|:---------:|:----:|:-------:|
+| N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+| RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
+    - [RTX stock] = 10.3 mg/mL 
+    - Drug volumes are added in triplicate
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
+ 
+  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
+  | :-------: | :------: |:-------: | :------: | :------: |
+  | RTX 1 | 100 $\mu$g/mL | 400$\mu$L | 15.5$\mu$L stock | 400 $\mu$g/mL |
+  | RTX 2 | 50 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 200 $\mu$g/mL |
+  | RTX 3 | 25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 100 $\mu$g/mL |
+  | RTX 4 | 12.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 50 $\mu$g/mL |
+  | RTX 5 | 6.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 25 $\mu$g/mL |
+  | RTX 6 | 3.125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 12.5 $\mu$g/mL |
+  | RTX 7 | 1.56 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | 6.25 $\mu$g/mL |
+  | RTX 8 | .78 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | 3.125 $\mu$g/mL |
+  | RTX 9 | .39 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | 1.56 $\mu$g/mL |
+  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+  
+  3. Added 10% serum or media control
+  - This provides complement factors to bind BL-bound RTX and initiate CDC
+  - Serum/media amounts added at 50 $\mu$L/well
+  - Serum volume is added in 1:4 ratio (10$\mu$L serum in 100$\mu$L final well volume)
+  - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
+  
+  4. Plate is incubated for 72 hrs at 37C
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "0% Serum"
+C2 <- "10% Serum"
+EC50_ID <- "EC50_RTX_N2-BC4_2431"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
 
 
 
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
 
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+
+# Monday 01-04-2024
+
+## Cell Culture
+### N2
+- Not ready to split
+- Added 5mL media
+
+### Ramos
+- Count: 1.6x10^6^ cells/mL
+- Seeded: 5x10^5^ cells in 15mL
+
+## EC50 Collection: 24329/24331
+- Collected plates seeded on 24-03-2024 and 31-3-2024
+- EC Plate collection protocol:
+  1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 1hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+- Results:
+
+## EC50 RTX N2-BC4/RAMOS-BC5 24401 - Seeding (DNW)
+- Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
+- Increased [RTX] to 1mg/mL (closer to Sorcha EC50)
+- Used RTX provided by Jamie
+- Plate seeding protocol:
+  1. Diluted cell suspension to seed 20000 cells/well in 25$\mu$L amounts
+  
+|Cell Line| Well Number | Cells total | Volume total | CS cells/mL | Flask cell count | **Flask Volume** | **Media Volume** |
+| :-------: | :------: | :--------:|:----------:|:---------:|:----:|:-------:|
+| N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+| RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
+    - [RTX stock] = 10.3 mg/mL 
+    - Drug volumes are added in triplicate
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
+ 
+  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
+  | :-------: | :------: |:-------: | :------: | :------: |
+  | RTX 1 | 1 mg/mL | 400$\mu$L | 15.5$\mu$L stock | 4 mg/mL |
+  | RTX 2 | 500 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 2 $\mu$g/mL |
+  | RTX 3 | 250 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 1 $\mu$g/mL |
+  | RTX 4 | 125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 5 $\mu$g/mL |
+  | RTX 5 | 62.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 2.5 $\mu$g/mL |
+  | RTX 6 | 31.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 1.25 $\mu$g/mL |
+  | RTX 7 | 15.6 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | .625 $\mu$g/mL |
+  | RTX 8 | 7.8 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | .3125 $\mu$g/mL |
+  | RTX 9 | 3.9 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | .156 $\mu$g/mL |
+  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+  
+  3. Added 10% serum or media control
+  - This provides complement factors to bind BL-bound RTX and initiate CDC
+  - Serum/media amounts added at 50 $\mu$L/well
+  - Serum volume is added in 1:4 ratio (10$\mu$L serum in 100$\mu$L final well volume)
+  - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
+  
+  4. Plate is incubated for 72 hrs at 37C
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "0% Serum"
+C2 <- "10% Serum"
+EC50_ID <- "EC50_RTX_N2-BC4_2431"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+# Tuesday 02-04-2024
+
+## N2/Ramos CD20 Flow Cytometry
+- Got antibody from Chris for CD20
+- Cat#: 562873
+
+Cell Stain Protocol:
+1. Resuspend cells to 1x10^6^ cells in 1mL
+2. Distribute CS into 3 wells of a 96-well plate
+3. Spin down @ 1500g for 2min
+4. Flick media out
+5. Make Cell Stain:
+  - 500uL PBS + 2uL Stain
+  -Make this while cells are spinning down
+6. Resuspend w/ 100uL in the first well and then resuspend the next 2 wells in the same stain volume
+  - Consolidate into 1 well/sample
+7. incubate in the fridge for 20min
+8. Spin down @ 1500g for 2 min
+9. Transfer to FACS tube and run
+
+- Results:
+
+# Thursday 04-04-2024
+
+## Cell Culture
+### N2
+- Count: 2.1x10^6^ cells/mL
+- Seeded: 5x10^5^ cells in 15mL
+
+### Ramos
+- Count: 1.9x10^6^ cells/mL
+- Seeded: 5x10^5^ cells in 15mL
+
+## EC50 Collection: 24401
+- Collected plate seeded on 01-04-2024
+- EC Plate collection protocol:
+  1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 1hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+- Results:DNW
+
+# Monday 08-04-2024
+
+## Cell Culture
+### N2
+- Count: 1.4x10^6^ cells/mL
+- Seeded: 3x10^5^ cells in 15mL
+
+### Ramos
+- Count: 2.9x10^6^ cells/mL
+- Seeded: 3x10^5^ cells in 15mL
+
+# Tuesday 09-04-2024
+
+## Perla Drug Randomizer
+
+- Randomized drugs for Perla Pucci mouse experiment
+
+| Drug | Identification |
+| :-------: | :------: |
+| Vehicle  | B | 
+| Beta 30 | F | 
+| Beta 10 | D | 
+| Plo 30  | A |
+| Plo 10  | E | 
+| TESA 4 | C | 
+| TESA0,4  | G |
+
+# Saturday 14-04-2024
+
+## Cell Culture
+### N2-BC4
+- Count: 6.7x10^5^ cells/mL
+- Seeded: 3x10^5^ cells in 15mL
+
+### Ramos-BC5
+- Count: 6.0x10^5^ cells/mL
+- Seeded: 3x10^5^ cells in 15mL
+
+## EC50 RTX N2-BC4/RAMOS-BC5 24414 - Seeding (DNW)
+- Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
+- Increased [RTX] to 1mg/mL (closer to Sorcha EC50)
+- Used RTX provided by Jamie
+- Looked at cell-intrisic effects of RTX (no serum)
+- Plate seeding protocol:
+  1. Diluted cell suspension to seed 20000 cells/well in 25$\mu$L amounts
+  
+|Cell Line| Well Number | Cells total | Volume total | CS cells/mL | Flask cell count | **Flask Volume** | **Media Volume** |
+| :-------: | :------: | :--------:|:----------:|:---------:|:----:|:-------:|
+| N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+| RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
+    - [RTX stock] = 10.3 mg/mL 
+    - Drug volumes are added in triplicate
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
+ 
+  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
+  | :-------: | :------: |:-------: | :------: | :------: |
+  | RTX 1 | 1 mg/mL | 400$\mu$L | 15.5$\mu$L stock | 4 mg/mL |
+  | RTX 2 | 500 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 2 $\mu$g/mL |
+  | RTX 3 | 250 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 1 $\mu$g/mL |
+  | RTX 4 | 125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 5 $\mu$g/mL |
+  | RTX 5 | 62.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 2.5 $\mu$g/mL |
+  | RTX 6 | 31.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 1.25 $\mu$g/mL |
+  | RTX 7 | 15.6 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | .625 $\mu$g/mL |
+  | RTX 8 | 7.8 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | .3125 $\mu$g/mL |
+  | RTX 9 | 3.9 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | .156 $\mu$g/mL |
+  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+  
+  3. Plate is incubated for 72 hrs at 37C
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "N2"
+C2 <- "Ramos"
+EC50_ID <- "EC50_RTX_N2-BC4_2431"
+
+dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
+                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
+                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
+                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:8) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+  
+ 
+# Wednesday 17-04-2024 
+
+## EC50 Collection: 24414
+- Collected plate seeded on 14-04-2024
+- EC Plate collection protocol:
+  1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 1hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+- Results:DNW
