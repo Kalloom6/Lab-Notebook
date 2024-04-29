@@ -225,3 +225,22 @@
 \contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24414 - Seeding (DNW)}{55}{section*.226}%
 \contentsline {section}{Wednesday 17-04-2024}{56}{section*.227}%
 \contentsline {subsection}{EC50 Collection: 24414}{56}{section*.228}%
+\contentsline {section}{Monday 22-04-2024}{56}{section*.229}%
+\contentsline {subsection}{Cell Culture}{56}{section*.230}%
+\contentsline {subsubsection}{N2-BC4}{56}{section*.231}%
+\contentsline {subsubsection}{Ramos-BC5}{56}{section*.232}%
+\contentsline {subsection}{Thawed NK-92}{56}{section*.233}%
+\contentsline {section}{Wednesday 24-04-2024}{57}{section*.234}%
+\contentsline {subsection}{Cell Culture}{57}{section*.235}%
+\contentsline {subsubsection}{N2-BC4}{57}{section*.236}%
+\contentsline {subsubsection}{Ramos-BC5}{57}{section*.237}%
+\contentsline {subsubsection}{NK-92}{57}{section*.238}%
+\contentsline {section}{Friday 26-04-2024}{57}{section*.239}%
+\contentsline {subsection}{Cell Culture}{57}{section*.240}%
+\contentsline {subsubsection}{N2-BC4}{57}{section*.241}%
+\contentsline {subsubsection}{Ramos-BC5}{57}{section*.242}%
+\contentsline {subsubsection}{NK-92}{57}{section*.243}%
+\contentsline {section}{Monday 29-04-2024}{57}{section*.244}%
+\contentsline {subsection}{Cell Culture}{57}{section*.245}%
+\contentsline {subsubsection}{N2-BC4}{57}{section*.246}%
+\contentsline {subsubsection}{Ramos-BC5}{57}{section*.247}%

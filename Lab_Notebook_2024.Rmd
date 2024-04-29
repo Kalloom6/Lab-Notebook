@@ -2052,3 +2052,68 @@ print(p, max.levels = NULL, width = 2)
   3. Read on plate reader according to Cell Titre Blue Protocol
 
 - Results:DNW
+
+
+# Monday 22-04-2024 
+
+## Cell Culture
+### N2-BC4
+- Seeded: 3x10^5^ cells in 15mL
+
+### Ramos-BC5
+- Seeded: 3x10^5^ cells in 15mL
+
+## Thawed NK-92 
+- Obtained from Chris Steele
+- Cultured in Advanced RPMI
+- Added 200u/mL of IL-2 (#78036.1)
+  * Obtained from Emily
+  * Product listed as 4.1x10^4^ IU/ug
+  * Stock diluted to 10ug/mL
+  * Added .48 uL stock/mL of media
+  
+# Wednesday 24-04-2024 
+
+## Cell Culture
+### N2-BC4
+- Seeded: 3x10^5^ cells in 15mL
+
+### Ramos-BC5
+- Seeded: 3x10^5^ cells in 15mL
+
+### NK-92
+- Looked very unhealthy
+- Lots of dead cells/debris in the media
+- Spun down, resuspended in 1mL of media
+- Split into 4 wells of a 48 well plate with increasing amounts of IL-2
+
+# Friday 26-04-2024 
+
+## Cell Culture
+### N2-BC4
+- Seeded: 3x10^5^ cells in 15mL
+
+### Ramos-BC5
+- Seeded: 3x10^5^ cells in 15mL
+
+### NK-92
+- Cells still look unhealthy
+- Tried to consolidate in single well of 24 well plate
+- Spun down in eppendorf and resuspended in 1mL of media
+
+# Monday 29-04-2024 
+
+## Cell Culture
+### N2-BC4
+- Seeded: 3x10^5^ cells in 15mL
+
+### Ramos-BC5
+- Seeded: 3x10^5^ cells in 15mL
+
+
+
+
+
+
+
+
