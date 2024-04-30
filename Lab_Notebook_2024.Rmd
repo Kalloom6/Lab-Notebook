@@ -1194,6 +1194,9 @@ knitr::kable(excel_data)
 - Seeded 2 10cm dishes of HEK cells
   * Coated with Poly-D-Lysine (covered plate, removed liquid, let sit for 10 min, washed with PBS) 
   * 4.5x10^6^ cells seeded per dish (seeded at 13:00)
+  
+# March 2024
+  
 
 # Wednesday 06-03-2024
 - Collected SC tumours
@@ -2110,10 +2113,193 @@ print(p, max.levels = NULL, width = 2)
 ### Ramos-BC5
 - Seeded: 3x10^5^ cells in 15mL
 
+# Tuesday 29-04-2024 
+
+## Cell Culture
+### N2-BC4
+- Count: 3x10^5^ cells/mL
+- Seeded: 3x10^5^ cells in 12mL
+- Reseeded FDC cells in T75
+
+### Ramos-BC5
+- Count: 4x10^5^ cells/mL
+- Seeded: 4x10^5^ cells in 12mL
+
+## Human Serum Reciept
+- Serum from 3 donors ordered from Cambridge Biosciences
+- Serum mixed together, aliquoted, and stored at -80
+
+|Product | Product ID | Barcode ID | Volume |
+  | :-------: | :------: |:-------: | :------: |
+  | Human Serum - Fresh Frozen | SERSKF2SIL10-FSXX | PR24C441891 | 10 mL |
+  | Human Serum - Fresh Frozen | SERSKF2SIL10-FSXX | PR23K435425 | 10 mL |
+  | Human Serum - Fresh Frozen | SERSKF2SIL10-MSXX | PR23D435392 | 10 mL |
+
+## Ramos/N2 CDC Testing  
+
+- Tested CDC assay adapted from [Ge et al., 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315025/#CR32)
+- CDC protocol
+1. Seed 250k cells 500uL volumes per well of a 12-well plate  
+2. Added RTX or media in 250uL volumes per well
+  * [RTX Stock] = 10mg/mL
+  * [RTX] working needs to be 4x final desired well volume
+  * 1uL RTX stock added to 1mL Media
+3. Add Serum or media in 250uL volumes per well
+  * Serum amount should be 4x final % desired
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Heat Inactivated Serum"
+C2 <- "Normal Human Serum"
+R1 <- "0ug/mL RTX"
+R2 <- "2.5ug/mL RTX"
+Plate_Name <- "CDC Testing"
+Plate_ID <- "CDC_24430_N2_Ramos"
+
+dil_ID = matrix(c(R1,R2,R1,R2,
+                  R1,R2,R1,R2
+                  ), ncol = 4, nrow = 2, byrow = TRUE)
+
+drug_list = matrix(c(
+  C1,C2,C1,C2,
+  C1,C2,C1,C2
+  ), ncol = 4, nrow = 2, byrow = TRUE)
 
 
 
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:4, , 
+                     labels = c("N2", "N2", "RAMOS", "RAMOS"), 
+                     expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = Plate_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+Results: DNW  
+- No clear differences between +HIAS/+RTX and +S/+RTX  
+- Seemed relatively healthy. 
+- Possible fixes:  
+  * Increase RTX dose
+  * Increase Serum %
+  * Increase the amount of time
+  * Add at the same time instead of pre-incubating with RTX
+  
+## EC50 RTX RAMOS-BC5 24430 - Seeding
+- Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
+- Increased [RTX] to 1mg/mL (closer to Sorcha EC50)
+- Used RTX provided by Jamie
+- Plate seeding protocol:
+  1. Diluted cell suspension to seed 20000 cells/well in 50$\mu$L amounts
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L  
+    - [RTX stock] = 10.3 mg/mL 
+    - Drug volumes are added in triplicate
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
+ 
+  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
+  | :-------: | :------: |:-------: | :------: | :------: |
+  | RTX 1 | 1 mg/mL | 400$\mu$L | 15.5$\mu$L stock | 4 mg/mL |
+  | RTX 2 | 500 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 2 $\mu$g/mL |
+  | RTX 3 | 250 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 1 $\mu$g/mL |
+  | RTX 4 | 125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 5 $\mu$g/mL |
+  | RTX 5 | 62.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 2.5 $\mu$g/mL |
+  | RTX 6 | 31.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 1.25 $\mu$g/mL |
+  
+  3. Plate is incubated for 72 hrs at 37C
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "Heat Inactivated Serum"
+C2 <- "Normal Human Serum"
+EC50_ID <- "EC50_RTX_RAMOS_240430"
+
+dil_ID = matrix(c(
+                   "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
+                   "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
+                   "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
+                  "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
+                  "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
+                  "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1"
+               ), ncol = 7, nrow = 6, byrow = TRUE)
+
+drug_list = matrix(c(
+                     C1,C1,C1,C1,C1,C1,C1,
+                     C1,C1,C1,C1,C1,C1,C1,
+                     C1,C1,C1,C1,C1,C1,C1,
+                     C2,C2,C2,C2,C2,C2,C2,
+                     C2,C2,C2,C2,C2,C2,C2,
+                     C2,C2,C2,C2,C2,C2,C2
+                        ), ncol = 7, nrow = 6, byrow = TRUE)
 
 
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:6) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:6) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:7, expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:6, labels = LETTERS[1:6], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+
+
+# Tuesday 29-04-2024
 
 
