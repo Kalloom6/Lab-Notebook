@@ -2207,7 +2207,7 @@ print(p, max.levels = NULL, width = 2)
 
 Results: DNW  
 - No clear differences between +HIAS/+RTX and +S/+RTX  
-- Seemed relatively healthy. 
+- Seemed relatively healthy   
 - Possible fixes:  
   * Increase RTX dose
   * Increase Serum %
