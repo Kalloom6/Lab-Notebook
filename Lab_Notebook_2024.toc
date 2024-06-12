@@ -245,11 +245,17 @@
 \contentsline {subsection}{Cell Culture}{57}{section*.246}%
 \contentsline {subsubsection}{N2-BC4}{57}{section*.247}%
 \contentsline {subsubsection}{Ramos-BC5}{57}{section*.248}%
-\contentsline {section}{Tuesday 29-04-2024}{58}{section*.249}%
+\contentsline {section}{Tuesday 30-04-2024}{58}{section*.249}%
 \contentsline {subsection}{Cell Culture}{58}{section*.250}%
 \contentsline {subsubsection}{N2-BC4}{58}{section*.251}%
 \contentsline {subsubsection}{Ramos-BC5}{58}{section*.252}%
 \contentsline {subsection}{Human Serum Reciept}{58}{section*.253}%
 \contentsline {subsection}{Ramos/N2 CDC Testing}{58}{section*.254}%
 \contentsline {subsection}{EC50 RTX RAMOS-BC5 24430 - Seeding}{59}{section*.255}%
-\contentsline {section}{Tuesday 29-04-2024}{60}{section*.256}%
+\contentsline {section}{Wednesday 30-04-2024}{60}{section*.256}%
+\contentsline {subsection}{Cell Culture}{60}{section*.257}%
+\contentsline {subsubsection}{N2-BC4}{60}{section*.258}%
+\contentsline {subsubsection}{Ramos-BC5}{60}{section*.259}%
+\contentsline {section}{Monday 10-06-2024}{60}{section*.260}%
+\contentsline {subsection}{Cell Culture}{60}{section*.261}%
+\contentsline {subsection}{EC50 RTX RAMOS-BC5 240610 - Seeding}{61}{section*.262}%
