@@ -1,0 +1,46 @@
+---
+title: "ES Cell Fixation for Split Barcoding RNA-seq"
+author: "Callum Malcolm"
+date: "2024-06-24"
+output: pdf_document
+---
+
+# Overview
+- Cell fixation for split-seq 
+- Need ~500k cells for each sample
+  * Ex. one well from a 6 well plate
+- Freeze down a few extra samples in order to test PCR cycles for split-seq
+
+
+# Solutions
+
+## PBS + RI
+- Make up fresh and store at 4C
+
+|Component       |Volume/sample| Volume/20 samples |
+|:--------------:|:----:|:---------:|
+| PBS (TC Grade) | 2 mL |  42 mL   |
+| RNase OUT        | 40 U/$\mu$L |  840 U/$\mu$L |
+| SUPERase Inhibitor    | 20 U/$\mu$L | 420 U/$\mu$L |
+
+## PBS + Formaldehyde
+- Make up fresh on the day and chill
+
+|Component       |Volume/sample| Volume/20 samples |
+|:--------------:|:----:|:---------:|
+| PBS (TC Grade) | 2.75 mL |  57.75 mL   |
+| 16% Formaldehyde (Pierce cat.28906) | 0.25 mL |  5.25 mL |
+
+# Protocol
+1. Collect ~500k cells from cell suspension
+2. Spin down at 180 x g (RCF)
+3. Resuspend pellet in 1mL of PBS + RI
+4.  Add 3mL of ice cold PBS + 1.33% formaldehyde and mix gently by pipetting up and down 2-3 times
+5. Incubate on ice for 10min
+6. Spin 300g for 3min at RT
+7. Wash pellet with 1mL PBS + RI and respin 300g for 3min at RT
+8. Remove supernatant and snap freeze pellet on dry ice
+9. Store pellet at -80C
+
+
+
