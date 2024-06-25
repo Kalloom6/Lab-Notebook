@@ -1,0 +1,37 @@
+---
+title: "RAMOS_RTX_Resistance"
+author: "Callum Malcolm"
+date: "2024-06-24"
+output: pdf_document
+---
+
+# Overview 
+- We want to generate a RTX resistant cell line of RAMOS
+- We want to analyse changes in barcode representation over time and do scRNA-seq of naive and resistant cells
+
+# Inital Testing
+
+-Several papers have used something approximating the protocol below:
+
+1. Seed 1x10^6^ cells/ml in a 6-well plate
+  * May want to alter cell amounts
+  * Ex. 1 well w/ 1ml of CS, 0.8ml of CS, 0.5ml of CS, ect.
+2. Add 1ug/mL of RTX and 10% and 25% NHS
+3. Incubate at 37C for 1hr 
+4. Check for cell lysis
+
+- Unlikely to exhibit cell lysis, this hasn't been seen in previous attempts, alternatively:
+
+1. Seed 1x10^5^ cells/ml in a 6-well plate
+2. Add 1ug/mL of RTX, 10%/25% of NHS
+3. Incubate at 37C for 48 hours
+  * Check at 24hrs to see if there is noticable change
+4. 40-50% viability?
+  * Attempt reculture
+
+
+
+
+
+
+Adapted from [Takei et al., 2005](https://www.sciencedirect.com/science/article/pii/S0145212605003607?via%3Dihub)
