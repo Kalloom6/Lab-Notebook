@@ -2432,8 +2432,60 @@ print(p, max.levels = NULL, width = 2)
   | :-------: | :------: |:-------: | :-------: | :-------: | 
   | Ramos BC 1 | 3.3x10^6^ cells/mL | 6.5x10^4^ cells/mL | T75 | 20mL | Advanced RMPI |
 
+## EC50 Collection: EC50_RTX_N2-BC4_10064
+- Collected plates seeded on 10-06-2024
+- EC Plate collection protocol:
+  1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 1hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+- Results: clear difference between NHS and HIAS
+  
+
+# Thursday 13-06-2024
+
+## Cryopreservation - RAMOS-BC 1/3/5
+- Cryopreserved 3 vials of the following cell lines:
+* Ramos-BC 1
+* Ramos-BC 3
+* Ramos-BC 5
+- ~2x10^6 cells/vial
+- Freezing media: FBS + 10% DMSO
+
+### Protocol
+
+1. 
 
 
+
+# Monday 24-06-2024
+
+## Cell Culture
+- Transfered RAMOS BC 3 to RPMI-1640
+
+### Making RPMI
+
+- RPMI_1
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| RPMI 1640   | ---- | 500 mL     | 89% |
+| FBS     | ---- | 56 mL    | 10% |
+| Glutamax    | ---- | 5.6 mL    | 1% |
+
+### Splitting Ramos BC 3
+
+|Cell Line Name | Count | Seeding Density | Flask | Flask Volume | Media |
+  | :-------: | :------: |:-------: | :-------: | :-------: | 
+  | Ramos BC 1 | 2x10^6^ cells/mL | 1x10^5^ cells/mL | T75 | 20mL | Advanced RMPI |
+
+1. Transferred CS to 50mL flask
+2. Spun down RAMOS BC 3
+3. Removed media and resuspended in 5mL of RPMI_1
+
+
+# Monday 24-06-2024
 
 
 
