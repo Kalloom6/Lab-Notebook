@@ -259,3 +259,5 @@
 \contentsline {section}{Monday 10-06-2024}{60}{section*.260}%
 \contentsline {subsection}{Cell Culture}{60}{section*.261}%
 \contentsline {subsection}{EC50 RTX RAMOS-BC5 240610 - Seeding}{61}{section*.262}%
+\contentsline {section}{Wednesday 13-06-2024}{62}{section*.263}%
+\contentsline {subsection}{Cell Culture}{62}{section*.264}%
