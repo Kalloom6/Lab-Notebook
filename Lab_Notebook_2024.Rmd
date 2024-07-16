@@ -2487,6 +2487,92 @@ print(p, max.levels = NULL, width = 2)
 
 # Monday 24-06-2024
 
+## Cell Culture
+- Split RAMOS
+- Spun down flask and counted
+  * Count: 2x10^6^ cells/mL
+  * Added 1mL of CS in 19mL media (1x10^5^cells/mL)
+  
+## CDC Tests
+- Set up 6 well plates and incubated for various amounts of time to look at RTX-CDC in an expanded format
+- Sample Plate setup:
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggforce)
+library(scales)
+library(prism)
+
+pbs <- "PBS"
+C1 <- "10% NHS"
+C2 <- "25% NHS"
+R1 <- "1 ug/mL RTX"
+R2 <- "2.5ug/mL RTX"
+Plate_Name <- "CDC Testing"
+Plate_ID <- "CDC_240624_RAMOS"
+
+dil_ID = matrix(c(R1,R1,R1,
+                  R1,R1,R1
+                  ), ncol = 3, nrow = 2, byrow = TRUE)
+
+drug_list = matrix(c(
+  C1,C1,C1,
+  C2,C2,C2
+  ), ncol = 3, nrow = 2, byrow = TRUE)
+
+
+
+df1 <- as.data.frame(drug_list)
+df2 <- as.data.frame(dil_ID)
+df1 <- df1 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+df2 <- df2 %>% 
+  mutate(row = 1:2) %>% 
+  pivot_longer(-row, names_to = "col", values_to = "value") %>%
+  mutate(col = as.integer(str_remove(col, "V"))) %>%
+  mutate(well = paste0(LETTERS[row], col))
+
+#Plot
+p <- ggplot(data = df1) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
+p <- p + coord_equal()
+p <- p + 
+  scale_x_continuous(breaks = 1:3, , 
+                     labels = c("1", "2", "3"), 
+                     expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = c("10% Serum", "25% Serum"), expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
+p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
+p <- p +
+  labs(title = Plate_ID, x = "Col", y = "Row") + 
+  #theme_prism("waves") + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p, max.levels = NULL, width = 2)
+```
+  
+
+Plate Set Up:
+1. Make CS 
+
+
+
+# Wednesday 10-07-2024
+
+## Cell Culture
+- Split RAMOS
+- Count: 1.65x10^6^
+- Added 1.5mL CS into 18.5media
+
+## RAMOS - RTX In Vitro CDC Pressure
+- Began RTX CDC In Vitro experiments
+- Seeded RAMOS into 2x 6 well plates
+- Froze down 3 vials of RAMOS
+  * These can be considered Day 0/Baseline pools
+  * Marked with black mark on top of caps
+- Seeded 2 
 
 
 

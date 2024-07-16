@@ -270,3 +270,8 @@
 \contentsline {subsubsection}{Making RPMI}{64}{section*.271}%
 \contentsline {subsubsection}{Splitting Ramos BC 3}{64}{section*.272}%
 \contentsline {section}{Monday 24-06-2024}{64}{section*.273}%
+\contentsline {subsection}{Cell Culture}{64}{section*.274}%
+\contentsline {subsection}{CDC Tests}{64}{section*.275}%
+\contentsline {section}{Wednesday 10-07-2024}{65}{section*.276}%
+\contentsline {subsection}{Cell Culture}{65}{section*.277}%
+\contentsline {subsection}{RAMOS - RTX In Vitro CDC Pressure}{65}{section*.278}%
