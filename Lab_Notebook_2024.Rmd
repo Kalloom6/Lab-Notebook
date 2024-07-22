@@ -2037,65 +2037,28 @@ print(P1)
  
  3. Added HIAS/NHS to indicated wells
   * 25$\mu$L/well
-  * 25% 
+  * Final well volume = 25% Serum (HIAS/NHS)
  4. Plate is incubated for 48 hrs at 37C
 
   
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-pbs <- "PBS"
-C1 <- "HIAS"
-C2 <- "NHS"
-EC50_ID <- "EC50_RTX_N2-BC4_10064"
-
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240610_PM.xlsx", sheet = "Sheet1")
+title <- "EC50 CDC Test N2 + RAMOS 240430"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
 
 
