@@ -1,0 +1,85 @@
+---
+title: "Plate mapping test"
+author: "Callum Malcolm"
+date: "2024-07-22"
+output: pdf_document
+---
+
+```{r setup, include=FALSE, fig.retina = NULL, dpi = 300}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplate)
+library(tidyverse)
+library(readxl)
+
+```
+
+
+Converting Excel sheets into tables
+
+
+
+# Generating Plate Maps
+
+
+## 6 well Plate
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/241007_PM_1.xlsx", sheet = "Sheet1")
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+  #label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  colour = "#00B6ED"
+)
+
+print(P1)
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/241007_PM_1.xlsx", sheet = "Sheet2")
+title <- "Plate 2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ # label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+## 96 well plate
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240719_PM.xlsx", sheet = "Sheet1")
+title <- "Plate 2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+

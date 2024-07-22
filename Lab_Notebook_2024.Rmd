@@ -7,6 +7,15 @@ toc: true
 toc_float: true
 urlcolor: blue
 ---
+
+```{r setup, include=FALSE, fig.retina = NULL, dpi = 300}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplate)
+library(tidyverse)
+library(readxl)
+
+```
+
 \newpage
 
 # \textbf January 2024
@@ -1011,8 +1020,6 @@ Hold Step |Step 6: 12C    | Hold |
 - Cubit PCR2 Samples to determine concentration
 
 ```{r, echo=FALSE, fig.align='center'}
-knitr::opts_chunk$set(echo = TRUE)
-library(readxl)
 
 excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/In_vivo_lib_prep_data.xlsx", sheet = "Pooling")
 
@@ -1382,10 +1389,6 @@ print(p, max.levels = NULL, width = 2)
   
   4. Plate is incubated for 72 hrs at 37C
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "0% Serum"
@@ -1493,10 +1496,6 @@ print(p, max.levels = NULL, width = 2)
   
   4. Plate is incubated for 72 hrs at 37C
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "0% Serum"
@@ -1590,10 +1589,6 @@ print(p, max.levels = NULL, width = 2)
   * Serum amount should be 4x final % desired
   
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "0% Serum"
@@ -1686,10 +1681,7 @@ print(p, max.levels = NULL, width = 2)
   
   4. Plate is incubated for 72 hrs at 37C
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
+
 
 pbs <- "PBS"
 C1 <- "0% Serum"
@@ -1746,6 +1738,7 @@ p <- p +
 print(p, max.levels = NULL, width = 2)
 ```
 
+# April
 
 # Monday 01-04-2024
 
@@ -1807,10 +1800,6 @@ print(p, max.levels = NULL, width = 2)
   
   4. Plate is incubated for 72 hrs at 37C
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "0% Serum"
@@ -1983,10 +1972,7 @@ Cell Stain Protocol:
   3. Plate is incubated for 72 hrs at 37C
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
+
 
 pbs <- "PBS"
 C1 <- "N2"
@@ -2149,10 +2135,6 @@ print(p, max.levels = NULL, width = 2)
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "Heat Inactivated Serum"
@@ -2239,10 +2221,6 @@ Results: DNW
   3. Plate is incubated for 72 hrs at 37C
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "Heat Inactivated Serum"
@@ -2312,6 +2290,10 @@ print(p, max.levels = NULL, width = 2)
 - Count: 4x10^5^ cells/mL
 - Seeded: 4x10^5^ cells in 12mL
 
+# May
+
+
+# June
 
 # Monday 10-06-2024
 
@@ -2362,10 +2344,6 @@ print(p, max.levels = NULL, width = 2)
 
   
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "HIAS"
@@ -2497,10 +2475,6 @@ print(p, max.levels = NULL, width = 2)
 - Set up 6 well plates and incubated for various amounts of time to look at RTX-CDC in an expanded format
 - Sample Plate setup:
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
 pbs <- "PBS"
 C1 <- "10% NHS"
@@ -2557,22 +2531,87 @@ print(p, max.levels = NULL, width = 2)
 Plate Set Up:
 1. Make CS 
 
-
+# July
 
 # Wednesday 10-07-2024
 
 ## Cell Culture
-- Split RAMOS
+- Split RAMOS BC 1
 - Count: 1.65x10^6^
 - Added 1.5mL CS into 18.5media
 
 ## RAMOS - RTX In Vitro CDC Pressure
 - Began RTX CDC In Vitro experiments
-- Seeded RAMOS into 2x 6 well plates
-- Froze down 3 vials of RAMOS
+- Seeded RAMOS BC 1 into 2x 6 well plates
+- Froze down 3 vials of RAMOS BC 1
   * These can be considered Day 0/Baseline pools
   * Marked with black mark on top of caps
-- Seeded 2 
+  
+### Freezing Down Cells Protocol
+  1. Counted cells in suspension
+  2. Took volume of cell suspension such that each vial would contain at least 2x10^6^ cells
+  3. Spun down CS @ 300 rcf for 5min
+  4. Discarded supernatant and resuspended in freezing media such that 1ml of freezing media contains 2x10^6^ cells
+    - Freezing media: FBS + 10% DMSO
+  5. Added 1mL CS in freezing media per cryovial
+  6. Cryovials were immediately put into freezing caddy and placed in -80 freezer
+  7. After 24hrs vials removed from freezing caddy and plced in Liquid Nitrogen  
+    - Location: Tank 1, Rack 5, Box 6
+  
+  
+  
+### RAMOS RTX DP - Dose 1
+- Began RTX CDC In Vitro dosing
+- Seeded RAMOS BC 1 into 2x 6 well plates
+
+#### Plate Layout
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Plate 1 data
+plate1_labels <- c("C1 -RTX", "C2 -RTX", "C3 -RTX", "C4 -RTX", "C5 -RTX", "C6 -RTX")
+plate1_df <- data.frame(
+  row = rep(1:2, each = 3),
+  col = rep(1:3, times = 2),
+  label = plate1_labels
+)
+
+# Plot Plate 1
+p1 <- ggplot(data = plate1_df) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45), fill = "lightblue", color = "black") +
+  coord_equal() +
+  scale_x_continuous(breaks = 1:3, labels = c("1", "2", "3"), expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = c("25% Serum", "25% Serum"), expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans()) +
+  geom_text(aes(x = col, y = row, label = label), size = 4) +
+  labs(title = "RAMOS BC 1 RTX DP - Dose 1 Plate 1", x = " ", y = " ") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p1)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Plate 2 data
+plate2_labels <- c("R1 +RTX", "R2 +RTX", "R3 +RTX", "R4 +RTX", "R5 +RTX", "R6 +RTX")
+plate2_df <- data.frame(
+  row = rep(1:2, each = 3),
+  col = rep(1:3, times = 2),
+  label = plate2_labels
+)
+
+# Plot Plate 2
+p2 <- ggplot(data = plate2_df) + 
+  geom_circle(aes(x0 = col, y0 = row, r = 0.45), fill = "purple", color = "black") +
+  coord_equal() +
+  scale_x_continuous(breaks = 1:3, labels = c("1", "2", "3"), expand = expansion(mult = c(0.01, 0.01))) +
+  scale_y_continuous(breaks = 1:2, labels = c("25% Serum", "25% Serum"), expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans()) +
+  geom_text(aes(x = col, y = row, label = label), size = 4) +
+  labs(title = "RAMOS BC 1 RTX DP - Dose 1 Plate 2", x = "Col", y = "Row") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+print(p2)
+
+```
+
+
 
 
 
