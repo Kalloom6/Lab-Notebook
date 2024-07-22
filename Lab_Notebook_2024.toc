@@ -200,10 +200,10 @@
 \contentsline {subsubsection}{Ramos-BC5}{50}{section*.201}%
 \contentsline {subsection}{Ramos CDC Testing}{50}{section*.202}%
 \contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24331 - Seeding (DNW)}{51}{section*.203}%
-\contentsline {section}{April}{53}{section*.204}%
-\contentsline {section}{Monday 01-04-2024}{53}{section*.205}%
-\contentsline {subsection}{Cell Culture}{53}{section*.206}%
-\contentsline {subsubsection}{N2}{53}{section*.207}%
+\contentsline {section}{April}{52}{section*.204}%
+\contentsline {section}{Monday 01-04-2024}{52}{section*.205}%
+\contentsline {subsection}{Cell Culture}{52}{section*.206}%
+\contentsline {subsubsection}{N2}{52}{section*.207}%
 \contentsline {subsubsection}{Ramos}{53}{section*.208}%
 \contentsline {subsection}{EC50 Collection: 24329/24331}{53}{section*.209}%
 \contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24401 - Seeding (DNW)}{53}{section*.210}%
@@ -213,25 +213,25 @@
 \contentsline {subsection}{Cell Culture}{55}{section*.214}%
 \contentsline {subsubsection}{N2}{55}{section*.215}%
 \contentsline {subsubsection}{Ramos}{55}{section*.216}%
-\contentsline {subsection}{EC50 Collection: 24401}{55}{section*.217}%
+\contentsline {subsection}{EC50 Collection: 240401}{55}{section*.217}%
 \contentsline {section}{Monday 08-04-2024}{55}{section*.218}%
 \contentsline {subsection}{Cell Culture}{55}{section*.219}%
 \contentsline {subsubsection}{N2}{55}{section*.220}%
 \contentsline {subsubsection}{Ramos}{55}{section*.221}%
-\contentsline {section}{Tuesday 09-04-2024}{55}{section*.222}%
-\contentsline {subsection}{Perla Drug Randomizer}{55}{section*.223}%
+\contentsline {section}{Tuesday 09-04-2024}{56}{section*.222}%
+\contentsline {subsection}{Perla Drug Randomizer}{56}{section*.223}%
 \contentsline {section}{Saturday 14-04-2024}{56}{section*.224}%
 \contentsline {subsection}{Cell Culture}{56}{section*.225}%
 \contentsline {subsubsection}{N2-BC4}{56}{section*.226}%
 \contentsline {subsubsection}{Ramos-BC5}{56}{section*.227}%
 \contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24414 - Seeding (DNW)}{56}{section*.228}%
 \contentsline {section}{Wednesday 17-04-2024}{57}{section*.229}%
-\contentsline {subsection}{EC50 Collection: 24414}{57}{section*.230}%
-\contentsline {section}{Monday 22-04-2024}{57}{section*.231}%
-\contentsline {subsection}{Cell Culture}{57}{section*.232}%
-\contentsline {subsubsection}{N2-BC4}{57}{section*.233}%
-\contentsline {subsubsection}{Ramos-BC5}{57}{section*.234}%
-\contentsline {subsection}{Thawed NK-92}{57}{section*.235}%
+\contentsline {subsection}{EC50 Collection: 240414}{57}{section*.230}%
+\contentsline {section}{Monday 22-04-2024}{58}{section*.231}%
+\contentsline {subsection}{Cell Culture}{58}{section*.232}%
+\contentsline {subsubsection}{N2-BC4}{58}{section*.233}%
+\contentsline {subsubsection}{Ramos-BC5}{58}{section*.234}%
+\contentsline {subsection}{Thawed NK-92}{58}{section*.235}%
 \contentsline {section}{Wednesday 24-04-2024}{58}{section*.236}%
 \contentsline {subsection}{Cell Culture}{58}{section*.237}%
 \contentsline {subsubsection}{N2-BC4}{58}{section*.238}%
@@ -242,10 +242,10 @@
 \contentsline {subsubsection}{N2-BC4}{58}{section*.243}%
 \contentsline {subsubsection}{Ramos-BC5}{58}{section*.244}%
 \contentsline {subsubsection}{NK-92}{58}{section*.245}%
-\contentsline {section}{Monday 29-04-2024}{58}{section*.246}%
-\contentsline {subsection}{Cell Culture}{58}{section*.247}%
-\contentsline {subsubsection}{N2-BC4}{58}{section*.248}%
-\contentsline {subsubsection}{Ramos-BC5}{58}{section*.249}%
+\contentsline {section}{Monday 29-04-2024}{59}{section*.246}%
+\contentsline {subsection}{Cell Culture}{59}{section*.247}%
+\contentsline {subsubsection}{N2-BC4}{59}{section*.248}%
+\contentsline {subsubsection}{Ramos-BC5}{59}{section*.249}%
 \contentsline {section}{Tuesday 30-04-2024}{59}{section*.250}%
 \contentsline {subsection}{Cell Culture}{59}{section*.251}%
 \contentsline {subsubsection}{N2-BC4}{59}{section*.252}%
@@ -253,11 +253,11 @@
 \contentsline {subsection}{Human Serum Reciept}{59}{section*.254}%
 \contentsline {subsection}{Ramos/N2 CDC Testing}{59}{section*.255}%
 \contentsline {subsection}{EC50 RTX RAMOS-BC5 24430 - Seeding}{60}{section*.256}%
-\contentsline {section}{Wednesday 30-04-2024}{61}{section*.257}%
-\contentsline {subsection}{Cell Culture}{61}{section*.258}%
-\contentsline {subsubsection}{N2-BC4}{61}{section*.259}%
-\contentsline {subsubsection}{Ramos-BC5}{61}{section*.260}%
-\contentsline {section}{May}{61}{section*.261}%
+\contentsline {section}{May}{61}{section*.257}%
+\contentsline {section}{Wednesday 01-05-2024}{61}{section*.258}%
+\contentsline {subsection}{Cell Culture}{61}{section*.259}%
+\contentsline {subsubsection}{N2-BC4}{61}{section*.260}%
+\contentsline {subsubsection}{Ramos-BC5}{61}{section*.261}%
 \contentsline {section}{June}{61}{section*.262}%
 \contentsline {section}{Monday 10-06-2024}{61}{section*.263}%
 \contentsline {subsection}{Cell Culture}{61}{section*.264}%

@@ -13,6 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 library(ggplate)
 library(tidyverse)
 library(readxl)
+library(ggforce)
+library(scales)
+library(prism)
+library(knitr)
 
 ```
 
@@ -1246,6 +1250,7 @@ Overview: Trying to optimise RTX CDC assay
 
 ## EC50 RTX N2-BC4 22324 - Seeding
 - Seeded 96-well plate with N2-BC4 and treated with RTX concentration range with or with out 10% Human Serum (HS)
+  * Used Heat-Inacted Serum which does not have functional complement which is why this experiment did not work
 - Plate seeding protocol:
   1. Diluted cell suspension to seed 20000 cells/well in 50$\mu$L amounts
   
@@ -1279,65 +1284,25 @@ Overview: Trying to optimise RTX CDC assay
   - Serum stock mix is 1.2mL HS : 2.4 mL media / plate
   
   4. Plate is incubated for 72 hrs at 37C
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-library(ggforce)
-library(scales)
-library(prism)
 
-pbs <- "PBS"
-C1 <- "0% Serum"
-C2 <- "10% Serum"
-EC50_ID <- "EC50_RTX_N2-BC4_22324"
-
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240322_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_250322"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
 
 # Monday 25-03-2024
@@ -1349,10 +1314,11 @@ print(p, max.levels = NULL, width = 2)
     * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
   2. Incubated for 1hr at 37C
   3. Read on plate reader according to Cell Titre Blue Protocol
-- Results:
+- Results: DNW
 
 ## EC50 RTX N2-BC4 25324 - Seeding (DNW)
 - Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 with or without 10% serum 
+  * Used Heat-Inacted Serum which does not have functional complement which is why this experiment did not work
 - Decreased overall well volume to reduce CTB being used
 - Used RTX provided by Jamie
 - Plate seeding protocol:
@@ -1388,62 +1354,27 @@ print(p, max.levels = NULL, width = 2)
   - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
   
   4. Plate is incubated for 72 hrs at 37C
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-pbs <- "PBS"
-C1 <- "0% Serum"
-C2 <- "10% Serum"
-EC50_ID <- "EC50_RTX_N2-BC4_25324"
-
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240322_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_25324"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
+
 
 ## Cell Culture
 ### N2-BC4
@@ -1459,6 +1390,7 @@ print(p, max.levels = NULL, width = 2)
 
 ## EC50 RTX N2-BC4/RAMOS-BC5 25324 - Seeding (DNW)
 - Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
+  * Used Heat-Inacted Serum which does not have functional complement which is why this experiment did not work
 - Decreased overall well volume to reduce CTB being used
 - Used RTX provided by Jamie
 - Plate seeding protocol:
@@ -1495,61 +1427,25 @@ print(p, max.levels = NULL, width = 2)
   - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
   
   4. Plate is incubated for 72 hrs at 37C
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-pbs <- "PBS"
-C1 <- "0% Serum"
-C2 <- "10% Serum"
-EC50_ID <- "EC50_RTX_N2-BC4_25324"
-
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240322_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_250324"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
 
 # Sunday 31-03-2024
@@ -1587,58 +1483,25 @@ print(p, max.levels = NULL, width = 2)
   * [RTX] working needs to be 4x final desired well volume
 3. Add Serum or media in 250uL volumes per well
   * Serum amount should be 4x final % desired
-  
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-pbs <- "PBS"
-C1 <- "0% Serum"
-C2 <- "10% Serum"
-R1 <- "0ug/mL RTX"
-R2 <- "5ug/mL RTX"
-Plate_Name <- "CDC Testing"
-Plate_ID <- "CDC_24331_Ramos"
-
-dil_ID = matrix(c(R1,R2,R1,R2,
-                  R1,R2,R1,R2,
-                 R1,R2,R1,R2
-                  ), ncol = 4, nrow = 3, byrow = TRUE)
-
-drug_list = matrix(c(
-  C1,C1,C2,C2,
-  C1,C1,C2,C2,
-  C1,C1,C2,C2
-  ), ncol = 4, nrow = 3, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240331_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_250331"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 12,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:3) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:3) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:4, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:3, labels = LETTERS[1:3], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = Plate_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
 
 ## EC50 RTX N2-BC4/RAMOS-BC5 24331 - Seeding (DNW)
@@ -1679,64 +1542,28 @@ print(p, max.levels = NULL, width = 2)
   - Serum volume is added in 1:4 ratio (10$\mu$L serum in 100$\mu$L final well volume)
   - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
   
-  4. Plate is incubated for 72 hrs at 37C
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+  4. Plate is incubated for 72 hrs at 37C  
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240331_PM.xlsx", sheet = "Sheet2")
+title <- "EC50_RTX_N2-BC4_250331"
 
 
-pbs <- "PBS"
-C1 <- "0% Serum"
-C2 <- "10% Serum"
-EC50_ID <- "EC50_RTX_N2-BC4_2431"
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-
-
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
+
 
 # April
 
@@ -1798,63 +1625,29 @@ print(p, max.levels = NULL, width = 2)
   - Serum volume is added in 1:4 ratio (10$\mu$L serum in 100$\mu$L final well volume)
   - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
   
-  4. Plate is incubated for 72 hrs at 37C
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-pbs <- "PBS"
-C1 <- "0% Serum"
-C2 <- "10% Serum"
-EC50_ID <- "EC50_RTX_N2-BC4_2431"
-
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
+  4. Plate is incubated for 72 hrs at 37C  
 
 
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240322_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_240401"
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
 
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
+
 
 # Tuesday 02-04-2024
 
@@ -1862,7 +1655,8 @@ print(p, max.levels = NULL, width = 2)
 - Got antibody from Chris for CD20
 - Cat#: 562873
 
-Cell Stain Protocol:
+Cell Stain Protocol:  
+
 1. Resuspend cells to 1x10^6^ cells in 1mL
 2. Distribute CS into 3 wells of a 96-well plate
 3. Spin down @ 1500g for 2min
@@ -1878,6 +1672,16 @@ Cell Stain Protocol:
 
 - Results:
 
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240402_RAMOS_N2_CD20_Flow.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
 # Thursday 04-04-2024
 
 ## Cell Culture
@@ -1889,7 +1693,7 @@ Cell Stain Protocol:
 - Count: 1.9x10^6^ cells/mL
 - Seeded: 5x10^5^ cells in 15mL
 
-## EC50 Collection: 24401
+## EC50 Collection: 240401
 - Collected plate seeded on 01-04-2024
 - EC Plate collection protocol:
   1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
@@ -1938,7 +1742,7 @@ Cell Stain Protocol:
 - Seeded: 3x10^5^ cells in 15mL
 
 ## EC50 RTX N2-BC4/RAMOS-BC5 24414 - Seeding (DNW)
-- Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
+- Seeded an EC50 experiment comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
 - Increased [RTX] to 1mg/mL (closer to Sorcha EC50)
 - Used RTX provided by Jamie
 - Looked at cell-intrisic effects of RTX (no serum)
@@ -1971,68 +1775,29 @@ Cell Stain Protocol:
   
   3. Plate is incubated for 72 hrs at 37C
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240322_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_240414"
 
 
-pbs <- "PBS"
-C1 <- "N2"
-C2 <- "Ramos"
-EC50_ID <- "EC50_RTX_N2-BC4_2431"
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-dil_ID = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                  pbs, "CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,"CNTR","RTX9","RTX8","RTX7","RTX6","RTX5", "RTX4","RTX3","RTX2","RTX1",pbs,
-                  pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-drug_list = matrix(c(pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs,C1,C1,C1,C1,C1,C1,C1,C1,C1,C1,pbs,
-                     pbs, C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,C2,C2,C2,C2,C2,C2,C2,C2,C2,C2,pbs,
-                     pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs,pbs), ncol = 12, nrow = 8, byrow = TRUE)
-
-
-
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:8) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:12, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:8, labels = LETTERS[1:8], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
-  
- 
+
 # Wednesday 17-04-2024 
 
-## EC50 Collection: 24414
+## EC50 Collection: 240414
 - Collected plate seeded on 14-04-2024
 - EC Plate collection protocol:
   1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
@@ -2134,61 +1899,28 @@ print(p, max.levels = NULL, width = 2)
   * Serum amount should be 4x final % desired
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-pbs <- "PBS"
-C1 <- "Heat Inactivated Serum"
-C2 <- "Normal Human Serum"
-R1 <- "0ug/mL RTX"
-R2 <- "2.5ug/mL RTX"
-Plate_Name <- "CDC Testing"
-Plate_ID <- "CDC_24430_N2_Ramos"
-
-dil_ID = matrix(c(R1,R2,R1,R2,
-                  R1,R2,R1,R2
-                  ), ncol = 4, nrow = 2, byrow = TRUE)
-
-drug_list = matrix(c(
-  C1,C2,C1,C2,
-  C1,C2,C1,C2
-  ), ncol = 4, nrow = 2, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240430_PM.xlsx", sheet = "Sheet1")
+title <- "CDC Test N2 + RAMOS 240430"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 12,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:2) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:2) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:4, , 
-                     labels = c("N2", "N2", "RAMOS", "RAMOS"), 
-                     expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:2, labels = LETTERS[1:2], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = Plate_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
 
 Results: DNW  
-- No clear differences between +HIAS/+RTX and +S/+RTX  
+- No clear differences between +HIAS/+RTX and +NHS/+RTX  
 - Seemed relatively healthy   
 - Possible fixes:  
   * Increase RTX dose
@@ -2208,77 +1940,41 @@ Results: DNW
     - Drug volumes are added in triplicate
     - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
     - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
- 
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 1 mg/mL | 400$\mu$L | 15.5$\mu$L stock | 4 mg/mL |
-  | RTX 2 | 500 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 2 $\mu$g/mL |
-  | RTX 3 | 250 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 1 $\mu$g/mL |
-  | RTX 4 | 125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 5 $\mu$g/mL |
-  | RTX 5 | 62.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 2.5 $\mu$g/mL |
-  | RTX 6 | 31.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 1.25 $\mu$g/mL |
+    
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240430_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
   
   3. Plate is incubated for 72 hrs at 37C
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-pbs <- "PBS"
-C1 <- "Heat Inactivated Serum"
-C2 <- "Normal Human Serum"
-EC50_ID <- "EC50_RTX_RAMOS_240430"
-
-dil_ID = matrix(c(
-                   "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
-                   "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
-                   "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
-                  "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
-                  "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1",
-                  "CNTR", "RTX6","RTX5","RTX4","RTX3","RTX2","RTX1"
-               ), ncol = 7, nrow = 6, byrow = TRUE)
-
-drug_list = matrix(c(
-                     C1,C1,C1,C1,C1,C1,C1,
-                     C1,C1,C1,C1,C1,C1,C1,
-                     C1,C1,C1,C1,C1,C1,C1,
-                     C2,C2,C2,C2,C2,C2,C2,
-                     C2,C2,C2,C2,C2,C2,C2,
-                     C2,C2,C2,C2,C2,C2,C2
-                        ), ncol = 7, nrow = 6, byrow = TRUE)
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240430_PM.xlsx", sheet = "Sheet2")
+title <- "EC50 CDC Test N2 + RAMOS 240430"
 
 
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
 
-df1 <- as.data.frame(drug_list)
-df2 <- as.data.frame(dil_ID)
-df1 <- df1 %>% 
-  mutate(row = 1:6) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-df2 <- df2 %>% 
-  mutate(row = 1:6) %>% 
-  pivot_longer(-row, names_to = "col", values_to = "value") %>%
-  mutate(col = as.integer(str_remove(col, "V"))) %>%
-  mutate(well = paste0(LETTERS[row], col))
-
-#Plot
-p <- ggplot(data = df1) + 
-  geom_circle(aes(x0 = col, y0 = row, r = 0.45, fill = value))
-p <- p + coord_equal()
-p <- p + 
-  scale_x_continuous(breaks = 1:7, expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(breaks = 1:6, labels = LETTERS[1:6], expand = expansion(mult = c(0.01, 0.01)), trans = reverse_trans())
-p <- p + geom_text(data = df2, aes(x = col, y = row, label = paste0(value)), size = 2,)
-p <- p +
-  labs(title = "96 Well Plate Map", subtitle = EC50_ID, x = "Col", y = "Row") + 
-  #theme_prism("waves") + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())
-print(p, max.levels = NULL, width = 2)
+print(P1)
 ```
 
+# May
 
-# Wednesday 30-04-2024
+# Wednesday 01-05-2024
 
 ## Cell Culture
 ### N2-BC4
@@ -2290,7 +1986,6 @@ print(p, max.levels = NULL, width = 2)
 - Count: 4x10^5^ cells/mL
 - Seeded: 4x10^5^ cells in 12mL
 
-# May
 
 
 # June
@@ -2340,7 +2035,10 @@ print(p, max.levels = NULL, width = 2)
   | RTX 9 | 3.9 $\mu$g/mL | 1 mL | 1 mL  RTX 8 | 0.026 $\mu$g/mL |
   | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
  
- 3. Plate is incubated for 48 hrs at 37C
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * 25% 
+ 4. Plate is incubated for 48 hrs at 37C
 
   
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
