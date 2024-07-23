@@ -1221,6 +1221,7 @@ knitr::kable(excel_data)
 - Collected 3 IP NSG tumours
 
 # Thursday 14-03-2024
+## Cell Culture - N2
 - Changed media (N2-BC4)
 
 # Friday 15-03-2024
@@ -1264,18 +1265,14 @@ Overview: Trying to optimise RTX CDC assay
     - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
     - 6 wells per condition, 50$\mu$L per well ~ minimum of 300$\mu$L per condition needed (recommend 500$\mu$L)  
  
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 100 $\mu$g/mL | 1 mL | 50$\mu$L stock | 400 $\mu$g/mL |
-  | RTX 2 | 50 $\mu$g/mL | 500 mL | 500$\mu$L RTX 1 | 200 $\mu$g/mL |
-  | RTX 3 | 25 $\mu$g/mL | 500 mL | 500$\mu$L RTX 2 | 100 $\mu$g/mL |
-  | RTX 4 | 12.5 $\mu$g/mL | 500 mL | 500$\mu$L RTX 3 | 50 $\mu$g/mL |
-  | RTX 5 | 6.25 $\mu$g/mL | 500 mL | 500$\mu$L RTX 4 | 25 $\mu$g/mL |
-  | RTX 6 | 3.125 $\mu$g/mL | 500 mL | 500$\mu$L RTX 5 | 12.5 $\mu$g/mL |
-  | RTX 7 | 1.56 $\mu$g/mL | 500 mL | 500$\mu$L RTX 6 | 6.25 $\mu$g/mL |
-  | RTX 8 | .78 $\mu$g/mL | 500 mL | 500$\mu$L RTX 7 | 3.125 $\mu$g/mL |
-  | RTX 9 | .39 $\mu$g/mL | 500 mL | 500$\mu$L RTX 8 | 1.56 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240325_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
   
   3. Added 10% serum or media control
   - This provides complement factors to bind BL-bound RTX and initiate CDC
@@ -1328,24 +1325,20 @@ print(P1)
 | :-------: | :------: | :--------:|:----------:|:---------:|:----:|:-------:|
 | 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
 
-  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
-    - [RTX stock] = 10.3 mg/mL 
-    - Drug volumes are added in triplicate
-    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
-    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
- 
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 100 $\mu$g/mL | 400$\mu$L | 15.5$\mu$L stock | 400 $\mu$g/mL |
-  | RTX 2 | 50 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 200 $\mu$g/mL |
-  | RTX 3 | 25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 100 $\mu$g/mL |
-  | RTX 4 | 12.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 50 $\mu$g/mL |
-  | RTX 5 | 6.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 25 $\mu$g/mL |
-  | RTX 6 | 3.125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 12.5 $\mu$g/mL |
-  | RTX 7 | 1.56 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | 6.25 $\mu$g/mL |
-  | RTX 8 | .78 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | 3.125 $\mu$g/mL |
-  | RTX 9 | .39 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | 1.56 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L   
+    - [RTX stock] = 10.3 mg/mL  
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]    
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)   
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240325_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
   
   3. Added 10% serum or media control
   - This provides complement factors to bind BL-bound RTX and initiate CDC
@@ -1402,7 +1395,7 @@ print(P1)
 
 # Friday 29-03-2024
 
-## EC50 RTX N2-BC4/RAMOS-BC5 25324 - Seeding (DNW)
+## EC50 RTX N2-BC4/RAMOS-BC5 25329 - Seeding (DNW)
 - Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
   * Used Heat-Inacted Serum which does not have functional complement which is why this experiment did not work
 - Decreased overall well volume to reduce CTB being used
@@ -1421,18 +1414,14 @@ print(P1)
     - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
     - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
  
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 100 $\mu$g/mL | 400$\mu$L | 15.5$\mu$L stock | 400 $\mu$g/mL |
-  | RTX 2 | 50 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 200 $\mu$g/mL |
-  | RTX 3 | 25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 100 $\mu$g/mL |
-  | RTX 4 | 12.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 50 $\mu$g/mL |
-  | RTX 5 | 6.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 25 $\mu$g/mL |
-  | RTX 6 | 3.125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 12.5 $\mu$g/mL |
-  | RTX 7 | 1.56 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | 6.25 $\mu$g/mL |
-  | RTX 8 | .78 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | 3.125 $\mu$g/mL |
-  | RTX 9 | .39 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | 1.56 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240329_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
   
   3. Added 10% serum or media control
   - This provides complement factors to bind BL-bound RTX and initiate CDC
@@ -1469,7 +1458,8 @@ print(P1)
 
 - Healthy, split
 
-- Changed FDC:
+
+#### Changed FDC:
 
 1. Thawed vial
 2. Added 1mL DMEM to vial
@@ -1531,25 +1521,21 @@ print(P1)
 | N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
 | RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
 
-  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
-    - [RTX stock] = 10.3 mg/mL 
-    - Drug volumes are added in triplicate
-    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
-    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
- 
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 100 $\mu$g/mL | 400$\mu$L | 15.5$\mu$L stock | 400 $\mu$g/mL |
-  | RTX 2 | 50 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 200 $\mu$g/mL |
-  | RTX 3 | 25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 100 $\mu$g/mL |
-  | RTX 4 | 12.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 50 $\mu$g/mL |
-  | RTX 5 | 6.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 25 $\mu$g/mL |
-  | RTX 6 | 3.125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 12.5 $\mu$g/mL |
-  | RTX 7 | 1.56 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | 6.25 $\mu$g/mL |
-  | RTX 8 | .78 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | 3.125 $\mu$g/mL |
-  | RTX 9 | .39 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | 1.56 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
-  
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L    
+    - [RTX stock] = 10.3 mg/mL  
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]    
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240329_DDT.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
   3. Added 10% serum or media control
   - This provides complement factors to bind BL-bound RTX and initiate CDC
   - Serum/media amounts added at 50 $\mu$L/well
@@ -1602,6 +1588,26 @@ print(P1)
 
 - Results:
 
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240329_EC50_CDC_RAMOS.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240329_EC50_CDC_N2.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
 ## EC50 RTX N2-BC4/RAMOS-BC5 24401 - Seeding (DNW)
 - Seeded an EC50 experiement comparing the effects of RTX on N2-BC4 and RAMOS-BC5 with or without 10% serum 
 - Increased [RTX] to 1mg/mL (closer to Sorcha EC50)
@@ -1609,29 +1615,25 @@ print(P1)
 - Plate seeding protocol:
   1. Diluted cell suspension to seed 20000 cells/well in 25$\mu$L amounts
   
-|Cell Line| Well Number | Cells total | Volume total | CS cells/mL | Flask cell count | **Flask Volume** | **Media Volume** |
-| :-------: | :------: | :--------:|:----------:|:---------:|:----:|:-------:|
-| N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
-| RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+|Cell Line| Well Number | Required Cell / Volume total | Required cells/mL | Stock cells/mL | **Stock CS Volume** | **Media Volume** |
+| :-------: | :------: | :--------:|:----------:|:---------:|:----:|
+| RAMOS-BC5| 60 wells | 1.6x10^6^ cells in 2 mL     | 8x10^5^ | 1.6x10^6^ | **1 mL$L** | **1 mL** |
 
-  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
-    - [RTX stock] = 10.3 mg/mL 
-    - Drug volumes are added in triplicate
-    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
-    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
- 
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 1 mg/mL | 400$\mu$L | 15.5$\mu$L stock | 4 mg/mL |
-  | RTX 2 | 500 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 2 $\mu$g/mL |
-  | RTX 3 | 250 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 1 $\mu$g/mL |
-  | RTX 4 | 125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 5 $\mu$g/mL |
-  | RTX 5 | 62.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 2.5 $\mu$g/mL |
-  | RTX 6 | 31.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 1.25 $\mu$g/mL |
-  | RTX 7 | 15.6 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | .625 $\mu$g/mL |
-  | RTX 8 | 7.8 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | .3125 $\mu$g/mL |
-  | RTX 9 | 3.9 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | .156 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L    
+    - [RTX stock] = 10.3 mg/mL   
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)    
+
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240401_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
   
   3. Added 10% serum or media control
   - This provides complement factors to bind BL-bound RTX and initiate CDC
@@ -1715,7 +1717,7 @@ knitr::include_graphics(image_path)
   2. Incubated for 1hr at 37C
   3. Read on plate reader according to Cell Titre Blue Protocol
 
-- Results:DNW
+- Results:**DNW**
 
 # Monday 08-04-2024
 
@@ -1768,24 +1770,21 @@ knitr::include_graphics(image_path)
 | N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
 | RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
 
-  2. Made RTX dilutions and added to respective wells in 50$\mu$L  
-    - [RTX stock] = 10.3 mg/mL 
-    - Drug volumes are added in triplicate
-    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
-    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L   
+    - [RTX stock] = 10.3 mg/mL   
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]    
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)    
  
-  |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 1 mg/mL | 400$\mu$L | 15.5$\mu$L stock | 4 mg/mL |
-  | RTX 2 | 500 $\mu$g/mL | 200 mL | 200$\mu$L RTX 1 | 2 $\mu$g/mL |
-  | RTX 3 | 250 $\mu$g/mL | 200 mL | 200$\mu$L RTX 2 | 1 $\mu$g/mL |
-  | RTX 4 | 125 $\mu$g/mL | 200 mL | 200$\mu$L RTX 3 | 5 $\mu$g/mL |
-  | RTX 5 | 62.5 $\mu$g/mL | 200 mL | 200$\mu$L RTX 4 | 2.5 $\mu$g/mL |
-  | RTX 6 | 31.25 $\mu$g/mL | 200 mL | 200$\mu$L RTX 5 | 1.25 $\mu$g/mL |
-  | RTX 7 | 15.6 $\mu$g/mL | 200 mL | 200$\mu$L RTX 6 | .625 $\mu$g/mL |
-  | RTX 8 | 7.8 $\mu$g/mL | 200 mL | 200$\mu$L RTX 7 | .3125 $\mu$g/mL |
-  | RTX 9 | 3.9 $\mu$g/mL | 200 mL | 200$\mu$L RTX 8 | .156 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240414_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
   
   3. Plate is incubated for 72 hrs at 37C
 

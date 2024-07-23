@@ -13,16 +13,129 @@ library(readxl)
 
 ```
 
+# README
+Repository for commonly used protocols/code chunks
 
-Converting Excel sheets into tables
+Add echo=FALSE to hide code, code will not be hidden so it can be copied from PDF
+
+# Protocols
+
+## EC50 Seeding
+
+Ex. ## EC50 RTX N2-BC4/RAMOS-BC5 24401 - Seeding (DNW)
+Write an overview of experiment
+Ex.
+- Seeded an EC50 experiment comparing the effects of RTX on RAMOS-BC5 with or without 10% serum 
+- Increased [RTX] to 1mg/mL (closer to Sorcha EC50)
+- Used RTX provided by Jamie
+- Didn't work because we used Heat Inactivated Serum (HIAS)
+- Plate seeding protocol:
+  1. Diluted cell suspension to seed 20000 cells/well in 25$\mu$L amounts
+  
+|Cell Line| Well Number | Required Cell / Volume total | Required cells/mL | Stock cells/mL | **Stock CS Volume** | **Media Volume** |
+| :-------: | :------: | :--------:|:----------:|:---------:|:----:|
+| RAMOS-BC5| 60 wells | 1.6x10^6^ cells in 2 mL     | 8x10^5^ | 1.6x10^6^ | **1 mL$L** | **1 mL** |
+
+  2. Made RTX dilutions and added to respective wells in 50$\mu$L    
+    - [RTX stock] = 10.3 mg/mL   
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)    
+
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240401_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+  
+  3. Added 10% HIAS or media control
+  - This provides complement factors to bind BL-bound RTX and initiate CDC
+  - Serum/media amounts added at 50 $\mu$L/well
+  - Serum volume is added in 1:4 ratio (10$\mu$L serum in 100$\mu$L final well volume)
+  - Serum stock mix is 600$\mu$L HS : 1.2 mL media / plate
+  
+  4. Plate is incubated for 72 hrs at 37C  
 
 
-
-# Generating Plate Maps
-
-
-## 6 well Plate
 ```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240322_PM.xlsx", sheet = "Sheet1")
+title <- "EC50_RTX_N2-BC4_240401"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+## Changing Feeder Cells
+
+Ex. #### Changed FDC:
+
+1. Thawed vial
+2. Added 1mL DMEM to vial
+3. Transferred to 15mL falcon tube
+4. Slowly added 5mL DMEM
+5. Spun down at 650rpm for 4min
+6. Removed supernant and resuspended vial flicking
+7. Added 1mL DMEM and pipetted multiple times to create single cell suspension
+8. Added to T175 flask
+9. Added 30mL of DMEM
+10. Added 5x10^5^ N2 cells from previous flask
+10. Placed in incubator
+
+# Code Chunks
+
+## Excel sheets to tables
+- For drug dilution tables  
+  * Need to make excel file
+  * Store in Lab Notebook repository in Data/Drug Dilution Table
+  * Reuse templates
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240329_DDT.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+# Inserting pictures
+- fig.align= (change position)
+- out.width= (change size)
+
+```{r, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240430_DDT.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+
+
+## Generating Plate Maps
+- Need to make reference excel sheet
+- These are stored in Lab Notebook/Data/Lab Notebook - Table excel files
+
+
+### 6 well Plate
+```{r }
 df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/241007_PM_1.xlsx", sheet = "Sheet1")
 
 
@@ -40,7 +153,9 @@ P1 <- plate_plot(
 print(P1)
 ```
 
-```{r, echo=FALSE}
+
+### 12 Well Plate
+```{r }
 df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/241007_PM_1.xlsx", sheet = "Sheet2")
 title <- "Plate 2"
 
@@ -51,7 +166,7 @@ P1 <- plate_plot(
   value = Condition,
   label = Value,
  # label_size = 2,
-  plate_size = 6,
+  plate_size = 12,
   plate_type = "round",
   colour = "#2E008B",
   title = title
@@ -61,9 +176,9 @@ print(P1)
 ```
 
 
-## 96 well plate
+### 96 well plate
 
-```{r, echo=FALSE}
+```{r }
 df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Write up/Lab Notebook - Table excel files/240719_PM.xlsx", sheet = "Sheet1")
 title <- "Plate 2"
 
