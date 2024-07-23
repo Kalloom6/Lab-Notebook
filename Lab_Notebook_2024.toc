@@ -265,20 +265,20 @@
 \contentsline {section}{Wednesday 13-06-2024}{63}{section*.266}%
 \contentsline {subsection}{Cell Culture}{63}{section*.267}%
 \contentsline {subsection}{EC50 Collection: EC50\_RTX\_N2-BC4\_10064}{63}{section*.268}%
-\contentsline {section}{Thursday 13-06-2024}{63}{section*.269}%
-\contentsline {subsection}{Cryopreservation - RAMOS-BC 1/3/5}{63}{section*.270}%
+\contentsline {section}{Thursday 13-06-2024}{64}{section*.269}%
+\contentsline {subsection}{Cryopreservation - RAMOS-BC 1/3/5}{64}{section*.270}%
 \contentsline {subsubsection}{Protocol}{64}{section*.271}%
 \contentsline {section}{Monday 24-06-2024}{64}{section*.272}%
 \contentsline {subsection}{Cell Culture}{64}{section*.273}%
 \contentsline {subsubsection}{Making RPMI}{64}{section*.274}%
 \contentsline {subsubsection}{Splitting Ramos BC 3}{64}{section*.275}%
-\contentsline {section}{Monday 24-06-2024}{64}{section*.276}%
-\contentsline {subsection}{Cell Culture}{64}{section*.277}%
-\contentsline {subsection}{CDC Tests}{64}{section*.278}%
+\contentsline {section}{Monday 24-06-2024}{65}{section*.276}%
+\contentsline {subsection}{Cell Culture}{65}{section*.277}%
+\contentsline {subsection}{CDC Tests}{65}{section*.278}%
 \contentsline {section}{July}{65}{section*.279}%
 \contentsline {section}{Wednesday 10-07-2024}{65}{section*.280}%
 \contentsline {subsection}{Cell Culture}{65}{section*.281}%
-\contentsline {subsection}{RAMOS - RTX In Vitro CDC Pressure}{65}{section*.282}%
-\contentsline {subsubsection}{Freezing Down Cells Protocol}{65}{section*.283}%
+\contentsline {subsection}{RAMOS - RTX In Vitro CDC Pressure}{66}{section*.282}%
+\contentsline {subsubsection}{Freezing Down Cells Protocol}{66}{section*.283}%
 \contentsline {subsubsection}{RAMOS RTX DP - Dose 1}{66}{section*.284}%
 \contentsline {paragraph}{Plate Layout}{66}{section*.285}%
