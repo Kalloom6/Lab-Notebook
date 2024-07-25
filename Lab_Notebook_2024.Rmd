@@ -2443,7 +2443,6 @@ P1 <- plate_plot(
 print(P1)
 ```
 
-
 # Sunday 21-07-2024
 
 ## Cell Culture
@@ -2463,6 +2462,25 @@ print(P1)
   * Resuspended in 1mL RPMI/10% FBS
   * Added to seperate wells of 12 well plate
 - RPMI/10% FBS in 12-well plate
+
+## EC50 Collection: EC50_RTX_N2-BC4_240721
+- Collected plates seeded on 21-07-2024
+- EC Plate collection protocol:
+  1. Added 40$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 1hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240610_EC50_CDC_RAMOS_Results.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
 
 # Tuesday 23-07-2024
 
