@@ -1,0 +1,56 @@
+---
+title: "Test"
+author: "Callum Malcolm"
+date: "2024-07-24"
+output: pdf_document
+---
+
+```{r setup, include=FALSE, fig.retina = NULL, dpi = 300}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplate)
+library(tidyverse)
+library(readxl)
+library(ggforce)
+library(scales)
+library(prism)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(xtable)
+library(formatdown)
+
+# Function to format numbers in scientific notation
+format_scientific <- function(x) {
+  if (is.numeric(x)) {
+    formatted <- formatC(x, format = "e", digits = 2)
+    parts <- strsplit(formatted, "e")[[1]]
+    coef <- parts[1]
+    exponent <- as.integer(parts[2])
+    paste0("$", coef, " \\times 10^{", exponent, "}$")
+  } else {
+    x
+  }
+}
+
+# Function to apply scientific notation formatting to specified columns
+apply_scientific_notation <- function(df, cols) {
+  df[cols] <- lapply(df[cols], format_scientific)
+  return(df)
+}
+
+```
+
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240719_DDT.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+

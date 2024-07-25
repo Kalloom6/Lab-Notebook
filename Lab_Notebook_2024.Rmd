@@ -1,5 +1,5 @@
 ---
-title: "Lab_Notebook_2024"
+title: "Lab Notebook 2024"
 author: "Callum Malcolm"
 output:
   pdf_document: default
@@ -17,6 +17,42 @@ library(ggforce)
 library(scales)
 library(prism)
 library(knitr)
+library(kableExtra)
+library(dplyr)
+library(xtable)
+
+
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplate)
+library(tidyverse)
+library(readxl)
+library(ggforce)
+library(scales)
+library(prism)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(xtable)
+library(formatdown)
+
+# Function to format numbers in scientific notation
+format_scientific <- function(x) {
+  if (is.numeric(x)) {
+    formatted <- formatC(x, format = "e", digits = 2)
+    parts <- strsplit(formatted, "e")[[1]]
+    coef <- parts[1]
+    exponent <- as.integer(parts[2])
+    paste0("$", coef, " \\times 10^{", exponent, "}$")
+  } else {
+    x
+  }
+}
+
+# Function to apply scientific notation formatting to specified columns
+apply_scientific_notation <- function(df, cols) {
+  df[cols] <- lapply(df[cols], format_scientific)
+  return(df)
+}
 
 ```
 
@@ -1617,7 +1653,7 @@ knitr::include_graphics(image_path)
   
 |Cell Line| Well Number | Required Cell / Volume total | Required cells/mL | Stock cells/mL | **Stock CS Volume** | **Media Volume** |
 | :-------: | :------: | :--------:|:----------:|:---------:|:----:|
-| RAMOS-BC5| 60 wells | 1.6x10^6^ cells in 2 mL     | 8x10^5^ | 1.6x10^6^ | **1 mL$L** | **1 mL** |
+| RAMOS-BC5| 60 wells | 1.6x10^6^ cells in 2 mL     | 8x10^5^ | 1.6x10^6^ | **1 mL** | **1 mL** |
 
   2. Made RTX dilutions and added to respective wells in 50$\mu$L    
     - [RTX stock] = 10.3 mg/mL   
@@ -1763,23 +1799,29 @@ knitr::include_graphics(image_path)
 - Used RTX provided by Jamie
 - Looked at cell-intrisic effects of RTX (no serum)
 - Plate seeding protocol:
-  1. Diluted cell suspension to seed 20000 cells/well in 25$\mu$L amounts
-  
-|Cell Line| Well Number | Cells total | Volume total | CS cells/mL | Flask cell count | **Flask Volume** | **Media Volume** |
-| :-------: | :------: | :--------:|:----------:|:---------:|:----:|:-------:|
-| N2-BC4| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
-| RAMOS-BC5| 60 wells | 1.2x10^6^ cells | 1.5 mL     | 8x10^5^ | 2.92x10^6^ | **410$\mu$L** | **1.1 mL** |
+  1. Diluted cell suspension to seed 20000 cells/well in 50$\mu$L amounts
 
-  2. Made RTX dilutions and added to respective wells in 50$\mu$L   
+```{r, echo=FALSE, fig.align='left', out.width='60%'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240414_DDT.xlsx", sheet = "Sheet3")
+
+excel_data <- excel_data %>%
+  mutate(across(where(is.numeric), format_scientific))
+
+knitr::kable(excel_data, escape = FALSE, booktabs = TRUE)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L   
     - [RTX stock] = 10.3 mg/mL   
     - Drug volumes are added in triplicate  
     - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]    
     - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)    
  
   
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center', out.width='70%'}
 
-excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240414_DDT.xlsx")
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240414_DDT.xlsx", sheet = "Sheet2")
 
 # Display the data as a table
 knitr::kable(excel_data)
@@ -1932,7 +1974,7 @@ P1 <- plate_plot(
 print(P1)
 ```
 
-Results: DNW  
+### Results: DNW  
 - No clear differences between +HIAS/+RTX and +NHS/+RTX  
 - Seemed relatively healthy   
 - Possible fixes:  
@@ -2028,25 +2070,33 @@ print(P1)
 - Used RTX provided by Jamie
 - Plate seeding protocol:
   1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240610_DDT.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+```
 
   2. Made RTX dilutions and added to respective wells in 25$\mu$L  
     - [RTX stock] = 10.3 mg/mL 
     - Drug volumes are added in triplicate
     - Drug volumes are being added consititute 1/4 of well volume: [RTX working] needs to be 4x [RTX well]  
-    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)  
- 
-   |Dilution ID| [RTX Well] | Media Volume | Source |  [RTX WS] |
-  | :-------: | :------: |:-------: | :------: | :------: |
-  | RTX 1 | 1.66 mg/mL | 1200$\mu$L | 800$\mu$L stock | 6.66 mg/mL |
-  | RTX 2 | 500 $\mu$g/mL | 1 mL | 1 mL RTX 1 | 3.33 $\mu$g/mL |
-  | RTX 3 | 250 $\mu$g/mL | 1 mL | 1 mL  RTX 2 | 1.66 $\mu$g/mL |
-  | RTX 4 | 125 $\mu$g/mL | 1 mL | 1 mL  RTX 3 | 0.833 $\mu$g/mL |
-  | RTX 5 | 62.5 $\mu$g/mL | 1 mL | 1 mL  RTX 4 | 0.416 $\mu$g/mL |
-  | RTX 6 | 31.25 $\mu$g/mL | 1 mL | 1 mL  RTX 5 | 0.208 $\mu$g/mL |
-  | RTX 7 | 15.6 $\mu$g/mL | 1 mL | 1 mL  RTX 6 | 0.104 $\mu$g/mL |
-  | RTX 8 | 7.8 $\mu$g/mL | 1 mL | 1 mL  RTX 7 | 0.052 $\mu$g/mL |
-  | RTX 9 | 3.9 $\mu$g/mL | 1 mL | 1 mL  RTX 8 | 0.026 $\mu$g/mL |
-  | CNTR | 0 $\mu$g/mL | 500 mL | - | 0 $\mu$g/mL |
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240610_DDT.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
  
  3. Added HIAS/NHS to indicated wells
   * 25$\mu$L/well
@@ -2092,7 +2142,7 @@ print(P1)
   2. Incubated for 1hr at 37C
   3. Read on plate reader according to Cell Titre Blue Protocol
 
-- Results:
+### Results:
 ```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
 # Path to your image file
@@ -2145,16 +2195,8 @@ knitr::include_graphics(image_path)
 2. Spun down RAMOS BC 3
 3. Removed media and resuspended in 5mL of RPMI_1
 
+## RAMOS RTX CDC Testing 240625 - Seeding
 
-# Monday 24-06-2024
-
-## Cell Culture
-- Split RAMOS
-- Spun down flask and counted
-  * Count: 2x10^6^ cells/mL
-  * Added 1mL of CS in 19mL media (1x10^5^cells/mL)
-  
-## CDC Tests
 - Set up 6 well plates and incubated for various amounts of time to look at RTX-CDC in an expanded format
 - Sample Plate setup:  
 
@@ -2180,7 +2222,38 @@ print(P1)
   
 
 Plate Set Up:
-1. Make CS 
+1. Make working CS
+
+
+# Tuesday 25-06-2024
+
+## Cell Culture
+- Split RAMOS
+- Spun down flask and counted
+  * Count: 2x10^6^ cells/mL
+  * Added 1mL of CS in 19mL media (1x10^5^cells/mL)
+  
+## RAMOS RTX CDC Testing 240625 - Collection
+- Assesed plates for cell death
+- Used Trypan Blue Exclusion assay
+
+Trypan Blue Protocol:  
+1. Resuspend cells in each well
+2. Take 10uL sample from each well and add to respective 0.2mL tube
+3. Added 10uL Trypan blue to each 0.2mL tube and mix well
+4. Added 10uL sample from tube to haemocytometer
+5. Counted both live/dead in all 4 squares
+
+### Results
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240625_CDC_6well_test_results.xlsx")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
 
 # July
 
@@ -2191,7 +2264,7 @@ Plate Set Up:
 - Count: 1.65x10^6^
 - Added 1.5mL CS into 18.5media
 
-## RAMOS - RTX In Vitro CDC Pressure
+## RAMOS - RTX In Vitro CDC Drug Pressure Experiment
 - Began RTX CDC In Vitro experiments
 - Seeded RAMOS BC 1 into 2x 6 well plates
 - Froze down 3 vials of RAMOS BC 1
@@ -2257,3 +2330,180 @@ P1 <- plate_plot(
 
 print(P1)
 ```
+
+
+#### 6-well Plate CDC Protocol  
+
+
+
+# Wednesday 17-07-2024
+
+## Cell Culture
+
+### RAMOS BC 1 - Baseline
+- Split 1/20 
+- RPMI/10% FBS in T75
+
+### RAMOS BC 1 - Cx/DP2
+- Split 0.7x10^6^ cells/flask
+- Use for RTX CDC EC50
+- RPMI/10% FBS in T25
+
+
+
+### RAMOS BC 1 - Rx/DP2
+- Split 0.7x10^6^ cells/flask
+- Use for RTX CDC EC50
+- RPMI/10% FBS in T25
+
+
+
+
+# Friday 19-07-2024
+
+## Cell Culture
+
+### RAMOS BC 1 - Baseline
+- Split 1/20 
+- RPMI/10% FBS in T75
+
+## RAMOS - RTX In Vitro CDC Drug Pressure Experiment
+
+### RAMOS BC 1 - Cx/DP2 and Rx/DP2
+- Cells from RAMOS RTX CDC DP
+- Following indicator will be used:
+  * Cx - Control RAMOS lines 1-6
+  * Rx - Rituximab treated RAMOS lines 1-6
+  * 2nd Dose of RTX (DP2) - 10ug/mL
+- Cells were expanded from 6-well plates to indvidiual T25 flasks in 6mL of media
+  * Cx-DP2 were expanded by taking 1/2 of 6-well CS
+  * Rx-DP2 were fully expanded
+  
+## EC50 RTX RAMOS-BC5 240719 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX on Cx/Rx-DP1 cell lines in the prescense of 25% NHS 
+- Seeded 3 plates each with a different RAMOS-DP line 
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240719_DDT.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240719_DDT.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240610_PM.xlsx", sheet = "Sheet1")
+title <- "EC50 CDC Test N2 + RAMOS 240719"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+# Sunday 21-07-2024
+
+## Cell Culture
+
+### RAMOS BC 1 - Baseline
+- Split 1/20 
+- RPMI/10% FBS in T75
+
+### RAMOS BC 1 - Cx/DP2
+- Split 1/6
+- RPMI/10% FBS in T25
+
+### RAMOS BC 1 - Rx/DP2
+- Not Growing well, still very sparse
+  * Transferred to 15mL Eppendorf tubes
+  * Spun down @ 300rcf for 5 min
+  * Resuspended in 1mL RPMI/10% FBS
+  * Added to seperate wells of 12 well plate
+- RPMI/10% FBS in 12-well plate
+
+# Tuesday 23-07-2024
+
+### RAMOS BC 1 - Baseline
+- Split 1/20 
+- RPMI/10% FBS in T75
+
+### RAMOS BC 1 - Cx/DP2
+- Split 1/6
+- RPMI/10% FBS in T25
+
+### RAMOS BC 1 - Rx/DP2
+- Expanded into T25
+- RPMI/10% FBS in T25
+
+# Wednesday 24-07-2024
+
+## Cell Culture
+
+### RAMOS BC 1 - Baseline
+- Split 1/3 
+- RPMI/10% FBS in T75
+
+### RAMOS BC 1 - Cx/DP2
+- Expanded 1/2 into T75
+- RPMI/10% FBS in T75
+
+### RAMOS BC 1 - Rx/DP2
+- Expanded into T75
+- RPMI/10% FBS in T75
+
+### Made Media - RPMI
+- Media recipe
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| RPMI 1640   | ---- | 500 mL     | 89% |
+| FBS     | ---- | 56 mL    | 10% |
+| Glutamax    | ---- | 5.6 mL    | 1% |
+| Pen/Strep   | ---- | 5.6 mL   | 1%  |
+
+
+
+
