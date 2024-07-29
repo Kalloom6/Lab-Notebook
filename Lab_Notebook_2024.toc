@@ -308,13 +308,23 @@
 \contentsline {subsubsection}{RAMOS BC 1 - Baseline}{73}{section*.309}%
 \contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{73}{section*.310}%
 \contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{73}{section*.311}%
-\contentsline {section}{Tuesday 23-07-2024}{73}{section*.312}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{73}{section*.313}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{73}{section*.314}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{73}{section*.315}%
-\contentsline {section}{Wednesday 24-07-2024}{73}{section*.316}%
-\contentsline {subsection}{Cell Culture}{73}{section*.317}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{73}{section*.318}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{73}{section*.319}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{74}{section*.320}%
-\contentsline {subsubsection}{Made Media - RPMI}{74}{section*.321}%
+\contentsline {subsection}{EC50 Collection: EC50\_RTX\_N2-BC4\_240721}{73}{section*.312}%
+\contentsline {subsubsection}{Results:}{73}{section*.313}%
+\contentsline {section}{Tuesday 23-07-2024}{74}{section*.314}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{74}{section*.315}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{74}{section*.316}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{74}{section*.317}%
+\contentsline {section}{Wednesday 24-07-2024}{74}{section*.318}%
+\contentsline {subsection}{Cell Culture}{74}{section*.319}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{74}{section*.320}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{74}{section*.321}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{74}{section*.322}%
+\contentsline {subsubsection}{Made Media - RPMI}{75}{section*.323}%
+\contentsline {section}{Friday 26-07-2024}{75}{section*.324}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{75}{section*.325}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{75}{section*.326}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{75}{section*.327}%
+\contentsline {subsubsection}{RAMOS RTX DP - Dose 3}{75}{section*.328}%
+\contentsline {paragraph}{Plate Layout}{75}{section*.329}%
+\contentsline {subsection}{EC50 RTX RAMOS-DP3 240726 - Seeding}{76}{section*.330}%
+\contentsline {subsubsection}{Plate seeding protocol:}{76}{section*.331}%

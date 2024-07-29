@@ -2472,10 +2472,13 @@ print(P1)
   3. Read on plate reader according to Cell Titre Blue Protocol
 
 ### Results:
+- Dosages too high
+- Need to decrease amounts for next EC50
+  * RTX1 should be ~20ug/mL
 ```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
 # Path to your image file
-image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240610_EC50_CDC_RAMOS_Results.png"
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240719_EC50_RTX_CDC_RAMOS_DP1.png"
 
 # Insert the image
 knitr::include_graphics(image_path)
@@ -2523,5 +2526,138 @@ knitr::include_graphics(image_path)
 | Pen/Strep   | ---- | 5.6 mL   | 1%  |
 
 
+# Friday 26-07-2024
+
+### RAMOS BC 1 - Baseline
+
+### RAMOS BC 1 - Cx/DP2
+
+### RAMOS BC 1 - Rx/DP2
+
+### RAMOS RTX DP - Dose 3
+- Began RTX CDC In Vitro dosing
+- Seeded RAMOS BC 1 into 2x 6 well plates
+
+#### Plate Layout  
+
+Cell Count
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240710_PM.xlsx", sheet = "Sheet1")
+title <- "RAMOS RTX DP3 Control 240726"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240710_PM.xlsx", sheet = "Sheet2")
+title <- "RAMOS RTX DP3 Rituximab 2407246"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+## EC50 RTX RAMOS-DP3 240726 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX on Cx/Rx-DP1 cell lines in the prescense of 25% NHS 
+- Seeded 3 plates each with a different RAMOS-DP line 
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240726_PM.xlsx", sheet = "Sheet1")
+title <- "EC50 CDC Test N2 + RAMOS 240719"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
 
 
