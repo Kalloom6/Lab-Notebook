@@ -50,7 +50,9 @@ format_scientific <- function(x) {
 
 # Function to apply scientific notation formatting to specified columns
 apply_scientific_notation <- function(df, cols) {
-  df[cols] <- lapply(df[cols], format_scientific)
+  df[cols] <- lapply(df[cols], function(col) {
+    sapply(col, format_scientific)
+  })
   return(df)
 }
 
@@ -2534,6 +2536,10 @@ knitr::include_graphics(image_path)
 
 ### RAMOS BC 1 - Rx/DP2
 
+
+
+# Tuesday 30-07-2024
+
 ### RAMOS RTX DP - Dose 3
 - Began RTX CDC In Vitro dosing
 - Seeded RAMOS BC 1 into 2x 6 well plates
@@ -2544,14 +2550,14 @@ Cell Count
 
 ```{r, echo=FALSE, fig.align='center'}
 
-excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT.xlsx", sheet = "Sheet3")
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT_DP3_Dosing.xlsx", sheet = "Sheet1")
 
-columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total")
+columns_to_format <- c("Cell Count", "Final cells/well")
 
 excel_data <- apply_scientific_notation(excel_data, columns_to_format)
 
 # Display the data as a table
-knitr::kable(excel_data)
+knitr::kable(excel_data, escape = FALSE, digits = 3)
 
 ```
 
@@ -2607,7 +2613,7 @@ print(P1)
   
 ```{r, echo=FALSE, fig.align='center'}
 
-excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT.xlsx", sheet = "Sheet3")
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT_EC50.xlsx", sheet = "Sheet3")
 
 columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
 
@@ -2627,7 +2633,7 @@ knitr::kable(excel_data)
   
 ```{r, echo=FALSE, fig.align='center'}
 
-excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT.xlsx", sheet = "Sheet2")
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT_EC50.xlsx", sheet = "Sheet2")
 
 # Display the data as a table
 knitr::kable(excel_data)
@@ -2641,8 +2647,8 @@ knitr::kable(excel_data)
 
   
 ```{r, echo=FALSE}
-df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240726_PM.xlsx", sheet = "Sheet1")
-title <- "EC50 CDC Test N2 + RAMOS 240719"
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240726_PM_EC50.xlsx", sheet = "Sheet1")
+title <- "EC50 CDC Test N2 + RAMOS 240730"
 
 
 P1 <- plate_plot(
