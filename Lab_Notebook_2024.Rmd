@@ -60,6 +60,23 @@ apply_scientific_notation <- function(df, cols) {
 
 \newpage
 
+# LN Repository
+
+## Rack 1
+- Location: Tank 2, Rack 1, Row H (Bottom)
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/LN_Repository.xlsx", sheet = "Sheet1")
+
+# Convert the last column (assuming it's the 4th column here) to character
+excel_data[, ncol(excel_data)] <- as.character(excel_data[, ncol(excel_data)])
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
 # \textbf January 2024
 
 # Tuesday 16-01-2024
@@ -2290,6 +2307,22 @@ knitr::kable(excel_data)
 - Began RTX CDC In Vitro dosing
 - Seeded RAMOS BC 1 into 2x 6 well plates
 
+#### Dosing Protocol
+
+1. Count CS and dilute to 1x10^5^ cells in 1 mL
+  - If cell count is below either re-culture or add required CS amount, spin down, and resuspend in 1mL
+2. Add 1mL of cell suspension containing 1x10^5^ cells to respective wells of 6-well plate
+3. Made RTX dilutions and added to respective Rx wells in 500$\mu$L    
+    - [RTX stock] = 10.3 mg/mL  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per RTX dosing, 500$\mu$L per well ~ minimum of 3000$\mu$L per condition needed (recommend 3500$\mu$L)
+    - 500$\mu$L media added to Cx wells
+ 3. Added NHS to all wells
+  * 500$\mu$L/well
+  * Final well volume = 25% Serum (NHS)
+ 4. Plates incubated for 24 hrs at 37C
+
 #### Plate Layout  
 
 
@@ -2332,10 +2365,6 @@ P1 <- plate_plot(
 
 print(P1)
 ```
-
-
-#### 6-well Plate CDC Protocol  
-
 
 
 # Wednesday 17-07-2024
@@ -2531,18 +2560,68 @@ knitr::include_graphics(image_path)
 # Friday 26-07-2024
 
 ### RAMOS BC 1 - Baseline
+- Split 1/6 
+- RPMI/10% FBS in T75
 
 ### RAMOS BC 1 - Cx/DP2
+- Split 1/6 
+- RPMI/10% FBS in T75
 
 ### RAMOS BC 1 - Rx/DP2
+- Added 2-3mL of fresh media
+
+# Monday 29-07-2024
+
+### RAMOS BC 1 - Baseline
+- Split 1/3 
+- RPMI/10% FBS in T75
+
+### RAMOS BC 1 - Cx/DP2
+- Add 5mL of RPMI/10% FBS 
+
+### RAMOS BC 1 - Rx/DP2
+- Cells still look unhealthy/too sparse to use
+- Spun down and resuspended in 6mL of media in new T25 flask
+- RPMI/10% FBS in T75
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Cell Counts/240730_Cell_Counts.xlsx", sheet = "Sheet1")
+
+columns_to_format <- c("Cell Count")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
 
 
 
 # Tuesday 30-07-2024
 
-### RAMOS RTX DP - Dose 3
+
+
+## RAMOS RTX DP - Dose 3 
 - Began RTX CDC In Vitro dosing
 - Seeded RAMOS BC 1 into 2x 6 well plates
+
+#### Dosing Protocol
+
+1. Count CS and dilute to 2x10^5^ cells in 1 mL
+  - If cell count is below either re-culture or add required CS amount, spin down, and resuspend in 1mL
+2. Add 1mL of cell suspension containing 2x10^5^ cells to respective wells of 6-well plate
+3. Made RTX dilutions and added to respective Rx wells in 500$\mu$L    
+    - [RTX stock] = 10.3 mg/mL  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per RTX dosing, 500$\mu$L per well ~ minimum of 3000$\mu$L per condition needed (recommend 3500$\mu$L)
+    - 500$\mu$L media added to Cx wells
+ 3. Added NHS to all wells
+  * 500$\mu$L/well
+  * Final well volume = 25% Serum (NHS)
+ 4. Plates incubated for 24 hrs at 37C
 
 #### Plate Layout  
 
@@ -2557,7 +2636,7 @@ columns_to_format <- c("Cell Count", "Final cells/well")
 excel_data <- apply_scientific_notation(excel_data, columns_to_format)
 
 # Display the data as a table
-knitr::kable(excel_data, escape = FALSE, digits = 3)
+knitr::kable(excel_data, digits = 1)
 
 ```
 
@@ -2602,7 +2681,7 @@ print(P1)
 ```
 
 
-## EC50 RTX RAMOS-DP3 240726 - Seeding
+## EC50 RTX RAMOS-DP2 240730 - Seeding
 - Seeded an EC50 experiment comparing the effects of RTX on Cx/Rx-DP1 cell lines in the prescense of 25% NHS 
 - Seeded 3 plates each with a different RAMOS-DP line 
 - Used Rixathon (Catalogue#: )
@@ -2636,7 +2715,7 @@ knitr::kable(excel_data)
 excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT_EC50.xlsx", sheet = "Sheet2")
 
 # Display the data as a table
-knitr::kable(excel_data)
+knitr::kable(excel_data, digits = 1)
 
 ```
  
@@ -2665,5 +2744,97 @@ P1 <- plate_plot(
 
 print(P1)
 ```
+
+## RAMOS RTX CDC DP2 - CD20 Flow Cytometry
+- Checked CD20 expression between Cx and Rx DP2
+- CD20:
+- Samples tested: 
+  * Baseline RAMOS 
+  * R1
+  * R3 
+  * R6
+  * C1 
+  * C3
+  * C6
+
+
+### CD20 Flow Protocol
+
+- Prior to starting: Make cell stain 
+  * 500$\mu$L  PBS + 2$\mu$L Stain
+  * 100$\mu$L of stain used/condition
+- Cell stain made: 2000 $\mu$L and 8 $\mu$L 
+
+1. Resuspend cells and transferred to 3 wells of a 96 well plate
+2. Spun down at 1500g for 2min
+3. Flick media out
+4. Resuspend w/ 100$\mu$L stain in well and consolidate in 1 well
+  * Add 100$\mu$L to bottom well and mix until cells resuspended
+  * Take 100$\mu$L CS-stain mix and add to well below and mix
+  * Repeat for third well and add the total CS-Stain mix to top well
+5. Incubate in fridge for 25min
+  * In the dark
+6. Spin down at 1500g for 2min
+7. Flick out media
+8. Resuspend in PBS and add to FACS tube
+  * Add an additional volume of PBS to dilute cells appropriately for flow
+  * Usually make it up to about 300-400$\mu$L CS-PBS in the tube
+  
+### Results
+- No apparent change in CD20 expression
+- This is interesting based on strong evidence which suggests loss of CD20 is the primary mechanism of RTX resistance
+- Will need to compare to EC50_240730 results
+  * Are Rx-DP2 actually resistant compared to Cx-DP2?
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240731_RAMOS_RTX_CDC_CD20_flow.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
+# Wednesday 31-07-2024
+
+## RAMOS BC 1 - Baseline
+- Split 1/6 
+- RPMI/10% FBS in T75
+
+## RAMOS BC 1 - Rx/DP2
+- Expanded remaining Rx/DP2 into T75
+- RPMI/10% FBS in T75
+
+| DP Line | CS Volume | Media Volume|
+| :-------: | :------: | :--------:|
+| R1-DP2   | 10 mL | 10 mL     |
+| R2-DP2    |10 mL | 10 mL    |
+| R4-DP2   | 5 mL | 5 mL     |
+| R6-DP2    |8 mL | 10 mL    |
+
+## RAMOS RTX DP - Dose 3 Collection
+- Decided to collect after 24hrs due to high amount of cell killing 
+  * Most examples in the literature do 24hr collection
+
+### Collection Protocol
+#### Rx-DP3:
+
+1. Well volume transferred to 15ml Eppendorf
+2. Eppendorfs supn down at 200 rcf for 6 min
+3. Supernatant discarded and R1-4, R6 resuspended in 1ml
+  - R5 resuspended in 500$\mu$L due to small pellet
+4. Collected cells added to individual wells of 12-well plate
+  - R5 added to 24-well plate
+  
+#### Cx-DP3
+
+- Good viability for all wells
+- Entire CS transferred to individal T75s and topped up with 8mL of RPMI/10% FBS in T75
+
+
+
+
+
 
 
