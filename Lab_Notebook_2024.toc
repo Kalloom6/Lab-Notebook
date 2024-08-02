@@ -346,3 +346,8 @@
 \contentsline {subsubsection}{Collection Protocol}{94}{section*.347}%
 \contentsline {paragraph}{Rx-DP3:}{94}{section*.348}%
 \contentsline {paragraph}{Cx-DP3}{94}{section*.349}%
+\contentsline {section}{Thursday 31-07-2024}{94}{section*.350}%
+\contentsline {subsection}{Rx-DP3 Culture}{94}{section*.351}%
+\contentsline {subsection}{Cx-RP3 Culture}{94}{section*.352}%
+\contentsline {subsection}{EC50\_240730 Collection - RAMOS RTX CDC DP2}{94}{section*.353}%
+\contentsline {subsubsection}{Results:}{94}{section*.354}%

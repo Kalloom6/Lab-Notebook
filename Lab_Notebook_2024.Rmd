@@ -2832,7 +2832,37 @@ knitr::include_graphics(image_path)
 - Good viability for all wells
 - Entire CS transferred to individal T75s and topped up with 8mL of RPMI/10% FBS in T75
 
+# Thursday 31-07-2024
 
+## Rx-DP3 Culture
+- Cells are growing but lots of dead cells as well
+- Added 1mL to all wells
+  * 500uL to R5
+
+## Cx-RP3 Culture
+- Look healthy but still growing, no split
+
+## EC50_240730 Collection - RAMOS RTX CDC DP2
+
+- Collected plates seeded on 21-07-2024
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- Less response for Rx-DP2 vs Cx-DP2
+- Not sure its fully "resistant", still a robust response to RTX dosing for Rx-DP2
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240719_EC50_RTX_CDC_RAMOS_DP2.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
 
 
 
