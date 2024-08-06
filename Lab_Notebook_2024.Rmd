@@ -2832,7 +2832,7 @@ knitr::include_graphics(image_path)
 - Good viability for all wells
 - Entire CS transferred to individal T75s and topped up with 8mL of RPMI/10% FBS in T75
 
-# Thursday 31-07-2024
+# Thursday 01-08-2024
 
 ## Rx-DP3 Culture
 - Cells are growing but lots of dead cells as well
