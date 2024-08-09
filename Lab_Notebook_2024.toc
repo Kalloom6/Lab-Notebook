@@ -1,353 +1,353 @@
 \contentsline {section}{LN Repository}{8}{section*.2}%
 \contentsline {subsection}{Rack 1}{8}{section*.3}%
-\contentsline {section}{\textbf January 2024}{20}{section*.4}%
-\contentsline {section}{Tuesday 16-01-2024}{20}{section*.5}%
-\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 1-8 / PCR 2 Sample 5}{20}{section*.6}%
-\contentsline {subsubsection}{Overview:}{20}{section*.7}%
-\contentsline {paragraph}{Sample List}{20}{section*.8}%
-\contentsline {subsubsection}{PCR 1: Samples 1-8}{21}{section*.9}%
-\contentsline {subsubsection}{Bead Clean Up}{22}{section*.10}%
-\contentsline {paragraph}{Overview}{22}{section*.11}%
-\contentsline {paragraph}{Materials}{22}{section*.12}%
-\contentsline {paragraph}{Protocol}{22}{section*.13}%
-\contentsline {paragraph}{Tapestation PCR 1 - Samples 1-8}{23}{section*.14}%
-\contentsline {subsubsection}{PCR 2: Samples 5}{23}{section*.15}%
-\contentsline {paragraph}{Overview}{23}{section*.16}%
-\contentsline {paragraph}{Materials}{23}{section*.17}%
-\contentsline {paragraph}{Protocol}{23}{section*.18}%
-\contentsline {paragraph}{Tapestation PCR 2}{24}{figure.1}%
-\contentsline {paragraph}{Review}{24}{section*.20}%
-\contentsline {paragraph}{Plan for tomorrow}{24}{section*.21}%
-\contentsline {section}{Wednesday 17-01-2024}{24}{section*.22}%
-\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30}{24}{section*.23}%
-\contentsline {subsubsection}{Overview:}{24}{section*.24}%
-\contentsline {subsubsection}{PCR 1: Samples 9-30}{24}{section*.25}%
-\contentsline {subsubsection}{Bead Clean Up}{26}{section*.26}%
-\contentsline {paragraph}{Overview}{26}{section*.27}%
-\contentsline {paragraph}{Materials}{26}{section*.28}%
-\contentsline {paragraph}{Protocol}{26}{section*.29}%
-\contentsline {paragraph}{Tapestation PCR 1}{26}{figure.2}%
-\contentsline {paragraph}{Tapestation PCR 1}{28}{section*.31}%
-\contentsline {paragraph}{Review}{28}{section*.32}%
-\contentsline {paragraph}{Plan for tomorrow}{28}{section*.33}%
-\contentsline {section}{Thursday 18-01-2024}{29}{section*.34}%
-\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 17/18/29}{29}{section*.35}%
-\contentsline {subsubsection}{Overview:}{29}{section*.36}%
-\contentsline {subsubsection}{PCR 1: Samples 17/18/29}{29}{section*.37}%
-\contentsline {subsubsection}{Bead Clean Up}{29}{section*.38}%
-\contentsline {paragraph}{Overview}{29}{section*.39}%
-\contentsline {paragraph}{Materials}{29}{section*.40}%
-\contentsline {paragraph}{Protocol}{29}{section*.41}%
-\contentsline {paragraph}{Tapestation PCR 1}{30}{section*.42}%
-\contentsline {paragraph}{Review}{30}{section*.43}%
-\contentsline {paragraph}{Plan for tomorrow}{30}{section*.44}%
-\contentsline {section}{Friday 19-01-2024}{30}{section*.45}%
-\contentsline {subsection}{WILDseq - Mouse Experiment 1: RNA Extraction/RT Samples 31-33}{30}{section*.46}%
-\contentsline {subsubsection}{RNA extraction Samples 31-33}{30}{section*.47}%
-\contentsline {subsubsection}{RT Protocol Samples 31-33}{30}{section*.48}%
-\contentsline {section}{Monday 22-01-2024}{31}{section*.49}%
-\contentsline {subsubsection}{PCR 1: Samples 31-33}{31}{section*.50}%
-\contentsline {subsubsection}{Bead Clean Up}{31}{section*.51}%
-\contentsline {paragraph}{Overview}{31}{section*.52}%
-\contentsline {paragraph}{Materials}{31}{section*.53}%
-\contentsline {paragraph}{Protocol}{32}{section*.54}%
-\contentsline {paragraph}{Tapestation PCR 1 31-33}{32}{section*.55}%
-\contentsline {paragraph}{Tapestation PCR 1}{33}{section*.56}%
-\contentsline {subsubsection}{PCR 1: Negative Control}{33}{section*.57}%
-\contentsline {paragraph}{Tapestation Control Test 1}{34}{section*.58}%
-\contentsline {paragraph}{Tapestation Control Test 2}{35}{section*.59}%
-\contentsline {section}{Tuesday 23-01-2024}{36}{section*.60}%
-\contentsline {subsection}{Made New Media: AR-5}{36}{section*.61}%
-\contentsline {subsection}{Cell Culture}{37}{section*.62}%
-\contentsline {subsubsection}{A20}{37}{section*.63}%
-\contentsline {subsubsection}{HEK}{37}{section*.64}%
-\contentsline {subsection}{WS-ME1 Library Prep: Control Test 3}{37}{section*.65}%
-\contentsline {subsubsection}{PCR 1: Negative Control}{37}{section*.66}%
-\contentsline {paragraph}{PCR1 Primer Mix}{37}{section*.67}%
-\contentsline {paragraph}{PCR1 MM}{37}{section*.68}%
-\contentsline {paragraph}{Tapestation Control Test 3}{38}{section*.69}%
-\contentsline {section}{Wednesday 24-01-2024}{39}{section*.70}%
-\contentsline {subsection}{Cell Culture}{39}{section*.71}%
-\contentsline {subsubsection}{A20}{39}{section*.72}%
-\contentsline {subsubsection}{HEK}{40}{section*.73}%
-\contentsline {subsection}{WILDseq - Mouse Experiment 1: Library Prep Attempt 5 - RT}{40}{section*.74}%
-\contentsline {subsubsection}{RT Protocol}{40}{section*.75}%
-\contentsline {paragraph}{Plan for tomorrow}{40}{section*.76}%
-\contentsline {section}{Thursday 25-01-2024}{41}{section*.77}%
-\contentsline {subsection}{Cell Culture}{41}{section*.78}%
-\contentsline {subsubsection}{A20}{41}{section*.79}%
-\contentsline {subsubsection}{HEK}{41}{section*.80}%
-\contentsline {subsection}{WS-ME1 Library Prep - Attempt 5 PCR 1}{41}{section*.81}%
-\contentsline {subsubsection}{PCR 1: Negative Control}{41}{section*.82}%
-\contentsline {paragraph}{PCR1 Primer Mix}{41}{section*.83}%
-\contentsline {paragraph}{PCR1 MM}{41}{section*.84}%
-\contentsline {subsubsection}{Bead Clean Up}{42}{section*.85}%
-\contentsline {paragraph}{Overview}{42}{section*.86}%
-\contentsline {paragraph}{Materials}{42}{section*.87}%
-\contentsline {paragraph}{Protocol}{42}{section*.88}%
-\contentsline {subsubsection}{Tapestation PCR 1 Samples 1-33}{42}{section*.89}%
-\contentsline {paragraph}{Tapestation PCR 1 1-16}{42}{section*.90}%
-\contentsline {subparagraph}{Tapestation PCR 1}{42}{figure.3}%
-\contentsline {paragraph}{Tapestation PCR 1 1-32}{44}{section*.92}%
-\contentsline {subparagraph}{Tapestation PCR 1}{44}{figure.4}%
-\contentsline {paragraph}{Tapestation PCR 1 18-20, 33}{44}{section*.94}%
-\contentsline {subparagraph}{Tapestation PCR 1}{44}{figure.5}%
-\contentsline {section}{Friday 26-01-2024}{46}{section*.96}%
-\contentsline {subsection}{Cell Culture}{46}{section*.97}%
-\contentsline {subsubsection}{A20}{46}{section*.98}%
-\contentsline {subsubsection}{HEK}{46}{section*.99}%
-\contentsline {subsection}{WS-ME1 Library Prep - Attempt 5 PCR 1 repeat and PCR 2 prep}{46}{section*.100}%
-\contentsline {subsubsection}{PCR2 Prep}{46}{section*.101}%
-\contentsline {subsubsection}{PCR1 Samples 18-20}{46}{section*.102}%
-\contentsline {paragraph}{PCR1 Protocol}{46}{section*.103}%
-\contentsline {subsubsection}{Bead Clean Up}{47}{section*.104}%
-\contentsline {paragraph}{Overview}{47}{section*.105}%
-\contentsline {paragraph}{Materials}{47}{section*.106}%
-\contentsline {paragraph}{Protocol}{47}{section*.107}%
-\contentsline {subsubsection}{Tapestation PCR 1 Samples 18-20}{47}{section*.108}%
-\contentsline {paragraph}{Tapestation PCR 1 18-20}{47}{section*.109}%
-\contentsline {subparagraph}{Tapestation PCR 1}{47}{figure.6}%
-\contentsline {section}{Monday 29-01-2024}{47}{section*.111}%
-\contentsline {subsection}{Cell Culture}{47}{section*.112}%
-\contentsline {subsubsection}{A20}{47}{section*.113}%
-\contentsline {subsubsection}{HEK}{49}{section*.114}%
-\contentsline {subsection}{PCR Step 2 - Samples 1-24}{49}{section*.115}%
-\contentsline {subsubsection}{Overview}{49}{section*.116}%
-\contentsline {subsubsection}{PCR2 Protocol}{49}{section*.117}%
-\contentsline {subsubsection}{Tapestation}{50}{section*.118}%
-\contentsline {section}{Tuesday 30-01-2024}{51}{section*.119}%
-\contentsline {subsection}{Cell Culture}{51}{section*.120}%
-\contentsline {subsubsection}{HEK}{51}{section*.121}%
-\contentsline {subsubsection}{A20}{51}{section*.122}%
-\contentsline {section}{\textbf February 2024}{52}{section*.123}%
-\contentsline {section}{Thursday 01-02-2024}{52}{section*.124}%
-\contentsline {subsection}{PCR Step 2 - Samples 1-8, 25-39}{52}{section*.125}%
-\contentsline {subsubsection}{Overview}{52}{section*.126}%
-\contentsline {subsubsection}{PCR2 Protocol}{52}{section*.127}%
-\contentsline {subsubsection}{Tapestation}{53}{section*.128}%
-\contentsline {section}{Monday 05-02-2024}{54}{section*.129}%
-\contentsline {subsection}{Cell Culture}{54}{section*.130}%
-\contentsline {subsubsection}{Made DMEM}{54}{section*.131}%
-\contentsline {subsubsection}{HEK - Seeded}{54}{section*.132}%
-\contentsline {subsubsection}{A20 - Split}{54}{section*.133}%
-\contentsline {section}{Tuesday 06-02-2024}{54}{section*.134}%
-\contentsline {subsection}{WS-ME1 Pooling for Submission}{54}{section*.135}%
-\contentsline {section}{Wednesday 07-02-2024}{55}{section*.136}%
-\contentsline {subsection}{Cell Culture}{55}{section*.137}%
-\contentsline {subsubsection}{HEK}{55}{section*.138}%
-\contentsline {subsubsection}{A20}{55}{section*.139}%
-\contentsline {section}{Friday 09-02-2024}{56}{section*.140}%
-\contentsline {subsection}{Cell Culture}{56}{section*.141}%
-\contentsline {subsubsection}{A20}{56}{section*.142}%
-\contentsline {section}{Monday 12-02-2024}{56}{section*.143}%
-\contentsline {subsection}{Cell Culture}{56}{section*.144}%
-\contentsline {subsubsection}{Made DMEM-V1}{56}{section*.145}%
-\contentsline {subsubsection}{Thawed HEK}{56}{section*.146}%
-\contentsline {subsubsection}{A20}{56}{section*.147}%
-\contentsline {subsection}{Processing scRNAseq}{56}{section*.148}%
-\contentsline {section}{Tuesday 13-02-2024}{56}{section*.149}%
-\contentsline {subsection}{Cell Culture}{56}{section*.150}%
-\contentsline {subsubsection}{HEK}{56}{section*.151}%
-\contentsline {subsection}{Processing scRNAseq}{56}{section*.152}%
-\contentsline {section}{Wednesday 14-02-2024}{56}{section*.153}%
-\contentsline {subsection}{Cell Culture}{56}{section*.154}%
-\contentsline {subsubsection}{A20}{56}{section*.155}%
-\contentsline {subsection}{Processing scRNAseq}{57}{section*.156}%
-\contentsline {section}{Friday 16-02-2024}{57}{section*.157}%
-\contentsline {subsection}{A20 Xenograft EXP 1}{57}{section*.158}%
-\contentsline {subsubsection}{Cell Prep}{57}{section*.159}%
-\contentsline {subsubsection}{Injection}{57}{section*.160}%
-\contentsline {section}{Monday 19-02-2024}{57}{section*.161}%
-\contentsline {subsection}{Cell Culture}{57}{section*.162}%
-\contentsline {subsubsection}{A20}{57}{section*.163}%
-\contentsline {section}{Wednesday 21-02-2024}{58}{section*.164}%
-\contentsline {subsection}{Cell Culture}{58}{section*.165}%
-\contentsline {subsubsection}{A20}{58}{section*.166}%
-\contentsline {subsubsection}{HEK}{58}{section*.167}%
-\contentsline {section}{Friday 23-02-2024}{58}{section*.168}%
-\contentsline {subsection}{Cell Culture}{58}{section*.169}%
-\contentsline {subsubsection}{A20}{58}{section*.170}%
-\contentsline {subsubsection}{HEK}{58}{section*.171}%
-\contentsline {section}{Monday 26-02-2024}{58}{section*.172}%
-\contentsline {subsection}{Cell Culture}{58}{section*.173}%
-\contentsline {subsubsection}{A20}{58}{section*.174}%
-\contentsline {subsubsection}{HEK}{58}{section*.175}%
-\contentsline {subsubsection}{WILDseq Virus Production Day 1}{59}{section*.176}%
-\contentsline {section}{March 2024}{59}{section*.177}%
-\contentsline {section}{Wednesday 06-03-2024}{59}{section*.178}%
-\contentsline {section}{Wednesday 13-03-2024}{59}{section*.179}%
-\contentsline {section}{Thursday 14-03-2024}{59}{section*.180}%
-\contentsline {subsection}{Cell Culture - N2}{59}{section*.181}%
-\contentsline {section}{Friday 15-03-2024}{59}{section*.182}%
-\contentsline {subsection}{Cell Culture}{59}{section*.183}%
-\contentsline {subsubsection}{N2-BC4 RTX CDC Assay - version 1}{59}{section*.184}%
-\contentsline {section}{Monday 18-03-2024}{59}{section*.185}%
-\contentsline {subsection}{Cell Culture - N2 -C4}{59}{section*.186}%
-\contentsline {subsection}{N2-BC4 RTX CDC Assay - version 2}{59}{section*.187}%
-\contentsline {section}{Friday 22-03-2024}{59}{section*.188}%
-\contentsline {subsection}{Cell Culture}{59}{section*.189}%
-\contentsline {subsubsection}{N2-BC4}{59}{section*.190}%
-\contentsline {subsection}{EC50 RTX N2-BC4 22324 - Seeding}{60}{section*.191}%
-\contentsline {section}{Monday 25-03-2024}{61}{section*.192}%
-\contentsline {subsection}{EC50 RTX N2-BC4 22324 - Collection}{61}{section*.193}%
-\contentsline {subsection}{EC50 RTX N2-BC4 25324 - Seeding (DNW)}{61}{section*.194}%
-\contentsline {subsection}{Cell Culture}{62}{section*.195}%
-\contentsline {subsubsection}{N2-BC4}{62}{section*.196}%
-\contentsline {section}{Wednesday 27-03-2024}{63}{section*.197}%
-\contentsline {subsection}{Cell Culture}{63}{section*.198}%
-\contentsline {section}{Thursday 28-03-2024}{63}{section*.199}%
-\contentsline {subsection}{EC50 RTX N2-BC4 25325 - Collection}{63}{section*.200}%
-\contentsline {section}{Friday 29-03-2024}{63}{section*.201}%
-\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 25329 - Seeding (DNW)}{63}{section*.202}%
-\contentsline {section}{Sunday 31-03-2024}{64}{section*.203}%
-\contentsline {subsection}{Cell Culture}{64}{section*.204}%
-\contentsline {subsubsection}{N2-BC4}{64}{section*.205}%
-\contentsline {paragraph}{Changed FDC:}{64}{section*.206}%
-\contentsline {subsubsection}{Ramos-BC5}{65}{section*.207}%
-\contentsline {subsection}{Ramos CDC Testing}{65}{section*.208}%
-\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24331 - Seeding (DNW)}{65}{section*.209}%
-\contentsline {section}{April}{67}{section*.210}%
-\contentsline {section}{Monday 01-04-2024}{67}{section*.211}%
-\contentsline {subsection}{Cell Culture}{67}{section*.212}%
-\contentsline {subsubsection}{N2}{67}{section*.213}%
-\contentsline {subsubsection}{Ramos BC 5}{67}{section*.214}%
-\contentsline {subsection}{EC50 Collection: 24329/24331}{67}{section*.215}%
-\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24401 - Seeding (DNW)}{68}{section*.216}%
-\contentsline {section}{Tuesday 02-04-2024}{70}{section*.217}%
-\contentsline {subsection}{N2/Ramos CD20 Flow Cytometry}{70}{section*.218}%
-\contentsline {section}{Thursday 04-04-2024}{71}{section*.219}%
-\contentsline {subsection}{Cell Culture}{71}{section*.220}%
-\contentsline {subsubsection}{N2}{71}{section*.221}%
-\contentsline {subsubsection}{Ramos}{71}{section*.222}%
-\contentsline {subsection}{EC50 Collection: 240401}{71}{section*.223}%
-\contentsline {section}{Monday 08-04-2024}{71}{section*.224}%
-\contentsline {subsection}{Cell Culture}{71}{section*.225}%
-\contentsline {subsubsection}{N2}{71}{section*.226}%
-\contentsline {subsubsection}{Ramos}{71}{section*.227}%
-\contentsline {section}{Tuesday 09-04-2024}{72}{section*.228}%
-\contentsline {subsection}{Perla Drug Randomizer}{72}{section*.229}%
-\contentsline {section}{Saturday 14-04-2024}{72}{section*.230}%
-\contentsline {subsection}{Cell Culture}{72}{section*.231}%
-\contentsline {subsubsection}{N2-BC4}{72}{section*.232}%
-\contentsline {subsubsection}{Ramos-BC5}{72}{section*.233}%
-\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24414 - Seeding (DNW)}{72}{section*.234}%
-\contentsline {section}{Wednesday 17-04-2024}{73}{section*.235}%
-\contentsline {subsection}{EC50 Collection: 240414}{73}{section*.236}%
-\contentsline {section}{Monday 22-04-2024}{74}{section*.237}%
-\contentsline {subsection}{Cell Culture}{74}{section*.238}%
-\contentsline {subsubsection}{N2-BC4}{74}{section*.239}%
-\contentsline {subsubsection}{Ramos-BC5}{74}{section*.240}%
-\contentsline {subsection}{Thawed NK-92}{74}{section*.241}%
-\contentsline {section}{Wednesday 24-04-2024}{74}{section*.242}%
-\contentsline {subsection}{Cell Culture}{74}{section*.243}%
-\contentsline {subsubsection}{N2-BC4}{74}{section*.244}%
-\contentsline {subsubsection}{Ramos-BC5}{74}{section*.245}%
-\contentsline {subsubsection}{NK-92}{74}{section*.246}%
-\contentsline {section}{Friday 26-04-2024}{74}{section*.247}%
-\contentsline {subsection}{Cell Culture}{74}{section*.248}%
-\contentsline {subsubsection}{N2-BC4}{74}{section*.249}%
-\contentsline {subsubsection}{Ramos-BC5}{74}{section*.250}%
-\contentsline {subsubsection}{NK-92}{74}{section*.251}%
-\contentsline {section}{Monday 29-04-2024}{75}{section*.252}%
-\contentsline {subsection}{Cell Culture}{75}{section*.253}%
-\contentsline {subsubsection}{N2-BC4}{75}{section*.254}%
-\contentsline {subsubsection}{Ramos-BC5}{75}{section*.255}%
-\contentsline {section}{Tuesday 30-04-2024}{75}{section*.256}%
-\contentsline {subsection}{Cell Culture}{75}{section*.257}%
-\contentsline {subsubsection}{N2-BC4}{75}{section*.258}%
-\contentsline {subsubsection}{Ramos-BC5}{75}{section*.259}%
-\contentsline {subsection}{Human Serum Reciept}{75}{section*.260}%
-\contentsline {subsection}{Ramos/N2 CDC Testing}{75}{section*.261}%
-\contentsline {subsubsection}{Results: DNW}{76}{section*.262}%
-\contentsline {subsection}{EC50 RTX RAMOS-BC5 24430 - Seeding}{76}{section*.263}%
-\contentsline {section}{May}{77}{section*.264}%
-\contentsline {section}{Wednesday 01-05-2024}{77}{section*.265}%
-\contentsline {subsection}{Cell Culture}{77}{section*.266}%
-\contentsline {subsubsection}{N2-BC4}{77}{section*.267}%
-\contentsline {subsubsection}{Ramos-BC5}{77}{section*.268}%
-\contentsline {section}{June}{77}{section*.269}%
-\contentsline {section}{Monday 10-06-2024}{77}{section*.270}%
-\contentsline {subsection}{Cell Culture}{77}{section*.271}%
-\contentsline {subsection}{EC50 RTX RAMOS-BC5 240610 - Seeding}{78}{section*.272}%
-\contentsline {section}{Wednesday 13-06-2024}{79}{section*.273}%
-\contentsline {subsection}{Cell Culture}{79}{section*.274}%
-\contentsline {subsection}{EC50 Collection: EC50\_RTX\_N2-BC4\_10064}{79}{section*.275}%
-\contentsline {subsubsection}{Results:}{80}{section*.276}%
-\contentsline {section}{Thursday 13-06-2024}{80}{section*.277}%
-\contentsline {subsection}{Cryopreservation - RAMOS-BC 1/3/5}{80}{section*.278}%
-\contentsline {subsubsection}{Protocol}{80}{section*.279}%
-\contentsline {section}{Monday 24-06-2024}{80}{section*.280}%
-\contentsline {subsection}{Cell Culture}{80}{section*.281}%
-\contentsline {subsubsection}{Making RPMI}{80}{section*.282}%
-\contentsline {subsubsection}{Splitting Ramos BC 3}{81}{section*.283}%
-\contentsline {subsection}{RAMOS RTX CDC Testing 240625 - Seeding}{81}{section*.284}%
-\contentsline {section}{Tuesday 25-06-2024}{81}{section*.285}%
-\contentsline {subsection}{Cell Culture}{81}{section*.286}%
-\contentsline {subsection}{RAMOS RTX CDC Testing 240625 - Collection}{81}{section*.287}%
-\contentsline {subsubsection}{Results}{82}{section*.288}%
-\contentsline {section}{July}{82}{section*.289}%
-\contentsline {section}{Wednesday 10-07-2024}{82}{section*.290}%
-\contentsline {subsection}{Cell Culture}{82}{section*.291}%
-\contentsline {subsection}{RAMOS - RTX In Vitro CDC Drug Pressure Experiment}{82}{section*.292}%
-\contentsline {subsubsection}{Freezing Down Cells Protocol}{82}{section*.293}%
-\contentsline {subsubsection}{RAMOS RTX DP - Dose 1}{82}{section*.294}%
-\contentsline {paragraph}{Dosing Protocol}{82}{section*.295}%
-\contentsline {paragraph}{Plate Layout}{83}{section*.296}%
-\contentsline {section}{Wednesday 17-07-2024}{84}{section*.297}%
-\contentsline {subsection}{Cell Culture}{84}{section*.298}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{84}{section*.299}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{84}{section*.300}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{84}{section*.301}%
-\contentsline {section}{Friday 19-07-2024}{84}{section*.302}%
-\contentsline {subsection}{Cell Culture}{84}{section*.303}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{84}{section*.304}%
-\contentsline {subsection}{RAMOS - RTX In Vitro CDC Drug Pressure Experiment}{84}{section*.305}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2 and Rx/DP2}{84}{section*.306}%
-\contentsline {subsection}{EC50 RTX RAMOS-BC5 240719 - Seeding}{84}{section*.307}%
-\contentsline {subsubsection}{Plate seeding protocol:}{84}{section*.308}%
-\contentsline {section}{Sunday 21-07-2024}{86}{section*.309}%
-\contentsline {subsection}{Cell Culture}{86}{section*.310}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{86}{section*.311}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{86}{section*.312}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{86}{section*.313}%
-\contentsline {subsection}{EC50 Collection: EC50\_RTX\_N2-BC4\_240721}{86}{section*.314}%
-\contentsline {subsubsection}{Results:}{87}{section*.315}%
-\contentsline {section}{Tuesday 23-07-2024}{87}{section*.316}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{87}{section*.317}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{87}{section*.318}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{87}{section*.319}%
-\contentsline {section}{Wednesday 24-07-2024}{87}{section*.320}%
-\contentsline {subsection}{Cell Culture}{87}{section*.321}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{87}{section*.322}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{87}{section*.323}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{88}{section*.324}%
-\contentsline {subsubsection}{Made Media - RPMI}{88}{section*.325}%
-\contentsline {section}{Friday 26-07-2024}{88}{section*.326}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{88}{section*.327}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{88}{section*.328}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{88}{section*.329}%
-\contentsline {section}{Monday 29-07-2024}{88}{section*.330}%
-\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{88}{section*.331}%
-\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{88}{section*.332}%
-\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{88}{section*.333}%
-\contentsline {section}{Tuesday 30-07-2024}{89}{section*.334}%
-\contentsline {subsection}{RAMOS RTX DP - Dose 3}{89}{section*.335}%
-\contentsline {paragraph}{Dosing Protocol}{89}{section*.336}%
-\contentsline {paragraph}{Plate Layout}{89}{section*.337}%
-\contentsline {subsection}{EC50 RTX RAMOS-DP2 240730 - Seeding}{90}{section*.338}%
-\contentsline {subsubsection}{Plate seeding protocol:}{90}{section*.339}%
-\contentsline {subsection}{RAMOS RTX CDC DP2 - CD20 Flow Cytometry}{92}{section*.340}%
-\contentsline {subsubsection}{CD20 Flow Protocol}{92}{section*.341}%
-\contentsline {subsubsection}{Results}{93}{section*.342}%
-\contentsline {section}{Wednesday 31-07-2024}{93}{section*.343}%
-\contentsline {subsection}{RAMOS BC 1 - Baseline}{93}{section*.344}%
-\contentsline {subsection}{RAMOS BC 1 - Rx/DP2}{93}{section*.345}%
-\contentsline {subsection}{RAMOS RTX DP - Dose 3 Collection}{94}{section*.346}%
-\contentsline {subsubsection}{Collection Protocol}{94}{section*.347}%
-\contentsline {paragraph}{Rx-DP3:}{94}{section*.348}%
-\contentsline {paragraph}{Cx-DP3}{94}{section*.349}%
-\contentsline {section}{Thursday 31-07-2024}{94}{section*.350}%
-\contentsline {subsection}{Rx-DP3 Culture}{94}{section*.351}%
-\contentsline {subsection}{Cx-RP3 Culture}{94}{section*.352}%
-\contentsline {subsection}{EC50\_240730 Collection - RAMOS RTX CDC DP2}{94}{section*.353}%
-\contentsline {subsubsection}{Results:}{94}{section*.354}%
+\contentsline {section}{\textbf January 2024}{10}{section*.4}%
+\contentsline {section}{Tuesday 16-01-2024}{10}{section*.5}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 1-8 / PCR 2 Sample 5}{10}{section*.6}%
+\contentsline {subsubsection}{Overview:}{10}{section*.7}%
+\contentsline {paragraph}{Sample List}{10}{section*.8}%
+\contentsline {subsubsection}{PCR 1: Samples 1-8}{11}{section*.9}%
+\contentsline {subsubsection}{Bead Clean Up}{11}{section*.10}%
+\contentsline {paragraph}{Overview}{11}{section*.11}%
+\contentsline {paragraph}{Materials}{11}{section*.12}%
+\contentsline {paragraph}{Protocol}{12}{section*.13}%
+\contentsline {paragraph}{Tapestation PCR 1 - Samples 1-8}{12}{section*.14}%
+\contentsline {subsubsection}{PCR 2: Samples 5}{13}{section*.15}%
+\contentsline {paragraph}{Overview}{13}{section*.16}%
+\contentsline {paragraph}{Materials}{13}{section*.17}%
+\contentsline {paragraph}{Protocol}{13}{section*.18}%
+\contentsline {paragraph}{Tapestation PCR 2}{13}{figure.1}%
+\contentsline {paragraph}{Review}{13}{section*.20}%
+\contentsline {paragraph}{Plan for tomorrow}{15}{section*.21}%
+\contentsline {section}{Wednesday 17-01-2024}{15}{section*.22}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 9-30}{15}{section*.23}%
+\contentsline {subsubsection}{Overview:}{15}{section*.24}%
+\contentsline {subsubsection}{PCR 1: Samples 9-30}{15}{section*.25}%
+\contentsline {subsubsection}{Bead Clean Up}{15}{section*.26}%
+\contentsline {paragraph}{Overview}{15}{section*.27}%
+\contentsline {paragraph}{Materials}{15}{section*.28}%
+\contentsline {paragraph}{Protocol}{15}{section*.29}%
+\contentsline {paragraph}{Tapestation PCR 1}{16}{figure.2}%
+\contentsline {paragraph}{Tapestation PCR 1}{17}{section*.31}%
+\contentsline {paragraph}{Review}{17}{section*.32}%
+\contentsline {paragraph}{Plan for tomorrow}{17}{section*.33}%
+\contentsline {section}{Thursday 18-01-2024}{18}{section*.34}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: PCR 1 Samples 17/18/29}{18}{section*.35}%
+\contentsline {subsubsection}{Overview:}{18}{section*.36}%
+\contentsline {subsubsection}{PCR 1: Samples 17/18/29}{18}{section*.37}%
+\contentsline {subsubsection}{Bead Clean Up}{18}{section*.38}%
+\contentsline {paragraph}{Overview}{18}{section*.39}%
+\contentsline {paragraph}{Materials}{18}{section*.40}%
+\contentsline {paragraph}{Protocol}{18}{section*.41}%
+\contentsline {paragraph}{Tapestation PCR 1}{19}{section*.42}%
+\contentsline {paragraph}{Review}{19}{section*.43}%
+\contentsline {paragraph}{Plan for tomorrow}{19}{section*.44}%
+\contentsline {section}{Friday 19-01-2024}{19}{section*.45}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: RNA Extraction/RT Samples 31-33}{19}{section*.46}%
+\contentsline {subsubsection}{RNA extraction Samples 31-33}{19}{section*.47}%
+\contentsline {subsubsection}{RT Protocol Samples 31-33}{19}{section*.48}%
+\contentsline {section}{Monday 22-01-2024}{20}{section*.49}%
+\contentsline {subsubsection}{PCR 1: Samples 31-33}{20}{section*.50}%
+\contentsline {subsubsection}{Bead Clean Up}{20}{section*.51}%
+\contentsline {paragraph}{Overview}{20}{section*.52}%
+\contentsline {paragraph}{Materials}{20}{section*.53}%
+\contentsline {paragraph}{Protocol}{21}{section*.54}%
+\contentsline {paragraph}{Tapestation PCR 1 31-33}{21}{section*.55}%
+\contentsline {paragraph}{Tapestation PCR 1}{22}{section*.56}%
+\contentsline {subsubsection}{PCR 1: Negative Control}{22}{section*.57}%
+\contentsline {paragraph}{Tapestation Control Test 1}{23}{section*.58}%
+\contentsline {paragraph}{Tapestation Control Test 2}{24}{section*.59}%
+\contentsline {section}{Tuesday 23-01-2024}{25}{section*.60}%
+\contentsline {subsection}{Made New Media: AR-5}{25}{section*.61}%
+\contentsline {subsection}{Cell Culture}{26}{section*.62}%
+\contentsline {subsubsection}{A20}{26}{section*.63}%
+\contentsline {subsubsection}{HEK}{26}{section*.64}%
+\contentsline {subsection}{WS-ME1 Library Prep: Control Test 3}{26}{section*.65}%
+\contentsline {subsubsection}{PCR 1: Negative Control}{26}{section*.66}%
+\contentsline {paragraph}{PCR1 Primer Mix}{26}{section*.67}%
+\contentsline {paragraph}{PCR1 MM}{26}{section*.68}%
+\contentsline {paragraph}{Tapestation Control Test 3}{27}{section*.69}%
+\contentsline {section}{Wednesday 24-01-2024}{28}{section*.70}%
+\contentsline {subsection}{Cell Culture}{28}{section*.71}%
+\contentsline {subsubsection}{A20}{28}{section*.72}%
+\contentsline {subsubsection}{HEK}{29}{section*.73}%
+\contentsline {subsection}{WILDseq - Mouse Experiment 1: Library Prep Attempt 5 - RT}{29}{section*.74}%
+\contentsline {subsubsection}{RT Protocol}{29}{section*.75}%
+\contentsline {paragraph}{Plan for tomorrow}{29}{section*.76}%
+\contentsline {section}{Thursday 25-01-2024}{30}{section*.77}%
+\contentsline {subsection}{Cell Culture}{30}{section*.78}%
+\contentsline {subsubsection}{A20}{30}{section*.79}%
+\contentsline {subsubsection}{HEK}{30}{section*.80}%
+\contentsline {subsection}{WS-ME1 Library Prep - Attempt 5 PCR 1}{30}{section*.81}%
+\contentsline {subsubsection}{PCR 1: Negative Control}{30}{section*.82}%
+\contentsline {paragraph}{PCR1 Primer Mix}{30}{section*.83}%
+\contentsline {paragraph}{PCR1 MM}{30}{section*.84}%
+\contentsline {subsubsection}{Bead Clean Up}{31}{section*.85}%
+\contentsline {paragraph}{Overview}{31}{section*.86}%
+\contentsline {paragraph}{Materials}{31}{section*.87}%
+\contentsline {paragraph}{Protocol}{31}{section*.88}%
+\contentsline {subsubsection}{Tapestation PCR 1 Samples 1-33}{31}{section*.89}%
+\contentsline {paragraph}{Tapestation PCR 1 1-16}{31}{section*.90}%
+\contentsline {subparagraph}{Tapestation PCR 1}{31}{figure.3}%
+\contentsline {paragraph}{Tapestation PCR 1 1-32}{33}{section*.92}%
+\contentsline {subparagraph}{Tapestation PCR 1}{33}{figure.4}%
+\contentsline {paragraph}{Tapestation PCR 1 18-20, 33}{33}{section*.94}%
+\contentsline {subparagraph}{Tapestation PCR 1}{33}{figure.5}%
+\contentsline {section}{Friday 26-01-2024}{35}{section*.96}%
+\contentsline {subsection}{Cell Culture}{35}{section*.97}%
+\contentsline {subsubsection}{A20}{35}{section*.98}%
+\contentsline {subsubsection}{HEK}{35}{section*.99}%
+\contentsline {subsection}{WS-ME1 Library Prep - Attempt 5 PCR 1 repeat and PCR 2 prep}{35}{section*.100}%
+\contentsline {subsubsection}{PCR2 Prep}{35}{section*.101}%
+\contentsline {subsubsection}{PCR1 Samples 18-20}{35}{section*.102}%
+\contentsline {paragraph}{PCR1 Protocol}{35}{section*.103}%
+\contentsline {subsubsection}{Bead Clean Up}{36}{section*.104}%
+\contentsline {paragraph}{Overview}{36}{section*.105}%
+\contentsline {paragraph}{Materials}{36}{section*.106}%
+\contentsline {paragraph}{Protocol}{36}{section*.107}%
+\contentsline {subsubsection}{Tapestation PCR 1 Samples 18-20}{36}{section*.108}%
+\contentsline {paragraph}{Tapestation PCR 1 18-20}{36}{section*.109}%
+\contentsline {subparagraph}{Tapestation PCR 1}{36}{figure.6}%
+\contentsline {section}{Monday 29-01-2024}{36}{section*.111}%
+\contentsline {subsection}{Cell Culture}{36}{section*.112}%
+\contentsline {subsubsection}{A20}{36}{section*.113}%
+\contentsline {subsubsection}{HEK}{38}{section*.114}%
+\contentsline {subsection}{PCR Step 2 - Samples 1-24}{38}{section*.115}%
+\contentsline {subsubsection}{Overview}{38}{section*.116}%
+\contentsline {subsubsection}{PCR2 Protocol}{38}{section*.117}%
+\contentsline {subsubsection}{Tapestation}{39}{section*.118}%
+\contentsline {section}{Tuesday 30-01-2024}{40}{section*.119}%
+\contentsline {subsection}{Cell Culture}{40}{section*.120}%
+\contentsline {subsubsection}{HEK}{40}{section*.121}%
+\contentsline {subsubsection}{A20}{40}{section*.122}%
+\contentsline {section}{\textbf February 2024}{41}{section*.123}%
+\contentsline {section}{Thursday 01-02-2024}{41}{section*.124}%
+\contentsline {subsection}{PCR Step 2 - Samples 1-8, 25-39}{41}{section*.125}%
+\contentsline {subsubsection}{Overview}{41}{section*.126}%
+\contentsline {subsubsection}{PCR2 Protocol}{41}{section*.127}%
+\contentsline {subsubsection}{Tapestation}{42}{section*.128}%
+\contentsline {section}{Monday 05-02-2024}{43}{section*.129}%
+\contentsline {subsection}{Cell Culture}{43}{section*.130}%
+\contentsline {subsubsection}{Made DMEM}{43}{section*.131}%
+\contentsline {subsubsection}{HEK - Seeded}{43}{section*.132}%
+\contentsline {subsubsection}{A20 - Split}{43}{section*.133}%
+\contentsline {section}{Tuesday 06-02-2024}{43}{section*.134}%
+\contentsline {subsection}{WS-ME1 Pooling for Submission}{43}{section*.135}%
+\contentsline {section}{Wednesday 07-02-2024}{44}{section*.136}%
+\contentsline {subsection}{Cell Culture}{44}{section*.137}%
+\contentsline {subsubsection}{HEK}{44}{section*.138}%
+\contentsline {subsubsection}{A20}{44}{section*.139}%
+\contentsline {section}{Friday 09-02-2024}{45}{section*.140}%
+\contentsline {subsection}{Cell Culture}{45}{section*.141}%
+\contentsline {subsubsection}{A20}{45}{section*.142}%
+\contentsline {section}{Monday 12-02-2024}{45}{section*.143}%
+\contentsline {subsection}{Cell Culture}{45}{section*.144}%
+\contentsline {subsubsection}{Made DMEM-V1}{45}{section*.145}%
+\contentsline {subsubsection}{Thawed HEK}{45}{section*.146}%
+\contentsline {subsubsection}{A20}{45}{section*.147}%
+\contentsline {subsection}{Processing scRNAseq}{45}{section*.148}%
+\contentsline {section}{Tuesday 13-02-2024}{45}{section*.149}%
+\contentsline {subsection}{Cell Culture}{45}{section*.150}%
+\contentsline {subsubsection}{HEK}{45}{section*.151}%
+\contentsline {subsection}{Processing scRNAseq}{45}{section*.152}%
+\contentsline {section}{Wednesday 14-02-2024}{45}{section*.153}%
+\contentsline {subsection}{Cell Culture}{45}{section*.154}%
+\contentsline {subsubsection}{A20}{45}{section*.155}%
+\contentsline {subsection}{Processing scRNAseq}{46}{section*.156}%
+\contentsline {section}{Friday 16-02-2024}{46}{section*.157}%
+\contentsline {subsection}{A20 Xenograft EXP 1}{46}{section*.158}%
+\contentsline {subsubsection}{Cell Prep}{46}{section*.159}%
+\contentsline {subsubsection}{Injection}{46}{section*.160}%
+\contentsline {section}{Monday 19-02-2024}{46}{section*.161}%
+\contentsline {subsection}{Cell Culture}{46}{section*.162}%
+\contentsline {subsubsection}{A20}{46}{section*.163}%
+\contentsline {section}{Wednesday 21-02-2024}{47}{section*.164}%
+\contentsline {subsection}{Cell Culture}{47}{section*.165}%
+\contentsline {subsubsection}{A20}{47}{section*.166}%
+\contentsline {subsubsection}{HEK}{47}{section*.167}%
+\contentsline {section}{Friday 23-02-2024}{47}{section*.168}%
+\contentsline {subsection}{Cell Culture}{47}{section*.169}%
+\contentsline {subsubsection}{A20}{47}{section*.170}%
+\contentsline {subsubsection}{HEK}{47}{section*.171}%
+\contentsline {section}{Monday 26-02-2024}{47}{section*.172}%
+\contentsline {subsection}{Cell Culture}{47}{section*.173}%
+\contentsline {subsubsection}{A20}{47}{section*.174}%
+\contentsline {subsubsection}{HEK}{47}{section*.175}%
+\contentsline {subsubsection}{WILDseq Virus Production Day 1}{48}{section*.176}%
+\contentsline {section}{March 2024}{48}{section*.177}%
+\contentsline {section}{Wednesday 06-03-2024}{48}{section*.178}%
+\contentsline {section}{Wednesday 13-03-2024}{48}{section*.179}%
+\contentsline {section}{Thursday 14-03-2024}{48}{section*.180}%
+\contentsline {subsection}{Cell Culture - N2}{48}{section*.181}%
+\contentsline {section}{Friday 15-03-2024}{48}{section*.182}%
+\contentsline {subsection}{Cell Culture}{48}{section*.183}%
+\contentsline {subsubsection}{N2-BC4 RTX CDC Assay - version 1}{48}{section*.184}%
+\contentsline {section}{Monday 18-03-2024}{48}{section*.185}%
+\contentsline {subsection}{Cell Culture - N2 -C4}{48}{section*.186}%
+\contentsline {subsection}{N2-BC4 RTX CDC Assay - version 2}{48}{section*.187}%
+\contentsline {section}{Friday 22-03-2024}{48}{section*.188}%
+\contentsline {subsection}{Cell Culture}{48}{section*.189}%
+\contentsline {subsubsection}{N2-BC4}{48}{section*.190}%
+\contentsline {subsection}{EC50 RTX N2-BC4 22324 - Seeding}{49}{section*.191}%
+\contentsline {section}{Monday 25-03-2024}{50}{section*.192}%
+\contentsline {subsection}{EC50 RTX N2-BC4 22324 - Collection}{50}{section*.193}%
+\contentsline {subsection}{EC50 RTX N2-BC4 25324 - Seeding (DNW)}{50}{section*.194}%
+\contentsline {subsection}{Cell Culture}{51}{section*.195}%
+\contentsline {subsubsection}{N2-BC4}{51}{section*.196}%
+\contentsline {section}{Wednesday 27-03-2024}{52}{section*.197}%
+\contentsline {subsection}{Cell Culture}{52}{section*.198}%
+\contentsline {section}{Thursday 28-03-2024}{52}{section*.199}%
+\contentsline {subsection}{EC50 RTX N2-BC4 25325 - Collection}{52}{section*.200}%
+\contentsline {section}{Friday 29-03-2024}{52}{section*.201}%
+\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 25329 - Seeding (DNW)}{52}{section*.202}%
+\contentsline {section}{Sunday 31-03-2024}{53}{section*.203}%
+\contentsline {subsection}{Cell Culture}{53}{section*.204}%
+\contentsline {subsubsection}{N2-BC4}{53}{section*.205}%
+\contentsline {paragraph}{Changed FDC:}{53}{section*.206}%
+\contentsline {subsubsection}{Ramos-BC5}{54}{section*.207}%
+\contentsline {subsection}{Ramos CDC Testing}{54}{section*.208}%
+\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24331 - Seeding (DNW)}{54}{section*.209}%
+\contentsline {section}{April}{56}{section*.210}%
+\contentsline {section}{Monday 01-04-2024}{56}{section*.211}%
+\contentsline {subsection}{Cell Culture}{56}{section*.212}%
+\contentsline {subsubsection}{N2}{56}{section*.213}%
+\contentsline {subsubsection}{Ramos BC 5}{56}{section*.214}%
+\contentsline {subsection}{EC50 Collection: 24329/24331}{56}{section*.215}%
+\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24401 - Seeding (DNW)}{57}{section*.216}%
+\contentsline {section}{Tuesday 02-04-2024}{59}{section*.217}%
+\contentsline {subsection}{N2/Ramos CD20 Flow Cytometry}{59}{section*.218}%
+\contentsline {section}{Thursday 04-04-2024}{60}{section*.219}%
+\contentsline {subsection}{Cell Culture}{60}{section*.220}%
+\contentsline {subsubsection}{N2}{60}{section*.221}%
+\contentsline {subsubsection}{Ramos}{60}{section*.222}%
+\contentsline {subsection}{EC50 Collection: 240401}{60}{section*.223}%
+\contentsline {section}{Monday 08-04-2024}{60}{section*.224}%
+\contentsline {subsection}{Cell Culture}{60}{section*.225}%
+\contentsline {subsubsection}{N2}{60}{section*.226}%
+\contentsline {subsubsection}{Ramos}{60}{section*.227}%
+\contentsline {section}{Tuesday 09-04-2024}{61}{section*.228}%
+\contentsline {subsection}{Perla Drug Randomizer}{61}{section*.229}%
+\contentsline {section}{Saturday 14-04-2024}{61}{section*.230}%
+\contentsline {subsection}{Cell Culture}{61}{section*.231}%
+\contentsline {subsubsection}{N2-BC4}{61}{section*.232}%
+\contentsline {subsubsection}{Ramos-BC5}{61}{section*.233}%
+\contentsline {subsection}{EC50 RTX N2-BC4/RAMOS-BC5 24414 - Seeding (DNW)}{61}{section*.234}%
+\contentsline {section}{Wednesday 17-04-2024}{62}{section*.235}%
+\contentsline {subsection}{EC50 Collection: 240414}{62}{section*.236}%
+\contentsline {section}{Monday 22-04-2024}{63}{section*.237}%
+\contentsline {subsection}{Cell Culture}{63}{section*.238}%
+\contentsline {subsubsection}{N2-BC4}{63}{section*.239}%
+\contentsline {subsubsection}{Ramos-BC5}{63}{section*.240}%
+\contentsline {subsection}{Thawed NK-92}{63}{section*.241}%
+\contentsline {section}{Wednesday 24-04-2024}{63}{section*.242}%
+\contentsline {subsection}{Cell Culture}{63}{section*.243}%
+\contentsline {subsubsection}{N2-BC4}{63}{section*.244}%
+\contentsline {subsubsection}{Ramos-BC5}{63}{section*.245}%
+\contentsline {subsubsection}{NK-92}{63}{section*.246}%
+\contentsline {section}{Friday 26-04-2024}{63}{section*.247}%
+\contentsline {subsection}{Cell Culture}{63}{section*.248}%
+\contentsline {subsubsection}{N2-BC4}{63}{section*.249}%
+\contentsline {subsubsection}{Ramos-BC5}{63}{section*.250}%
+\contentsline {subsubsection}{NK-92}{63}{section*.251}%
+\contentsline {section}{Monday 29-04-2024}{64}{section*.252}%
+\contentsline {subsection}{Cell Culture}{64}{section*.253}%
+\contentsline {subsubsection}{N2-BC4}{64}{section*.254}%
+\contentsline {subsubsection}{Ramos-BC5}{64}{section*.255}%
+\contentsline {section}{Tuesday 30-04-2024}{64}{section*.256}%
+\contentsline {subsection}{Cell Culture}{64}{section*.257}%
+\contentsline {subsubsection}{N2-BC4}{64}{section*.258}%
+\contentsline {subsubsection}{Ramos-BC5}{64}{section*.259}%
+\contentsline {subsection}{Human Serum Reciept}{64}{section*.260}%
+\contentsline {subsection}{Ramos/N2 CDC Testing}{64}{section*.261}%
+\contentsline {subsubsection}{Results: DNW}{65}{section*.262}%
+\contentsline {subsection}{EC50 RTX RAMOS-BC5 24430 - Seeding}{65}{section*.263}%
+\contentsline {section}{May}{66}{section*.264}%
+\contentsline {section}{Wednesday 01-05-2024}{66}{section*.265}%
+\contentsline {subsection}{Cell Culture}{66}{section*.266}%
+\contentsline {subsubsection}{N2-BC4}{66}{section*.267}%
+\contentsline {subsubsection}{Ramos-BC5}{66}{section*.268}%
+\contentsline {section}{June}{66}{section*.269}%
+\contentsline {section}{Monday 10-06-2024}{66}{section*.270}%
+\contentsline {subsection}{Cell Culture}{66}{section*.271}%
+\contentsline {subsection}{EC50 RTX RAMOS-BC5 240610 - Seeding}{67}{section*.272}%
+\contentsline {section}{Wednesday 13-06-2024}{68}{section*.273}%
+\contentsline {subsection}{Cell Culture}{68}{section*.274}%
+\contentsline {subsection}{EC50 Collection: EC50\_RTX\_N2-BC4\_10064}{68}{section*.275}%
+\contentsline {subsubsection}{Results:}{69}{section*.276}%
+\contentsline {section}{Thursday 13-06-2024}{69}{section*.277}%
+\contentsline {subsection}{Cryopreservation - RAMOS-BC 1/3/5}{69}{section*.278}%
+\contentsline {subsubsection}{Protocol}{69}{section*.279}%
+\contentsline {section}{Monday 24-06-2024}{69}{section*.280}%
+\contentsline {subsection}{Cell Culture}{69}{section*.281}%
+\contentsline {subsubsection}{Making RPMI}{69}{section*.282}%
+\contentsline {subsubsection}{Splitting Ramos BC 3}{70}{section*.283}%
+\contentsline {subsection}{RAMOS RTX CDC Testing 240625 - Seeding}{70}{section*.284}%
+\contentsline {section}{Tuesday 25-06-2024}{70}{section*.285}%
+\contentsline {subsection}{Cell Culture}{70}{section*.286}%
+\contentsline {subsection}{RAMOS RTX CDC Testing 240625 - Collection}{70}{section*.287}%
+\contentsline {subsubsection}{Results}{71}{section*.288}%
+\contentsline {section}{July}{71}{section*.289}%
+\contentsline {section}{Wednesday 10-07-2024}{71}{section*.290}%
+\contentsline {subsection}{Cell Culture}{71}{section*.291}%
+\contentsline {subsection}{RAMOS - RTX In Vitro CDC Drug Pressure Experiment}{71}{section*.292}%
+\contentsline {subsubsection}{Freezing Down Cells Protocol}{71}{section*.293}%
+\contentsline {subsubsection}{RAMOS RTX DP - Dose 1}{71}{section*.294}%
+\contentsline {paragraph}{Dosing Protocol}{71}{section*.295}%
+\contentsline {paragraph}{Plate Layout}{72}{section*.296}%
+\contentsline {section}{Wednesday 17-07-2024}{73}{section*.297}%
+\contentsline {subsection}{Cell Culture}{73}{section*.298}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{73}{section*.299}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{73}{section*.300}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{73}{section*.301}%
+\contentsline {section}{Friday 19-07-2024}{73}{section*.302}%
+\contentsline {subsection}{Cell Culture}{73}{section*.303}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{73}{section*.304}%
+\contentsline {subsection}{RAMOS - RTX In Vitro CDC Drug Pressure Experiment}{73}{section*.305}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2 and Rx/DP2}{73}{section*.306}%
+\contentsline {subsection}{EC50 RTX RAMOS-BC5 240719 - Seeding}{73}{section*.307}%
+\contentsline {subsubsection}{Plate seeding protocol:}{73}{section*.308}%
+\contentsline {section}{Sunday 21-07-2024}{75}{section*.309}%
+\contentsline {subsection}{Cell Culture}{75}{section*.310}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{75}{section*.311}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{75}{section*.312}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{75}{section*.313}%
+\contentsline {subsection}{EC50 Collection: EC50\_RTX\_N2-BC4\_240721}{75}{section*.314}%
+\contentsline {subsubsection}{Results:}{76}{section*.315}%
+\contentsline {section}{Tuesday 23-07-2024}{76}{section*.316}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{76}{section*.317}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{76}{section*.318}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{76}{section*.319}%
+\contentsline {section}{Wednesday 24-07-2024}{76}{section*.320}%
+\contentsline {subsection}{Cell Culture}{76}{section*.321}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{76}{section*.322}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{76}{section*.323}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{77}{section*.324}%
+\contentsline {subsubsection}{Made Media - RPMI}{77}{section*.325}%
+\contentsline {section}{Friday 26-07-2024}{77}{section*.326}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{77}{section*.327}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{77}{section*.328}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{77}{section*.329}%
+\contentsline {section}{Monday 29-07-2024}{77}{section*.330}%
+\contentsline {subsubsection}{RAMOS BC 1 - Baseline}{77}{section*.331}%
+\contentsline {subsubsection}{RAMOS BC 1 - Cx/DP2}{77}{section*.332}%
+\contentsline {subsubsection}{RAMOS BC 1 - Rx/DP2}{77}{section*.333}%
+\contentsline {section}{Tuesday 30-07-2024}{78}{section*.334}%
+\contentsline {subsection}{RAMOS RTX DP - Dose 3}{78}{section*.335}%
+\contentsline {paragraph}{Dosing Protocol}{78}{section*.336}%
+\contentsline {paragraph}{Plate Layout}{78}{section*.337}%
+\contentsline {subsection}{EC50 RTX RAMOS-DP2 240730 - Seeding}{79}{section*.338}%
+\contentsline {subsubsection}{Plate seeding protocol:}{79}{section*.339}%
+\contentsline {subsection}{RAMOS RTX CDC DP2 - CD20 Flow Cytometry}{81}{section*.340}%
+\contentsline {subsubsection}{CD20 Flow Protocol}{81}{section*.341}%
+\contentsline {subsubsection}{Results}{82}{section*.342}%
+\contentsline {section}{Wednesday 31-07-2024}{82}{section*.343}%
+\contentsline {subsection}{RAMOS BC 1 - Baseline}{82}{section*.344}%
+\contentsline {subsection}{RAMOS BC 1 - Rx/DP2}{82}{section*.345}%
+\contentsline {subsection}{RAMOS RTX DP - Dose 3 Collection}{83}{section*.346}%
+\contentsline {subsubsection}{Collection Protocol}{83}{section*.347}%
+\contentsline {paragraph}{Rx-DP3:}{83}{section*.348}%
+\contentsline {paragraph}{Cx-DP3}{83}{section*.349}%
+\contentsline {section}{Thursday 01-08-2024}{83}{section*.350}%
+\contentsline {subsection}{Rx-DP3 Culture}{83}{section*.351}%
+\contentsline {subsection}{Cx-RP3 Culture}{83}{section*.352}%
+\contentsline {subsection}{EC50\_240730 Collection - RAMOS RTX CDC DP2}{83}{section*.353}%
+\contentsline {subsubsection}{Results:}{83}{section*.354}%
