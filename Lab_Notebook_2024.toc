@@ -351,3 +351,13 @@
 \contentsline {subsection}{Cx-RP3 Culture}{83}{section*.352}%
 \contentsline {subsection}{EC50\_240730 Collection - RAMOS RTX CDC DP2}{83}{section*.353}%
 \contentsline {subsubsection}{Results:}{83}{section*.354}%
+\contentsline {section}{Friday 02-08-2024}{84}{section*.355}%
+\contentsline {subsection}{Rx-DP3 Culture}{84}{section*.356}%
+\contentsline {subsection}{Cx-DP3 Culture}{84}{section*.357}%
+\contentsline {subsection}{Ramos Baseline}{84}{section*.358}%
+\contentsline {section}{Saturday 03-08-2024}{84}{section*.359}%
+\contentsline {subsection}{Cell Culture}{84}{section*.360}%
+\contentsline {section}{Sunday 04-08-2024}{85}{section*.361}%
+\contentsline {subsection}{Cx-DP3 Culture}{85}{section*.362}%
+\contentsline {subsection}{EC50 RTX RAMOS-DP2 240804 - Seeding}{85}{section*.363}%
+\contentsline {subsubsection}{Plate seeding protocol:}{85}{section*.364}%

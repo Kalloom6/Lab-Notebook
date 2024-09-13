@@ -195,7 +195,7 @@ Hold Step |Step 6: 12C    | Hold |
 
 #### Tapestation PCR 1 - Samples 1-8
 
-![2024-01-16 Tapestation PCR 1 Results Samples 1-8](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 1.png)
+![2024-01-16 Tapestation PCR 1 Results Samples 1-8](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 1.png)
 \center
 Initial Test PCR 1
 \raggedright
@@ -249,7 +249,7 @@ Hold Step |Step 6: 12C    | Hold |
 4. Checked size and concentration on tapestation
 
 #### Tapestation PCR 2
-![2024-01-16 Tapestation PCR 2 Test Samples 5](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 2.png)
+![2024-01-16 Tapestation PCR 2 Test Samples 5](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-16 TS 2.png)
 
 
 #### Review
@@ -323,10 +323,10 @@ __10-25 cycles of steps 2-4__
 **Expected size = 165-172bp**
 
 #### Tapestation PCR 1
-![2024-01-17 Tapestation PCR 1 Samples 9-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
+![2024-01-17 Tapestation PCR 1 Samples 9-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 1.png)
 
 #### Tapestation PCR 1
-![2024-01-17 Tapestation PCR 1 Samples 17-30](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 2.png)
+![2024-01-17 Tapestation PCR 1 Samples 17-30](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-17 TS 2.png)
 \\
 
 #### Review
@@ -517,7 +517,7 @@ Hold Step |Step 6: 12C    | Hold |
 
 #### Tapestation PCR 1 31-33 
 #### Tapestation PCR 1
-![2024-01-22 Tapestation PCR 1 Samples 30-33 and Control](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
+![2024-01-22 Tapestation PCR 1 Samples 30-33 and Control](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 \center
 **!!!! Band present in - Control lane !!!!**
 \raggedright
@@ -552,13 +552,13 @@ Hold Step |Step 6: 12C    | Hold |
 #### Tapestation Control Test 1
 - Compared New -Control to old 
   * Wanted to determine if this was a pipetting error
-![2024-01-22 Tapestation Control Test 1](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
+![2024-01-22 Tapestation Control Test 1](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 
 
 #### Tapestation Control Test 2
 - Compared New -Control to H20 
   * Wanted to determine if water was contaminated
-![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
+![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-22 TS 1.png)
 
 
 # Tuesday 23-01-2024
@@ -650,7 +650,7 @@ Hold Step |Step 6: 12C    | Hold |
 #### Tapestation Control Test 3 
 - Compared New -Control to old -control 
   * Wanted to determine if water was contaminated
-![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-23 TS 1.png)
+![2024-01-22 Tapestation Control Test 2](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-23 TS 1.png)
   
   
 # Wednesday 24-01-2024
@@ -817,17 +817,17 @@ Hold Step |Step 6: 12C    | Hold |
 
 #### Tapestation PCR 1 1-16 
 ##### Tapestation PCR 1
-![2024-01-25 Tapestation PCR 1 Samples 1-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 1.png)
+![2024-01-25 Tapestation PCR 1 Samples 1-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 1.png)
 
 #### Tapestation PCR 1 1-32 
 ##### Tapestation PCR 1
-![2024-01-25 Tapestation PCR 1 Samples 17-32](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 2.png)
+![2024-01-25 Tapestation PCR 1 Samples 17-32](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 2.png)
 
 - Samples 18, 19, and 20 DNW
 
 #### Tapestation PCR 1 18-20, 33 
 ##### Tapestation PCR 1
-![2024-01-25 Tapestation PCR 1 Samples 33 and redo 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 3.png)
+![2024-01-25 Tapestation PCR 1 Samples 33 and redo 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-25 TS 3.png)
 
 - Samples 18, 19, and 20 DNW again
 
@@ -922,7 +922,7 @@ Hold Step |Step 6: 12C    | Hold |
 
 #### Tapestation PCR 1 18-20
 ##### Tapestation PCR 1
-![2024-01-26 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
+![2024-01-26 Tapestation PCR 1 Samples 18-20](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-26 TS 1.png)
 
 
 # Monday 29-01-2024
@@ -976,10 +976,10 @@ __8 cycles of steps 2-4__
 4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
 
 ### Tapestation 
-![2024-01-29 Tapestation PCR 2 Samples 1-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-29 TS 1.png)  
+![2024-01-29 Tapestation PCR 2 Samples 1-16](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-29 TS 1.png)  
 - 1-8 PCR DNW (suspected issue with bead clean-up)
 
-![2024-01-29 Tapestation PCR 2 Samples 17-24](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-29 TS 2.png)  -
+![2024-01-29 Tapestation PCR 2 Samples 17-24](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-01-29 TS 2.png)  -
 
 - Last 4 samples are from Chris (seperate experiment)
 
@@ -1038,8 +1038,8 @@ Hold Step |Step 6: 12C    | Hold |
 
 
 ### Tapestation
-![2024-02-01 Tapestation PCR 2 Samples 1-8,25-32](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 1.png)
-![2024-02-01 Tapestation PCR 2 Samples 33-39](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 2.png) 
+![2024-02-01 Tapestation PCR 2 Samples 1-8,25-32](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 1.png)
+![2024-02-01 Tapestation PCR 2 Samples 33-39](/Users/callum/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/Tapestation/Screenshot 2024-02-01 TS 2.png) 
 
 
 # Monday 05-02-2024
@@ -1080,7 +1080,7 @@ Hold Step |Step 6: 12C    | Hold |
 
 ```{r, echo=FALSE, fig.align='center'}
 
-excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Wildseq - Mouse Experiment 1/In_vivo_lib_prep_data.xlsx", sheet = "Pooling")
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Turner Lab/Data/Previous/Wildseq - Mouse Experiment 1/In_vivo_lib_prep_data.xlsx", sheet = "Pooling")
 
 # Display the data as a table
 knitr::kable(excel_data)
@@ -2863,6 +2863,105 @@ image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Noteboo
 knitr::include_graphics(image_path)
 
 ```
+
+# Friday 02-08-2024
+
+## Rx-DP3 Culture
+- Cells growing, expanded to 6 well plate
+- R5 unhealthy
+  * Spun down and transferred to single well of 48 well plate
+
+## Cx-DP3 Culture
+- Split 1/2 and added 10ml
+- Collected samples for western/barcoding
+  1. Collected 1x10^6^ cells in 15 mL tube
+  2. Spun down @ 300 rcf for 5min
+  3. Resuspended in 500uL PBS and transferred to 1.5mL Eppendorf
+  4. Spun down @ max speed for 5 min at 4C
+  5. Remove supernatant
+  6. Snap freeze cell pellet and transfer to -80C
+  
+## Ramos Baseline 
+- Split 1/6 
+- Gave aliquot to Chris
+- Count: 3.68x10^6^ cells/mL
+
+# Saturday 03-08-2024
+
+## Cell Culture
+- Add media to all
+
+# Sunday 04-08-2024
+
+## Cx-DP3 Culture
+- Split 1/2 and added 10ml
+- Collected samples for western/barcoding
+
+
+## EC50 RTX RAMOS-DP2 240804 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX + 25% NHS vs 25% HIAS on Cx-DP3 cell lines
+- Seeded 2 plates each with a different Cx-DP3 line 
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240804_DDT_EC50.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240804_DDT_EC50.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240804_DDT_EC50.xlsx", sheet = "Sheet4")
+title <- "EC50 CDC Test N2 + RAMOS 240804"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
 
 
 
