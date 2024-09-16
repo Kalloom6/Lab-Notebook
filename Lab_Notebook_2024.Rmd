@@ -2983,20 +2983,15 @@ P1 <- plate_plot(
 print(P1)
 ```
 
-# Tuesday 04-08-2024
+# Tuesday 06-08-2024
 
 ## RAMOS Baseline Culture
 - Split 1/6
 
 ## Cx-DP3 Culture
 - Split 1/6 and added 10ml
-
-## Rx-DP3 Culture
-- Added media to Rx-DP3 cultures
-  * R1/R3/R4/R6 added 8mL media
-  * R2 added 4mL
  
-## EC50_240806 Collection - RAMOS RTX CDC DP3
+## EC50_240804 Collection - RAMOS RTX CDC DP3
 
 - Collected plates seeded on 06-08-2024
 - EC Plate collection protocol:
@@ -3006,12 +3001,12 @@ print(P1)
   3. Read on plate reader according to Cell Titre Blue Protocol
 
 ### Results:
-- Less response for Rx-DP2 vs Cx-DP2
-- Not sure its fully "resistant", still a robust response to RTX dosing for Rx-DP2
+- HIAS impact on RTX CDC similar to previous experiments
+- NHS impact on RTX CDC is consistent with previous experiments
 ```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
 # Path to your image file
-image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240719_EC50_RTX_CDC_RAMOS_DP2.png"
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240804_EC50_RTX_CDC_RAMOS_DP3.png"
 
 # Insert the image
 knitr::include_graphics(image_path)
@@ -3084,7 +3079,46 @@ P1 <- plate_plot(
 print(P1)
 ```
 
+# Wednesday 07-08-2024
 
+## Cell Culture
+- All cells growing fine, not ready to split/use experimentally
+  * RAMOS Baseline (BC 1)
+  * Cx-DP3
+  * Rx-DP3
 
+# Thursday 08-08-2024
 
+## Ramos Baseline Culture
+- Split 1/2
+
+## Cx-DP3 Culture
+- Split 1/2
+
+## Rx-DP3 Culture
+- Added media to Rx-DP3 cultures
+  * R1/R3/R4/R6 added 8mL media
+  * R2 added 4mL
+
+## EC50_240806 Collection - RAMOS RTX CDC DP3
+
+- Collected plates seeded on 06-08-2024
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- HIAS impact on RTX CDC similar to previous experiments
+- NHS impact on RTX CDC is consistent with previous experiments
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240804_EC50_RTX_CDC_RAMOS_DP3.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
 

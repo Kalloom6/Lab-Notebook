@@ -364,5 +364,8 @@
 \contentsline {section}{Tuesday 04-08-2024}{87}{section*.365}%
 \contentsline {subsection}{RAMOS Baseline Culture}{87}{section*.366}%
 \contentsline {subsection}{Cx-DP3 Culture}{87}{section*.367}%
-\contentsline {subsection}{EC50 RTX RAMOS-DP3 240806 - Seeding}{88}{section*.368}%
-\contentsline {subsubsection}{Plate seeding protocol:}{88}{section*.369}%
+\contentsline {subsection}{Rx-DP3 Culture}{88}{section*.368}%
+\contentsline {subsection}{EC50\_240804 Collection - RAMOS RTX CDC DP3}{88}{section*.369}%
+\contentsline {subsubsection}{Results:}{88}{section*.370}%
+\contentsline {subsection}{EC50 RTX RAMOS-DP3 240806 - Seeding}{88}{section*.371}%
+\contentsline {subsubsection}{Plate seeding protocol:}{88}{section*.372}%
