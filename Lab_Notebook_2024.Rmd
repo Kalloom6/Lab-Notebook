@@ -3122,3 +3122,225 @@ knitr::include_graphics(image_path)
 
 ``` 
 
+# Friday 09-08-2024
+
+## Ramos Baseline Culture
+- Split 1/6
+
+## Cx-DP3 Culture
+- Split 1/6
+
+## Rx-DP3 Culture
+- Split 1/2
+
+# Monday 12-08-2024
+
+## Ramos Baseline Culture
+- Split 1/2
+
+## Cx-DP3 Culture
+- Split 1/2
+
+## Rx-DP3 Culture
+- Split 1/2
+- Froze Down R4-DP2
+  1. Counted cells in suspension
+  2. Took volume of cell suspension such that each vial would contain at least 2x10^6^ cells
+  3. Spun down CS @ 300 rcf for 5min
+  4. Discarded supernatant and resuspended in freezing media such that 1ml of freezing media contains 2x10^6^ cells
+    - Freezing media: FBS + 10% DMSO
+  5. Added 1mL CS in freezing media per cryovial
+  6. Cryovials were immediately put into freezing caddy and placed in -80 freezer
+  7. After 24hrs vials removed from freezing caddy and plced in Liquid Nitrogen  
+    - Location: Tank 1, Rack 5, Box 6
+    
+# Wednesday 14-08-2024
+
+## Ramos Baseline Culture
+- Split 1/2
+
+## DP3 Viable Freezing
+- Viably Froze R4-DP2/Cx-DP3/Rx-DP3
+
+### Freezing Down Cells Protocol
+  1. Counted cells in suspension
+  2. Took volume of cell suspension such that each vial would contain at least 2x10^6^ cells
+  3. Spun down CS @ 300 rcf for 5min
+  4. Discarded supernatant and resuspended in freezing media such that 1ml of freezing media contains 2x10^6^ cells
+    - Freezing media: FBS + 10% DMSO
+  5. Added 1mL CS in freezing media per cryovial
+  6. Cryovials were immediately put into freezing caddy and placed in -80 freezer
+  7. After 24hrs vials removed from freezing caddy and plced in Liquid Nitrogen  
+    - Location: Tank 1, Rack 5, Box 6
+
+## Dosing RAMOS-DP4 RTX CDC
+- Began RTX CDC In Vitro dosing
+- Seeded Cx/Rx-DP2 into 2x 6 well plates
+
+#### Dosing Protocol
+
+1. Count CS and diluted to 2x10^5^ cells in 1 mL
+  - If cell count is below either re-culture or add required CS amount, spin down, and resuspend in 1mL
+2. Add 1mL of cell suspension containing 2x10^5^ cells to respective wells of 6-well plate
+3. Made RTX dilutions and added to respective Rx wells in 500$\mu$L    
+    - [RTX stock] = 10.3 mg/mL 
+    - [RTX Final] = 50$\mu$g/mL
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per RTX dosing, 500$\mu$L per well ~ minimum of 3000$\mu$L per condition needed (recommend 3500$\mu$L)
+    - 500$\mu$L media added to Cx wells
+ 3. Added NHS to all wells
+  * 500$\mu$L/well
+  * Final well volume = 25% Serum (NHS)
+ 4. Plates incubated for 24 hrs at 37C
+ 
+#### Plate Layout  
+
+Cell Count
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240710_PM.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Count", "Final cells/well")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240710_PM.xlsx", sheet = "Sheet1")
+title <- "RAMOS RTX DP3 Control 240726"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/240710_PM.xlsx", sheet = "Sheet2")
+title <- "RAMOS RTX DP3 Rituximab 2407246"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+## EC50 RTX RAMOS-DP3 240814 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX + 25% NHS vs 25% HIAS on Cx-DP3 cell lines
+  * 2x Rx-DP3 lines (R1 + R4) and 2x Cx-DP3 (C2 + C4) exposed to RTX + 25% HIAS
+- Seeded 2 plates each section with a different Ramos conditioned lines
+  * Plate 1: R1 + R4
+  * Plate 2: C2 + C4
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240814_DDT_EC50.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240814_DDT_EC50.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240814_DDT_EC50.xlsx", sheet = "Sheet4")
+title <- "EC50 240814 Plate 1"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240814_DDT_EC50.xlsx", sheet = "Sheet5")
+title <- "EC50 240814 Plate 2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+
+
+
+

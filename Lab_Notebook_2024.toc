@@ -361,11 +361,35 @@
 \contentsline {subsection}{Cx-DP3 Culture}{86}{section*.362}%
 \contentsline {subsection}{EC50 RTX RAMOS-DP3 240804 - Seeding}{86}{section*.363}%
 \contentsline {subsubsection}{Plate seeding protocol:}{86}{section*.364}%
-\contentsline {section}{Tuesday 04-08-2024}{87}{section*.365}%
+\contentsline {section}{Tuesday 06-08-2024}{87}{section*.365}%
 \contentsline {subsection}{RAMOS Baseline Culture}{87}{section*.366}%
 \contentsline {subsection}{Cx-DP3 Culture}{87}{section*.367}%
-\contentsline {subsection}{Rx-DP3 Culture}{88}{section*.368}%
-\contentsline {subsection}{EC50\_240804 Collection - RAMOS RTX CDC DP3}{88}{section*.369}%
-\contentsline {subsubsection}{Results:}{88}{section*.370}%
-\contentsline {subsection}{EC50 RTX RAMOS-DP3 240806 - Seeding}{88}{section*.371}%
-\contentsline {subsubsection}{Plate seeding protocol:}{88}{section*.372}%
+\contentsline {subsection}{EC50\_240804 Collection - RAMOS RTX CDC DP3}{88}{section*.368}%
+\contentsline {subsubsection}{Results:}{88}{section*.369}%
+\contentsline {subsection}{EC50 RTX RAMOS-DP3 240806 - Seeding}{88}{section*.370}%
+\contentsline {subsubsection}{Plate seeding protocol:}{88}{section*.371}%
+\contentsline {section}{Wednesday 07-08-2024}{89}{section*.372}%
+\contentsline {subsection}{Cell Culture}{89}{section*.373}%
+\contentsline {section}{Thursday 08-08-2024}{90}{section*.374}%
+\contentsline {subsection}{Ramos Baseline Culture}{90}{section*.375}%
+\contentsline {subsection}{Cx-DP3 Culture}{90}{section*.376}%
+\contentsline {subsection}{Rx-DP3 Culture}{90}{section*.377}%
+\contentsline {subsection}{EC50\_240806 Collection - RAMOS RTX CDC DP3}{90}{section*.378}%
+\contentsline {subsubsection}{Results:}{90}{section*.379}%
+\contentsline {section}{Friday 09-08-2024}{91}{section*.380}%
+\contentsline {subsection}{Ramos Baseline Culture}{91}{section*.381}%
+\contentsline {subsection}{Cx-DP3 Culture}{91}{section*.382}%
+\contentsline {subsection}{Rx-DP3 Culture}{91}{section*.383}%
+\contentsline {section}{Monday 12-08-2024}{91}{section*.384}%
+\contentsline {subsection}{Ramos Baseline Culture}{91}{section*.385}%
+\contentsline {subsection}{Cx-DP3 Culture}{91}{section*.386}%
+\contentsline {subsection}{Rx-DP3 Culture}{91}{section*.387}%
+\contentsline {section}{Wednesday 14-08-2024}{91}{section*.388}%
+\contentsline {subsection}{Ramos Baseline Culture}{91}{section*.389}%
+\contentsline {subsection}{DP3 Viable Freezing}{91}{section*.390}%
+\contentsline {subsubsection}{Freezing Down Cells Protocol}{91}{section*.391}%
+\contentsline {subsection}{Dosing RAMOS-DP4 RTX CDC}{92}{section*.392}%
+\contentsline {paragraph}{Dosing Protocol}{92}{section*.393}%
+\contentsline {paragraph}{Plate Layout}{92}{section*.394}%
+\contentsline {subsection}{EC50 RTX RAMOS-DP3 240814 - Seeding}{93}{section*.395}%
+\contentsline {subsubsection}{Plate seeding protocol:}{93}{section*.396}%
