@@ -3339,6 +3339,18 @@ P1 <- plate_plot(
 print(P1)
 ```
 
+# Friday 16-08-2024
+
+## Cell Culture
+- split all flasks 1/10
+
+## DP4
+- Expanded Cx to T25s
+- Spun down Rx-DP4 t+ added to 12 well plate
+
+
+## Collect EC50 240814
+- Add script here
 
 
 
