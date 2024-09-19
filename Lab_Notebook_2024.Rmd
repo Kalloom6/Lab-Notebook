@@ -3341,18 +3341,37 @@ print(P1)
 
 # Friday 16-08-2024
 
-## Cell Culture
-- split all flasks 1/10
+## Ramos Baseline - BC 1
+- Split 1/10
 
-## DP4
+## RAMOS RTX-DP4 
 - Expanded Cx to T25s
 - Spun down Rx-DP4 t+ added to 12 well plate
-
 
 ## Collect EC50 240814
 - Add script here
 
+## EC50_240814 Collection - RAMOS RTX CDC DP3
 
+- Collected plates seeded on 14-08-2024
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- HIAS impact on RTX CDC similar to previous experiments
+- NHS impact on RTX CDC is consistent with previous experiments
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240804_EC50_RTX_CDC_RAMOS_DP3.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
 
 
 
