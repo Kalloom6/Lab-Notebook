@@ -3122,6 +3122,67 @@ knitr::include_graphics(image_path)
 
 ``` 
 
+## RAMOS RTX CDC DP3 - CD20 Flow Cytometry
+- Checked CD20 expression between Cx and Rx DP4
+- CD20:
+- Samples tested: 
+  * Baseline RAMOS 
+  * R2
+  * R3 
+  * R4
+  * C1 
+  * C2
+  * C6
+
+
+### CD20 Flow Protocol
+
+- Prior to starting: Make cell stain 
+  * 500$\mu$L  PBS + 2$\mu$L Stain
+  * 100$\mu$L of stain used/condition
+- Cell stain made: 2000 $\mu$L and 8 $\mu$L 
+
+1. Resuspend cells and transferred to 3 wells of a 96 well plate
+2. Spun down at 1500g for 2min
+3. Flick media out
+4. Resuspend w/ 100$\mu$L stain in well and consolidate in 1 well
+  * Add 100$\mu$L to bottom well and mix until cells resuspended
+  * Take 100$\mu$L CS-stain mix and add to well below and mix
+  * Repeat for third well and add the total CS-Stain mix to top well
+5. Incubate in fridge for 25min
+  * In the dark
+6. Spin down at 1500g for 2min
+7. Flick out media
+8. Resuspend in PBS and add to FACS tube
+  * Add an additional volume of PBS to dilute cells appropriately for flow
+  * Usually make it up to about 300-400$\mu$L CS-PBS in the tube
+  
+### Results
+- No apparent change in CD20 expression
+- This is interesting based on strong evidence which suggests loss of CD20 is the primary mechanism of RTX resistance
+- GFP+% is not ideal
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240808_RAMOS_RTX_CDC_CD20_flow.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240808_RAMOS_RTX_CDC_CD20_flow_A.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
+
 # Friday 09-08-2024
 
 ## Ramos Baseline Culture
@@ -3366,12 +3427,183 @@ print(P1)
 ```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
 # Path to your image file
-image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240804_EC50_RTX_CDC_RAMOS_DP3.png"
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240814_EC50_RTX_CDC_RAMOS_DP3.png"
 
 # Insert the image
 knitr::include_graphics(image_path)
 
 ``` 
+
+# Monday 19-08-2024
+
+## RAMOS Rx-DP4 
+- Expanded Rx to T25s
+
+# Tuesday 20-08-2024
+
+## RAMOS RTX-DP4 
+- Expanded Rx-DP4 to T25s
+
+## EC50 RTX RAMOS-DP3 240814 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX + 25% NHS vs 25% HIAS on Cx-DP3 cell lines
+  * 3x Rx-DP3 lines (R2,R3,R4) exposed to RTX + 25% HIAS
+- Seeded 2 plates each section with a different Ramos conditioned lines
+  * Plate 1: R2 + R3
+  * Plate 2: R4
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240820_DDT_EC50.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240820_DDT_EC50.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240820_DDT_EC50.xlsx", sheet = "Sheet4")
+title <- "EC50 240820 Plate 1"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240820_DDT_EC50.xlsx", sheet = "Sheet5")
+title <- "EC50 240820 Plate 2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+# Wednesday 21-08-2024
+
+
+## RAMOS RTX CDC DP4 - CD20 Flow Cytometry
+- Checked CD20 expression between Cx and Rx DP4
+- CD20:
+- Samples tested: 
+  * Baseline RAMOS 
+  * R2
+  * R3 
+  * R4
+  * C1 
+  * C2
+  * C6
+
+
+### CD20 Flow Protocol
+
+- Prior to starting: Make cell stain 
+  * 500$\mu$L  PBS + 2$\mu$L Stain
+  * 100$\mu$L of stain used/condition
+- Cell stain made: 2000 $\mu$L and 8 $\mu$L 
+
+1. Resuspend cells and transferred to 3 wells of a 96 well plate
+2. Spun down at 1500g for 2min
+3. Flick media out
+4. Resuspend w/ 100$\mu$L stain in well and consolidate in 1 well
+  * Add 100$\mu$L to bottom well and mix until cells resuspended
+  * Take 100$\mu$L CS-stain mix and add to well below and mix
+  * Repeat for third well and add the total CS-Stain mix to top well
+5. Incubate in fridge for 25min
+  * In the dark
+6. Spin down at 1500g for 2min
+7. Flick out media
+8. Resuspend in PBS and add to FACS tube
+  * Add an additional volume of PBS to dilute cells appropriately for flow
+  * Usually make it up to about 300-400$\mu$L CS-PBS in the tube
+  
+### Results
+- No apparent change in CD20 expression
+- This is interesting based on strong evidence which suggests loss of CD20 is the primary mechanism of RTX resistance
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240821_RAMOS_RTX_CDC_CD20_flow.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
+- Histogram analysis is interesting
+  * CD20 staining is not as strong
+- This could be due to RTX exposure
+  * CD20 Ab competing with bound RTX
+  * Expression is not necessarily different
+- Colours:
+  * Rx-DP4: Green, Light blue, Dark Blue
+  * Cx-DP4: Purple, Blue, Red
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/240821_RAMOS-DP4_CD20_flow_histo.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```  
+
+
+
 
 
 
