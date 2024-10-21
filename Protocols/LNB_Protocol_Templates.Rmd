@@ -1,0 +1,141 @@
+---
+title: "LNB_Protocol_Templates"
+author: "Callum Malcolm"
+date: "2024-10-21"
+output: pdf_document
+---
+
+## EC50 - Seeding
+- Explain what was done
+- Ex:
+
+- Seeded an EC50 experiment comparing the effects of RTX + 25% NHS vs 25% HIAS on Cx-DP3 cell lines
+  * 3x Rx-DP3 lines (R2,R3,R4) exposed to RTX + 25% HIAS
+- Seeded 2 plates each section with a different Ramos conditioned lines
+  * Plate 1: R2 + R3
+  * Plate 2: R4
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("path_to_file", sheet = "Sheet Name")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("path_to_file", sheet = "Sheet Name")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("path_to_file", sheet = "Sheet Name")
+title <- "EC50 240820 Plate 1"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+```{r, echo=FALSE}
+df <- read_xlsx("path_to_file", sheet = "sheet name")
+title <- "Title Name"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+## EC50 Collection - Info
+- Explain what happened:
+- Collected plates seeded on 14-08-2024
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- HIAS impact on RTX CDC similar to previous experiments
+- NHS impact on RTX CDC is consistent with previous experiments
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/path_to_file"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+
+### Flow Protocol
+
+- Prior to starting: Make cell stain 
+  * 500$\mu$L  PBS + 2$\mu$L Stain
+  * 100$\mu$L of stain used/condition
+- Cell stain made: 2000 $\mu$L and 8 $\mu$L 
+
+1. Resuspend cells and transferred to 3 wells of a 96 well plate
+2. Spun down at 1500g for 2min
+3. Flick media out
+4. Resuspend w/ 100$\mu$L stain in well and consolidate in 1 well
+  * Add 100$\mu$L to bottom well and mix until cells resuspended
+  * Take 100$\mu$L CS-stain mix and add to well below and mix
+  * Repeat for third well and add the total CS-Stain mix to top well
+5. Incubate in fridge for 25min
+  * In the dark
+6. Spin down at 1500g for 2min
+7. Flick out media
+8. Resuspend in PBS and add to FACS tube
+  * Add an additional volume of PBS to dilute cells appropriately for flow
+  * Usually make it up to about 300-400$\mu$L CS-PBS in the tube
