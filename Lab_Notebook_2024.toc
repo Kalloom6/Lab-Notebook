@@ -413,3 +413,8 @@
 \contentsline {subsubsection}{CD20 Flow Protocol}{101}{section*.414}%
 \contentsline {subsubsection}{Results}{102}{section*.415}%
 \contentsline {section}{Thursday 22-08-2024}{103}{section*.416}%
+\contentsline {subsection}{DP4 Collections}{103}{section*.417}%
+\contentsline {subsubsection}{Viable Freezing}{103}{section*.418}%
+\contentsline {paragraph}{Protocol}{103}{section*.419}%
+\contentsline {subparagraph}{PBS + RI}{103}{section*.420}%
+\contentsline {subparagraph}{PBS + Formaldehyde}{104}{section*.421}%

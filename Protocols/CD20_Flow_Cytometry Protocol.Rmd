@@ -1,0 +1,29 @@
+---
+title: "Flow Protocol"
+author: "Callum Malcolm"
+date: "2024-10-24"
+output: pdf_document
+---
+
+# CD20 Flow Protocol
+
+## Overview
+- Prior to starting: Make cell stain 
+  * 500$\mu$L  PBS + 2$\mu$L Stain
+  * 100$\mu$L of stain used/condition
+
+## Protocol
+1. Resuspend cells and transferred to 3 wells of a 96 well plate
+2. Spun down at 1500g for 2min
+3. Flick media out
+4. Resuspend w/ 100$\mu$L stain in well and consolidate in 1 well
+  * Add 100$\mu$L to bottom well and mix until cells resuspended
+  * Take 100$\mu$L CS-stain mix and add to well below and mix
+  * Repeat for third well and add the total CS-Stain mix to top well
+5. Incubate in fridge for 25min
+  * In the dark
+6. Spin down at 1500g for 2min
+7. Flick out media
+8. Resuspend in PBS and add to FACS tube
+  * Add an additional volume of PBS to dilute cells appropriately for flow
+  * Usually make it up to about 300-400$\mu$L CS-PBS in the tube

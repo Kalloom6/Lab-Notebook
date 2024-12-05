@@ -3604,7 +3604,62 @@ knitr::include_graphics(image_path)
 
 # Thursday 22-08-2024
 
+## DP4 Collections 
 
+### Viable Freezing
+- Viably froze the following for splitseq
+  * R1-DP4
+  * R2-DP4
+  * R3-DP4
+  * R4-DP4
+  * C1-DP4
+  * C2-DP4
+  * C3-DP4
+  * C4-DP4
+  
+#### Protocol
+- Need ~500k cells for each sample
+  * Ex. one well from a 6 well plate
+- Freeze down a few extra samples in order to test PCR cycles for split-seq
+
+
+##### PBS + RI
+- Make up fresh and store at 4C
+
+|Component       |Volume/sample| Volume/20 samples |
+|:--------------:|:----:|:---------:|
+| PBS (TC Grade) | 2 mL |  42 mL   |
+| RNase OUT        | 40 U/$\mu$L |  840 U/$\mu$L |
+| SUPERase Inhibitor    | 20 U/$\mu$L | 420 U/$\mu$L |
+
+##### PBS + Formaldehyde
+- Make up fresh on the day and chill
+
+|Component       |Volume/sample| Volume/20 samples |
+|:--------------:|:----:|:---------:|
+| PBS (TC Grade) | 2.75 mL |  57.75 mL   |
+| 16% Formaldehyde (Pierce cat.28906) | 0.25 mL |  5.25 mL |
+
+###### Protocol
+1. Collect ~500k cells from cell suspension
+2. Spin down at 180 x g (RCF)
+3. Resuspend pellet in 1mL of PBS + RI
+4.  Add 3mL of ice cold PBS + 1.33% formaldehyde and mix gently by pipetting up and down 2-3 times
+5. Incubate on ice for 10min
+6. Spin 300g for 3min at RT
+7. Wash pellet with 1mL PBS + RI and respin 300g for 3min at RT
+8. Remove supernatant and snap freeze pellet on dry ice
+9. Store pellet at -80C
+### Freezing Down Cells Protocol
+  1. Counted cells in suspension
+  2. Took volume of cell suspension such that each vial would contain at least 2x10^6^ cells
+  3. Spun down CS @ 300 rcf for 5min
+  4. Discarded supernatant and resuspended in freezing media such that 1ml of freezing media contains 2x10^6^ cells
+    - Freezing media: FBS + 10% DMSO
+  5. Added 1mL CS in freezing media per cryovial
+  6. Cryovials were immediately put into freezing caddy and placed in -80 freezer
+  7. After 24hrs vials removed from freezing caddy and plced in Liquid Nitrogen  
+    - Location: Tank 1, Rack 5, Box 6
 
 
 
