@@ -16,7 +16,7 @@ toc_float: true
   * Can also use as negative control to determine product size and yield on tapestation
 
 ## Materials
-- For 40 samples
+- For 47 samples
 
 |Component       |Expected Volume/experiment| Material ID |
 |:--------------:|:----:|:---------:|
@@ -24,8 +24,8 @@ toc_float: true
 | SSIV RT        | 50 $\mu$L |   |
 | 100 mM DTT     | 50 $\mu$L |    |
 | RNAse Out      | 50 $\mu$L |   |
-| Thermolabile Exonuclease I  | 1 $\mu$L |          |
-| NEBuffer r3.1*        | 2 $\mu$L |          |
+| Thermolabile Exonuclease I  | 50 $\mu$L |          |
+| NEBuffer r3.1*        | 100 $\mu$L |          |
 
 
 ## RT Protocol  

@@ -3661,6 +3661,829 @@ knitr::include_graphics(image_path)
   7. After 24hrs vials removed from freezing caddy and plced in Liquid Nitrogen  
     - Location: Tank 1, Rack 5, Box 6
 
+# Monday 10-09-2024
+
+## RTX DP - RNA Extraction: Samples 4-24
+
+### Overview
+- Did RNA Extraction with samples 4-24
+- RNeasy PLus Mini Kit - Qiagen
+  * Cat #: 74134
+  
+### Protocol
+  1. Added 600$\mu$L Buffer RLT Plus and homogenized lysate via vortexing
+  2. Lysate was spun down for 3min at max speed, supernatant removed, and added to gDNA Eliminator spun column  
+    - Spin column placed in 2ml Collection tube  
+  3. Centrifuged for 30s at max speed
+  4. Discarded columns and kept flow through
+  5. 600$\mu$L 70% Ethanol added to flowthrough and mixed via pipetting
+  6. Transferred 700$\mu$L of sample into an RNeasy Spin Column (placed in 2mL collection tube)
+  7. Centrifuged at max speed for 30s
+    - Repeated step 6-7 until all flowthrough has spun through spin column  
+  8. Added 700$\mu$L Buffer RW1 to the RNedasy spin column and centrifuge at max speed for 30s
+  9. Added 500$\mu$L Buffer RPE to spin column and centrifuge at max speed for 30s
+  10. Added 500$\mu$L Buffer RPE to spin column and centrifuge at max speed for 30s (repeat of previous step)
+  11. Placed spin column in empty tube and centrifuge at max speed for 1min
+  12. Placed spin column in collection tube, added 30$\mu$L Elution Buffer and incubated at RT for 2min
+  13. Centrifuge at max speed for 1min
+  14. Determine concentration on nano-drop
+
+### Results
+
+```{r, echo=FALSE, fig.align='left'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_LP_RNAextraction1.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+# Tuesday 10-09-2024
+
+## RTX DP - RNA Extraction: Samples 25-47
+
+### Overview
+- Did RNA Extraction with samples 25-47
+- RNeasy PLus Mini Kit - Qiagen
+  * Cat #: 74134
+  
+### Protocol
+  1. Added 600$\mu$L Buffer RLT Plus and homogenized lysate via vortexing
+  2. Lysate was spun down for 3min at max speed, supernatant removed, and added to gDNA Eliminator spun column  
+    - Spin column placed in 2ml Collection tube  
+  3. Centrifuged for 30s at max speed
+  4. Discarded columns and kept flow through
+  5. 600$\mu$L 70% Ethanol added to flowthrough and mixed via pipetting
+  6. Transferred 700$\mu$L of sample into an RNeasy Spin Column (placed in 2mL collection tube)
+  7. Centrifuged at max speed for 30s
+    - Repeated step 6-7 until all flowthrough has spun through spin column  
+  8. Added 700$\mu$L Buffer RW1 to the RNedasy spin column and centrifuge at max speed for 30s
+  9. Added 500$\mu$L Buffer RPE to spin column and centrifuge at max speed for 30s
+  10. Added 500$\mu$L Buffer RPE to spin column and centrifuge at max speed for 30s (repeat of previous step)
+  11. Placed spin column in empty tube and centrifuge at max speed for 1min
+  12. Placed spin column in collection tube, added 30$\mu$L Elution Buffer and incubated at RT for 2min
+  13. Centrifuge at max speed for 1min
+  14. Determine concentration on nano-drop
+
+### Results
+
+```{r, echo=FALSE, fig.align='left'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_LP_RNAextraction2.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+# Wednesday 11-09-2024
+
+## RTX DP - RNA Extraction: Samples 1-3
+
+### Overview
+- Did RNA Extraction with samples 1-3
+- RNeasy PLus Mini Kit - Qiagen
+  * Cat #: 74134
+  
+### Protocol
+  1. Added 600$\mu$L Buffer RLT Plus and homogenized lysate via vortexing
+  2. Lysate was spun down for 3min at max speed, supernatant removed, and added to gDNA Eliminator spun column  
+    - Spin column placed in 2ml Collection tube  
+  3. Centrifuged for 30s at max speed
+  4. Discarded columns and kept flow through
+  5. 600$\mu$L 70% Ethanol added to flowthrough and mixed via pipetting
+  6. Transferred 700$\mu$L of sample into an RNeasy Spin Column (placed in 2mL collection tube)
+  7. Centrifuged at max speed for 30s
+    - Repeated step 6-7 until all flowthrough has spun through spin column  
+  8. Added 700$\mu$L Buffer RW1 to the RNedasy spin column and centrifuge at max speed for 30s
+  9. Added 500$\mu$L Buffer RPE to spin column and centrifuge at max speed for 30s
+  10. Added 500$\mu$L Buffer RPE to spin column and centrifuge at max speed for 30s (repeat of previous step)
+  11. Placed spin column in empty tube and centrifuge at max speed for 1min
+  12. Placed spin column in collection tube, added 30$\mu$L Elution Buffer and incubated at RT for 2min
+  13. Centrifuge at max speed for 1min
+  14. Determine concentration on nano-drop
+
+### Results
+
+```{r, echo=FALSE, fig.align='left'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_LP_RNAextraction3.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+# Friday 27-09-2024
+
+## RTX DP - RT: Samples 1-47
+### Overview
+- cDNA synthesis from RNA template
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| 5x SSIV Buffer | 200 $\mu$L | |
+| SSIV RT        | 50 $\mu$L |   |
+| 100 mM DTT     | 50 $\mu$L |    |
+| RNAse Out      | 50 $\mu$L |   |
+| Thermolabile Exonuclease I  | 50 $\mu$L |          |
+| NEBuffer r3.1*        | 100 $\mu$L |          |
+
+
+### RT Protocol  
+1. In PCR strip tubes, prepare 1-5 $\mu$g of RNA in a total volume of 10 $\mu$l of RNAse/DNAase-free water.
+2. Add 1 $\mu$l of WS_RT_UMI_NexteraR2 primer (2$\mu$M stock)
+3. Add 1 $\mu$l dNTPs (10 mM each). 
+4. Denature at 65 C for 5 mins in the PCR machine, then straight onto ice for at least 2 mins, spin briefly to get liquid to the bottom of the tube.
+5. Prepare mastermix of RT enzyme and buffers. 1.1x the number of samples.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| 5x SSIV Buffer | 4 $\mu$L |     208 $\mu$L     |
+| SSIV RT        | 1 $\mu$L |      52 $\mu$L    |
+| 100 mM DTT     | 1 $\mu$L |      52 $\mu$L   |
+| RNAse Out      | 1 $\mu$L |       52 $\mu$L   |
+
+6. Add 7 $\mu$l of RT MM prepared above to each sample and mix, spin briefly to get liquid to the bottom of the tube.
+   - Spin briefly to get liquid to bottom of the tube 
+7. In the PCR machine incubate at 53 C for 10 mins followed by 80 C for 10 mins.
+8. Add 1 $\mu$l Themolabile Exonuclease I (NEB M0568) to remove excess RT primer.
+
+|Component       |Volume|   MM volume  |
+|:--------------|----|-----------------|
+| Thermolabile Exonuclease I  | 1 $\mu$L |          |
+| NEBuffer r3.1*        | 2 $\mu$L |          |
+
+\begin{center}
+\textbf{Most PCR buffers are compatible}
+\end{center}
+
+9. In PCR Machine: heat at 37C for 4 mins followed by 80C for 1 min  
+    - Spin briefly to get liquid to bottom of the tube
+10. Add 1 $\mu$l of RNAse H and incubate at 37 C for 20 mins.
+11. Dilute final cDNA 1:2 with DNAse/RNAse-free water.
+
+
+
+# Monday 30-09-2024
+
+## RTX DP - PCR1: Samples 1-47
+
+## Overview
+- Aim to keep number of cycles at a minimum. 
+- Forward primer is an equal mix of primers with different length spacers to generate diversity required for sequencing.
+
+## Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM WS_RT-PCR1_Fwd  | 70 $\mu$L |   -       |
+| 10uM WS_RT-PCR1_Rev | 70 $\mu$L |     -     |
+| DNAse/RNAse H20 | 550 $\mu$L |          |
+| Kapa Hifi HotStart Ready Mix (2X) | 1200 $\mu$L |  KK2601  |
+
+## PCR1 Protocol  
+
+- Set up PCR reactions on ice
+- One reaction per sample plus -RT control
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM WS_RT-PCR1_Fwd | 1.5 $\mu$L |
+|10uM WS_RT-PCR1_Rev | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\begin{center}
+\textbf{10-25 cycles of steps 2-4}
+\end{center}
+
+Clean up reaction using Ampure beads and check product size and yield on tapestation
+
+# Tuesday 01-10-2024
+
+## RTX DP - Bead Clean Up: Samples 1-47
+### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+## RTX DP - Tape Station: Samples 1-8
+### Overview
+
+
+### Materials
+
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-01 - PCR1 SAMPLES 1-8 RTX RAMOS DP 1.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```  
+
+
+# Wednesday 02-10-2024
+
+## RTX DP - Tape Station: Samples 9-47
+### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-02 - PCR1 SAMPLES 9-16 RTX RAMOS TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```  
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-02 - PCR1 SAMPLES 17-32 RTX RAMOS TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-02 - PCR1 SAMPLES 33-48 RTX RAMOS TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+# Thursday 03-10-2024
+
+## RTX DP - PCR1: Repeat Samples 24 + 45
+
+## Overview
+- Repeated samples 24 + 45
+- Aim to keep number of cycles at a minimum. 
+- Forward primer is an equal mix of primers with different length spacers to generate diversity required for sequencing.
+
+## Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM WS_RT-PCR1_Fwd  | 70 $\mu$L |   -       |
+| 10uM WS_RT-PCR1_Rev | 70 $\mu$L |     -     |
+| DNAse/RNAse H20 | 550 $\mu$L |          |
+| Kapa Hifi HotStart Ready Mix (2X) | 1200 $\mu$L |  KK2601  |
+
+## PCR1 Protocol  
+
+- Set up PCR reactions on ice
+- One reaction per sample plus -RT control
+
+1. Prepare mastermix of below reagents at 1.1x the number of samples
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM WS_RT-PCR1_Fwd | 1.5 $\mu$L |
+|10uM WS_RT-PCR1_Rev | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 12 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+|||
+| **Total Master Mix volume**|**40 $\mu$L** |
+|||
+| cDNA from above        | 10 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 60C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 1 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\begin{center}
+\textbf{10-25 cycles of steps 2-4}
+\end{center}
+
+Clean up reaction using Ampure beads and check product size and yield on tapestation
+
+# Friday 04-10-2024
+
+## RTX DP - Tapestation: Repeat Samples 24 + 45
+### Overview
+- Run automated gel to check bandsize/location
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| DS |  | |
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-04 - PCR1 REDO SAMPLES 24 + 45 RTX RAMOS TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+
+# Monday 07-10-2024
+
+## RTX DP - PCR2: 1-47
+### Overview
+- PCR2 for all samples using PCR1 product post cleanup
+- PCR to index samples for sequencing by attaching UMI 
+- VERY IMPORTANT to accurately record which samples receive which adaptors  
+  *[Guide for Index Adaptor Pooling](https://support-docs.illumina.com/SHARE/IndexAdaptersPooling/Content/SHARE/FrontPages/IndexAdapterPooling.htm) 
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM Nxxx Nextera i7 adapter  | - |   -       |
+| 10uM Sxxx Nextera i5 adapter | - |     -     |
+| DNAse/RNAse H20 | 1000 $\mu$L |          |
+| Q5 | 1200 $\mu$L |  M0492S  |
+
+### Protocol
+1. Prepare samples according to the following table:
+  - Keep careful note of which adaptors are added to which sample
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM Nxxx Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM Sxxx Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\begin{center}
+\textbf{8 cycles of steps 2-4}
+\end{center}
+
+3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
+- If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
+
+4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
+
+# Tuesday 08-10-2024
+
+## RTX DP - Bead Clean Up 2: Samples 1-47
+### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+## RTX DP - Tapestation: Samples 1-16
+### Overview
+- Run automated gel to check bandsize/location
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| DS |  | |
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-08 - PCR2 SAMPLES 1-8 RTX RAMOS DP TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+```
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-08 - PCR2 SAMPLES 9-16 RTX RAMOS DP TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+# Wednesday 09-10-2024
+
+## RTX DP - Tapestation: Samples 17-47
+### Overview
+- Run automated gel to check bandsize/location
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| DS |  | |
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-09 - PCR2 SAMPLES 17-24 RTX RAMOS TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-09 - PCR2 SAMPLES 25-40 RTX RAMOS TS.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+# Thursday 10-10-2024
+
+## RTX DP - PCR2: Repeat Samples 1-8
+### Overview
+- PCR2 for all samples using PCR1 product post cleanup
+- PCR to index samples for sequencing by attaching UMI 
+- VERY IMPORTANT to accurately record which samples receive which adaptors  
+  *[Guide for Index Adaptor Pooling](https://support-docs.illumina.com/SHARE/IndexAdaptersPooling/Content/SHARE/FrontPages/IndexAdapterPooling.htm) 
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM Nxxx Nextera i7 adapter  | - |   -       |
+| 10uM Sxxx Nextera i5 adapter | - |     -     |
+| DNAse/RNAse H20 | 1000 $\mu$L |          |
+| Q5 | 1200 $\mu$L |  M0492S  |
+
+### Protocol
+1. Prepare samples according to the following table:
+  - Keep careful note of which adaptors are added to which sample
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM Nxxx Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM Sxxx Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\begin{center}
+\textbf{8 cycles of steps 2-4}
+\end{center}
+
+3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
+- If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
+
+4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
+
+## RTX DP - Bead Clean Up 2: Repeat Samples 1-8
+### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+## RTX DP - Tapestation: Repeat Samples 1-8
+### Overview
+- Run automated gel to check bandsize/location
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| DS |  | |
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-10 - PCR2 SAMPLES 1-8 RTX RAMOS TS RE-RUN.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+```
+
+# Friday 11-10-2024
+
+## RTX DP - PCR2: Repeat Samples 1 + 6
+### Overview
+- PCR2 for all samples using PCR1 product post cleanup
+- PCR to index samples for sequencing by attaching UMI 
+- VERY IMPORTANT to accurately record which samples receive which adaptors  
+  *[Guide for Index Adaptor Pooling](https://support-docs.illumina.com/SHARE/IndexAdaptersPooling/Content/SHARE/FrontPages/IndexAdapterPooling.htm) 
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------|----|-----------------|:-------------:|
+| 10uM Nxxx Nextera i7 adapter  | - |   -       |
+| 10uM Sxxx Nextera i5 adapter | - |     -     |
+| DNAse/RNAse H20 | 1000 $\mu$L |          |
+| Q5 | 1200 $\mu$L |  M0492S  |
+
+### Protocol
+1. Prepare samples according to the following table:
+  - Keep careful note of which adaptors are added to which sample
+
+|Component       |Volume|
+|:--------------|----|
+| 10uM Nxxx Nextera i7 adapter  | 1.5 $\mu$L |
+|10uM Sxxx Nextera i5 adapter | 1.5 $\mu$L |
+| DNAse/RNAse H20      | 21 $\mu$L |
+| Kapa Hifi HotStart Ready Mix (2X) | 25 $\mu$L |
+| 10ng/$\mu$L PCR1  | 1 $\mu$L | 
+
+
+2. Perform PCR using the following parameters:  
+
+|Step Name |Steps |Time|
+|:----:|:--------------:|:----:|
+|Initial Denaturation |Step 1: 95C    | 3mins |
+|Denaturation | **Step 2: 98C** | **20s**|
+|Annealing | **Step 3: 55C** | **15s**| 
+|Extension| **Step 4: 72C** | **15s**|
+|Final Extension|Step 5: 72C    | 2 min |
+Hold Step |Step 6: 12C    | Hold |  
+
+\begin{center}
+\textbf{8 cycles of steps 2-4}
+\end{center}
+
+3. Perform Ampure bead clean up as above with 90ul beads per 50ul PCR reaction.
+- If you don’t have a crazy number of samples you might also want to consider doing up to 4 PCR2 reactions per sample and pooling them afterwards just to make sure all your sequences are captured.
+
+4. Check size and concentration on tapestation. Dilute and pool samples for sequencing.
+
+## RTX DP - Bead Clean Up 2: Repeat Samples 1 + 6
+### Overview
+- Clean PCR reaction by removing leftover primers
+- This prevents false reads, cleaner indexing in later steps, and higher quality samples
+
+### Materials
+- For 40 samples
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| Ampure Bead Kit | 200 $\mu$L | |
+
+### Protocol
+1.	Equilibrate Ampure beads to room temp (available from supplies cold room)
+2.	Mix well and vortex for 30sec to ensure uniform distribution.
+3.	Add 90ul (1.8X volume) to PCR reaction and mix thoroughly by pipetting.
+4.	Incubate 5min, room temp
+5.	Place on magnet for 2 min and keep on magnet until final elution
+6.	Remove supernatant and add 200ul 70% ethanol (make fresh)
+7.	Incubate 30sec and remove
+8.	Repeat 70% ethanol wash
+9.	Air dry beads 5-10min room temp. Once dry the beads will go from shiny to matt in appearance. Avoid over drying (cracked appearance).
+10.	Add 15 ul EB buffer and resuspend beads by pipetting
+11.	Incubate 2min room temp
+12.	Place on magnet and remove eluate
+13. Assess PCR product size, contamination and concentration on tapestation.   
+**Expected size = 165-172bp**
+
+## RTX DP - Tapestation: Repeat Samples 1 + 6
+### Overview
+- Run automated gel to check bandsize/location
+
+### Materials
+
+|Component       |Expected Volume/experiment| Material ID |
+|:--------------:|:----:|:---------:|
+| DS |  | |
+
+### Protocol
+1.	Added 2$\mu$L High Sensitvity D1000 Sample Buffer with 2$\mu$L DNA sample
+2.	Spun down, then vortexed using IKA vortexer and adaptor at 2000rpm for 1 min
+3.	Spun down to position sample at the bottom of the tube
+4.	Loaded samples into the 2200 TapeStation
+
+### Results
+
+```{r, echo=FALSE, out.width ='100%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/tapestation/2024-10-11 - PCR2 SAMPLES 1 + 6 RTX RAMOS TS RE-RUN.pdf"
+
+# Insert the image
+knitr::include_graphics(image_path)
+```
+
+# Monday 11-10-2024
+
+## Qubit - RTX DP Samples 1-47
+
+### Overview
+- Quantify DNA concentration to submit library for sequencing
+  
+### Protocol
+  1. Prepare Qubit tubes  
+    - 2 tubes for standards  
+    - 47 sample tubes  
+  2. Add solutions in following amounts:
+  
+```{r, echo=FALSE, fig.align='left'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Qubit_protocol.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+  3. Vortex for 3-5 seconds
+  4. Allow tubes to incubate at RT for 2min and read samples
+
+
+### Results
+
+```{r, echo=FALSE, fig.align='left'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_LP_QUBIT.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+
+
 
 
 
