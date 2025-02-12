@@ -1,4 +1,7 @@
 library(openxlsx)
+library(ggpubr)
+library(dplyr)
+library(vegan)
 
 df <- read.xlsx("~/OneDrive - University of Cambridge/Turner Lab/Data/Ramos_RTX_DP/Barcode Abundance/barcode_data.xlsx")
 
@@ -13,6 +16,10 @@ df <- df %>%
 
 
 #################### clone count comp ###########
+
+## this is bad representation: over represents clonal diversity due to difference in sample number, 
+## need to take mean or select specific samples as comp
+
 histo <- function(x){
   p <- ggplot(x, aes(x = normalised_counts)) + geom_histogram(color="black",
                                                 fill="#CC9900") + labs(title='') +
@@ -38,13 +45,16 @@ histo_plots
 
 
 ############ Diversity index ############
+
+## Same problem as above
+
 data_summary <- df %>%
   group_by(condition) %>%
   summarize(shannon_entropy = diversity(normalised_counts, index = "shannon"))
 
 bp <- ggbarplot(
   data_summary, x = "condition", y = "shannon_entropy", 
-  color= "condition", palette = c("#00AFBB", "#E7B800"),
+  color= "condition", palette = c("#00AFBB", "#E7B800", "green"),
   position = position_dodge(0.8)
 )
 
@@ -76,7 +86,7 @@ bc_check <- function(x) {
   
   # Plotting
 ggplot(summarized_data %>% 
-           filter(barcode_ID != NA),
+           filter(!is.na(barcode_ID)),
          aes(x = barcode_ID, y = normalised_counts)) +
     geom_col(color = "black", fill = "#CC9900") +  # Bars for mean proportion
     coord_flip() +  # Flip the coordinates for readability
@@ -97,7 +107,7 @@ ggplot(summarized_data %>%
 }
 
 quartz()
-bc_check(df)
+bc_check(select)
 
 
 
