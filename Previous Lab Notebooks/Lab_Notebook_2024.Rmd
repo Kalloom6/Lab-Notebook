@@ -2692,7 +2692,7 @@ print(P1)
   
 ```{r, echo=FALSE, fig.align='center'}
 
-excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/240726_DDT_EC50.xlsx", sheet = "Sheet3")
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/25_DDT_EC50.xlsx", sheet = "Sheet3")
 
 columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
 

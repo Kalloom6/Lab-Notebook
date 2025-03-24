@@ -76,3 +76,92 @@ excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/
 knitr::kable(excel_data)
 
 ```
+
+# \textbf January 2024
+
+# \textbf January 2024
+
+# \textbf March 2024
+
+# Monday 24-03-2024
+
+## MR - CD20 Flow EpiDrug Pretreatment
+### Protocol
+1. 1x10e6 cells from each treatment group were split into 3 wells of a 96-well plate
+2. Plate spun at 300xg 5 min and supernatant discarded
+3. Cells were resuspnded in FACS Staining buffer
+  - 1ul CD20 (BD Cat# 562873) per 250uL
+  - 12 uL in 3000uL 
+4. Plate inbuated in the dark for 20min at 4C
+5. Plate spun at 300xg 5 min and supernatant discarded
+6. Samples were resuspended in 400uL PBS and transferred to FACS tubes
+
+### Results
+- No clear alteration of CD20 expression due to Epigenetic drug pretreatment
+
+# Tuesday 25-03-2024
+
+## RTX EC50_250324 RBL2 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX on Baseline RBL2 in the presence of 25% NHS 
+- Seeded 1 plates with the same RBL2 Baseline population
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250324_DDT_EC50.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250324_DDT_EC50.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250324_DDT_EC50.xlsx", sheet = "Sheet4")
+title <- "EC50_250324 CDC Test RBL2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
