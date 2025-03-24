@@ -1,0 +1,78 @@
+---
+title: "Lab Notebook 2024"
+author: "Callum Malcolm"
+output:
+  pdf_document: default
+toc: true
+toc_float: true
+urlcolor: blue
+---
+
+```{r setup, include=FALSE, fig.retina = NULL, dpi = 300}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplate)
+library(tidyverse)
+library(readxl)
+library(ggforce)
+library(scales)
+library(prism)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(xtable)
+
+
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplate)
+library(tidyverse)
+library(readxl)
+library(ggforce)
+library(scales)
+library(prism)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(xtable)
+library(formatdown)
+
+# Function to format numbers in scientific notation
+format_scientific <- function(x) {
+  if (is.numeric(x)) {
+    formatted <- formatC(x, format = "e", digits = 2)
+    parts <- strsplit(formatted, "e")[[1]]
+    coef <- parts[1]
+    exponent <- as.integer(parts[2])
+    paste0("$", coef, " \\times 10^{", exponent, "}$")
+  } else {
+    x
+  }
+}
+
+# Function to apply scientific notation formatting to specified columns
+apply_scientific_notation <- function(df, cols) {
+  df[cols] <- lapply(df[cols], function(col) {
+    sapply(col, format_scientific)
+  })
+  return(df)
+}
+
+```
+
+\newpage
+
+# LN Repository
+
+## Rack 1
+- Location: Tank 2, Rack 1, Row H (Bottom)
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/LN_Repository.xlsx", sheet = "Sheet1")
+
+# Convert the last column (assuming it's the 4th column here) to character
+#excel_data[, ncol(excel_data)] <- as.character(excel_data[, ncol(excel_data)])
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
