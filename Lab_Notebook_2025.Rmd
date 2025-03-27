@@ -165,3 +165,81 @@ P1 <- plate_plot(
 print(P1)
 ```
 
+## RBL2 RTX DP - Dose 1
+- Began RTX CDC In Vitro dosing
+- Seeded RBL2 into 2x 6 well plates
+
+### Dosing Protocol
+
+1. Count CS and dilute to 2x10^5^ cells in 1 mL
+  - If cell count is below either re-culture or add required CS amount, spin down, and resuspend in 1mL
+2. Add 1mL of cell suspension containing 2x10^5^ cells to respective wells of 6-well plate
+3. Made RTX dilutions and added to respective Rx wells in 500$\mu$L    
+    - [RTX stock] = 10.3 mg/mL  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per RTX dosing, 500$\mu$L per well ~ minimum of 3000$\mu$L per condition needed (recommend 3500$\mu$L)
+    - 1.4 uL RTX stock in 3.5mL media
+    - 500$\mu$L media added to Cx wells
+ 3. Added NHS to all wells
+  * 500$\mu$L/well
+  * Final well volume = 25% Serum (NHS)
+ 4. Plates incubated for 24 hrs at 37C
+
+### Plate Layout  
+
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/250325_PM.xlsx", sheet = "Sheet1")
+title <- "RBL2 RTX DP1 Control 250325"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/250325_PM.xlsx", sheet = "Sheet2")
+title <- "RBL2 RTX DP1 RR-RBL2 250325"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+## RBL2 RTX DP - Sample Collection Baseline
+### Collection Protocol
+1. 1x10^6^ cells added to eppendorf tubes
+2. Spun down @ max speed @ 4C
+3. Supernatant removed
+4. Pellets flash frozen
+5. Pellets saved at -80C
+
+
+
+
+
