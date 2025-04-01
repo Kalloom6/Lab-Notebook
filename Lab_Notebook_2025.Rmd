@@ -252,8 +252,10 @@ print(P1)
   3. Read on plate reader according to Cell Titre Blue Protocol
 
 ### Results:
-- HIAS impact on RTX CDC similar to previous experiments
+- HIAS impact on RBL2 CDC similar to RAMOS experiments
 - NHS impact on RTX CDC is consistent with previous experiments
+  * Cell viability was only reduced to 50%
+  * Will repeat with higher doses of RTX (100ug/ml) and more careful cell counting
 ```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
 # Path to your image file
@@ -263,4 +265,264 @@ image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Noteboo
 knitr::include_graphics(image_path)
 
 ``` 
+
+## RBL2 RTX DP - Dose 1 Collection
+
+### Collection Protocol
+#### Rx-DP3:
+
+1. Well volume transferred to 15ml Eppendorf
+2. Eppendorfs supn down at 200 rcf for 6 min
+3. Supernatant discarded and resuspended in 2ml
+4. Collected cells added to individual wells of 6-well plates
+
+# Friday 28-03-2024
+
+## RAMOS-RTXDP SplitSeq: Qubit
+- Needed to resumbit library due to low concentration
+
+### SS Qubit Results
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_SS_QUBIT.xlsx", sheet = "Sheet1")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+- CRUK-CI Genomics core tends to ask for 30-40uL of 10-20nM Library Pool
+
+# Monday 31-03-2024
+
+## RAMOS-RTXDP SplitSeq: Library Pooling and Submission
+- Library Pooled for submission
+- Submission ID: SLX-24264
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_SS_QUBIT.xlsx", sheet = "Sheet3")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Library_prep_tables/RTX_DP_SS_QUBIT.xlsx", sheet = "Sheet4")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+
+## RTX EC50_250331 RBL2 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX on Baseline RBL2 in the presence of 25% NHS 
+- Seeded 1 plates with the RBL2 Baseline population
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250331_DDT_EC50.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250331_DDT_EC50.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250331_DDT_EC50.xlsx", sheet = "Sheet4")
+title <- "EC50_250331 CDC Test RBL2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+# \textbf April 2025
+
+# Tuesday 01-04-2024
+
+## RTX EC50_250401 RBL2 - Seeding
+- Seeded an EC50 experiment comparing the effects of RTX on Baseline RBL2 in the presence of 25% NHS 
+- Seeded 1 plates with the RBL2 Baseline population
+- Used Rixathon (Catalogue#: )
+
+### Plate seeding protocol:  
+
+  1. Diluted cell suspension to seed 10000 cells/well in 50$\mu$L amounts
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250401_DDT_EC50.xlsx", sheet = "Sheet3")
+
+columns_to_format <- c("Cell Line", "Cell Count", "Required Cell total", "CS cells/mL")
+
+excel_data <- apply_scientific_notation(excel_data, columns_to_format)
+
+# Display the data as a table
+knitr::kable(excel_data)
+
+```
+
+  2. Made RTX dilutions and added to respective wells in 25$\mu$L    
+    - [RTX stock] = 10.3 mg/mL    
+    - Drug volumes are added in triplicate  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per condition, 25$\mu$L per well ~ minimum of 150$\mu$L per condition needed (recommend 200$\mu$L)
+  
+```{r, echo=FALSE, fig.align='center'}
+
+excel_data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250401_DDT_EC50.xlsx", sheet = "Sheet2")
+
+# Display the data as a table
+knitr::kable(excel_data, digits = 1)
+
+```
+ 
+ 3. Added HIAS/NHS to indicated wells
+  * 25$\mu$L/well
+  * Final well volume = 25% Serum (HIAS/NHS)
+ 4. Plate is incubated for 48 hrs at 37C
+
+  
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Drug Dilution Tables/250401_DDT_EC50.xlsx", sheet = "Sheet4")
+title <- "EC50_250331 CDC Test RBL2"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 96,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+## RBL2 RTX DP - Dose 1
+- Restarted RTX CDC In Vitro dosing
+- Concerns with initial seeding/dosing
+  * RBL2 appear to be more resistant to RTX dosing
+  * Plan is to start with 25ug/mL RTX
+  * 25 -> 50 -> 100 -> 200
+- Seeded RBL2 into 2x 6 well plates
+
+### Dosing Protocol
+
+1. Count CS and dilute to 5x10^5^ cells in 1 mL
+  - If cell count is below either re-culture or add required CS amount, spin down, and resuspend in 1mL
+2. Add 1mL of cell suspension containing 5x10^5^ cells to respective wells of 6-well plate
+3. Made RTX dilutions and added to respective Rx wells in 500$\mu$L    
+    - [RTX stock] = 10.3 mg/mL  
+    - Drug volumes are being added consititute 1/4 of well volume:   
+      * [RTX working] needs to be 4x [RTX well]   
+    - 6 wells per RTX dosing, 500$\mu$L per well ~ minimum of 3000$\mu$L per condition needed (recommend 3500$\mu$L)
+    - 25ug/mL [RTX]
+      * 34$\mu$L RTX stock in 3.5mL media
+      * 100ug/mL WS 
+    - 500$\mu$L media added to Cx wells
+ 3. Added NHS to all wells
+  * 500$\mu$L/well
+  * Final well volume = 25% Serum (NHS)
+ 4. Plates incubated for 24 hrs at 37C
+
+### Plate Layout  
+
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/250325_PM.xlsx", sheet = "Sheet1")
+title <- "RBL2 RTX DP1 Control 250401"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+```{r, echo=FALSE}
+df <- read_xlsx("~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Lab Notebook - Table excel files/250325_PM.xlsx", sheet = "Sheet2")
+title <- "RBL2 RTX DP1 RR-RBL2 250401"
+
+
+P1 <- plate_plot(
+  data = df,
+  position = well,
+  value = Condition,
+  label = Value,
+ label_size = 2,
+  plate_size = 6,
+  plate_type = "round",
+  #colour = "#2E008B",
+  title = title
+)
+
+print(P1)
+```
+
+
+
 
