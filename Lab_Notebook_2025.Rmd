@@ -79,7 +79,7 @@ knitr::kable(excel_data)
 
 # \textbf January 2024
 
-# \textbf January 2024
+# \textbf February 2024
 
 # \textbf March 2024
 
@@ -240,6 +240,27 @@ print(P1)
 5. Pellets saved at -80C
 
 
+# Thursday 27-03-2024
 
+## EC50_250325 Collection - RBL2 RTX CDC Baseline
 
+- Collected plates seeded on 25-03-2025
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- HIAS impact on RTX CDC similar to previous experiments
+- NHS impact on RTX CDC is consistent with previous experiments
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250325_EC50_RTX_CDC_RBL2_Baseline1.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
 
