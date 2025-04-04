@@ -665,6 +665,17 @@ knitr::include_graphics(image_path)
 
 # Friday 04-04-2024
 
+## RBL2 RTX DP - Dose 1 Culture
+
+### RBL2 RTX-Treated
+- Expanded to T25
+- Transferred 1mL of CS and added 3mL of fresh media
+- Cells looked relatively healthy, good growth from yesterday
+
+### RBL2 Control
+- Spun down and resuspended in 4 ml of media
+- Look fine
+
 ## EC50_250402 Collection - RBL2 RTX CDC Baseline
 
 - Collected plates seeded on 02-04-2025
