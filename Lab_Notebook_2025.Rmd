@@ -269,7 +269,6 @@ knitr::include_graphics(image_path)
 ## RBL2 RTX DP - Dose 1 Collection
 
 ### Collection Protocol
-#### Rx-DP3:
 
 1. Well volume transferred to 15ml Eppendorf
 2. Eppendorfs supn down at 200 rcf for 6 min
@@ -525,6 +524,19 @@ print(P1)
 
 # Wednesday 02-04-2024
 
+## Media Prep
+### Advanced RPMI for PDX
+- 20% FBS
+#### Recipe
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| Advanced RMPI   | ---- | 500 mL     | 78% |
+| Glutamax     | ---- | 6.5 mL    | 20% |
+| Pen-Strep    | ---- | 6.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 20% |
+
+
 ## EC50_250331 Collection - RBL2 RTX CDC Baseline
 
 - Collected plates seeded on 25-03-2025
@@ -612,3 +624,56 @@ P1 <- plate_plot(
 
 print(P1)
 ```
+
+# Thursday 03-04-2024
+
+## RBL2 RTX DP - Dose 1 Collection
+
+### Collection Protocol: RTX Treated
+
+1. Well volume transferred to 15ml Eppendorf
+2. Eppendorfs supn down at 200 rcf for 6 min
+3. Supernatant discarded and resuspended in 1ml
+4. Collected RTX-treated cells added to individual wells of 24-well plates
+
+- Control wells expanded to T25s in 4ml media
+
+## EC50_250401 Collection - RBL2 RTX CDC Baseline
+
+- Collected plates seeded on 25-03-2025
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- HIAS Results as expected
+  * Need to seed one more as reference
+- NHS impact on RTX CDC is consistent with previous experiments
+  * Cell viability still wasnt reduced below 50%
+  * Will repeat with higher doses of RTX (1000ug/ml) and increased cell/well amount (4x10^5^)
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250401_EC50_RTX_CDC_RBL2_Baseline1.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
