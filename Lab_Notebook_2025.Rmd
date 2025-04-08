@@ -701,14 +701,19 @@ knitr::include_graphics(image_path)
 ``` 
 
 
-# Friday 04-04-2024
+# Monday 07-04-2024
 
 ## RBL2 RTX DP - Dose 1 Culture
 
+### RBL2 Baseline
+- Healthy
+- Use for EC50 
+- Split
+- Would like to discontiue the line once we have firmly established optimal dose-response conditions for RTX
+
 ### RBL2 RTX-Treated
 - Cells look rough
-- Spin down and resuspend in 12 well plates
-- Expanded too quickly
+- Leave for one more day to see if they're just growing slowly
 
 ### RBL2 Control
 - Look good
@@ -782,7 +787,25 @@ print(P1)
 ```
 
 
+# Tuesday 08-04-2024
 
+## Cell Culture
+
+### RBL2 Baseline
+- Healthy
+- Use for EC50 
+  * Seed tomorrow based on results
+- Split 1/4
+- Would like to discontiue the line once we have firmly established optimal dose-response conditions for RTX
+
+### RBL2 RTX-Treated
+- Cells look rough
+- Spun down and resuspend in 12 well plates
+- Expanded too quickly
+
+### RBL2 Control
+- Look good
+- Leave for another day
 
 
 
