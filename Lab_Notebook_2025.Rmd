@@ -686,7 +686,7 @@ knitr::include_graphics(image_path)
   3. Read on plate reader according to Cell Titre Blue Protocol
 
 ### Results:
-- NHS impact on RTX CDC is wildly different
+- Seeding conditions here are wildly different
   * Down to 30% viability at ~4ug/mL
   * Seems like the issue was cell seeding
   * Will repeat 07-04-2025 with 20ug/mL but 4x10^5^ cells
@@ -820,12 +820,16 @@ print(P1)
   3. Read on plate reader according to Cell Titre Blue Protocol
 
 ### Results:
-- NHS impact on RTX CDC is wildly different
-  * 
+- Seeding conditions seem to be optimized
+  * HIAS conditions seem weird
+    1. Seems to be due to seeding error in the first row
+  * RTX+/NHS+ pushed down to acceptable levels at highest dose
+    1. Could potentially go higher? (100ug/mL??)
+    2. Would prefer to limit to 20ug/mL for resource maintenance
 ```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
 # Path to your image file
-image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250402_EC50_RTX_CDC_RBL2_Baseline1.png"
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250407_EC50_RTX_CDC_RBL2_Baseline1.png"
 
 # Insert the image
 knitr::include_graphics(image_path)
@@ -833,8 +837,9 @@ knitr::include_graphics(image_path)
 ``` 
 
 
+# Friday 11-04-2024
 
-
+## asdf
 
 
 
