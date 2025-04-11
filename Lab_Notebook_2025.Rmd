@@ -808,4 +808,36 @@ print(P1)
 - Leave for another day
 
 
+# Wednesday 09-04-2024
+
+## EC50_250407 Collection - RBL2 RTX CDC Baseline
+
+- Collected plates seeded on 07-04-2025
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- NHS impact on RTX CDC is wildly different
+  * 
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250402_EC50_RTX_CDC_RBL2_Baseline1.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+
+
+
+
+
+
+
+
 
