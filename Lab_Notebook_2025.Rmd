@@ -861,7 +861,7 @@ knitr::include_graphics(image_path)
 ### RBL2-Rx1
 - Expanded to T75
 
-## RTX EC50_250422 RBL2 - Seeding
+## RTX EC50_250421 RBL2 - Seeding
 - Seeded an EC50 experiment comparing the effects of RTX on Baseline RBL2 in the presence of 25% NHS or 25% HIAS
   * Looking to establish optimal EC50 range
 - Seeded 1 plates with the RBL2 Baseline population based on previous results:
@@ -1001,5 +1001,28 @@ P1 <- plate_plot(
 print(P1)
 ```
 
+# Wednesday 23-04-2024
 
+### Results:
+- Seeding error
+  * Seeded incorrect number of cells (undercounted - overseeded)
+  * HIAS condition is lower than ideal
+    1. Seeding error?
+    2. HIAS quality?
+  * Still struggling to crack 50% Cell viability reduction
+    1. In this case likely due to seeding
+    2. EC50_250422 looks similar however
+    3. Seed less cells?
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
 
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250421_EC50_RTX_CDC_RBL2_Baseline1.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+- Conclusions:
+  * 40k might be too much
+    1. Seed 20k on top and 30k on bottom?
+    2. Thaw new cells
