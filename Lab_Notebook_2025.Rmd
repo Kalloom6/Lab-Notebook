@@ -1003,6 +1003,15 @@ print(P1)
 
 # Wednesday 23-04-2024
 
+## EC50_250421 Collection - RBL2 RTX CDC Baseline
+
+- Collected plates seeded on 21-04-2025
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
 ### Results:
 - Seeding error
   * Seeded incorrect number of cells (undercounted - overseeded)
@@ -1026,3 +1035,109 @@ knitr::include_graphics(image_path)
   * 40k might be too much
     1. Seed 20k on top and 30k on bottom?
     2. Thaw new cells
+
+# Thursday 23-04-2024
+
+## Cell Culture
+### RBL2 Barcoded
+- Thawed RBL2
+### NK-92
+- Made NK92 media
+#### Recipe
+
+| Solution | ID code | Volume| % Total volume
+| :-------: | :------: | :--------:|:----------:|
+| RMPI 1640 + L-Glutamine   | ---- | 500 mL     | 78% |
+| FBS     | ---- | 50 mL    | 20% |
+| NaPyr    | ---- | 5.5 mL      | 1% |
+| FBS     | ---- | 128 mL    | 20% |
+- Thawed NK-92
+
+## EC50_250422 Collection - RBL2 RTX CDC Baseline
+
+- Collected plates seeded on 22-04-2025
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- Seeding error
+  * Seeded incorrect number of cells (undercounted - overseeded)
+  * HIAS condition is lower than ideal
+    1. Seeding error?
+    2. HIAS quality?
+  * Still struggling to crack 50% Cell viability reduction
+    1. In this case likely due to seeding
+    2. EC50_250422 looks similar however
+    3. Seed less cells?
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250422_EC50_RTX_CDC_RBL2_Baseline1.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+- Conclusions:
+  * Re-thaw cells and restart
+
+
+# Monday 28-04-2024
+
+## Cell Culture
+### RBL2 Barcoded
+- Split RBL2
+### NK-92 
+- Add media
+
+## EC50_250430 Collection - RBL2 RTX CDC Baseline
+
+- Collected plates seeded on 22-04-2025
+- EC Plate collection protocol:
+  1. Added 20$\mu$L Cell Titre Blue (CTB) to each conditioned well 
+    * 20$\mu$L CTB/100$\mu$L of conditioned well recommended by manufacturer
+  2. Incubated for 2hr at 37C
+  3. Read on plate reader according to Cell Titre Blue Protocol
+
+### Results:
+- Seeding error
+  * Seeded incorrect number of cells (undercounted - overseeded)
+  * HIAS condition is lower than ideal
+    1. Seeding error?
+    2. HIAS quality?
+  * Still struggling to crack 50% Cell viability reduction
+    1. In this case likely due to seeding
+    2. EC50_250422 looks similar however
+    3. Seed less cells?
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250430_EC50_RTX_CDC_RBL2_Baseline1.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+
+```{r, echo=FALSE, out.width ='70%', fig.align='center'}
+
+# Path to your image file
+image_path <- "~/Library/CloudStorage/OneDrive-UniversityofCambridge/Lab Notebook/Data/Results/250430_EC50_RTX_CDC_RBL2_Baseline1A.png"
+
+# Insert the image
+knitr::include_graphics(image_path)
+
+``` 
+- Conclusions:
+  * Re-thaw cells and restart
+
+
+
+
+
+
+
+
